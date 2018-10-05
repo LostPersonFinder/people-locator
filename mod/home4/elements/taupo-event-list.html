@@ -1,0 +1,150 @@
+<!-- taupo full page -->
+<dom-module id="taupo-event-list">
+  <template>
+    <style>
+      :host {
+        visibility: hidden;
+        @apply(--layout-vertical);
+      }
+      taupo-events {
+        height: calc(100% - 72px);
+        @apply(--layout-flex);
+      }
+    </style>
+    <div id="e"><taupo-events id="events"></taupo-events></div>
+  </template>
+</dom-module>
+<script>
+(function () {
+  Polymer({
+    is: 'taupo-event-list',
+    behaviors: [
+      Polymer.NeonAnimatableBehavior,
+      Polymer.NeonAnimationRunnerBehavior
+    ],
+    properties: {
+      animationConfig: {
+        type: Object,
+        value: function() {
+          return {
+            'entry': {
+              animatable: this.$.events,
+              type: 'entry'
+            },
+            'exit': {
+              animatable: this.$.events,
+              type: 'exit'
+            }
+          };
+        }
+      }
+    },
+    listeners: {
+      'neon-animation-finish': '_onNeonAnimationFinish'
+    },
+    ready: function() {
+      clog('%cevent-list::ready', 9, 'color: grey');
+    },
+    attached: function() {
+      clog('%cevent-list::attached', 9, 'color: grey');
+    },
+    show: function() {
+      document.querySelector('taupo-events')._load(eShow2);
+    },
+    show2: function() {
+      window.opened = true;
+      window.animating = true;
+      clog('%cevent-list::show2 animate', 9, 'color: grey');
+      this.style.visibility = 'visible';
+      $('taupo-event-list').animate({ opacity: 1 }, 500);
+      this.playAnimation('entry');
+    },
+    hide: function() {
+      window.opened = false;
+      window.animating = true;
+      if(typeof window.skipHideEvents !== 'undefined' || window.skipHideEvents == true) {
+        delete window.skipHideEvents;
+        clog('%cevent-list::hide skip initial', 9, 'color: grey');
+        if(window.opened === false && typeof window.callback !== 'undefined' && window.callback !== '') { window[window.callback](); }
+      } else {
+        clog('%cevent-list::hide EXIT', 9, 'color: grey');
+        this.playAnimation('exit');
+      }
+    },
+    _onNeonAnimationFinish: function() {
+      clog('%cevent-list::_onNeonAnimationFinish', 9, 'color: grey');
+      window.animating = false;
+      if(window.opened === false) { $('taupo-event-list').css({ opacity: 0 }); }
+      // next....
+      if(window.opened === false && typeof window.callback !== 'undefined' && window.callback !== '') { window[window.callback](); }
+    }
+  });
+})();
+
+
+// refresh articles w/o update
+function refreshArticles() {
+  clog('%cevent-list::refreshArticles', 9, 'color: grey');
+  // if showing articles: hide, _load, then show
+  if(window.router.short == '') {
+    window.callback = 'refreshArticles2';
+    document.querySelector('taupo-event-list').hide();
+  // not showing, so, just _load content
+  }
+}
+
+// refresh articles part 2
+function refreshArticles2() {
+  clog('%cevent-list::refreshArticles2', 9, 'color: grey');
+  document.querySelector('taupo-events')._load(showEvents);
+}
+
+// reload articles from server
+function reloadArticles() {
+  clog('%cevent-list::reloadArticles', 9, 'color: grey');
+  // only refresh articles if displaying them
+  if(window.router.short == '') {
+    document.querySelector('taupo-event-list').hide();
+    document.querySelector('taupo-events').eFetch();
+  }
+}
+
+// reload articles from server
+function reloadArticlesDontHide() {
+  clog('%cevent-list::reloadArticlesDontHide', 9, 'color: grey');
+  document.querySelector('taupo-events').eFetch();
+}
+
+// show events
+function showEvents() {
+  clog('%cevent-list::showEvents', 9, 'color: grey');
+  if(typeof window.eventData == 'undefined') {
+    clog('%cevent-list::showEvents events=undefined', 9, 'color: grey');
+    document.querySelector('taupo-events').eFetch();
+  } else {
+    clog('%cevent-list::showEvents events=1', 9, 'color: grey');
+    document.querySelector('taupo-event-list').show();
+  }
+  rtlFooter();
+}
+
+// show events
+function eShow2() {
+  clog('%cevent-list::eShow2', 9, 'color: grey');
+  document.querySelector('taupo-event-list').show2();
+}
+
+// show events, but pre-load
+function showEventsPreLoad() {
+  clog('%cevent-list::showEvents', 9, 'color: grey');
+  //alert('here'); debugger;
+  document.querySelector('taupo-event-list').show();
+  rtlFooter();
+}
+
+// rtl foot links
+function rtlFooter() {
+  if(window.rtl) { $('.footlink').addClass('rtlfootlink'   ); }
+  else           { $('.footlink').removeClass('rtlfootlink'); }
+}
+</script>

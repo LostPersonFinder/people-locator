@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Solr managed schema - automatically generated - DO NOT EDIT -->
+<schema name="lpf" version="1.5">
+  <uniqueKey>p_uuid</uniqueKey>
+  <fieldType name="binary" class="solr.BinaryField"/>
+  <fieldType name="boolean" class="solr.BoolField" sortMissingLast="true"/>
+  <fieldType name="date" class="solr.TrieDateField" positionIncrementGap="0" precisionStep="0"/>
+  <fieldType name="double" class="solr.TrieDoubleField" positionIncrementGap="0" precisionStep="0"/>
+  <fieldType name="exact_text" class="solr.TextField" omitNorms="true" sortMissingLast="true">
+    <analyzer>
+      <tokenizer class="solr.KeywordTokenizerFactory"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+      <filter class="solr.TrimFilterFactory"/>
+    </analyzer>
+  </fieldType>
+  <fieldType name="float" class="solr.TrieFloatField" positionIncrementGap="0" precisionStep="0"/>
+  <fieldType name="ignored" class="solr.StrField" indexed="false" stored="false"/>
+  <fieldType name="int" class="solr.TrieIntField" positionIncrementGap="0" precisionStep="0"/>
+  <fieldType name="long" class="solr.TrieLongField" positionIncrementGap="0" precisionStep="0"/>
+  <fieldType name="nameType" class="solr.TextField" positionIncrementGap="100">
+    <analyzer>
+      <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+      <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
+      <filter class="solr.ASCIIFoldingFilterFactory"/>
+    </analyzer>
+  </fieldType>
+  <fieldType name="noexp_text" class="solr.TextField" positionIncrementGap="100">
+    <analyzer>
+      <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+      <filter class="solr.StopFilterFactory" words="stopwords.txt" ignoreCase="true"/>
+      <filter class="solr.WordDelimiterFilterFactory" catenateNumbers="1" generateNumberParts="0" generateWordParts="0" catenateWords="1"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+      <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
+    </analyzer>
+  </fieldType>
+  <fieldType name="string" class="solr.StrField" sortMissingLast="true"/>
+  <fieldType name="tdate" class="solr.TrieDateField" positionIncrementGap="0" precisionStep="6"/>
+  <fieldType name="tdouble" class="solr.TrieDoubleField" positionIncrementGap="0" precisionStep="8"/>
+  <fieldType name="text" class="solr.TextField" positionIncrementGap="100">
+    <analyzer type="index">
+      <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+      <filter class="solr.SynonymFilterFactory" expand="false" ignoreCase="true" synonyms="synonyms.txt"/>
+      <filter class="solr.StopFilterFactory" words="stopwords.txt" ignoreCase="true"/>
+      <filter class="solr.WordDelimiterFilterFactory" catenateNumbers="1" generateNumberParts="1" generateWordParts="1" catenateWords="1"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+      <filter class="solr.SnowballPorterFilterFactory" language="English" protected="protwords.txt"/>
+      <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
+    </analyzer>
+    <analyzer type="query">
+      <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+      <filter class="solr.StopFilterFactory" words="stopwords.txt" ignoreCase="true"/>
+      <filter class="solr.WordDelimiterFilterFactory" generateNumberParts="1" generateWordParts="1"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+      <filter class="solr.SnowballPorterFilterFactory" language="English" protected="protwords.txt"/>
+      <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
+    </analyzer>
+  </fieldType>
+  <fieldType name="text_ws" class="solr.TextField" positionIncrementGap="100">
+    <analyzer>
+      <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+    </analyzer>
+  </fieldType>
+  <fieldType name="tfloat" class="solr.TrieFloatField" positionIncrementGap="0" precisionStep="8"/>
+  <fieldType name="tint" class="solr.TrieIntField" positionIncrementGap="0" precisionStep="8"/>
+  <fieldType name="tlong" class="solr.TrieLongField" positionIncrementGap="0" precisionStep="8"/>
+  <field name="_version_" type="long" indexed="true" stored="true"/>
+  <field name="ageGroup" type="string" indexed="true" stored="true"/>
+  <field name="alternate_names" type="nameType" indexed="true" stored="true"/>
+  <field name="comments" type="text" indexed="false" stored="true"/>
+  <field name="family_name" type="nameType" indexed="true" stored="true"/>
+  <field name="full_name" type="nameType" indexed="true" stored="true"/>
+  <field name="full_name_no_ws" type="exact_text" indexed="true" stored="true"/>
+  <field name="given_name" type="nameType" indexed="true" stored="true"/>
+  <field name="hospital" type="noexp_text" indexed="true" stored="true"/>
+  <field name="icon_url" type="text" indexed="false" stored="true"/>
+  <field name="image_height" type="int" indexed="false" stored="true"/>
+  <field name="image_width" type="int" indexed="false" stored="true"/>
+  <field name="last_seen" type="text" indexed="false" stored="true"/>
+  <field name="mass_casualty_id" type="exact_text" indexed="true" stored="true"/>
+  <field name="maxAge" type="tint" indexed="true" stored="true"/>
+  <field name="minAge" type="tint" indexed="true" stored="true"/>
+  <field name="opt_gender" type="string" indexed="true" stored="true"/>
+  <field name="opt_status" type="string" indexed="true" stored="true"/>
+  <field name="p_uuid" type="string" indexed="true" stored="true"/>
+  <field name="shortname" type="string" indexed="true" stored="true"/>
+  <field name="triage_category" type="string" indexed="false" stored="true"/>
+  <field name="updated" type="tdate" indexed="true" stored="true"/>
+  <field name="url_thumb" type="text" indexed="true" stored="true"/>
+  <field name="years_old" type="tint" indexed="true" stored="true"/>
+  <field name="animal" type="string" indexed="true" stored="true"/>
+  <dynamicField name="*" type="ignored" multiValued="true"/>
+  <copyField source="full_name" dest="full_name_no_ws"/>
+</schema>

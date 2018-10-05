@@ -1,0 +1,502 @@
+<!-- taupo search -->
+<dom-module id="taupo-search">
+  <template>
+    <style>
+      :host {
+        visibility: hidden;
+        @apply(--layout-vertical);
+        padding: 0 0.5em;
+      }
+      taupo-results {
+        @apply(--layout-flex);
+      }
+      .easeInQuart {
+        -webkit-transition: all 250ms cubic-bezier(0.895, 0.03, 0.685, 0.22);
+        transition:         all 250ms cubic-bezier(0.895, 0.03, 0.685, 0.22);
+        opacity: 0;
+      }
+      .easeOutQuart {
+        -webkit-transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition:         all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        opacity: 1 !important;
+      }
+      paper-fab {
+        background: rgb(210, 63, 49);
+        z-index: 101;
+        position: fixed;
+        bottom: 16px;
+        right: 16px;
+        height: 50px;
+        width: 50px;
+        --paper-fab-iron-icon: {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      .rtl {
+        direction: rtl;
+      }
+      .rtlfab {
+        left: 16px;
+      }
+      @media (min-width:412px) {
+        paper-fab {
+          height: 60px;
+          width: 60px;
+          --paper-fab-iron-icon: {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+      @media (min-width:480px) {
+        paper-fab {
+          height: 64px;
+          width: 64px;
+          --paper-fab-iron-icon: {
+            width: 54px;
+            height: 54px;
+          }
+        }
+      }
+      @media (min-width:600px) {}
+      @media (min-width:720px) {
+        #search-box {
+          margin-left: 5em;
+          margin-right: 5em;
+        }
+        #searchPlaceholder {
+          left: 4em;
+        }
+      }
+      @media (min-width:960px) {
+        #search-box {
+          margin-left: 12em;
+          margin-right: 12em;
+        }
+        #searchPlaceholder {
+          left: 11.5em;
+        }
+      }
+      @media (min-width:1200px) {
+        #search-box {
+          margin-left: 19em;
+          margin-right: 19em;
+        }
+        #searchPlaceholder {
+          left: 18.5em;
+        }
+      }
+      @media (min-width:1600px) {
+        #search-box {
+          margin-left: 25em;
+          margin-right: 25em;
+        }
+        #searchPlaceholder {
+          left: 24.5em;
+        }
+      }
+      @media (min-width:1900px) {
+        #search-box {
+          margin-left: 30em;
+          margin-right: 30em;
+        }
+        #searchPlaceholder {
+          left: 29.5em;
+        }
+      }
+    </style>
+    <paper-fab id="addOne" elevation="5" icon="add" title="Report a person or animal" alt="Report a person or animal" onclick="goReport();"></paper-fab>
+    <div id="e"><taupo-results id="results"></taupo-results></div>
+  </template>
+</dom-module>
+<script>
+(function () {
+  Polymer({
+    is: 'taupo-search',
+    behaviors: [
+      Polymer.NeonAnimatableBehavior,
+      Polymer.NeonAnimationRunnerBehavior
+    ],
+    properties: {
+      animationConfig: {
+        type: Object,
+        value: function() {
+          return {
+            'entry': {
+              animatable: this.$.results,
+              type: 'entry'
+            },
+            'exit': {
+              animatable: this.$.results,
+              type: 'exit'
+            }
+          };
+        }
+      }
+    },
+    listeners: {
+      'neon-animation-finish': '_onNeonAnimationFinish'
+    },
+    // show search element
+    show: function() {
+      clog('%csearch::show', 9, 'color: grey');
+      $('#search-panel').animate({ height: '60px' }, 425);
+      // watch for fab fix
+      window.onscroll = function(){ fixFab(); };
+      $(window).on("resize", function(){ fixFab(); });
+      fixFab();
+      window.focused = false;
+    },
+    // show search element part 2 invoked from callback
+    show2: function() {
+      clog('%csearch::show2', 9, 'color: grey');
+      window.opened2 = true;
+      window.animating = true;
+      this.style.visibility = 'visible';
+      $('#module').css({ opacity: 1 });
+      $('taupo-search').css({ opacity: 1 });
+      this.playAnimation('entry');
+      initAutocomplete();
+    },
+    // show search element part 3 -- subsequent search -- from callback
+    show3: function() {
+      clog('%csearch::show3', 9, 'color: grey');
+      window.opened2 = true;
+      window.animating = true;
+      $('#e').removeClass('easeInQuart');
+      this.playAnimation('entry');
+      $('#e').addClass('easeOutQuart');
+    },
+    // just hide search results
+    justhide: function() {
+      clog('%csearch::justhide', 9, 'color: grey');
+      window.focused = false;
+      window.animating = true;
+      $('#e').removeClass('easeOutQuart');
+      this.playAnimation('exit');
+      $('#e').addClass('easeInQuart');
+      clog('%csearch::justhide complete', 9, 'color: grey');
+    },
+    // hide search element and exit to event list
+    hide: function() {
+      clog('%csearch::hdie', 9, 'color: grey');
+      window.opened2 = false;
+      window.focused = false;
+      window.animating = true;
+      this.playAnimation('exit');
+      // close search box
+      $('#search-panel').animate({ height: '60px' }, 425);
+      // stop listeners
+      $('#mainContainer').off("scroll", function(){});
+      $(window).off("resize",           function(){});
+      // scroll to top
+      $('#mainContainer').animate({ scrollTop: "0px" });
+      // fade out
+      $('taupo-search').fadeTo(500, 0, function(){ doneHideSearch(); });
+    },
+    // invoked at animation completion
+    _onNeonAnimationFinish: function() {
+      clog('%csearch::_onNeonAnimationFinish callback:'+window.callback+' fetchcallback:'+window.fetchcallback, 9, 'color: grey');
+      window.animating = false;
+      if(window.opened2 === false) { $('taupo-search').css({ opacity: 0 }); }
+      // next
+      if(window.opened2 === false && typeof window.callback !== 'undefined' && window.callback !== '') { window[window.callback](); }
+      if(!window.opened2) { this.style.visibility = 'hidden'; }
+    },
+    // polymer element is ready
+    ready: function() {
+      window.searchTerm = window.directTerm;
+      clog('%csearch::ready searchTerm: '+window.searchTerm, 9, 'color: grey');
+    },
+    // attached to dom
+    attached: function() {
+      clog('%csearch::attached: searchTerm:'+window.searchTerm, 9, 'color: grey');
+      $('#maglass iron-icon').css({ fill: '#fff'});
+      goQuery();
+      var solrPUUID = '';
+      // direct record access
+      if(window.uuid != '' && window.uuid != 'undefined' && typeof window.uuid !== 'undefined' ) {
+        if(window.solr == 1) { solrPUUID = 'p_uuid:'; }
+        clog('%csearch::attached direct ? YES : '+window.uuid, 9, 'color: grey');
+        window.searchTerm = solrPUUID+window.uuid;
+      } else {
+        clog('%csearch::attached direct ? NO', 9, 'color: grey');
+        window.searchTerm = '';
+      }
+      // begin to show
+      this.show();
+    }
+  });
+})();
+
+// enter search
+function goSearch(push) {
+  window.queryCount = 0;
+  window.router.short = window.eventData[window.disaster].short;
+  window.latitude     = window.eventData[window.disaster].latitude;
+  window.longitude    = window.eventData[window.disaster].longitude;
+  clog('%csearch::goSearch: push:'+push+'/'+window.router.short+'/'+window.latitude+'/'+window.longitude, 9, 'color: grey');
+  if(push) {
+    window.router.action = '';
+    pushRoute();
+  }
+  window.dontPushFromGo = true;
+  window.callback = 'goSearch2';
+  document.querySelector('taupo-event-list').hide();
+  window.postLoginRegisterAction = 'goQuery';
+}
+
+// enter search part 2 invoked from callback
+function goSearch2() {
+  clog('%csearch::goSearch2: disaster:'+window.disaster, 9, 'color: grey');
+  delete window.callback;
+  $('html, body').animate({ scrollTop: "0px" });
+  $('#search-panel').removeClass('easeInSearch');
+  $('#search-panel').addClass('easeOutSearch');
+  $('#goHome').removeClass('easeInHome');
+  $('#goHome').addClass('easeOutHome');
+  $('#goHome').removeClass('none');
+  window.opened2 = false;
+  $('#module').html('<taupo-search id="taupo-search"></taupo-search><taupo-footer></taupo-footer>');
+  // localize omb date
+  moment.locale(window.router.locale);
+  var localizedDate = moment('2019-08-31 12:00:00').format('l'); // 7/27/2017
+  Polymer.Base.async(function() { $('.ombDateLocalized').html(localizedDate);}, 1);
+  rtlSearch();
+}
+
+// initial search OR fired by enter key or mag button
+function goQuery() {
+  clog('%csearch::goQuery', 9, 'color: grey');
+  // sanity check
+  if(window.searchTerm == 'undefined') {
+    window.searchTerm = '';
+    clog('%csearch::goquery INSANE!', 9, 'color: pink');
+  }
+  // if mobile -- hide on-screen keyboard
+  if(!window.mquery.queryMatches) { hideKeyboard($('#query')); }
+  // initial search
+  if(this.opened2 === false) {
+    clog('%csearch::goQuery->initial_search ('+window.searchTerm+')', 9, 'color: grey');
+    window.fetchcallback = 'this.domHost.show2';
+    document.querySelector('taupo-results').sFetchResults();
+  // subsequent search
+  } else {
+    clog('%csearch::goQuery->subsequent_search ('+window.searchTerm+')', 9, 'color: grey');
+    document.querySelector('taupo-search').justhide();
+    window.fetchcallback = 'this.domHost.show3';
+    window.waitabit = 'goQuery2';
+    document.querySelector('taupo-results').sFetchResults();
+  }
+}
+
+// halt updateElements until animation completes
+function goQuery2() {
+  // wait for the hide() animation to finish if we are too quick
+  if(window.animating === true) {
+    window.intervalID2 = setInterval(function() {
+      if(window.animating === false) {
+        clearInterval(window.intervalID2);
+        clog('%csearch::goQuery2 <--- clear --->', 9, 'color: grey');
+        document.querySelector('taupo-results')._updateElements();
+      }
+    }, 25);
+  } else { document.querySelector('taupo-results')._updateElements(); }
+}
+
+// exit search back to event list
+function leaveSearch() {
+  clog('%csearch::leaveSearch', 9, 'color: grey');
+  unfocusSearch();
+  $('#search-panel').removeClass('easeOutSearch');
+  $('#search-panel').addClass('easeInSearch');
+  delete window.enterAction;
+  document.querySelector('taupo-search').hide();
+  window.postLoginRegisterAction = 'reloadArticles';
+  window.onscroll = function(){};
+  // clear sbp
+  if(typeof window.sbp64 !== 'undefined') { sbpclear(); }
+  // hide home
+  $('#goHome').removeClass('easeOutHome');
+  $('#goHome').addClass('easeInHome');
+  setTimeout(function() { $('#goHome').addClass('none'); }, 600);
+}
+
+// search hidden, show events
+function doneHideSearch() {
+  clog('%csearch::doneHideSearch', 9, 'color: grey');
+  unfocusSearch();
+  $('#module').html('<taupo-event-list></taupo-event-list><taupo-footer></taupo-footer>');
+  setTimeout(function() {
+    if(typeof window.logged_out !== 'undefined' && window.logged_out == true) {
+      delete window.logged_out;
+      reloadArticlesDontHide();
+    } else { document.querySelector('taupo-events')._load(showEventsPreLoad); }
+  }, 100);
+  // localize omb date
+  moment.locale(window.router.locale);
+  var localizedDate = moment('2019-08-31 12:00:00').format('l'); // 7/27/2017
+  Polymer.Base.async(function() { $('.ombDateLocalized').html(localizedDate);}, 1);
+  // clear sbp
+  if(typeof window.sbp64 !== 'undefined') { sbpclear(); }
+}
+
+// focus user attention on search box
+function focusSearch() {
+  if(window.focused === false) {
+    clog('%csearch::focusSearch', 9, 'color: grey');
+    window.focused = true;
+    $('#search-box').addClass('shown');
+    $('#query'     ).css({ color: '#000000' });
+    $('#maglass iron-icon').css({ fill: '#1976d2'});
+    $('#scamera iron-icon').css({ fill: '#1976d2'});
+    $('#searchPlaceholder').css('display', 'none');
+    $('#query').focus();
+    var query = document.querySelector("#query");
+    setTimeout(function() { query.addEventListener("input", function(){ window.searchTerm = query.value; }, { passive: true} ); }, 300);
+  }
+  window.enterAction = 'goQuery';
+}
+
+// unfocus search box
+function unfocusSearch() {
+  if(window.focused === true) {
+    clog('%csearch::unFocusSearch', 9, 'color: grey');
+    window.focused = false;
+    $('#search-box').removeClass('shown');
+    $('#query'     ).css({ color: '#fff' });
+    $('#query').val('');
+    $('#maglass iron-icon').css({ fill: '#fff'});
+    $('#scamera iron-icon').css({ fill: '#fff'});
+    $('#searchPlaceholder').css('display', 'block');
+    //$('#query').focus();
+    var query = document.querySelector("#query");
+    query.removeEventListener("input", function(){});
+  }
+}
+
+// move FAB if footer is visible
+function fixFab() {
+  var a = $('taupo-footer');
+  var x = inViewport(a);
+  $('#addOne').css('bottom', (16+x)+'px');
+}
+
+// search by photo
+function sbp() {
+  // show uploading
+  $('#pad9overlay').css('display','block');
+  // p to query
+  $('#sbpimg').html('<img src="'+window.sbp64+'">');
+  $('#sbpfn' ).html(window.sbpfile.name);
+  // disable and empty query box
+  $('#query').val('');
+  $('#query').prop('disabled', true);
+  $('#query').css('display', 'none');
+  $('#sbpview').css('display', 'block');
+  $('#sbpview').css('height', '32px');
+  // strip
+  window.sbp64 = window.sbp64.replace('data:image/jpeg;base64,', '');
+  window.sbp64 = window.sbp64.replace('data:image/png;base64,',  '');
+  window.sbp64 = window.sbp64.replace('data:image/tiff;base64,', '');
+  // query
+  goQuery();
+}
+// clear sbp
+function sbpclear() {
+  // hide sbp
+  $('#sbpview').css('display', 'none');
+  $('#sbpview').css('height', '0px');
+  // re-enable query
+  $('#query').prop('disabled', false);
+  $('#query').css('display', 'block');
+  // delete photo
+  delete window.sbp64;
+  delete window.sbpfile;
+  // reset overlay
+  setTimeout(function() { $('#pad9overlay').css('display','none'); }, 500);
+}
+
+// rtl fab, search
+function rtlSearch() {
+  if(window.rtl) {
+    $('#addOne').addClass('rtlfab');
+    $('#search-panel').addClass('rtl');
+    $('#searchPlaceholder').addClass('rtlph');
+    $('.footlink').addClass('rtlfootlink');
+  } else {
+    $('#addOne').removeClass('rtlfab');
+    $('#search-panel').removeClass('rtl');
+    $('#searchPlaceholder').removeClass('rtlph');
+    $('.footlink').removeClass('rtlfootlink');
+  }
+}
+
+// autocomplete setup
+function initAutocomplete() {
+  // autocomplete requires SOLR
+  // comment out one line below to show fake autocomplete results on non-SOLR instances
+  if(!window.solr || typeof window.autocomplete !== 'undefined') return;
+  window.autocomplete = document.querySelector('paper-autocomplete-suggestions');
+  // max suggestions
+  var maxItems = 7;
+  window.autocomplete.maxViewableItems = maxItems;
+  // search term changed
+  window.autocomplete.addEventListener('autocomplete-change', function(e) { getAutocompletes(e.detail.text, maxItems); });
+  // suggestion selected
+  window.autocomplete.addEventListener('autocomplete-selected', function(e) {
+    window.searchTerm = e.detail.text;
+    clog('%csearch::autocomplete: searchTerm:'+window.searchTerm, 9, 'color: grey');
+    window.opened2 = false;
+    goQuery();
+  });
+  // opened/closed
+  window.autocomplete.addEventListener('is-open-changed', function(e) {
+    // toggle enter key action based on open/closed status
+    if(e.detail.value) { delete window.enterAction; }
+    else { window.enterAction = 'goQuery'; }
+  });
+}
+
+// get suggestions for autocomplete
+function getAutocompletes(prefix, max) {
+  // xhr
+  window.rc = new Object();
+  window.rc.token = window.token;
+  window.rc.call  = 'autocomplete';
+  window.rc.short = window.router.short;
+  window.rc.prefix = prefix.toLowerCase();
+  window.rc.max = max;
+  var rcj = JSON.stringify(window.rc);
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', window.endpoint, true);
+  xhr.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
+  xhr.onload = function(e) {
+    clog('%csearch::getAutocompletes: response:'+e.target.status, 9, 'color: grey');
+    // net error
+    if(e.target.status !== 200 && e.target.status !== 0) { netConnectionError(); return; }
+    var resp = JSON.parse(e.target.response);
+    var error = resp.error;
+    var results = resp.results;
+    // success
+    if(parseInt(error, 10) === 0) {
+      if(results.length != 0) {
+        suggestions = [];
+        // prefix items with "text:"
+        for(var i=0; i < results.length; i++) { suggestions.push({"text" : results[i]}); }
+        window.autocomplete.suggestions(suggestions);
+        clog('%csearch::autocomplete.suggestions()', 9, 'color: grey');
+      } else {
+        window.autocomplete.hideSuggestions();
+      }
+    // error
+    } else {
+      clog('%csearch::getAutocompletes error:'+error, 9, 'color: grey');
+      toastRed('restError9999', window.toastDuration);
+    }
+  }.bind(this);
+  xhr.onerror = function(e) { netConnectionError(); };
+  xhr.send(rcj);
+}
+</script>

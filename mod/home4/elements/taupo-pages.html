@@ -1,0 +1,535 @@
+<!-- pages -->
+<dom-module id="taupo-pages">
+  <style>
+    a, a:visited, a:hover, a:active {
+      color: var(--taupo-accent) !important;
+      text-decoration: none;
+    }
+    #pdpage {
+      max-height: 100%;
+      max-width: 100%;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: scroll; 
+    }
+    .page-header {
+      font-weight: bold;
+      position: fixed;
+      z-index: 10;
+      background-color: var(--taupo-blue);
+      color: white;
+      margin-top: 0;
+      padding: 0.5em 24px;
+      font-size: 1.5em;
+      width: 100%;
+    }
+    .page-content {
+      padding-top: 52px;
+      z-index: 5;
+    }
+    #pageX {
+      position: absolute;
+      top: 0;
+      right: 3em;
+      margin: 0.35em 0;
+    }
+    .rtl {
+      direction: rtl;
+    }
+    .rtlh {
+      padding-right: 3em;
+    }
+    @media (min-width:480px) {}
+    @media (min-width:600px) {
+      #pdpage {
+        max-height: 80%;
+        max-width: 480px;
+        margin: auto;
+        width: 480px;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+      .page-header {
+        width: 480px;
+                box-sizing: border-box;
+           -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+      }
+      #pageX {
+        right: 0.5em;
+      }
+    }
+    @media (min-width:720px) {
+      #pdpage {
+        max-width: 600px;
+        width: 600px;
+      }
+      .page-header {
+        width: 600px;
+      }
+    }
+    @media (min-width:960px){
+      #pdpage {
+        max-width: 720px;
+        width: 720px;
+      }
+      .page-header {
+        width: 720px;
+      }
+    }
+    @media (min-width:1200px){
+      #pdpage {
+        max-width: 960px;
+        width: 960px;
+      }
+      .page-header {
+        width: 960px;
+      }
+    }
+    @media (min-width:1600px){}
+    @media (min-width:1900px){}
+  </style>
+  <template>
+    <paper-dialog id="pdpage" modal withBackdrop entry-animation="scale-up-animation" exit-animation="fade-out-animation">
+      <div class="page-header">
+        <span class="page-title">Page Title</span>
+        <paper-icon-button id="pageX" class="padX" icon="clear" title="clear" onclick="hidePage(true);"></paper-icon-button>
+      </div>
+      <div class="page-content"></div>
+    </paper-dialog>
+  </template>
+  <script>
+  (function () {
+    Polymer({
+      is: 'taupo-pages',
+      showOpen: function() {
+        pdpage.open(); 
+        // register this modal
+        window.modal = '#pdpage';
+      },
+      ready: function() {},
+      attached: function() {}
+    });
+  })();
+  // close page
+  function hidePage(performBack) {
+    if(performBack) { popRoute(); }
+    // reallow scroll
+    var pdpage = document.querySelector("#pdpage");
+    Polymer.IronDropdownScrollManager.removeScrollLock(pdpage);
+    // close
+    document.querySelector('#pdpage').close();
+    // pop modal state
+    delete window.modal;
+  }
+  // 404 page
+  function page404() {
+    toastRed('page404', window.toastDuration);
+  }
+  // load page
+  function loadPage() {
+    var pagename = '';
+    // help
+    if(window.pageID == 1) {
+      $('.page-title').html('<i18n-msg msgid="linkHelp"></i18n-msg>');
+      $('.page-content').html('<taupo-page-help></taupo-page-help>');
+      pagename = 'help';
+    // about
+    } else if(window.pageID == 2) {
+      $('.page-title').html('<i18n-msg msgid="linkAbout"></i18n-msg>');
+      $('.page-content').html('<taupo-page-about></taupo-page-about>');
+      pagename = 'about';
+    // privacy
+    } else if(window.pageID == 3) {
+      $('.page-title').html('<i18n-msg msgid="linkPrivacy"></i18n-msg>');
+      $('.page-content').html('<taupo-page-privacy></taupo-page-privacy>');
+      pagename = 'privacy';
+    // resources
+    } else if(window.pageID == 4) {
+      $('.page-title').html('<i18n-msg msgid="linkResources"></i18n-msg>');
+      $('.page-content').html('<taupo-page-resources></taupo-page-resources>');
+      pagename = 'resources';
+    // follow
+    } else if(window.pageID == 5) {
+      $('.page-title').html('<i18n-msg msgid="followUs"></i18n-msg>');
+      $('.page-content').html('<taupo-page-follow></taupo-page-follow>');
+      pagename = 'follow';
+    // trademark
+    } else if(window.pageID == 6) {
+      $('.page-title').html('<i18n-msg msgid="linkTrademark"></i18n-msg>');
+      $('.page-content').html('<taupo-page-trademark></taupo-page-trademark>');
+      pagename = 'trademark';
+    // omb
+    } else if(window.pageID == 7) {
+      $('.page-title').html('<i18n-msg msgid="ombNoticeTitle"></i18n-msg>');
+      $('.page-content').html('<taupo-page-omb></taupo-page-omb>');
+      pagename = 'omb';
+      // localize dates
+      localizeDates();
+    } else { return; }
+    pagesOpen();
+    if(typeof window.doPush !== 'undefined') {
+      delete window.doPush;
+      window.router.short = 'pages';
+      window.router.action = pagename;
+      pushRoute();
+    }
+  }
+  // just a little bit of closure :)
+  function pagesOpen() {
+    if(window.rtl) {
+      $('#pdpage').addClass('rtl');
+      $('.page-header').addClass('rtlh');
+      $('#omblr').addClass('rtlomb');
+    } else {
+      $('#pdpage').removeClass('rtl');
+      $('.page-header').removeClass('rtlh');
+      $('#omblr').removeClass('rtlomb');
+    }
+    document.querySelector('taupo-pages').showOpen();
+    window.modal = '#pdpage';
+  }
+  // functional pages
+  function loadPage1() { window.doPush = true; window.pageID = 1; loadPage(); }
+  function loadPage2() { window.doPush = true; window.pageID = 2; loadPage(); }
+  function loadPage3() { window.doPush = true; window.pageID = 3; loadPage(); }
+  function loadPage4() { window.doPush = true; window.pageID = 4; loadPage(); }
+  function loadPage5() { window.doPush = true; window.pageID = 5; loadPage(); }
+  function loadPage6() { window.doPush = true; window.pageID = 6; loadPage(); }
+  function loadPage7() { window.doPush = true; window.pageID = 7; loadPage(); }
+  </script>
+</dom-module>
+
+
+<!-- taupo help page -->
+<dom-module id="taupo-page-help">
+  <template>
+    <style>
+      hr {
+        margin: 1em 0;
+        height: 1px;
+        border: none;
+        background-color: rgba(0,0,0,0);
+      }
+      a, a:visited, a:hover, a:active {
+        color: var(--taupo-accent) !important;
+        text-decoration: none;
+      }
+  </style>
+    <h2><i18n-msg msgid="helpFindTitle"></i18n-msg></h2>
+    <br>
+    <i18n-msg msgid="helpFindText"></i18n-msg>
+    <br><br>
+    <i18n-msg msgid="helpFindText2"></i18n-msg>
+    <br><br>
+    <a href="https://pl.nlm.nih.gov/en/test/perPage:100" target="_blank" rel="noopener noreferrer">https://pl.nlm.nih.gov/en/test/perPage:100</a><br>
+    <a href="https://pl.nlm.nih.gov/en/test/unk%20perPage:10" target="_blank" rel="noopener noreferrer">https://pl.nlm.nih.gov/en/test/unk%20perPage:10</a>
+    <div style="clear:both;"></div>
+    <hr>
+    <h2><i18n-msg msgid="helpReportTitle"></i18n-msg></h2>
+    <br>
+    <i18n-msg msgid="helpReportText"></i18n-msg>
+  </template>
+  <script>
+  (function () {
+    Polymer({
+      is: 'taupo-page-help'
+    });
+  })();
+  </script>
+</dom-module>
+
+
+<!-- taupo about page -->
+<dom-module id="taupo-page-about">
+  <template>
+    <style>
+      hr {
+        margin: 0.75em 0;
+        height: 1px;
+        border: none;
+        background-color: rgba(0,0,0,0);
+      }
+      a, a:visited, a:hover, a:active {
+        color: var(--taupo-accent) !important;
+        text-decoration: none;
+      }
+      #aboutNIH {
+        margin: -16px 0 -8px -12px;
+      }
+    </style>
+    <img id="aboutNIH" src="/assets/images/logo/nih-nlm-logo.svg" alt="NIH logo">
+    <i18n-msg msgid="pageAboutTextAbout"></i18n-msg>
+    <div style="clear:both;"></div>
+    <hr>
+    <h2><i18n-msg msgid="pageAboutHeaderBrowser"></i18n-msg></h2>
+    <i18n-msg msgid="pageAboutTextBrowser"></i18n-msg>
+    <div style="clear:both;"></div>
+    <hr>
+    <h2><i18n-msg msgid="pageAboutHeaderFAQ"></i18n-msg></h2>
+    <ul>
+      <li><a class="ext2" target="noopener" href="/assets/images/about/datasheet-peoplelocator.pdf">NLM PEOPLE LOCATOR<sup>&reg;</sup></a></li>
+      <li><a class="ext2" target="noopener" href="/assets/images/about/datasheet-reunite.pdf">ReUnite<sup>&reg;</sup></a></li>
+      <li><a class="ext2" target="noopener" href="/assets/images/about/faq-peoplelocator.pdf"><i18n-msg msgid="pageAboutFAQ"></i18n-msg></a></li>
+    </ul>
+  </template>
+  <script>
+  (function () {
+    Polymer({
+      is: 'taupo-page-about'
+    });
+  })();
+  </script>
+  <style></style>
+</dom-module>
+
+
+<!-- taupo privacy page -->
+<dom-module id="taupo-page-privacy">
+  <template>
+    <style>
+      hr {
+        margin: 1em 0;
+        height: 1px;
+        border: none;
+        background-color: rgba(0,0,0,0);
+      }
+      .left1em {
+        margin-left: 0.5em;
+      }
+      .right1em {
+        margin-right: 0.5em;
+      }
+      a, a:visited, a:hover, a:active {
+        color: var(--taupo-accent) !important;
+        text-decoration: none;
+      }
+    </style>
+    <i18n-msg msgid="pagePrivacyText1"></i18n-msg><br>
+    <ul>
+      <li><i18n-msg msgid="the" class="right1em"></i18n-msg>NLM PEOPLE LOCATOR<sup>&reg;</sup><i18n-msg msgid="pagePrivacyBullet1" class="left1em"></i18n-msg></li>
+      <li><i18n-msg msgid="the" class="right1em"></i18n-msg>ReUnite®<i18n-msg msgid="pagePrivacyBullet2" class="left1em"></i18n-msg></li>
+      <li><i18n-msg msgid="the" class="right1em"></i18n-msg>Google Person Finder</li>
+      <li><i18n-msg msgid="pagePrivacyBullet3"></i18n-msg></li>
+    </ul>
+    <i18n-msg msgid="pagePrivacyText2a" class="right1em"></i18n-msg>NLM PEOPLE LOCATOR<sup>&reg;</sup><i18n-msg msgid="pagePrivacyText2b" class="left1em right1em"></i18n-msg>NLM PEOPLE LOCATOR<sup>&reg;</sup><i18n-msg msgid="pagePrivacyText2c" class="left1em right1em"></i18n-msg>Google Person Finder.<br>
+    <br>
+    <i18n-msg msgid="pagePrivacyText3a" class="right1em"></i18n-msg>NLM PEOPLE LOCATOR<sup>&reg;</sup><i18n-msg msgid="pagePrivacyText3b" class="left1em"></i18n-msg>
+    <hr>
+    <h2><i18n-msg msgid="forMore"></i18n-msg></h2>
+    <ul>
+      <li><a class="ext2" target="noopener" href="http://www.nlm.nih.gov/privacy.html"><i18n-msg msgid="pagePrivacyText4"></i18n-msg></a></li>
+      <li><a class="ext2" target="noopener" href="http://www.nih.gov/institutes-nih/nih-office-director/office-communications-public-liaison/freedom-information-act-office"><i18n-msg msgid="pagePrivacyText5"></i18n-msg></a></li>
+    </ul>
+  </template>
+  <script>
+  (function () {
+    Polymer({
+      is: 'taupo-page-privacy'
+    });
+  })();
+  </script>
+  <style></style>
+</dom-module>
+
+
+<!-- taupo resources page -->
+<dom-module id="taupo-page-resources">
+  <template>
+    <style>
+      hr {
+        margin: 1em 0;
+        height: 1px;
+        border: none;
+        background-color: rgba(0,0,0,0);
+      }
+      a, a:visited, a:hover, a:active {
+        color: var(--taupo-accent) !important;
+        text-decoration: none;
+      }
+    </style>
+    <h2><i18n-msg msgid="pageResourcesTitle1"></i18n-msg></h2>
+    <ul>
+      <li><a class="ext2" target="noopener" href="https://safeandwell.communityos.org/cms"><i18n-msg msgid="pageResourcesFamily1"></i18n-msg></a></li>
+      <li><a class="ext2" target="noopener" href="https://egateway.fema.gov/inter/nefrls/home.htm"><i18n-msg msgid="pageResourcesFamily2"></i18n-msg></a></li>
+      <li><a class="ext2" target="noopener" href="http://www.nokr.org/nok/restricted/home.htm"><i18n-msg msgid="pageResourcesFamily3"></i18n-msg></a></li>
+      <li><a class="ext2" target="noopener" href="http://familylinks.icrc.org"><i18n-msg msgid="pageResourcesFamily4"></i18n-msg></a></li>
+      <li><a class="ext2" target="noopener" href="http://www.missingkids.com"><i18n-msg msgid="pageResourcesNcmec"></i18n-msg></a></li>
+    </ul>
+    <hr>
+    <h2><i18n-msg msgid="pageResourcesTitle2"></i18n-msg></h2>
+    <ul>
+      <li><a class="ext2" target="noopener" href="http://disasterinfo.nlm.nih.gov"><i18n-msg msgid="pageResourcesFromDIMRC"></i18n-msg></a></li>
+      <li><a class="ext2" target="noopener" href="http://www.disasterassistance.gov"><i18n-msg msgid="pageResourcesDisaster2"></i18n-msg></a></li>
+      <li><a class="ext2" target="noopener" href="http://www.redcross.org/get-help/disaster-relief-and-recovery/find-an-open-shelter"><i18n-msg msgid="pageResourcesDisaster3"></i18n-msg></a></li>
+    </ul>
+    <hr>
+    <h2><i18n-msg msgid="pageResourcesTitle3"></i18n-msg></h2>
+    <ul>
+      <li><a class="ext2" target="noopener" href="http://disaster.nlm.nih.gov/dimrc/floods.html"><i18n-msg msgid="pageResourcesFromDIMRC"></i18n-msg></a></li>
+      <li><a class="ext2" target="noopener" href="http://www.nlm.nih.gov/medlineplus/floods.html"><i18n-msg msgid="pageResourcesFromMedlinePlus"></i18n-msg></a></li>
+    </ul> 
+    <hr>
+    <h2><i18n-msg msgid="pageResourcesTitle4"></i18n-msg></h2>
+    <ul>
+      <li><a class="ext2" target="noopener" href="http://disaster.nlm.nih.gov/enviro/tornados.html"><i18n-msg msgid="pageResourcesFromDIMRC"></i18n-msg></a></li>
+      <li><a class="ext2" target="noopener" href="http://www.nlm.nih.gov/medlineplus/tornadoes.html"><i18n-msg msgid="pageResourcesFromMedlinePlus"></i18n-msg></a></li>
+    </ul>
+  </template>
+  <script>
+  (function () {
+    Polymer({
+      is: 'taupo-page-resources'
+    });
+  })();
+  </script>
+  <style></style>
+</dom-module>
+
+
+<!-- taupo follow page -->
+<dom-module id="taupo-page-follow">
+  <template>
+    <style>
+      hr {
+        margin: 1em 0;
+        height: 1px;
+        border: none;
+        background-color: rgba(0,0,0,0);
+      }
+      #gplus, #twitter, #facebook {
+        display: block;
+        max-width: 600px;
+        font-size: 130%;
+        font-weight: bold;
+        text-align: center;
+        padding: 10px;
+        color: white;
+        line-height: 2em;
+        margin: 2em auto;
+        text-decoration: none;
+      }
+      #gplus {
+        background: #ec4221;
+      }
+      #twitter {
+        background: #00e2ff;
+      }
+      #facebook {
+        background: #3b5998;
+      }
+    </style>
+    <div id="followmore">
+      <a target="noopener" id="gplus"    href="https://google.com/+NLMPeopleLocator"      >Google+</a>
+      <a target="noopener" id="twitter"  href="https://twitter.com/NLM_PL"                >Twitter</a>
+      <a target="noopener" id="facebook" href="https://www.facebook.com/NlmPeopleLocator/">Facebook</a>
+    </div>
+  </template>
+  <script>
+  (function () {
+    Polymer({
+      is: 'taupo-page-follow'
+    });
+  })();
+  </script>
+  <style></style>
+</dom-module>
+
+
+<!-- taupo trademark page -->
+<dom-module id="taupo-page-trademark">
+  <template>
+    <style>
+      hr {
+        margin: 1em 0;
+        height: 1px;
+        border: none;
+        background-color: rgba(0,0,0,0);
+      }
+      .left1em {
+        margin-left: 0.5em;
+      }
+      .right1em {
+        margin-right: 0.5em;
+      }
+      #trademore {
+        margin: 2em 2em;
+      }
+    </style>
+    <div id="trademore">
+      NLM PEOPLE LOCATOR<sup>&reg;</sup><i18n-msg msgid="and" class="left1em right1em"></i18n-msg>ReUnite<sup>&reg;</sup><i18n-msg msgid="trademarkText" class="left1em right1em"></i18n-msg>
+    </div>
+  </template>
+  <script>
+  (function () {
+    Polymer({
+      is: 'taupo-page-trademark'
+    });
+  })();
+  </script>
+  <style></style>
+</dom-module>
+
+
+<!-- taupo omb page -->
+<dom-module id="taupo-page-omb">
+  <template>
+    <style>
+      hr {
+        margin: 1em 0;
+        height: 1px;
+        border: none;
+        background-color: rgba(0,0,0,0);
+      }
+      .left1em, .ombDateLocalized {
+        margin-left: 0.5em;
+      }
+      .right1em {
+        margin-right: 0.5em;
+      }
+    
+      #omb7 {
+        overflow: auto;
+        max-width: 1000px;
+      }
+      #omb7root {
+        font-size: 1em;
+        padding: 0 1.5em 0.5em;
+      }
+      #omb7x {
+        margin-top: 2em;
+        background-color: rgb(255, 255, 0);
+      }
+      .ombp {
+        font-size: 0.9em;
+        margin-top: 1em;
+      }
+      .ombButtonCenter {
+        text-align: center;
+      }
+      .bold {
+        font-weight: bold;
+      }
+      .rtlomb {
+        margin-right: 0.5em;
+      }
+    </style>
+    <div id="omb7">
+      <i18n-msg class="bold" msgid="omb7notice"></i18n-msg>&nbsp;:&nbsp;<i18n-msg class="bold" msgid="omb7submission"></i18n-msg>
+      <div class="ombp">
+        OMB NO: 0925-0612<i18n-msg id="omblr" msgid="expirationDate" class="left1em"></i18n-msg>:<span class="ombDateLocalized">8/31/2019</span><br><br>
+        <i18n-msg msgid="omb7text"></i18n-msg>
+      </div>
+      <div class="ombp">ATTN: PRA (0925-0612)<br>NIH Project Clearance Branch<br>6705 Rockledge Drive MSC 7974<br>Bethesda, MD 20892-7974</div>
+    </div>
+  </template>
+  <script>
+  (function () {
+    Polymer({
+      is: 'taupo-page-omb'
+    });
+  })();
+  </script>
+  <style></style>
+</dom-module>

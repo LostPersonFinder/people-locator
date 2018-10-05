@@ -1,0 +1,1170 @@
+{
+  "thisLanguageDescription": {
+    "message": "Tamil",
+    "context": "This word describes this language itself IN ENGLISH! DO NOT TRANSLATE THIS!! This phrase must remain in English."
+  },
+  "thisLanguage": {
+    "message": "ஆங்கிலம்",
+    "context": "This word describes this language itself."
+  },
+  "signIn": {
+    "message": "உள்நுழை அல்லது பதிவு",
+    "context": "A button that when clicked allows a user to login or register."
+  },
+  "logout": {
+    "message": "வெளியேறு",
+    "context": "A label for a button allowing a user to logout."
+  },
+  "administration": {
+    "message": "நிர்வாகம்",
+    "context": "A label for a button allowing a user to access the Administraion module."
+  },
+  "linkHelp": {
+    "message": "உதவி",
+    "context": "This is the text for a link to the Help page."
+  },
+  "linkAbout": {
+    "message": "பற்றி",
+    "context": "The link text for the About link."
+  },
+  "linkPrivacy": {
+    "message": "தனியுரிமை",
+    "context": "The link text for the Privacy link."
+  },
+  "linkAccessibility": {
+    "message": "அணுகல்தன்மை",
+    "context": "The link text for the Accessibility link."
+  },
+  "linkContact": {
+    "message": "தொடர்பு",
+    "context": "The link text for the Contact link."
+  },
+  "linkApps": {
+    "message": "ஆப்ஸ்",
+    "context": "The link text for the Apps link."
+  },
+  "linkResources": {
+    "message": "வளங்கள்",
+    "context": "The link text for the Resources link."
+  },
+  "linkFollowUs": {
+    "message": "எங்களை பின்தொடரவும்",
+    "context": "The link text for the Follow Us link."
+  },
+  "linkTrademark": {
+    "message": "முத்திரை",
+    "context": "The link text for the Trademark link."
+  },
+  "expirationDate": {
+    "message": "காலாவதி தேதி",
+    "context": "Verbiage describing the expiration date of the OMB notice."
+  },
+  "restError1": {
+    "message": "பிழை: தவறான கடவுச்சொல் அல்லது பயனாளர்",
+    "context": "Error message presented when a user provides the incorrect username and/or password."
+  },
+  "restError2": {
+    "message": "பிழை: உங்கள் கணக்கு தற்காலிகமாக மீண்டும் மீண்டும் உள்நுழைய தவறியதற்காக பூட்டப்பட்டுள்ளது , பின்னர் மீண்டும் முயற்சி",
+    "context": "Error message presented when a user fails to login repeatedly."
+  },
+  "restError3": {
+    "message": "பிழை: உங்கள் மின்னஞ்சல் முகவரி உறுதிசெய்யும் வரை உள்நுழைய முடியாது, தயவுசெய்து இணைப்புக்கு மின்னஞ்சல் சரிபார்க்கவும்",
+    "context": "Error message presented when a user account is not yet active."
+  },
+  "restError2000": {
+    "message": "பிழை: ஒரு பயனர் ஏற்கனவே வழங்கிய வழங்கிய மின்னஞ்சல் முகவரி மட்டுமே உள்ளது",
+    "context": "Error message presented when user tries to use an email address already in use."
+  },
+  "restError2001": {
+    "message": "பிழை: தவறான மின்னஞ்சல் முகவரி",
+    "context": "Error message presented when a user provides an invalid email address."
+  },
+  "restError2002": {
+    "message": "பிழை: கடவுச்சொல்லின் நீளம் 8-16 எழுத்துக்கள் இருக்க வேண்டும் குறைந்தது ஒரு பெரிய எழுத்தில் , ஒரு ஸ்மால் , மற்றும் ஒரு எண் தன்மையை வேண்டும்",
+    "context": "Error message presented when user enters an invalid password."
+  },
+  "restError2004": {
+    "message": "பிழை: கடவுச்சொல் பொருத்தமாக இல்லை",
+    "context": "Error message presented when entered password do not match one another."
+  },
+  "passError0": {
+    "message": "பிழை: கடவுச்சொல் 8-16 எழுத்துகள் இருக்க வேண்டும்",
+    "context": "Error message presented when entered password is of incorrect length, must be 8-16 characters long."
+  },
+  "passError1": {
+    "message": "பிழை: கடவுச்சொல் குறைந்தது ஒரு பேரெழுத்து இருக்க வேண்டும் (A முதல் Z )",
+    "context": "Error message presented when entered password does not contain at least one uppercase letter."
+  },
+  "passError2": {
+    "message": "பிழை: கடவுச்சொல் குறைந்தது ஒரு ஸ்மால் கடிதம் (a - z) இருக்க வேண்டும்",
+    "context": "Error message presented when entered password does not contain at least one lowercase letter."
+  },
+  "passError3": {
+    "message": "பிழை: கடவுச்சொல் குறைந்தது ஒரு எண் கொண்டிருக்க வேண்டும் (0-9)",
+    "context": "Error message presented when entered password does not contain at least one digit."
+  },
+  "restError5000": {
+    "message": "பிணைய பிழை. உங்கள் இணைப்பைச் சரிபார்த்து , மீண்டும் முயற்சிக்கவும்.",
+    "context": "Error message presented when there is a network / internet issue."
+  },
+  "restError9999": {
+    "message": "அறியாத தவறு ஒன்று நிகழ்ந்து உள்ளது.",
+    "context": "Error message presented when an unknown error has occurred."
+  },
+  "notifyLogin": {
+    "message": "உள்நுழையப்பட்டது.",
+    "context": "This notification will appear after the user successfully logs in."
+  },
+  "notifyRegister": {
+    "message": "நீங்கள் இப்போது பதிவு மற்றும் இன்னும் உள்நுழைவு தொடங்கவில்லை.",
+    "context": "This notification will appear after the user newly registers and is automatically logged in."
+  },
+  "notifyRegistering": {
+    "message": "பதிவு...",
+    "context": "This notification will appear briefly as the system registers and creates a new account for the user."
+  },
+  "notifyPasswordChanged": {
+    "message": "கடவுச்சொல் வெற்றிகரமாக மாற்றப்பட்டது.",
+    "context": "This notification will appear after the user successfully changes their password."
+  },
+  "notifyResetPassword": {
+    "message": "நீங்கள் எப்படி உங்கள் கடவுச்சொல்லை மீட்டமைக்க மின்னஞ்சலில் வழிமுறைகளை வருகின்றன.",
+    "context": "This notification appears when a user has successfully sent a request to reset their password."
+  },
+  "pad1login": {
+    "message": "உள் நுழை",
+    "context": "This is the name of the first tab of the user dialog allowing a user to login."
+  },
+  "pad1register": {
+    "message": "பதிவு",
+    "context": "This is the name of the second tab of the user dialog allowing a user to register."
+  },
+  "pad1forgotText": {
+    "message": "உங்கள் மின்னஞ்சல் முகவரியை உள்ளிடவும் மற்றும் நாம் எப்படி உங்கள் கடவுச்சொல்லை மீட்டமைக்க நீங்கள் வழிமுறைகளை அனுப்ப வேண்டும்.",
+    "context": "This text informs the user of what they must do in order to reset their password ~ they must enter their email address."
+  },
+  "pad1forgotSend": {
+    "message": "அனுப்பு",
+    "context": "This is the text label on the forgot my password dialog to submit the form."
+  },
+  "pad1loginForgot": {
+    "message": "Forgot password?",
+    "context": "This is the text label for the forgot my password button on the login dialog."
+  },
+  "pad1loginUsernamePlaceholder": {
+    "message": "பயனர்பெயர்",
+    "context": "This is the placeholder text for the username input."
+  },
+  "pad1loginPasswordPlaceholder": {
+    "message": "கடவுச்சொல்",
+    "context": "This is the placeholder text for the password input."
+  },
+  "pad1registerEmailPlaceholder": {
+    "message": "மின்னஞ்சல்",
+    "context": "This is the placeholder text for the email input."
+  },
+  "pad1registerText": {
+    "message": "உங்கள் கடவுச்சொல் ஒரு எண்ணை , ஒரு சிறிய எழுத்து , ஒரு பேரெழுத்து இருக்க வேண்டும் , மற்றும் 8-16 எழுத்துகள் இருக்க.",
+    "context": "This is the text displayed while the user is in the process of registering informing them of our minimum password requirements."
+  },
+  "omb7notice": {
+    "message": "அறிவிப்பு",
+    "context": "This is the first word of the OMB notice."
+  },
+  "omb7submission": {
+    "message": "தகவல் சமர்ப்பித்தல் தன்னார்வ உள்ளது. சமர்ப்பிக்கப்பட்ட அனைத்து தகவல் பகிரங்கமாக கிடைக்க செய்யப்படும்.",
+    "context": "These are the first two sentences of the OMB notice."
+  },
+  "omb7text": {
+    "message": "தகவல் இந்த சேகரிப்பு பொது அறிக்கை சுமையை பதில் சராசரி 3 நிமிடங்கள் என்று மதிப்பிடப்பட்டுள்ளது. இந்த மதிப்பீடு , வழிமுறைகளை மீளாய்வு சேகரித்து , மற்றும் தரவு நுழையும் நேரம் அடங்கும். ஒரு நிறுவனம் நடத்தும் இல்லை அல்லது ஸ்பான்சர் , மற்றும் ஒரு நபர் அதை ஒரு தற்போது செல்லுபடியாகும் OMB கட்டுப்பாடு எண்ணிக்கை வரை தகவல் ஒரு தொகுப்பு , பதிலளிக்க வேண்டிய அவசியம் இல்லை . க்கு , இந்த சுமையை மதிப்பீட்டை அல்லது இந்த சுமையை குறைத்து பரிந்துரைகள் உள்ளிட்ட தகவல் இந்த தொகுப்பு வேறு எந்த அம்சம் , குறித்த கருத்துக்கள் அனுப்ப:",
+    "context": "This is the main paragraph of the OMB notice."
+  },
+  "omb7sub": {
+    "message": "நான் இந்த படித்து ஏற்றுக்கொள்ள வேண்டும்.",
+    "context": "This is the label for the OMB notice agreement button."
+  },
+  "pad3following": {
+    "message": "Following",
+    "context": "This is the name of the first tab of user preferences that shows which records a user is following -- shortened to 1 word!"
+  },
+  "pad3settings": {
+    "message": "அமைப்புகள்",
+    "context": "This is the name of the second tab of user preferences that shows user settings."
+  },
+  "pad3loading": {
+    "message": "ஏற்றுதல்",
+    "context": "This word is displayed when the following records tab is loading results from the server."
+  },
+  "pad3emptyFollow": {
+    "message": "நீங்கள் எந்த பதிவுகளை பின்வரும் இல்லை.",
+    "context": "This verbiage is displayed when the following records panel is displayed and the user is not following any records."
+  },
+  "pad3unFollow": {
+    "message": "பின்தொடரா",
+    "context": "This is the text label applied to the button that allows a user to unfollow updates to a record."
+  },
+  "pad3record": {
+    "message": "Receive updates to records that you are following via",
+    "context": "This verbiage describes the user settings section where a user can subscribe to receive messages from PL via push or email when a record they are following is updated."
+  },
+  "pad3event": {
+    "message": "Receive a message when a new event is created via",
+    "context": "This verbiage describes the user settings section where a user can subscribe to receive messages from PL via push or email when a new event is created."
+  },
+  "pad3admin": {
+    "message": "Receive Admin messages via",
+    "context": "This verbiage describes the user settings section where a user can subscribe to receive admin messages from PL via push or email."
+  },
+  "pushNotification": {
+    "message": "Push Notification",
+    "context": "This describes a button label for a Push Notification option."
+  },
+  "pad3changePasswordButton": {
+    "message": "கடவுச்சொல்லை மாற்று",
+    "context": "This verbiage describes the extent to which we use the push notification subscription a user provides to send out information."
+  },
+  "pad3passwordRequirements": {
+    "message": "உங்கள் கடவுச்சொல் ஒரு எண்ணை , ஒரு சிறிய எழுத்து , ஒரு பேரெழுத்து இருக்க வேண்டும் , மற்றும் 8-16 எழுத்துகள் இருக்க.",
+    "context": "This verbiage describes the extent to which we use the push notification subscription a user provides to send out information."
+  },
+  "pad3oldPasswordPlaceholder": {
+    "message": "பழைய கடவுச்சொல்",
+    "context": "This is the placeholder text for the old password input."
+  },
+  "pad3newPassword1Placeholder": {
+    "message": "புதிய கடவுச்சொல்",
+    "context": "This is the placeholder text for the new password input."
+  },
+  "pad3newPassword2Placeholder": {
+    "message": "புதிய கடவுச்சொல் மீண்டும்",
+    "context": "This is the placeholder text for the new password again input."
+  },
+  "pushNotificationsDisallowed": {
+    "message": "நீங்கள் அறிவிப்புகளை காண்பிக்கும் இருந்து இந்த தளத்தில் தடை . நீங்கள் இந்த வசதியை பயன்படுத்த இந்த அனுமதி மீண்டும் இயக்க வேண்டும்.",
+    "context": "This text tells the user that they have prohibited the site from using push notifications and that they must re-enable this feature to subscribe."
+  },
+  "helpFindTitle": {
+    "message": "ஒரு நபர் அல்லது விலங்குகளைக் கண்டறிக",
+    "context": "This is the title of the help page section on how to find/search."
+  },
+  "helpFindText": {
+    "message": "நீங்கள் காணாமற் போன நபர் அல்லது மிருகத்தை தேடுகிறீர்களானால், எங்கள் பேரழிவு நிகழ்வுகளில் ஒன்றைத் தேடுவதன் மூலம் அவற்றைத் தேட முயற்சிக்கலாம். நீங்கள் முதலில் LOCATOR க்கு வந்தால், உங்களுக்கு கிடைக்கும் பேரழிவு நிகழ்வுகள் பட்டியலைக் கொண்டு வழங்கப்படும். ஒவ்வொரு நிகழ்விலும் ஒரு பெயர், நிகழ்விற்கான விளக்கப்படமான படம் மற்றும் சூழ்நிலையை விவரிக்கும் சில உரை ஆகியவை உள்ளன. நீங்கள் கீழே சென்றால், நீங்கள் தேர்ந்தெடுக்கும் சில வெவ்வேறு நிகழ்வுகள் உள்ளன. நீங்கள் கண்டுபிடிக்க முயற்சிக்கும் நபர் அல்லது விலங்கு நீங்கள் மிகவும் சந்தோசமாக இருப்பதாக நீங்கள் நம்பும் நிகழ்வைத் தேர்ந்தெடுக்கவும். உதாரணமாக, ஹைட்டி பூகம்பம் என்ற ஒரு நிகழ்வும், நீங்கள் தேடும் நபரும் ஹெய்டியில் கடைசியாக பார்த்திருந்தால், நீங்கள் இந்த நிகழ்வை தேர்வு செய்ய வேண்டும். படத்தை கீழ் பெரிய பச்சை பொத்தானை தட்டுவதன் மூலம் ஒரு நிகழ்வு தேர்ந்தெடுக்க வேண்டும்; இந்த குறிப்பிட்ட பேரழிவு நிகழ்வுக்கான தேடுபொறியை நேரடியாக நீங்கள் எடுக்கும். நீங்கள் தேர்ந்தெடுத்தபின் ஒரு புதிய தேடல் பெட்டி தோன்றும். நீங்கள் இந்த தேடல் பெட்டியில் கண்டுபிடிக்க முயற்சிக்கும் நபரின் பெயரை உள்ளிடவும். தேடல் முடிவுகள் முடிவுக்கு அருகில் உள்ள மிகவும் பொருத்தமான முடிவுகளுடன் தானாகவே புதுப்பிக்கப்படும். எந்தவொரு partuclar பதிவுக்கு கீழே உள்ள விவரங்களின் இணைப்பைத் தட்டுவதன் மூலம் மேலும் தகவலைப் பெறலாம், இது ஒரு விரிவான பார்வைத் திறக்கும். இந்த விவரம் பார்வையில், நீங்கள் விரிவான பதிவு தகவல்களை பார்வையிடலாம், உங்கள் சொந்த கருத்துக்களைச் சேர்க்கவும், அல்லது புதுப்பிப்புகளுக்கான பதிவுகளைத் தொடங்குங்கள்.",
+    "context": "This is the help page article body describing in detail how to find/search for a person or animal."
+  },
+  "helpReportTitle": {
+    "message": "Help Reporting a Person or Animal",
+    "context": "This is the title of the help page section on how to report."
+  },
+  "helpReportText": {
+    "message": "If you are unable to locate the preson or animal you seek, then you should report this person to our PEOPLE LOCATOR registry. Once you have navigated into a disaster event, you will see a pink floating action button on the bottom right of the screen. Tapping this button will initiate the reporting process and launch you into a separate wizard that will guide you through the steps of completing a new report based on the information you provide us. Once completed, your report will be entered into our searchable registry and be publicly visible to others. Once you complete the report (if not reported anonymously) you will automatically begin to follow your own report for updates as they come into our registry. Others may comment on your record providing you with new information about the person or animal you reported. Since you are following this record, updates will be sent to you via email or push notifications.",
+    "context": "This is the help page article body describing in detail how to report a person or animal."
+  },
+  "pageAboutTextAbout": {
+    "message": "இந்த தளத்தில் பெதஸ்தா, மேரிலாந்து மருத்துவ அமெரிக்காவில் தேசிய நூலக மூலம் வழங்கப்படுகிறது. நிஸா சுகாதார, சுகாதார மற்றும் மனித சேவைகள், அமெரிக்கா திணைக்களம் தேசிய நிறுவனங்கள் பகுதியாக உள்ளது, மற்றும் அதன் நோக்கம் தொடர்பு தொழில்நுட்பம் வளர்ச்சி மற்றும் ஒருங்கிணைப்பு சுகாதார சேவைகளை வழங்குதல் மேம்படுத்த உள்ளது. இத்தளம் பேரழிவுகளை எதிர்கொள்கையில் போன்ற கருவிகளின் பயன்பாடு படிக்கும் நோக்கத்திற்காக வழங்கப்படுகிறது. அடிப்படை தொழில்நுட்பம் லாஸ்ட் நபர் கண்டுபிடிப்பான் திட்டம், பெதஸ்தா மருத்துவமனைகள் 'அவசர தயாரிப்பு கூட்டு நிஸா பங்களிப்பு பகுதி வழியாக உருவாக்கப்பட்டது. கூட்டு எல்.பி.எப் ஆரம்ப மத்திய நிதி பெற்றார் மற்றும் பிற நிஸா 2008 இல் எல்.பி.எப் திட்டம் தற்போது பயோமெடிக்கல் கம்யூனிகேஷன்ஸ் நிஸா தான் லிஸ்டர் ஹில் தேசிய மையம் மூலம் என்ஐஹெச்சின் சார்பான ஆராய்ச்சி திட்டம், துணைபுரிகிறது திட்டங்கள். மென்பொருள் வளர்ச்சி LHNCBC கம்ப்யூட்டர் சயின்ஸ் கிளை மற்றும் அனர்த்த தகவல் மேலாண்மை ஆராய்ச்சி மையம், நிஸா சிறப்புவாய்ந்த தகவல் சேவைகளின் ஒரு பகுதியாக இருந்து கூடுதல் உள்ளடக்கத்தை, LHNCBC தான் கம்யூனிகேஷன் இன்ஜினியரிங் கிளை தலைமையில் உள்ளது.",
+    "context": "This is the first paragraph of verbiage on the About page describing the purpose of the PEOPLE LOCATOR."
+  },
+  "pageAboutTextBrowser": {
+    "message": "நீங்கள் குக்கீ மற்றும் ஜாவா உங்கள் வலை உலாவியில் ஐ இயலுமைப்படுத்த வேண்டும். நீங்கள் பின்வரும் இணைய உலாவிகளில் இரண்டு மிகச் சமீபத்திய பதிப்புகள் ஒரு வேண்டும் : குரோம், பயர்பாக்ஸ், சபாரி, ஓபரா, எட்ஜ் , அல்லது இன்டர்நெட் எக்ஸ்ப்ளோரர்.",
+    "context": "This is the text on the About page describing web browsers support."
+  },
+  "pageAboutHeaderBrowser": {
+    "message": "உலாவி ஆதரவு",
+    "context": "On the About page, section header title Browser Support."
+  },
+  "pageAboutHeaderFAQ": {
+    "message": "தரவுத்தாள்களில் மற்றும் அடிக்கடி கேட்கப்படும் கேள்விகள்",
+    "context": "On the About page, this is the link to datasheets and the FAQ."
+  },
+  "pageAboutFAQ": {
+    "message": "அடிக்கடி கேட்கப்படும் கேள்விகள்",
+    "context": "Frequently Asked Questions link title on About page."
+  },
+  "pagePrivacyText1": {
+    "message": "குறிப்பிடப்பட்டால் தவிர , இந்த வலை தளத்தில் உள்ள சமூகம் சார்ந்த தரவு பொது கிடைக்கும் மற்றும் வலை தளம் அனைத்து பார்வையாளர்கள் தேட முடியும். மூலம் நிஸா நேரடி வெளியிடுவதன் மூலம் தனிப்பட்ட பதிவுகளில் சுட்டிக்காட்டப்படுகிறது தரவு , பல்வேறு ஆதாரங்களில் இருந்து பெற்றுக்கொள்ளலாம் :",
+    "context": "This is the first text paragraph on the Privacy page describing how user data is handled."
+  },
+  "pagePrivacyText2a": {
+    "message": "க்கு சமர்ப்பிப்புகள்",
+    "context": "Beginning of the second paragraph on the Privacy page."
+  },
+  "pagePrivacyText2b": {
+    "message": "தளத்தில் நடுநிலையாக இல்லை மற்றும் பிற பங்களிப்பு நிறுவனங்கள் ஆய்வு அல்லது இந்த வலை தளத்தில் உள்ள தரவு எந்த துல்லியமாக சரிபார்க்க வேண்டும் என எதிர்பார்க்கக்கூடாது . நேரடி சமர்ப்பிப்பு மூலம் பெற்றார் என்று தரவு குறிப்பு",
+    "context": "Large portion of the second paragraph of the Privacy page."
+  },
+  "pagePrivacyText2c": {
+    "message": "ஏனைய முகவர் , நிறுவனங்கள் , மற்றும் நிறுவனங்கள் உட்பட , மக்கள் காணாமல் கண்டுபிடிக்க முயற்சி உதவி பரவலாக்கப்படுகிறது இருக்கலாம் ஆனால் இவை மட்டுமே அல்ல",
+    "context": "End portion of the second paragraph of the Privacy page."
+  },
+  "pagePrivacyText3a": {
+    "message": "நேரடி சமர்ப்பிப்புகளை",
+    "context": "Beginning of the third paragraph on the Privacy page."
+  },
+  "pagePrivacyText3b": {
+    "message": "நிருபர் மின்னஞ்சல் முகவரி மற்றும் சாதன ID கிளறி விட வேண்டும் , ஆனால் வெளிப்படையாக காட்டப்பட மாட்டாது.",
+    "context": "End of the third paragraph on the Privacy page."
+  },
+  "pagePrivacyText4": {
+    "message": "NLM ஒட்டுமொத்த தனியுரிமை அறிக்கை ",
+    "context": "Text for the link to NLM's privacy policy page."
+  },
+  "pagePrivacyText5": {
+    "message": "தகவல் சுதந்திர சட்டத்தின் கீழ்",
+    "context": "Text for the link to the Freedom of Information Act site."
+  },
+  "forMore": {
+    "message": "மேலும்",
+    "context": "The title for a subsection on the Privacy page with links to more topics."
+  },
+  "the": {
+    "message": "அந்த",
+    "context": "The word the."
+  },
+  "pagePrivacyBullet1": {
+    "message": "அறிக்கை செயல்பாடு",
+    "context": "The second half ot the first bullet point on the Privacy page."
+  },
+  "pagePrivacyBullet2": {
+    "message": "விண்ணப்ப",
+    "context": "The word application as it applies to the ReUnite app."
+  },
+  "pagePrivacyBullet3": {
+    "message": "மற்ற ஆட்சிக்குழு நிறுவனங்கள்",
+    "context": "The fourth bullet point on the Privacy page."
+  },
+  "pageResourcesTitle1": {
+    "message": "குடும்பம் மற்றும் நண்பர்கள் கண்டுபிடிக்க",
+    "context": "The first section title on the Resources page."
+  },
+  "pageResourcesTitle2": {
+    "message": "அனர்த்த வளங்கள்",
+    "context": "The second section title on the Resources page."
+  },
+  "pageResourcesTitle3": {
+    "message": "வெள்ளம் வளங்கள்",
+    "context": "The third section title on the Resources page."
+  },
+  "pageResourcesTitle4": {
+    "message": "டொர்னாடோ வளங்கள்",
+    "context": "The fourth section title on the Resources page."
+  },
+  "pageResourcesFamily1": {
+    "message": "செஞ்சிலுவை பாதுகாப்பான மற்றும் பட்டியல்",
+    "context": "First bullet link in the Family and Friends section of the Resource page."
+  },
+  "pageResourcesFamily2": {
+    "message": "மத்திய அவசரகால நிர்வாக அமைப்பு தேசிய அவசரநிலை குடும்ப பதிவு மற்றும் லொக்கேட்டர் அமைப்பு",
+    "context": "Second bullet link in the Family and Friends section of the Resource page."
+  },
+  "pageResourcesFamily3": {
+    "message": "கின் தேசிய பதிவகம் அடுத்து",
+    "context": "Third bullet link in the Family and Friends section of the Resource page."
+  },
+  "pageResourcesFamily4": {
+    "message": "செஞ்சிலுவை மீட்கப்படுகிறது குடும்ப இணைப்புகள் அனைத்துலகக் குழுவின்",
+    "context": "fourth buller link in the Family and Friends section of the Resource page."
+  },
+  "pageResourcesFromDIMRC": {
+    "message": "நிஸா அனர்த்த தகவல் மேலாண்மை ஆராய்ச்சி மையத்தில் இருந்து",
+    "context": "Text label for several links to DIMRC on the Resource page."
+  },
+  "pageResourcesDisaster2": {
+    "message": "அனர்த்த உதவி",
+    "context": "Second bullet link on the Disaster section of the Resource page."
+  },
+  "pageResourcesDisaster3": {
+    "message": "செஞ்சிலுவை முகாம்களில் மற்றும் உணவு வழங்குகிறது",
+    "context": "Third buller link on the Disaster section of the Resource page."
+  },
+  "pageResourcesFromMedlinePlus": {
+    "message": "NLM's MedlinePlus ருந்து",
+    "context": "Text label for several links to Medline Plus on the Resource page."
+  },
+  "followUs": {
+    "message": "நம்மை பின்பற்ற...",
+    "context": "Used to prompt user to follow us on a social network of their choice."
+  },
+  "and": {
+    "message": "மற்றும்",
+    "context": "The word and used between two nouns."
+  },
+  "trademarkText": {
+    "message": "உடல்நலம் மற்றும் மனித சேவைகள் U.S. நீதித்துறை பதிவு முத்திரைகள்.",
+    "context": "The second half of the trademark sentence."
+  },
+  "tabReport": {
+    "message": "அறிக்கை",
+    "context": "The title of the 3rd tab allowing someone to Report a new person or pet."
+  },
+  "tagline": {
+    "message": "கண்டுபிடிக்க மற்றும் பேரழிவுகளின் போது குடும்பம், நண்பர்கள் , மற்றும் செல்லப்பிராணிகள் காணாமல் தெரிவிக்க.",
+    "context": "The tagline is the summary of what the application is for."
+  },
+  "pageTitle": {
+    "message": "Find and report missing people and animals during disasters",
+    "context": "This is the page title which is very similar in nature to the tagline."
+  },
+  "eventRetired": {
+    "message": "நீங்கள் கோரிய நிகழ்வு செயலில் இல்லை.",
+    "context": "We inform the user this message when they attempt to come to us via exact event url when the event is no longer open."
+  },
+  "eventListFindReportButton": {
+    "message": "கண்டுபிடி / ஒரு நபர் அல்லது விலங்கு தெரிவியுங்கள்",
+    "context": "This is the button text on the home page to Find or Report a person or animal."
+  },
+  "searchPlaceholder": {
+    "message": "தேடல்",
+    "context": "The search box starts off with this text to inform the user what the element is used for."
+  },
+  "records": {
+    "message": "பதிவுகள்",
+    "context": "When a search is performed this word is prefixed with the number of results, ie. 17 records"
+  },
+  "sexMale": {
+    "message": "ஆண்",
+    "context": "Sex = Male"
+  },
+  "sexFemale": {
+    "message": "பெண்",
+    "context": "Sex = Female"
+  },
+  "sexOther": {
+    "message": "பிற",
+    "context": "Sex = Other"
+  },
+  "statusMissing": {
+    "message": "காணாமல்",
+    "context": "Status is Missing"
+  },
+  "statusFound": {
+    "message": "கண்டறியப்பட்டது",
+    "context": "Status is Found"
+  },
+  "statusDeceased": {
+    "message": "இறந்தவர்",
+    "context": "Status is Deceased"
+  },
+  "statusInjured": {
+    "message": "காயமடைந்த",
+    "context": "Status is Injured"
+  },
+  "statusAlive": {
+    "message": "Alive & Well",
+    "context": "Status is Alive and Well"
+  },
+  "statusUnknown": {
+    "message": "தெரியாத",
+    "context": "Status, Location, or other attribute is Unknown"
+  },
+  "age": {
+    "message": "வயது",
+    "context": "Age of person or animal"
+  },
+  "comments": {
+    "message": "கருத்துரைகள்",
+    "context": "Comments that others may add to a person or animal record."
+  },
+  "addComment": {
+    "message": "ஒரு கருத்தை சேர்க்க",
+    "context": "The label for a button allowing a user to add a comment to a record."
+  },
+  "addCommentLabel": {
+    "message": "இந்த சாதனையை உங்களிடம் பற்றி எந்த கூடுதல் தகவல் சேர்",
+    "context": "This is the label below the add comment button explaining to a user what it does."
+  },
+  "followButton": {
+    "message": "பின்பற்றவும்",
+    "context": "A button allows a user to follow record updates."
+  },
+  "name": {
+    "message": "பெயர்",
+    "context": "This label is displayed under the person or animal name."
+  },
+  "status": {
+    "message": "நிலைமை",
+    "context": "This label is displayed below the person or animal missing / found status."
+  },
+  "lastUpdated": {
+    "message": "Last Updated",
+    "context": "This label is displayed under the date / time of when a record was last updated."
+  },
+  "gender": {
+    "message": "பாலினம்",
+    "context": "This is a label below the displayed gender of a person or animal."
+  },
+  "lastKnownLocation": {
+    "message": "கடைசியாகப் பார்த்த இடம்",
+    "context": "This is a label displayed below a text box showing a person or animal last known location."
+  },
+  "newReport": {
+    "message": "புதிய அறிக்கை",
+    "context": "This is the window title when a new person or animal is being reported."
+  },
+  "reportChoicePA": {
+    "message": "நீங்கள் ஒரு நபர் அல்லது ஒரு விலங்கு புகாரளிக்க விரும்புகிறீர்களா?",
+    "context": "This is the text option displayed for a user to choose and fill out either a person or animal report."
+  },
+  "person": {
+    "message": "நபர்",
+    "context": "This is the text label on a button a user presses to choose a person report."
+  },
+  "animal": {
+    "message": "விலங்குகள்",
+    "context": "This is the text label on a button a user presses to choose an animal report."
+  },
+  "reportChoiceStatusP": {
+    "message": "நீங்கள் புகார் கூறும் நபர் என்ற அறிவிப்பைப் தயவு செய்து.",
+    "context": "This is the text option displayed for a user to choose the status of the person they are reporting."
+  },
+  "explainMissingP": {
+    "message": "நபர் காணாமல் இருக்கும் என்று நம்பப்படுகிறது",
+    "context": "The label next to the status selection button for missing."
+  },
+  "explainFoundP": {
+    "message": "நபர் சுகாதார தெரியவில்லை கண்டறியப்பட்டுள்ளது",
+    "context": "The label next to the status selection button for found."
+  },
+  "explainAliveP": {
+    "message": "நபர் காணப்படும் மற்றும் நன்கு உள்ளது",
+    "context": "The label next to the status selection button for alive & well."
+  },
+  "explainInjuredP": {
+    "message": "நபர் கண்டறியப்பட்டுள்ளது மற்றும் காயம் உள்ளது",
+    "context": "The label next to the status selection button for injured."
+  },
+  "explainDeceasedP": {
+    "message": "நபர் கண்டறியப்பட்டுள்ளது மற்றும் இறந்துவிட்டார் வருகிறது",
+    "context": "The label next to the status selection button for deceased."
+  },
+  "explainUnknownP": {
+    "message": "தகவல் நபர் பற்றி முயன்றது",
+    "context": "The label next to the status selection button for unknown."
+  },
+  "location": {
+    "message": "இடம்",
+    "context": "Text label for Location."
+  },
+  "photo": {
+    "message": "நிழற்படம்",
+    "context": "Text label for Photo."
+  },
+  "reportChoiceStatusA": {
+    "message": "நீங்கள் புகாரளிக்கும் விலங்குகளின் நிலையை தயவுசெய்து குறிப்பிடவும்.",
+    "context": "This is the text option displayed for a user to choose the status of the animal they are reporting."
+  },
+  "explainMissingA": {
+    "message": "விலங்கு காணவில்லை என்று நம்பப்படுகிறது",
+    "context": "The label next to the status selection button for missing."
+  },
+  "explainFoundA": {
+    "message": "விலங்கு கண்டறியப்பட்டுள்ளது மற்றும் சுகாதார தெரியவில்லை",
+    "context": "The label next to the status selection button for found."
+  },
+  "explainAliveA": {
+    "message": "விலங்கு கண்டுபிடிக்கப்பட்டது மற்றும் நன்றாக உள்ளது",
+    "context": "The label next to the status selection button for alive & well."
+  },
+  "explainInjuredA": {
+    "message": "விலங்கு கண்டுபிடிக்கப்பட்டுள்ளது மற்றும் காயம் உள்ளது ",
+    "context": "The label next to the status selection button for injured."
+  },
+  "explainDeceasedA": {
+    "message": "விலங்கு கண்டுபிடிக்கப்பட்டுள்ளது மற்றும் இறந்து  உள்ளது",
+    "context": "The label next to the status selection button for deceased."
+  },
+  "explainUnknownA": {
+    "message": "விலங்கு பற்றி தகவல்  முற்பட்டது",
+    "context": "The label next to the status selection button for unknown."
+  },
+  "reportChoiceSexP": {
+    "message": "நீங்கள் புகாரளிக்கும் நபரின் பாலினத்தை தயவுசெய்து குறிப்பிடுக.",
+    "context": "This is the text option displayed for a user to choose the gender of the person they are reporting."
+  },
+  "reportChoiceSexA": {
+    "message": "நீங்கள் புகாரளிக்கும் நபரின் பாலினத்தை தயவுசெய்து குறிப்பிடுக.",
+    "context": "This is the text option displayed for a user to choose the gender of the person they are reporting."
+  },
+  "explainSexMaleP": {
+    "message": "நபர் பாலினம்  ஆண்",
+    "context": "The label next to the person sex selection button for male."
+  },
+  "explainSexFemaleP": {
+    "message": "பெண்",
+    "context": "The label next to the person sex selection button for female."
+  },
+  "explainSexOtherP": {
+    "message": "நபரின் பாலினம் மற்றது",
+    "context": "The label next to the person sex selection button for other."
+  },
+  "explainSexUnknownP": {
+    "message": "நபரின் பாலினம் அறியப்படவில்லை",
+    "context": "The label next to the person sex selection button for unknown."
+  },
+  "explainSexOtherA": {
+    "message": "விலங்கு பாலினம் மற்றது",
+    "context": "The label next to the animal sex selection button for other."
+  },
+  "explainSexUnknownA": {
+    "message": "விலங்குகளின் பாலினம் அறியப்படவில்லை",
+    "context": "The label next to the animal sex selection button for unknown."
+  },
+  "reportChoiceAgeP": {
+    "message": "நீங்கள் புகாரளிக்கும் நபரின் தோராயமான வயதைத் தேர்ந்தெடுக்கவும்",
+    "context": "This is the text option displayed for a user to choose the age of the person they are reporting."
+  },
+  "reportChoiceAgeA": {
+    "message": "நீங்கள் புகாரளிக்கும் விலங்குகளின் தோராயமான வயதைத் தேர்ந்தெடுக்கவும்",
+    "context": "This is the text option displayed for a user to choose the age of the animal they are reporting."
+  },
+  "reportChoiceAgeUnknown": {
+    "message": "வயது பற்றி உறுதியாக தெரியவில்லை எனில், தெரியாததைத் தேர்ந்தெடுக்கவும்.",
+    "context": "The label next to the status selection button for unknown."
+  },
+  "explainAgeUnknownP": {
+    "message": "நபரின் வயது தெரியவில்லை",
+    "context": "The label next to the person age selection button for unknown."
+  },
+  "explainAgeUnknownA": {
+    "message": "விலங்கின் வயது தெரியவில்லை",
+    "context": "The label next to the animal age selection button for unknown."
+  },
+  "continue": {
+    "message": "தொடர்ந்து",
+    "context": "The label of a button to continue to the next step."
+  },
+  "reportChoiceNameP": {
+    "message": "நீங்கள் புகாரளிக்கும் நபரின் பெயரை உள்ளிடவும்.",
+    "context": "This is the section title displayed for a user to enter the name of the person they are reporting."
+  },
+  "reportChoiceNameA": {
+    "message": "நீங்கள் புகாரளிக்கும் விலங்குகளின் பெயர் மற்றும் / அல்லது  அடையாள எண்ணை உள்ளிடவும்.",
+    "context": "This is the section title displayed for a user to enter the name and/or the buddy identification number of the animal they are reporting."
+  },
+  "explainNameP": {
+    "message": "நபரின் பெயர்",
+    "context": "The text label for name entry of a person."
+  },
+  "explainNameA": {
+    "message": "விலங்கின் பெயர்",
+    "context": "The text label for name entry of an animal."
+  },
+  "explainBuddyA": {
+    "message": "விலங்கின் அடையாள  எண்",
+    "context": "The text label for buddty identification number entry of an animal."
+  },
+  "reportChoiceNameUnknownP": {
+    "message": "பெயர் தெரியவில்லையானால், அறியப்படாததைத் தேர்ந்தெடுக்கவும்.",
+    "context": "This is the section title displayed for the use to choose name unknown."
+  },
+  "explainNameUnknownP": {
+    "message": "நபரின் பெயர் தெரியவில்லை",
+    "context": "The label next to the person name selection button for unknown."
+  },
+  "explainNameUnknownA": {
+    "message": "பெயர் மற்றும் விலங்கின்  அடையாள எண்  தெரியவில்லை",
+    "context": "The label next to the animal name selection button for unknown."
+  },
+  "cameraError": {
+    "message": "உங்கள் வலை உலாவியால் எந்த கேமராவும் கண்டறியப்படவில்லை. அதற்கு பதிலாக உங்கள் கேமரா பயன்பாட்டைப் பயன்படுத்தலாம்.",
+    "context": "This toast notification is displayed when there is an error detecting the camera on the user device."
+  },
+  "browserLimitation": {
+    "message": "உங்கள் இணைய உலாவி இந்த அம்சத்தை ஆதரிக்கவில்லை.",
+    "context": "This toast notification is displayed when a user attempts to use a feature that their web browser does not support."
+  },
+  "photoOnly": {
+    "message": "JPEG, PNG, and TIFF image files only.",
+    "context": "This toast notification is displayed when a user attempts to use an unsupported image file format in search by photo or report."
+  },
+  "reportChoicePhotoP": {
+    "message": "இந்த நபரின் அடையாளத்தை மேம்படுத்துவதற்கு விருப்பமாக நீங்கள் ஒரு புகைப்படத்தை சேர்க்கலாம்.",
+    "context": "Section titled telling user that they can add a photo for identification purposes."
+  },
+  "reportChoicePhotoA": {
+    "message": "நீங்கள் விருப்பமாக இந்த   விலங்கின்  அடையாளத்தை மேம்படுத்த ஒரு புகைப்படத்தை சேர்க்கலாம்.",
+    "context": "Section titled telling user that they can add a photo for identification purposes."
+  },
+  "reportChoicePhotoCapture": {
+    "message": "பிடிப்பு",
+    "context": "This is the button label used to capture a photograph using the device camera."
+  },
+  "reportChoicePhotoSelectFile": {
+    "message": "கோப்பு தேர்ந்தெடு",
+    "context": "This is the button label used to select an image file from local device storage."
+  },
+  "reportChoicePhotoTake": {
+    "message": "ஒரு புகைப்படத்தை எடுக்கவும்",
+    "context": "This is the button label used to open the device camera before capturing an image."
+  },
+  "reportChoicePhotoDelete": {
+    "message": "நீக்கு",
+    "context": "This is the button label used to delete an image the user has already submitted."
+  },
+  "reportChoicePhotoHelp": {
+    "message": "Crop or rotate the photo if necessary.",
+    "context": "This is the help text displayed below image manipulation controls informing the user how to alter the already submitted image."
+  },
+  "reportChoiceMapP": {
+    "message": "இந்த நபரைத் தேர்ந்தெடுப்பதில் மற்றவர்களுக்கு உதவ விருப்பமாக  ஒரு வரைபடத்தை நீங்கள் குறிப்பிடலாம்.",
+    "context": "This is the section header above the map used to specify a last known location."
+  },
+  "reportChoiceMapA": {
+    "message": "நீங்கள் இந்த விலங்குகளை கண்டுபிடிப்பதில் மற்றவர்களுக்கு உதவ ஒரு வரைபட புள்ளி விருப்பமாக குறிப்பிடலாம்.",
+    "context": "This is the section header above the map used to specify a last known location."
+  },
+  "reportChoiceMapHelp": {
+    "message": "கடைசியாக அறியப்பட்ட இடத்திற்கு வரைபட அடையாளத்தை இழுக்கவும்.",
+    "context": "This is the help text below the last know location map informing a user what to do."
+  },
+  "information": {
+    "message": "தகவல்",
+    "context": "This a label for a tab in the reporting wizard where a user enters free text about additional Information."
+  },
+  "submit": {
+    "message": "சமர்ப்பி",
+    "context": "This a label for a tab in the reporting wizard where a user finalizes and submits the report."
+  },
+  "submitAnon": {
+    "message": "அநாமதேயமாக சமர்ப்பிக்கவும்",
+    "context": "This a label for a tab in the reporting wizard where a user finalizes and submits the report anonymously."
+  },
+  "reportChoiceInformationHelpP": {
+    "message": "இந்த நபரை அடையாளம் காணவோ அல்லது கண்டுபிடிப்பதில் மற்றவர்களுக்கு உதவுவதாக நீங்கள் நினைக்கும் எந்த கூடுதல் தகவலையும் விருப்பமாக வழங்கலாம்.",
+    "context": "This is help text informing the user that the information they enter will assist in locating or identifying the person."
+  },
+  "reportChoiceInformationHelpA": {
+    "message": "இந்த மிருகத்தை அடையாளம் காணவோ அல்லது கண்டுபிடிப்பதில் மற்றவர்களுக்கு உதவுவதாக நீங்கள் நினைக்கும் எந்த கூடுதல் தகவலையும் விருப்பமாக வழங்கலாம்.",
+    "context": "This is help text informing the user that the information they enter will assist in locating or identifying the animal."
+  },
+  "reportBeingSubmittedToast": {
+    "message": "அறிக்கை சமர்ப்பிக்கப்பட்டது...",
+    "context": "This toast notification will be displayed while the report is being sent in."
+  },
+  "reportSubmit": {
+    "message": "அறிக்கை சமர்ப்பிக்கவும்",
+    "context": "This is the section title on the last page of the reporting wizard. The user will choose how to submit the report."
+  },
+  "explainSignInP": {
+    "message": "இந்த நபரைப் பற்றிய கூடுதல் தகவல்கள் கிடைக்கும்போது அறிவிக்கப்பட விரும்பினால், புகாரை சமர்ப்பிக்கும் முன் உள்நுழைக.",
+    "context": "If the user is not signed in, we will prompt them to sign in so that they can recieve updates to their reported record."
+  },
+  "explainSignInA": {
+    "message": "இந்த விலங்கு பற்றி கூடுதல் தகவல்கள் கிடைக்கும்போது அறிவிக்கப்பட விரும்பினால், புகாரை சமர்ப்பிக்கும் முன் உள்நுழைக.",
+    "context": "If the user is not signed in, we will prompt them to sign in so that they can recieve updates to their reported record."
+  },
+  "explainSubmitP": {
+    "message": "இந்த நபரைப் பற்றிய கூடுதல் தகவல்கள் கிடைக்கும்போது அறிவிக்கப்பட விரும்பினால், அறிக்கையை இப்போது சமர்ப்பிக்கவும்.",
+    "context": "If the user is already signed in, we will ask them to submit the record and subscribe to updates."
+  },
+  "explainSubmitA": {
+    "message": "இந்த மிருகத்தைப் பற்றிய கூடுதல் தகவல்கள் கிடைக்கும்போது அறிவிக்கப்பட விரும்பினால், அறிக்கையை இப்போது சமர்ப்பிக்கவும்.",
+    "context": "If the user is already signed in, we will ask them to submit the record and subscribe to updates."
+  },
+  "explainAnonP": {
+    "message": "அநாமதேயமாக சமர்ப்பிக்கவும், இந்த நபரைப் பற்றிய கூடுதல் தகவல்கள் கிடைக்கும்போது உங்களுக்கு அறிவிக்கப்படாது.",
+    "context": "The user is prompted that they may choose to submit their report anonymoysly and not recieve any updates afterwards."
+  },
+  "explainAnonA": {
+    "message": "அநாமதேயமாக சமர்ப்பிக்கவும், இந்த மிருகத்தைப் பற்றிய கூடுதல் தகவல்கள் கிடைக்கும்போது உங்களுக்கு அறிவிக்கப்படமாட்டாது.",
+    "context": "The user is prompted that they may choose to submit their report anonymoysly and not recieve any updates afterwards."
+  },
+  "explainAnon2": {
+    "message": "This record will expire after 90 days. Use the “Report Abuse” button in the MORE DETAILS view later on to request an earlier expiration.",
+    "context": "The user is prompted that they may choose to submit their report anonymoysly and not recieve any updates afterwards."
+  },
+  "reportComplete": {
+    "message": "அறிக்கை முடித்து சமர்ப்பிக்கப்பட்டது , நன்றி.",
+    "context": "This is the section title on the final page of the reporting wizard. The report has been completed."
+  },
+  "explainCopy1": {
+    "message": "உங்கள் நிறைவு செய்ததற்கான URL இதுதான். இந்த பதிவுக்கு செய்த புதுப்பிப்புகளையும் / அல்லது கருத்துகளையும் காண இந்த URL ஐ நீங்கள் பின்னர் மீண்டும் பார்க்கலாம்.",
+    "context": "We inform the user of the URL that corresponds to the report they just completed so that they may bookkmark or share it for later."
+  },
+  "explainCopy2": {
+    "message": "இந்த URL ஐ உங்கள் கிளிப்போர்டுக்கு நகலெடுக்கவும், இதன்மூலம் நீங்கள் பகிரலாம் அல்லது அதை புக்மார்க் செய்யலாம்.",
+    "context": "This is the text below the copy to clipboard button informing the user what the button does."
+  },
+  "buddyIdentificationNumber": {
+    "message": "படிவம் அடையாள எண்",
+    "context": "This is the label to the Buddy Identification Number field which is displayed for animals."
+  },
+  "notifyRecordFollow": {
+    "message": "நீங்கள் இப்போது இந்த பதிவைப் பின்தொடர்கிறீர்கள், மாற்றங்கள் அல்லது கருத்துகள் சேர்க்கப்பட்டவுடன் புதுப்பிப்புகளைப் பெறுவீர்கள்",
+    "context": "This notification will appear after the user unfollows a record via the full record view."
+  },
+  "notifyRecordUnfollow": {
+    "message": "நீங்கள் இனி இந்த பதிவைப் பின்தொடரவில்லை",
+    "context": "This notification will appear after the user unfollows a record via the full record view."
+  },
+  "followStatusTrue": {
+    "message": "தொடர்ந்து",
+    "context": "This label is displayed next to a toggle switch displaying that the user is folliwng the currently viewed record."
+  },
+  "followStatusFalse": {
+    "message": "தொடர்ந்து இல்லை",
+    "context": "This label is displayed next to a toggle switch displaying that the user is not folliwng the currently viewed record."
+  },
+  "followButtonExplain": {
+    "message": "இந்த பதிவில் மாற்றம் செய்யப்பட்டால் அல்லது அறிவிப்பு சேர்க்கப்படும் போது அறிவிப்பைப் பெறுக",
+    "context": "This label is displayed below the follow user toggle button explaining what the button does."
+  },
+  "followButtonAnon": {
+    "message": "பதிவைப் பின்தொடரவும் மற்றும் அறிவிப்புகளைப் புதுப்பித்தலின் போது பெறவும், நீங்கள் முதலில் உள்நுழைய வேண்டும்",
+    "context": "The follow record button is disabled when a user is not signed in, aka anonymous. We inform them that to follow a record they must first sign in."
+  },
+  "longerComment": {
+    "message": "நீண்ட கருத்துரையை உள்ளிடுக",
+    "context": "The user is notified to enter a longer comment if it is too short"
+  },
+  "commentBeingSubmittedToast": {
+    "message": "கருத்து சமர்ப்பிக்கப்பட்டது ...",
+    "context": "This toast notification will be displayed while the new comment is being sent in."
+  },
+  "moduleInvalid": {
+    "message": "இந்த தொகுதி இல்லை.",
+    "context": "If the user attempts to access a non-existant portion of the site (very unlikely) this toast notification will appear."
+  },
+  "moduleAccess": {
+    "message": "இந்த தொகுதியை அணுக உங்களுக்கு அனுமதி இல்லை.",
+    "context": "If the user attempts to access a portion of the site they do not have permission for, this toast notification will appear."
+  },
+  "copyTrue": {
+    "message": "URL கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது.",
+    "context": "After the user clicks on the copy to clipboard button, if successful, this toast notification will appear."
+  },
+  "copyFalse": {
+    "message": "URL ஐ நகலெடுக்க முடியவில்லை.",
+    "context": "After the user clicks on the copy to clipboard button, if unsuccessful, this toast notification will appear."
+  },
+  "userConfirmActive": {
+    "message": "உங்கள் மின்னஞ்சல் முகவரி இப்போது உறுதிப்படுத்தப்பட்டுள்ளது மற்றும் உங்கள் பயனர் கணக்கு செயலாக்கப்பட்டது.",
+    "context": "When the user visits a confirmation link emailed to them, this toast notification will appear informing the user that their account is now active and email address verified."
+  },
+  "userConfirmInvalid": {
+    "message": "இந்த உறுதிப்படுத்தல் இணைப்பு தவறானது.",
+    "context": "When the user vists an invalid email address confirmation link or an invalid password reset confirmation link, this toast notification will appear."
+  },
+  "userPasswordTwo": {
+    "message": "ஒரு புதிய கடவுச்சொல் உங்களுக்கு மின்னஞ்சல் அனுப்பப்பட்டது.",
+    "context": "When the user visits a valid password reset confirmation link, this toast notification will appear to notify the user a new password has been generated and emailed to them."
+  },
+  "eurl1": {
+    "message": "இந்த நிகழ்வைப் பகிர்",
+    "context": "This section text is displayed on the paper action dialog when a user clicks the share event button."
+  },
+  "eurl2": {
+    "message": "Copy to clipboard",
+    "context": "This text appears under the button to share an event via email."
+  },
+  "eurl3": {
+    "message": "Send Email",
+    "context": "This text appears under the button to share an event via clipboard."
+  },
+  "eurl4": {
+    "message": "Share",
+    "context": "This button text label appears on the button for a user to share an event or record."
+  },
+  "eurl5": {
+    "message": "Share this record",
+    "context": "This section text is displayed on the paper action dialog when a user clicks the share record button."
+  },
+  "page404": {
+    "message": "404: இந்த பக்கம் இல்லை. ",
+    "context": "This toast is displayed when a user attempts to visit a non-existant page."
+  },
+  "ombNoticeTitle": {
+    "message": "OMB அறிவிப்பு ",
+    "context": "This is the page title for the OMB Notice."
+  },
+  "abuseReportAbuse": {
+    "message": "தகாதது என பதிவுசெய்",
+    "context": "This is used as a sectional header and the label of the report abuse button."
+  },
+  "abuseWhatReport": {
+    "message": "நீங்கள் என்ன சொல்ல விரும்புகிறீர்கள்?",
+    "context": "This is the query presented to a user when asked to be more specific about the type of abuse report the user is filing."
+  },
+  "abuseReportSpam": {
+    "message": "ஸ்பேம்",
+    "context": "This is the button label to select a report abuse claim of type spam."
+  },
+  "abuseReportSex": {
+    "message": "பாலியல் வெளிப்படையான",
+    "context": "This is the button label to select a report abuse claim of type sexually explicit."
+  },
+  "abuseReportHate": {
+    "message": "வெறுக்கத்தக்க பேச்சு",
+    "context": "This is the button label to select a report abuse claim of type hate speech."
+  },
+  "abuseReportViolence": {
+    "message": "வன்முறை",
+    "context": "This is the button label to select a report abuse claim of type violence"
+  },
+  "abuseReportElse": {
+    "message": "ஏதோ ஒன்று",
+    "context": "This button label is to select a report abuse claim of type something else."
+  },
+  "abuseThanks": {
+    "message": "நன்றி. உங்கள் தவறான உரிமைகோரலை நாங்கள் பெற்றுள்ளோம். எங்களது தள ஊழியர்கள் இந்த பதிவை மதிப்பாய்வு செய்து, பொருத்தமற்ற உள்ளடக்கத்தை அகற்றுவார்.",
+    "context": ""
+  },
+  "deleteRecord": {
+    "message": "பதிவு நீக்கு",
+    "context": "This is used as a button label and dialog header allowing a user to delete a record from the system."
+  },
+  "deleteRecordConfirm": {
+    "message": "இந்த பதிவை நிச்சயமாக நீக்க விரும்புகிறீர்களா? உங்கள் பதிவு தரவு நீக்கப்பட்டவுடன் மீண்டும் மீட்க வழி இல்லை.",
+    "context": "This is the question prompting a user when they choose to delete a record. We confirm they are certain with their decision."
+  },
+  "deleteRecordCancel": {
+    "message": "ரத்து",
+    "context": "Button label to cancel the action of deleting a record."
+  },
+  "deleteRecordDelete": {
+    "message": "நீக்கு",
+    "context": "Button label to confirm the deletion of a record."
+  },
+  "deleteRecordDone": {
+    "message": "பதிவு நீக்கப்பட்டது",
+    "context": "A toast notification displayed to inform the user the deletion of a record action has been completed."
+  },
+  "seconds": {
+    "message": "விநாடிகள்",
+    "context": "This word means seconds of time."
+  },
+  "record": {
+    "message": "ஆவணம்",
+    "context": "When a search is performed this word is prefixed with the number of results, ie. 1 record -- special case when only 1 result"
+  },
+  "notifyLogout": {
+    "message": "வெளியேற்றப்பட்டார்.",
+    "context": "This notification will appear after the user successfully logs out."
+  },
+  "uploadingPhoto": {
+    "message": "புகைப்படத்தை பதிவேற்றுகிறது...",
+    "context": "This message is displayed after a user selects an image file to search by photo as the file is being uploaded."
+  },
+  "searchByPhoto": {
+    "message": "புகைப்படத்தைத் தேடு",
+    "context": "When a user elects to search by photo from the search query bar, a dialog box appears with this as the title."
+  },
+  "dragAndDrop": {
+    "message": "இழுத்து & விடு",
+    "context": "A user may drag and drop a file to search by image. This message shows the user where to drag and drop the file ~ the target."
+  },
+  "emailRecordRevisionSubject": {
+    "message": "A record you are following has been updated",
+    "context": "We email users following a record when a revision is made or a comment is added, this is the subject of that email."
+  },
+  "emailRecordRevisionLine1": {
+    "message": "A comment has been added or a revision made to a record you are following.",
+    "context": "We email users following a record when a revision is made or a comment is added, this is the first line of that email."
+  },
+  "emailRecordRevisionLine2": {
+    "message": "You can review the record at this location:",
+    "context": "We email users following a record when a revision is made or a comment is added, this line prefixes the direct record url."
+  },
+  "emailRecordRevisionLine3": {
+    "message": "If you want to unsubscribe from these email alerts, visit the link above and untoggle the Following button.",
+    "context": "We email users following a record when a revision is made or a comment is added, at the end we inform the user of how to unsubscribe to these emails."
+  },
+  "emailNewUserSubject": {
+    "message": "Confirm your email address",
+    "context": "We email new users after they register, this is the subject line of said email."
+  },
+  "emailNewUserLine1": {
+    "message": "Thank you for registering.",
+    "context": "We email new users after they register, this is the first line of said email thanking them for registering."
+  },
+  "emailNewUserLine2": {
+    "message": "You must visit the link below in order to complete the registration process:",
+    "context": "We email new users after they register, this is the second line of said email providing them a link complete the registration process."
+  },
+  "emailNewUserLine3": {
+    "message": "Failure to visit the link will result in your account being deleted after 30 days.",
+    "context": "We email new users after they register, this is the last line of said email warning the user about account deletion for failure to activate their account."
+  },
+  "emailForgot1Subject": {
+    "message": "Password reset request",
+    "context": "We email a user when they initiate the forgot password sequence, this is the subject of that email."
+  },
+  "emailForgot1Line1": {
+    "message": "Someone has initiated a password reset request for your account.",
+    "context": "We email a user when they initiate the forgot password sequence, this is the first line of that email."
+  },
+  "emailForgot1Line2": {
+    "message": "If you did not initiate this request, it is safe to ignore this email and your password will not be changed.",
+    "context": "We email a user when they initiate the forgot password sequence, we inform the user it is safe to ignore this request if they did not initiate it."
+  },
+  "emailForgot1Line3": {
+    "message": "However, if you did initiate this request and would prefer to reset your password, you must visit the following link:",
+    "context": "We email a user when they initiate the forgot password sequence, this line prefixes a url the user must click on to continue in the forgot password sequence."
+  },
+  "emailForgot1Line4": {
+    "message": "Once this link has been visited, a new password will be generated and sent to you in a second email.",
+    "context": "We email a user when they initiate the forgot password sequence, final line of this email informing a new password will be generated."
+  },
+  "emailForgot2Subject": {
+    "message": "New password",
+    "context": "This is the second email in the forgot password sequence, and this is the subject of that email."
+  },
+  "emailForgot2Line1": {
+    "message": "Your new password is:",
+    "context": "This is the second email in the forgot password sequence, this line prefixes the new password we generated for the user."
+  },
+  "emailForgot2Line2": {
+    "message": "You may optionally change your password after signing in:",
+    "context": "This is the second email in the forgot password sequence, lastly, we inform the user that they may change their password after logging in."
+  },
+  "welcomeTo": {
+    "message": "Welcome to",
+    "context": "The first time a user comes to PL, we welcome them like: Welcome to PEOPLE LOCATOR. However PEOPLE LOCATOR is not translated in this welcome message."
+  },
+  "chooseLanguage": {
+    "message": "Choose a language",
+    "context": "We prompt the user to select a language at first visit."
+  },
+  "additionalInformation": {
+    "message": "Additional Information",
+    "context": "This is a label displayed several places titled Additional Information."
+  },
+  "inEvent": {
+    "message": "in event",
+    "context": "This substring 'in event' will appear atop search results under the search bar after '27 record' but before the event name (0.123 seconds)"
+  },
+  "viewOriginalRecord": {
+    "message": "View Original Record",
+    "context": "This link appears on record with a forieign origin. Tapping on the link will open the record from its original location."
+  },
+  "ncmec1": {
+    "message": "We suggest you also send this report to the National Center for Missing and Exploited Children as well.",
+    "context": "In the reporting wizard, this message will be displayed when a report is completed for a child."
+  },
+  "ncmec2": {
+    "message": "You can find a link to NCMEC here.",
+    "context": "In the reporting wizard, this message will be displayed when a report is completed for a child. This is the link text."
+  },
+  "pageResourcesNcmec": {
+    "message": "National Center for Missing and Exploited Children",
+    "context": "Resource Page link to NCMEC."
+  },
+  "eventListMeta": {
+    "message": "Find and report missing people and animals in",
+    "context":  "Find and report missing people and animals in any disaster using this website."
+  },
+  "eventListMeta3": {
+    "message": "using this National Library of Medicine website.",
+    "context": "Find missing people using this National Library of Medicine website."
+  },
+  "searchTitle": {
+    "message": "Find missing people and animals in",
+    "context": "Find missing people and animals in the Mexico Earthquake."
+  },
+  "searchMeta": {
+    "message": "Search for missing people and animals in",
+    "context": "Search for missing people and animals in the Mexico Earthquake."
+  },
+  "searchMeta2": {
+    "message": "by name or by photo",
+    "context": "Search for missing people by name or by photo"
+  },
+  "searchMeta3": {
+    "message": "using the National Library of Medicine's",
+    "context": "Search for missing people using the National Library of Medicine's NLM PEOPLE LOCATOR."
+  },
+  "reportTitle": {
+    "message": "Report people and animals in",
+    "context": "Report people and animals in the Mexico Earthquake."
+  },
+  "reportMeta": {
+    "message": "Report the status of people and animals in",
+    "context": "Report the status of people and animals in the Mexico City Earthquake."
+  },
+  "recordTitle": {
+    "message": "Reported person",
+    "context": "Reported person Juan Valdez in the Mexico City Earthquake."
+  },
+  "recordTitle2": {
+    "message": "in",
+    "context": "Reported person Juan Valdez in the Mexico City Earthquake."
+  },
+  "recordMeta":  {
+    "message": "has been reported",
+    "content": "Juan Valdez has been reported missing on our website."
+  },
+  "aboutMeta": {
+    "message": "The National Library of Medicine, part of the National Institutes of Health, created this website",
+    "content": "The National Library of Medicine, part of the National Institutes of Health, created this website for the public."
+  },
+  "aboutMeta2": {
+    "message": "for finding and reporting missing people and animals during disasters.",
+    "content": "We created this website for finding and reporting missing people and animals during disasters."
+  },
+  "resourceMeta": {
+    "message": "Additional National Library of Medicine resources for",
+    "content": "Additional National Library of Medicine resources for finding people."
+  },
+  "followUsMeta": {
+    "message": "Receive disaster alerts on social media from the National Library of Medicine's",
+    "content": "Receive disaster alerts on social media from the National Library of Medicine's NLM PEOPLE LOCATOR."
+  },
+  "privacyMeta": {
+    "message": "Privacy policies governing the use of the National Library of Medicine's",
+    "content": "Privacy policies governing the use of the National Library of Medicine's NLM PEOPLE LOCATOR."
+  },
+  "goHomePage": {
+    "message": "Go to the home page",
+    "context": "Displayed tooltip when you hover your mouse over the home button."
+  },
+  "searchUsingPhoto": {
+    "message": "Search using a photo",
+    "context": "Displayed tooltip when you hover your mouse over the visual search button."
+  },
+  "searchUsingName": {
+    "message": "Search using a name",
+    "context": "Displayed tooltip when you hover your mouse over the search magnifying glass."
+  },
+  "reportPersonAnimal": {
+    "message": "Report a person or animal",
+    "context": "Tooltip for report button."
+  },
+  "enterName": {
+    "message": "Enter name to search",
+    "context": "Title for a search box."
+  },
+  "selectEvent": {
+    "message": "Select event",
+    "context": "Title for a menu of PL events."
+  },
+  "answerYes": {
+    "message": "Yes",
+    "context": "The affirmative, yes, as in an answer to a question."
+  },
+  "answerNo": {
+    "message": "No",
+    "context": "The negative, no, as in an answer to a question."
+  },
+  "rDeviceShort": {
+    "message": "Register Additional Device",
+    "context": "This text will appear as a header on the dialog box that appears when a user is prompted to register a new device for push notifications. See below."
+  },
+  "rDeviceLong": {
+    "message": "Would you like to register this device to recieve push notifications?",
+    "context": "This dialog will appear when a user logs into from a 2nd, 3rd, 4th... device as a prompt to also recieve push notifications on this additional device."
+  },
+  "appUpdate1": {
+    "message": "A new version of this app is available.",
+    "context": "When a new version of PL is updated online, a returning user will be prompted to update the version he/she is using."
+  },
+  "appUpdate2": {
+    "message": "UPDATE",
+    "context": "This label appears on the button to update the version of PL to the newest available. See above."
+  },
+  "noTranslationAvailable": {
+    "message": "This event description has not been translated to your language so it is being shown in English.",
+    "context": "This label appears on the button to update the version of PL to the newest available. See above."
+  },
+  "helpFindText2": {
+    "message": "By default, searches will always return up to 50 results. However, if you would like to have it return more results, you can append or prepend the keyword perPage:100 to a search query which will effectively set a different limit on the number of results that are returned. The number 100 can be changed to any integer value. You may also modify the URL to achieve this filter effect. Here are some examples:",
+    "context": "This paragraph describes advanced search filters."
+  }
+}

@@ -1,0 +1,29 @@
+#exportPFIF, #importPFIF {
+	padding: 1em;
+}
+.exporttext, #pfif_incident_id, #xml {
+	padding: 0.25em 1em;
+	width: 300px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	margin-bottom: 0.5em;
+}
+input {
+	text-align:center;
+}
+#submitButton {
+	margin: 1em 0 0 -5px;
+}
+#exportArea {
+	height: 400px;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.04);
+	border: 1px solid rgba(0,0,0,0.06);
+	border-radius: 1em;
+	margin-bottom: 1em;
+	margin-top: -0.5em;
+}
+form {
+  background: #444;
+}

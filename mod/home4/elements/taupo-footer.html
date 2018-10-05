@@ -1,0 +1,169 @@
+<!-- site footer -->
+<dom-module id="taupo-footer">
+  <style>
+    *, *:before, *:after {
+              box-sizing: inherit;
+         -moz-box-sizing: inherit;
+      -webkit-box-sizing: inherit;
+      -webkit-font-smoothing: antialiased;
+    }
+    #foot4 {
+      width: 100% !important;
+      overflow: hidden;
+      height: 120px;
+      background-color: var(--taupo-dark-blue);
+      color: white;
+      padding: 0.5em 0 0 0.25em;
+    }
+    #footBreak1, #footBreak2, #footBreak3 {
+      clear: both;
+    }
+    .footlink {
+      margin: 0.35em 0.6em;
+      font-size: 0.75em;
+      float: left !important;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+           -o-user-select: none;
+              user-select: none;
+      cursor: pointer;
+    }
+    .rtlfootlink {
+      float: right !important;
+    }
+    .footnih {
+      height: 20px;
+      margin: -5px -5px -5px 0;
+    }
+    .footlink a {
+      color: white;
+      text-decoration: none;
+    }
+    .left1em, .ombDateLocalized {
+      margin-left: 0.5em;
+    }
+    .right1em {
+      margin-right: 0.5em;
+    }
+    /* styles for browsers larger than 480px; */
+    @media (min-width:480px) {
+      .footlink {
+        font-size: 0.9em;
+        margin: 0.35em 0.8em;
+      }
+      .footnih {
+        height: 22px;
+        margin: -6px -5px -6px 0;
+      }
+      #foot4 {
+        height: 140px;
+        padding: 0.5em 0 0 0.4em;
+      }
+    }
+    /* styles for browsers larger than 600px; */
+    @media (min-width:600px) {
+      .footlink {
+        font-size: 0.95em;
+        margin: 0.4em 1.2em;
+      }
+      .footnih {
+        height: 24px;
+        margin: -7px -5px -7px 0;
+      }
+      #foot4 {
+        height: 150px;
+        padding: 0.5em 0 0 0;
+      }
+    }
+    /* styles for browsers larger than 720px; */
+    @media (min-width:720px) {
+      .footlink {
+        margin: 0.4em 1.6em 0.4em 1.2em;
+      }
+    }
+    /* styles for browsers larger than 960px; */
+    @media (min-width:960px){
+      #footBreak1 {
+        clear: none;
+        display: none;
+      }
+      .footlink {
+        margin: 0 1em 0 1em;
+        display: inline;
+        font-size: 1em;
+        line-height: 2.4em;
+      }
+      .footnih {
+        height: 26px;
+        margin: -8px -5px -8px 0;
+      }
+      #foot4 {
+        height: 130px;
+        padding: 0.5em 0 0 1em;
+      }
+    }
+    /* styles for browsers larger than 1200px; */
+    @media (min-width:1200px){
+      #footBreak2 {
+        clear: none;
+        display: none;
+      }
+      #foot4 {
+        height: 85px;
+      }
+      .footlink.taupo-footer {
+          margin: 0 0.5em;
+      }
+    }
+    /* styles for browsers larger than 1600px; */
+    @media (min-width:1600px){
+      #footBreak3 {
+        clear: none;
+        display: none;
+      }
+      #foot4 {
+        height: 50px;
+        text-align: center;
+      }
+      .footlink {
+        float: none !important;
+      }
+    }
+    /* styles for browsers larger than 1900px; */
+    @media (min-width:1900px){
+      .footlink.taupo-footer {
+          margin: 0 1.15em;
+      }
+    }
+  </style>
+  <template>
+    <div id="foot4">
+      <div class="footlink" onclick="loadPage1();"><i18n-msg msgid="linkHelp"></i18n-msg></div>
+      <div class="footlink" onclick="loadPage2();"><i18n-msg msgid="linkAbout"></i18n-msg></div>
+      <div class="footlink" onclick="loadPage3();"><i18n-msg msgid="linkPrivacy"></i18n-msg></div>
+      <div class="footlink" onclick="loadPage4();"><i18n-msg msgid="linkResources"></i18n-msg></div>
+      <div id="footBreak1"></div>
+      <div class="footlink" onclick="loadPage5();"><i18n-msg msgid="linkFollowUs" ></i18n-msg></div>
+      <div class="footlink" onclick="loadPage6();"><i18n-msg msgid="linkTrademark"></i18n-msg></div>
+      <div class="footlink ext"><a target="noopener" href="https://lpf.nlm.nih.gov/PeopleLocator-ReUnite"  ><i18n-msg msgid="linkApps"></i18n-msg></a></div>
+      <div class="footlink ext"><a target="noopener" href="https://ceb.nlm.nih.gov/cebhome/contact.php?lpf"><i18n-msg msgid="linkContact"></i18n-msg></a></div>
+      <div id="footBreak2"></div>
+      <div class="footlink ext"><a target="noopener" href="http://www.nih.gov"       ><img class="footnih" src="/assets/images/logo/nih-white.svg" alt="NIH logo"></a></div>
+      <div class="footlink ext"><a target="noopener" href="http://www.nlm.nih.gov"   >NLM</a></div>
+      <div class="footlink ext"><a target="noopener" href="http://lhncbc.nlm.nih.gov">LHNCBC</a></div>
+      <div class="footlink ext"><a target="noopener" href="http://www.hhs.gov"       >HHS</a></div>
+      <div class="footlink ext"><a target="noopener" href="http://www.usa.gov"       >USA.gov</a></div>
+      <div class="footlink ext"><a target="noopener" href="https://www.nlm.nih.gov/accessibility.html"><i18n-msg msgid="linkAccessibility"></i18n-msg></a></div>
+      <div id="footBreak3"></div>
+      <div class="footlink" onclick="loadPage7();">OMB NO: 0925-0612<i18n-msg class="left1em" msgid="expirationDate"></i18n-msg>:<span class="ombDateLocalized"></span></div>
+    </div><!-- foot4 -->
+  </template>
+  <script>
+  (function () {
+    Polymer({
+      is: 'taupo-footer'
+    });
+  })();
+  </script>
+</dom-module>

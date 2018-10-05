@@ -1,0 +1,1247 @@
+<!-- report -->
+<dom-module id="taupo-report">
+  <style>
+    .report-id {
+      font-size: 0.8em;
+      color: white;
+    }
+    #report-pad {
+      max-height: 100%;
+      max-width: 100%;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      max-height: 100%;
+      overflow: hidden;
+      background-color: #eee;
+    }
+    .report-header {
+      font-weight: bold;
+      position: fixed;
+      z-index: 10;
+      background-color: var(--accent-color);
+      border: 1px solid var(--accent-color);
+      margin-top: 0;
+      padding: 0.5em 24px;
+      font-size: 1.5em;
+      width: 100%;
+    }
+    .report-content {
+      padding: 0;
+      margin: 0;
+      z-index: 5;
+    }
+    #reportX {
+      position: absolute;
+      top: 0;
+      right: 3em;
+      color: white;
+    }
+    .report-content {
+              box-sizing: border-box;
+         -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      display: flex;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+              flex-direction: column;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-wrap: nowrap;
+      -webkit-flex-wrap: nowrap;
+          -ms-flex-wrap: nowrap;
+              justify-content: flex-start;
+      -webkit-justify-content: flex-start;
+                -ms-flex-pack: start;
+              align-items: center;
+      -webkit-align-items: center;
+           -ms-flex-align: center;
+              align-content: flex-end;
+      -webkit-align-content: flex-end;
+         -ms-flex-line-pack: end;
+      min-height: 100%;
+    }
+    .flex-spacer-1, .flex-spacer-2 {
+              flex: 1 1 auto;
+      -webkit-flex: 1 1 auto;
+          -ms-flex: 1 1 auto;
+               align-self: auto;
+       -webkit-align-self: auto;
+      -ms-flex-item-align: auto;
+      width: 100%;
+    }
+    .flex-spacer-1 {
+               order: 1;
+       -webkit-order: 1;
+      -ms-flex-order: 1;
+    }
+    .wizard {
+              box-sizing: border-box;
+         -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      margin-top: 42px;
+               order: 2;
+       -webkit-order: 2;
+      -ms-flex-order: 2;
+              flex: 1 0 auto;
+      -webkit-flex: 1 0 auto;
+          -ms-flex: 1 0 auto;
+               align-self: auto;
+       -webkit-align-self: auto;
+      -ms-flex-item-align: auto;
+      width: 100%;
+    }
+    .flex-spacer-3 {
+               order: 3;
+       -webkit-order: 3;
+      -ms-flex-order: 3;
+    }
+    .tabby {
+      border: 1px solid rgb(0, 0, 0);
+              box-sizing: border-box;
+         -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+               order: 4;
+       -webkit-order: 4;
+      -ms-flex-order: 4;
+              flex: 0 0 50px;
+      -webkit-flex: 0 0 50px;
+          -ms-flex: 0 0 50px;
+               align-self: center;
+       -webkit-align-self: center;
+      -ms-flex-item-align: center;
+      width: 100%;
+      opacity: 0;
+      background-color: rgb(0, 0, 0);
+      color: rgb(255, 255, 255);
+    }
+    .section-text {
+      maring-bottom: 1em;
+    }
+    .section-question {
+      margin: 0 1em 1em 1em;
+      font-weight: bold;
+    }
+    .report-pager {
+      position: relative;
+    }
+    .report-page {
+      text-align: center;
+    }
+    .report-button {
+      background-color: white;
+    }
+    .subb {
+      width: 200px !important;
+    }
+    .subG {
+      margin: 1em 1.5em 2em;
+    }
+    .width150 {
+      width: 150px;
+      margin: 1em 0.5em 0 0;
+    }
+    .statItem, .sexItem, .ageItem {
+      text-align: center;
+    }
+    .statExplain, .sexExplain, .ageExplain, .explainG {
+      opacity: 0.7;
+      font-style: italic;
+      font-size: 0.9em;
+    }
+    #ncmec {
+      margin: 2em;
+    }
+    .ncmec2 {
+      color: var(--taupo-accent);
+    }
+    .clickable {
+      cursor: pointer;
+    }
+    .ncmec2:hover {
+      cursor: pointer;
+    }
+    .lkit {
+      margin: 0 2.5em;
+      text-align: left;
+    }
+    .hide {
+              transition: all .5s ease;
+         -moz-transition: all .5s ease;
+      -webkit-transition: all .5s ease;
+      padding-top: 35px;
+      opacity: 0;
+    }
+    .unhide {
+              transition: all .5s ease;
+         -moz-transition: all .5s ease;
+      -webkit-transition: all .5s ease;
+      padding-top: 0px !important;
+      opacity: 1 !important;
+    }
+    .none {
+      display: none !important;
+    }
+    .init {
+      opacity: 0;
+      padding-top: 35px;
+    }
+    .left {
+      text-align: left;
+    }
+    .section-question-7 {
+      margin-bottom: 2em;
+    }
+    /* missing */
+    paper-button[toggles][active].mis, paper-button.hover.mis:hover {
+      background-color: var(--taupo-blue);
+      color: white;
+    }
+    /* found */
+    paper-button[toggles][active].fnd, paper-button.hover.fnd:hover {
+      background-color: var(--taupo-brown);
+      color: white;
+    }
+    /* alive */
+    paper-button[toggles][active].ali, paper-button.hover.ali:hover {
+      background-color: var(--taupo-green);
+      color: white;
+    }
+    /* injured */
+    paper-button[toggles][active].inj, paper-button.hover.inj:hover {
+      background-color: var(--taupo-red);
+      color: white;
+    }
+    /* deceased */
+    paper-button[toggles][active].dec, paper-button.hover.dec:hover {
+      background-color: var(--taupo-black);
+      color: white;
+    }
+    /* unknown */
+    paper-button[toggles][active].unk, paper-button.hover.unk:hover {
+      background-color: var(--taupo-grey);
+      color: white;
+    }
+    /* male */
+    paper-button[toggles][active].mal, paper-button.hover.mal:hover {
+      background-color: var(--taupo-blue);
+      color: white;
+    }
+    /* female */
+    paper-button[toggles][active].fml, paper-button.hover.fml:hover {
+      background-color: var(--accent-color);
+      color: white;
+    }
+    /* other */
+    paper-button[toggles][active].cpx, paper-button.hover.cpx:hover {
+      background-color: var(--taupo-grey);
+      color: white;
+    }
+    /* unknown sex */
+    paper-button[toggles][active].unks, paper-button.hover.unks:hover {
+      background-color: var(--taupo-grey);
+      color: white;
+    }
+    /* unknown age */
+    paper-button[toggles][active].unka, paper-button.hover.unka:hover {
+      background-color: var(--taupo-grey);
+      color: white;
+    }
+    /* unknown name */
+    paper-button[toggles][active].unkn, paper-button.hover.unkn:hover {
+      background-color: var(--taupo-grey);
+      color: white;
+    }
+    /* submit */
+    paper-button.hover.subb:hover, paper-button.hover.reportCopy:hover {
+      background-color: var(--taupo-green);
+      color: white;
+    }
+    /* copy */
+    paper-button.hover.reportCopy:hover {
+      background-color: var(--taupo-black);
+      color: white;
+    }
+    /* cam */
+    paper-button.hover.cam:hover {
+      background-color: var(--taupo-grey);
+      color: white;
+    }
+    .cam {
+      height: 3em;
+      margin: 0 2px 0 0;
+    }
+    .photoCapText {
+      margin-top: 0.5em;
+    }
+    .uploadButtons {
+      height: 49px;
+    }
+    .buttonRotateL, .buttonRotateR, .buttonMoveU, .buttonMoveD {
+      width: 42px;
+      padding: 0;
+      min-width: 42px !important;
+    }
+    .fixButtons {
+      top: -7px;
+    }
+    .slide {
+      margin: auto;
+      background-color: rgb(255, 255, 255);
+      padding: 1em;
+      border-radius: 2px;
+    }
+    .ageUnknownSection, .nameUnknownSection {
+      margin: 3em 1em 0em !important;
+    }
+    .continueBoxAge, .continueBoxName, .continueBoxPhoto, .continueBoxInformation {
+      position: absolute;
+      bottom: 56px;
+      right: -150px;
+      margin-right: 3px;
+    }
+    .continueAge, .continueName, .continuePhoto, .continueInformation {
+      background-color: var(--accent-color);
+      color: white;
+    }
+    .unhideContinueAge, .unhideContinueName, .unhideContinuePhoto {
+              transition: all .4s ease;
+         -moz-transition: all .4s ease;
+      -webkit-transition: all .4s ease;
+      right: 0px !important;
+    }
+    .nameHolder, .buddyHolder {
+      width: 21em;
+      margin: 0 auto;
+      background-color: rgb(255, 255, 255);
+      padding: 0 1em;
+      border-radius: 2px;
+    }
+    .zero {
+      opacity: 0 !important;
+    }
+    .dropzone, video, .showImage, .rmaph {
+      width: 360px;
+      height: 270px;
+      margin: 0 auto 1em;
+    }
+    .dropzoneBG {
+      background-image: linear-gradient(
+        -45deg,
+        rgba(127,255,127,0.3) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(127,255,127,0.3) 50%,
+        rgba(127,255,127,0.3) 75%,
+        transparent 75%,
+        transparent
+      );
+      background-size: 16px 16px;
+    }
+    .lkih {
+      margin: 0 1em 1em;
+      text-align: left;
+      padding: 0 1em;
+      background-color: rgb(255, 255, 255);
+      border-radius: 2px;
+    }
+    .explainCopy1 {
+      margin: 2em 2em;
+    }
+    .explainCopy2 {
+      margin: 0.5em 5em;
+    }
+    #uuidh {
+      margin: 1em 2em 1em;
+      background-color: rgb(255, 255, 255);
+      border-radius: 2px;
+      padding: 0 1em;
+    }
+    .js-copytextarea {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 2em;
+      height: 2em;
+      padding: 0;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      background: transparent;
+      z-index: -1;
+      opacity: 0.01;
+    }
+    paper-slider {
+      --paper-slider-input: { width: 70px; }
+    }
+    .rtl {
+      direction: rtl;
+    }
+    .rtla {
+      direction: rtl;
+      text-align: right;
+    }
+    .rtlh {
+      padding-right: 3em;
+    }
+    .rtls {
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+    }
+    @media (min-width:412px) {
+      .dropzone, video, .showImage, .rmaph {
+        width: 412px;
+        height: 280px;
+      } 
+    }
+    @media (min-width:480px) {
+      .report-id {
+        font-size: 1em;
+      }
+    }
+    @media (min-width:600px) {
+      #report-pad {
+        max-height: 80%;
+        max-width: 480px;
+        margin: auto;
+        width: 480px;
+        overflow-y: hidden;
+        overflow-x: hidden;
+      }
+      .report-header {
+        width: 480px;
+                box-sizing: border-box;
+           -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+      }
+      #reportX {
+        right: 0.5em;
+      }
+      .dropzone, video, .showImage, .rmaph {
+        width: 480px;
+        height: 360px;
+      }
+    }
+    @media (min-width:720px) {
+      #report-pad {
+        max-width: 600px;
+        width: 600px;
+      }
+      .report-header {
+        width: 600px;
+      }
+      .dropzone, video, .showImage, .rmaph {
+        width: 600px;
+      }
+    }
+    @media (min-width:960px){
+      #report-pad {
+        max-width: 720px;
+        width: 720px;
+      }
+      .report-header {
+        width: 720px;
+      }
+      .dropzone, video, .showImage, .rmaph {
+        width: 720px;
+      }
+    }
+    @media (min-width:1200px){}
+    @media (min-width:1600px){}
+    @media (min-width:1900px){}
+  </style>
+  <template>
+    <paper-dialog id="report-pad" modal entry-animation="scale-up-animation" exit-animation="fade-out-animation">
+      <div class="report-header">
+        <span class="report-id"><i18n-msg msgid="newReport"></i18n-msg>&nbsp;<i18n-msg msgid="inEvent"></i18n-msg>&nbsp;<span id="reportEvent"></span></span>
+        <span onclick="hideReport(true);"><paper-icon-button id="reportX" class="padX" icon="clear" title="clear"></paper-icon-button></span>
+      </div>
+      <div class="report-content">
+        <div class="flex-spacer-1"></div>
+        <div class="wizard">
+          <div class="report-page">
+            <div class="report-page-x">
+              <section class="section-question"><i18n-msg msgid="reportChoicePA"></i18n-msg></section>
+              <div>
+                <paper-button raised id="reportPerson" onclick="reportPA(0);" class="report-button nonUpper"><i18n-msg msgid="person"></i18n-msg></paper-button>
+                <paper-button raised id="reportAnimal" onclick="reportPA(1);" class="report-button nonUpper"><i18n-msg msgid="animal"></i18n-msg></paper-button>
+              </div>
+            </div>
+            <div id="report-page-0p" class="none">
+              <section class="section-question"><i18n-msg msgid="reportChoiceStatusP"></i18n-msg></section>
+              <div class="left">
+                <div class="statItem">
+                  <paper-button toggles class="mis hover report-button nonUpper width150" onclick="setStatus('mis');"><i18n-msg msgid="statusMissing"></i18n-msg></paper-button>
+                  <div class="statExplain"><i18n-msg msgid="explainMissingP"></i18n-msg></div>
+                </div>
+                <div class="statItem">
+                  <paper-button toggles class="fnd hover report-button nonUpper width150" onclick="setStatus('fnd');"><i18n-msg msgid="statusFound"></i18n-msg></paper-button>
+                  <div class="statExplain"><i18n-msg msgid="explainFoundP"></i18n-msg></div>
+                </div>
+                <div class="statItem">
+                  <paper-button toggles class="ali hover report-button nonUpper width150" onclick="setStatus('ali');"><i18n-msg msgid="statusAlive"></i18n-msg></paper-button>
+                  <div class="statExplain"><i18n-msg msgid="explainAliveP"></i18n-msg></div>
+                </div>
+                <div class="statItem">
+                  <paper-button toggles class="inj hover report-button nonUpper width150" onclick="setStatus('inj');"><i18n-msg msgid="statusInjured"></i18n-msg></paper-button>
+                  <div class="statExplain"><i18n-msg msgid="explainInjuredP"></i18n-msg></div>
+                </div>
+                <div class="statItem">
+                  <paper-button toggles class="dec hover report-button nonUpper width150" onclick="setStatus('dec');"><i18n-msg msgid="statusDeceased"></i18n-msg></paper-button>
+                  <div class="statExplain"><i18n-msg msgid="explainDeceasedP"></i18n-msg></div>
+                </div>
+                <div class="statItem">
+                  <paper-button toggles class="unk hover report-button nonUpper width150" onclick="setStatus('unk');"><i18n-msg msgid="statusUnknown"></i18n-msg></paper-button>
+                  <div class="statExplain"><i18n-msg msgid="explainUnknownP"></i18n-msg></div>
+                </div>
+              </div>
+            </div>
+            <div id="report-page-0a" class="none">
+              <section class="section-question"><i18n-msg msgid="reportChoiceStatusA"></i18n-msg></section>
+              <div class="left">
+                <div class="statItem">
+                  <paper-button toggles class="mis hover report-button nonUpper width150" onclick="setStatus('mis');"><i18n-msg msgid="statusMissing"></i18n-msg></paper-button>
+                  <div class="statExplain"><i18n-msg msgid="explainMissingA"></i18n-msg></div>
+                </div>
+                <div class="statItem">
+                  <paper-button toggles class="fnd hover report-button nonUpper width150" onclick="setStatus('fnd');"><i18n-msg msgid="statusFound"></i18n-msg></paper-button>
+                  <div class="statExplain"><i18n-msg msgid="explainFoundA"></i18n-msg></div>
+                </div>
+                <div class="statItem">
+                  <paper-button toggles class="ali hover report-button nonUpper width150" onclick="setStatus('ali');"><i18n-msg msgid="statusAlive"></i18n-msg></paper-button>
+                  <div class="statExplain"><i18n-msg msgid="explainAliveA"></i18n-msg></div>
+                </div>
+                <div class="statItem">
+                  <paper-button toggles class="inj hover report-button nonUpper width150" onclick="setStatus('inj');"><i18n-msg msgid="statusInjured"></i18n-msg></paper-button>
+                  <div class="statExplain"><i18n-msg msgid="explainInjuredA"></i18n-msg></div>
+                </div>
+                <div class="statItem">
+                  <paper-button toggles class="dec hover report-button nonUpper width150" onclick="setStatus('dec');"><i18n-msg msgid="statusDeceased"></i18n-msg></paper-button>
+                  <div class="statExplain"><i18n-msg msgid="explainDeceasedA"></i18n-msg></div>
+                </div>
+                <div class="statItem">
+                  <paper-button toggles class="unk hover report-button nonUpper width150" onclick="setStatus('unk');"><i18n-msg msgid="statusUnknown"></i18n-msg></paper-button>
+                  <div class="statExplain"><i18n-msg msgid="explainUnknownA"></i18n-msg></div>
+                </div>
+              </div>
+            </div>
+            <div id="report-page-1p" class="none">
+              <section class="section-question"><i18n-msg msgid="reportChoiceSexP"></i18n-msg></section>
+              <div class="left">
+                <div class="sexItem">
+                  <paper-button toggles class="mal hover report-button nonUpper width150" onclick="setSex('mal');"><i18n-msg msgid="sexMale"></i18n-msg></paper-button>
+                  <div class="sexExplain"><i18n-msg msgid="explainSexMaleP"></i18n-msg></div>
+                </div>
+                <div class="sexItem">
+                  <paper-button toggles class="fml hover report-button nonUpper width150" onclick="setSex('fml');"><i18n-msg msgid="sexFemale"></i18n-msg></paper-button>
+                  <div class="sexExplain"><i18n-msg msgid="explainSexFemaleP"></i18n-msg></div>
+                </div>
+                <div class="sexItem">
+                  <paper-button toggles class="cpx hover report-button nonUpper width150" onclick="setSex('cpx');"><i18n-msg msgid="sexOther"></i18n-msg></paper-button>
+                  <div class="sexExplain"><i18n-msg msgid="explainSexOtherP"></i18n-msg></div>
+                </div>
+                <div class="sexItem">
+                  <paper-button toggles class="unks hover report-button nonUpper width150" onclick="setSex('unk');"><i18n-msg msgid="statusUnknown"></i18n-msg></paper-button>
+                  <div class="sexExplain"><i18n-msg msgid="explainSexUnknownP"></i18n-msg></div>
+                </div>
+              </div>
+            </div>
+            <div id="report-page-1a" class="none">
+              <section class="section-question"><i18n-msg msgid="reportChoiceSexA"></i18n-msg></section>
+              <div class="left">
+                <div class="sexItem">
+                  <paper-button toggles class="mal hover report-button nonUpper width150" onclick="setSex('mal');"><i18n-msg msgid="sexMale"></i18n-msg></paper-button>
+                  <div class="sexExplain"><i18n-msg msgid="explainMissingA"></i18n-msg></div>
+                </div>
+                <div class="sexItem">
+                  <paper-button toggles class="fml hover report-button nonUpper width150" onclick="setSex('fml');"><i18n-msg msgid="sexFemale"></i18n-msg></paper-button>
+                  <div class="sexExplain"><i18n-msg msgid="explainFoundA"></i18n-msg></div>
+                </div>
+                <div class="sexItem">
+                  <paper-button toggles class="cpx hover report-button nonUpper width150" onclick="setSex('cpx');"><i18n-msg msgid="sexOther"></i18n-msg></paper-button>
+                  <div class="sexExplain"><i18n-msg msgid="explainSexOtherA"></i18n-msg></div>
+                </div>
+                <div class="sexItem">
+                  <paper-button toggles class="unks hover report-button nonUpper width150" onclick="setSex('unk');"><i18n-msg msgid="statusUnknown"></i18n-msg></paper-button>
+                  <div class="sexExplain"><i18n-msg msgid="explainSexUnknownA"></i18n-msg></div>
+                </div>
+              </div>
+            </div>
+            <div id="report-page-2p" class="none">
+              <section class="section-question"><i18n-msg msgid="reportChoiceAgeP"></i18n-msg></section>
+              <div>
+                <paper-slider id="agep" class="slide" value="0" min="0" max="120" editable></paper-slider>
+              </div>
+              <section class="section-question ageUnknownSection"><i18n-msg msgid="reportChoiceAgeUnknown"></i18n-msg></section>
+              <div class="ageItem">
+                <paper-button toggles class="unka hover report-button nonUpper width150" onclick="setAge('unk');"><i18n-msg msgid="statusUnknown"></i18n-msg></paper-button>
+                <div class="ageExplain"><i18n-msg msgid="explainAgeUnknownP"></i18n-msg></div>
+              </div>
+              <div class="continueBoxAge">
+                <paper-button class="continueAge report-button" onclick="toPage(3);"><i18n-msg msgid="continue"></i18n-msg> &nbsp; &gt;&gt;</paper-button>
+              </div>
+            </div>
+            <div id="report-page-2a" class="none">
+              <section class="section-question"><i18n-msg msgid="reportChoiceAgeA"></i18n-msg></section>
+              <div>
+                <paper-slider id="agea" class="slide" value="0" min="0" max="30" editable></paper-slider>
+              </div>
+              <section class="section-question ageUnknownSection"><i18n-msg msgid="reportChoiceAgeUnknown"></i18n-msg></section>
+              <div class="ageItem">
+                <paper-button toggles class="unka hover report-button nonUpper width150" onclick="setAge('unk');"><i18n-msg msgid="statusUnknown"></i18n-msg></paper-button>
+                <div class="ageExplain"><i18n-msg msgid="explainAgeUnknownA"></i18n-msg></div>
+              </div>
+              <div class="continueBoxAge">
+                <paper-button class="continueAge report-button" onclick="toPage(3);"><i18n-msg msgid="continue"></i18n-msg> &nbsp; &gt;&gt;</paper-button>
+              </div>
+            </div>
+            <div id="report-page-3p" class="none">
+              <section class="section-question"><i18n-msg msgid="reportChoiceNameP"></i18n-msg></section>
+              <div class="nameHolder">
+                <paper-input id="namep" on-input="nameInput" label=""></paper-input>
+                <div class="explainG"><i18n-msg msgid="explainNameP"></i18n-msg></div>
+              </div>
+              <section class="section-question nameUnknownSection"><i18n-msg msgid="reportChoiceNameUnknownP"></i18n-msg></section>
+              <div class="nameItem">
+                <paper-button toggles class="unkn hover report-button nonUpper width150" onclick="setName(null);"><i18n-msg msgid="statusUnknown"></i18n-msg></paper-button>
+                <div class="explainG"><i18n-msg msgid="explainNameUnknownP"></i18n-msg></div>
+              </div>
+              <div class="continueBoxName">
+                <paper-button class="continueName report-button" onclick="toPage(4);"><i18n-msg msgid="continue"></i18n-msg> &nbsp; &gt;&gt;</paper-button>
+              </div>
+            </div>
+            <div id="report-page-3a" class="none">
+              <section class="section-question"><i18n-msg msgid="reportChoiceNameA"></i18n-msg></section>
+              <div class="nameHolder">
+                <paper-input id="namea" on-input="nameInput" label=""></paper-input>
+              </div>
+              <div class="explainG"><i18n-msg msgid="explainNameA"></i18n-msg></div>
+              <div class="buddyHolder">
+                <paper-input id="buddya" on-input="nameInput" label=""></paper-input>
+              </div>
+              <div class="explainG"><i18n-msg msgid="explainBuddyA"></i18n-msg></div>
+              <section class="section-question nameUnknownSection"><i18n-msg msgid="reportChoiceNameUnknownP"></i18n-msg></section>
+              <div class="nameItem">
+                <paper-button toggles class="unkn hover report-button nonUpper width150" onclick="setName(null);"><i18n-msg msgid="statusUnknown"></i18n-msg></paper-button>
+                <div class="explainG"><i18n-msg msgid="explainNameUnknownA"></i18n-msg></div>
+              </div>
+              <div class="continueBoxName">
+                <paper-button class="continueName report-button" onclick="toPage(4);"><i18n-msg msgid="continue"></i18n-msg> &nbsp; &gt;&gt;</paper-button>
+              </div>
+            </div>
+            <div id="report-page-4p" class="none">
+              <section class="section-question section-question-4"><i18n-msg msgid="reportChoicePhotoP"></i18n-msg></section>
+              <div class="dropzone dropzoneBG">
+                <video class="video none" autoplay></video>
+                <canvas class="canvas none"></canvas>
+                <div class="showImage none"></div>
+              </div>
+              <div class="uploadButtons">
+                <paper-button class="report-button cam buttonRotateL none" onclick="rotateL();" disabled><iron-icon icon="av:replay-10"></iron-icon></paper-button>
+                <paper-button class="report-button cam buttonRotateR none" onclick="rotateR();" disabled><iron-icon icon="av:forward-10"></iron-icon></paper-button>
+                <paper-button class="report-button cam buttonCapture none" onclick="capturePhoto();"><i18n-msg msgid="reportChoicePhotoCapture"></i18n-msg></paper-button>
+                <input type="file" id="filesid" accept="image/*" class="files none" onchange="selectFile(this.files)">
+                <paper-button class="report-button cam buttonSelect" id="pbselect"><i18n-msg msgid="reportChoicePhotoSelectFile"></i18n-msg></paper-button>
+                <paper-button class="report-button cam buttonCamera"       onclick="getCamera();"><i18n-msg msgid="reportChoicePhotoTake"></i18n-msg></paper-button>
+                <paper-button class="report-button cam buttonDelete none"  onclick="deletePhoto();" disabled><i18n-msg msgid="reportChoicePhotoDelete"></i18n-msg></paper-button>
+                <paper-button class="report-button cam buttonMoveU none" onclick="moveU();" disabled><iron-icon icon="icons:arrow-upward"></iron-icon></paper-button>
+                <paper-button class="report-button cam buttonMoveD none" onclick="moveD();" disabled><iron-icon icon="icons:arrow-downward"></iron-icon></paper-button>
+              </div>
+              <div class="photoCapText zero explainG"><i18n-msg msgid="reportChoicePhotoHelp"></i18n-msg></div>
+              <div class="continueBoxPhoto unhideContinuePhoto">
+                <paper-button class="continuePhoto report-button" onclick="setImage();"><i18n-msg msgid="continue"></i18n-msg> &nbsp; &gt;&gt;</paper-button>
+              </div>
+            </div>
+            <div id="report-page-5p" class="none">
+              <section class="section-question section-question-5"><i18n-msg msgid="reportChoiceMapP"></i18n-msg></section>
+              <div class="rmaph"></div>
+              <div class="mapCapText explainG"><i18n-msg msgid="reportChoiceMapHelp"></i18n-msg></div>
+              <div class="continueBoxPhoto unhideContinuePhoto">
+                <paper-button class="continuePhoto report-button" onclick="setLocation();"><i18n-msg msgid="continue"></i18n-msg> &nbsp; &gt;&gt;</paper-button>
+              </div>
+            </div>
+            <div id="report-page-6p" class="none">
+              <section class="section-question section-question-6"><i18n-msg msgid="additionalInformation"></i18n-msg></section>
+              <div class="lkih">
+                <paper-textarea on-input="infoInput" id="lkip" class="lki" rows=1 max-rows=10></paper-textarea>
+              </div>
+              <div class="explainG lkit"><i18n-msg msgid="reportChoiceInformationHelpP"></i18n-msg></div>
+              <div class="continueBoxInformation unhideContinuePhoto">
+                <paper-button class="continueInformation report-button" onclick="toPage(7);"><i18n-msg msgid="continue"></i18n-msg> &nbsp; &gt;&gt;</paper-button>
+              </div>
+            </div>
+            <div id="report-page-6a" class="none">
+              <section class="section-question section-question-6"><i18n-msg msgid="additionalInformation"></i18n-msg></section>
+              <div class="lkih">
+                <paper-textarea on-input="infoInput" id="lkia" class="lki" rows=1 max-rows=10></paper-textarea>
+              </div>
+              <div class="explainG lkit"><i18n-msg msgid="reportChoiceInformationHelpA"></i18n-msg></div>
+              <div class="continueBoxInformation unhideContinuePhoto">
+                <paper-button class="continueInformation report-button" onclick="toPage(7);"><i18n-msg msgid="continue"></i18n-msg> &nbsp; &gt;&gt;</paper-button>
+              </div>
+            </div>
+            <div id="report-page-7p" class="none">
+              <section class="section-question section-question-7"><i18n-msg msgid="reportSubmit"></i18n-msg></section>
+              <div class="reportSignIn">
+                <paper-button class="reportButtonSignIn subb hover report-button nonUpper width150"><i18n-msg msgid="signIn"></i18n-msg></paper-button>
+                <div class="explainG subG"><i18n-msg msgid="explainSignInP"></i18n-msg></div>
+              </div>
+              <div class="reportUser">
+                <paper-button class="reportButtonSubmit subb hover report-button nonUpper width150"><i18n-msg msgid="submit"></i18n-msg></paper-button>
+                <div class="explainG subG"><i18n-msg msgid="explainSubmitP"></i18n-msg></div>
+              </div>
+              <div class="reportAnon">
+                <paper-button class="reportButtonAnon subb hover report-button nonUpper width150"><i18n-msg msgid="submitAnon"></i18n-msg></paper-button>
+                <div class="explainG subG"><i18n-msg msgid="explainAnonP"></i18n-msg><br><i18n-msg msgid="explainAnon2"></i18n-msg></div>
+              </div>
+            </div>
+            <div id="report-page-7a" class="none">
+              <section class="section-question section-question-7"><i18n-msg msgid="reportSubmit"></i18n-msg></section>
+              <div class="reportSignIn">
+                <paper-button class="reportButtonSignIn subb hover report-button nonUpper width150"><i18n-msg msgid="signIn"></i18n-msg></paper-button>
+                <div class="explainG subG"><i18n-msg msgid="explainSignInA"></i18n-msg></div>
+              </div>
+              <div class="reportUser">
+                <paper-button class="reportButtonSubmit subb hover report-button nonUpper width150"><i18n-msg msgid="submit"></i18n-msg></paper-button>
+                <div class="explainG subG"><i18n-msg msgid="explainSubmitA"></i18n-msg></div>
+              </div>
+              <div class="reportAnon">
+                <paper-button class="reportButtonAnon subb hover report-button nonUpper width150"><i18n-msg msgid="submitAnon"></i18n-msg></paper-button>
+                <div class="explainG subG left"><i18n-msg msgid="explainAnonA"></i18n-msg><br><i18n-msg msgid="explainAnon2"></i18n-msg></div>
+              </div>
+            </div>
+            <div class="report-page-z none">
+              <section class="section-question"><i18n-msg msgid="reportComplete"></i18n-msg></section>
+              <div class="explainG explainCopy1"><i18n-msg msgid="explainCopy1"></i18n-msg></div>
+              <div id="uuidh"></div>
+              <paper-button aria-label="copy url" class="reportCopy hover report-button nonUpper width150" onclick="copyUrl();"><img height=23 width=23 src="/assets/images/other/clippy.svg" alt=""></paper-button>
+              <div class="explainG explainCopy2"><i18n-msg msgid="explainCopy2"></i18n-msg></div>
+              <textarea class="js-copytextarea"></textarea>
+              <div id="ncmec" class="none explainG"><i18n-msg msgid="ncmec1"></i18n-msg> <span class="ncmec2" onclick="loadPage4();"><i18n-msg msgid="ncmec2">></i18n-msg></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-spacer-3"></div>
+        <div class="tabby none"></div>
+      </div>
+    </paper-dialog>
+  </template>
+</dom-module>
+<script>
+(function () {
+  Polymer({
+    is: 'taupo-report',
+    nameInput: function() {
+      setName(-1);
+    },
+    infoInput: function() {
+      setInfo();
+    }
+  });
+})();
+
+// load report
+function goReport() {
+  clog('%creport::goReport', 9, 'color: grey');
+  if(typeof window.dontPush == 'undefined') {
+    window.router.action = 'report';
+    pushRoute();
+  } else { delete window.dontPush; }
+  //
+  window.filters  = ''; // quick search filters
+  window.sending  = false; // report submission send state
+  // open
+  if(window.rtl) {
+    $('#report-pad').addClass('rtl');
+    $('.report-header').addClass('rtlh');
+    $('paper-slider').prop('dir', 'rtl');
+    $('#lkia').addClass('rtla');
+  } else {
+    $('#report-pad').removeClass('rtl');
+    $('.report-header').removeClass('rtlh');
+    $('paper-slider').prop('dir', 'ltr');
+    $('#lkia').removeClass('rtla');
+  }
+  document.querySelector('#report-pad').open();
+  // register this modal
+  window.modal = '#report-pad';
+  // init reporting var
+  window.r = new Object();
+  window.r.pa        = 0;
+  window.r.stat      = null;
+  window.r.sex       = 'unk';
+  window.r.age       = 18;
+  window.r.name      = '';
+  window.r.buddy     = '';
+  window.r.photo     = null;
+  window.r.latitude  = 0;
+  window.r.longitude = 0;
+  window.r.lki       = '';
+  // handlers
+  $(function() { $("#agep" ).change(function(e) { setAge(-1);  }); });
+  $(function() { $("#agea" ).change(function(e) { setAge(-1);  }); });
+  var pbselect = document.getElementById('pbselect');
+  pbselect.addEventListener('click', function(){document.getElementById('filesid').click();}, false);
+  // PL-1671
+  var ua = window.navigator.userAgent;
+  var iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
+  var webkit = !!ua.match(/WebKit/i);
+  window.iOSSafari = iOS && webkit && !ua.match(/CriOS/i);
+  if(window.iOSSafari) {
+    $('#pbselect').prop('disabled', true);
+    $('#pbselect').addClass('none');
+    $('#filesid').removeClass('none');
+    $('.buttonCamera').prop('disabled', true);
+    $('.buttonCamera').addClass('none');
+  }
+  $('#reportEvent').html(getEventName(window.router.short));
+}
+// hide report
+function hideReport(performBack) {
+  clog('%creport::hideReport:'+performBack, 9, 'color: grey');
+  if(performBack) { popRoute(); return; }
+  window.dontPushFromReport = true;
+  // close pad
+  document.querySelector('#report-pad').close();
+  // pop modal state
+  delete window.modal;
+  // wait for close
+  setTimeout(function() {
+    // scroll to top
+    $('#report-pad').animate({ scrollTop: "0px" });
+    $('.report-page-x').removeClass('none');
+    // hide all
+    for(var i=0; i<10; i++) {
+      $('#report-page-'+i+'p').addClass('none');
+      $('#report-page-'+i+'a').addClass('none');
+    }
+    $('.tabby').addClass('none');
+  }, 255);
+  // clear handlers
+  $(function() { $("#agep" ).off(); });
+  $(function() { $("#agea" ).off(); });
+  $(function() { $("#namep").off(); });
+  $(function() { $("#namea").off(); });
+  // other stuff to reset
+  $('.continueBoxAge').removeClass('unhideContinueAge');
+  $('.report-page-z').addClass('none');
+  $('.reportButtonSignIn').prop('disabled', false);
+  $('.reportButtonSubmit').prop('disabled', false);
+  $('.reportButtonAnon').prop('disabled', false);
+  // reset status
+  $('.mis').prop('active', false);
+  $('.fnd').prop('active', false);
+  $('.ali').prop('active', false);
+  $('.inj').prop('active', false);
+  $('.dec').prop('active', false);
+  $('.unk').prop('active', false);
+  // reset sex
+  $('.mal' ).prop('active', false);
+  $('.fml' ).prop('active', false);
+  $('.cpx' ).prop('active', false);
+  $('.unks').prop('active', false);
+  // reset age
+  $('#agep').val(0);
+  $('.unka').prop('active', false);
+  // reset name
+  $('.unkn').prop('active', false);
+  $('#namep').val('');
+  // reset ncmec
+  $('#ncmec').addClass('none');
+  // reset photo
+  deletePhoto();
+  // reset lki
+  $('#lki'+window.reporting).val('');
+  // refresh search results
+  goQuery();
+}
+
+// report person or animal
+function reportPA(x) {
+  window.r.pa = x;
+  $('.wizard').addClass('hide');
+  // person
+  if(x === 0) {
+    window.reporting = 'p';
+    setTimeout(function() { 
+      $('.report-page-x' ).addClass('none');
+      $('#report-page-0p').removeClass('none');
+      $('.tabby').html(
+        '<paper-tabs class="tabz" selected="0" scrollable>'+
+          '<paper-tab class="tab0"          onclick="toPage(0);"><i18n-msg msgid="status"></i18n-msg></paper-tab>'+
+          '<paper-tab class="tab1" disabled onclick="toPage(1);"><i18n-msg msgid="gender"></i18n-msg></paper-tab>'+
+          '<paper-tab class="tab2" disabled onclick="toPage(2);"><i18n-msg msgid="age"></i18n-msg></paper-tab>'+
+          '<paper-tab class="tab3" disabled onclick="toPage(3);"><i18n-msg msgid="name"></i18n-msg></paper-tab>'+
+          '<paper-tab class="tab4" disabled onclick="toPage(4);"><i18n-msg msgid="photo"></i18n-msg></paper-tab>'+
+          '<paper-tab class="tab5" disabled onclick="toPage(5);"><i18n-msg msgid="location"></i18n-msg></paper-tab>'+
+          '<paper-tab class="tab6" disabled onclick="toPage(6);"><i18n-msg msgid="information"></i18n-msg></paper-tab>'+
+          '<paper-tab class="tab7" disabled onclick="toPage(7);"><i18n-msg msgid="submit"></i18n-msg></paper-tab>'+
+        '</paper-tabs>');
+      $('.tabby' ).removeClass('none');
+      $('.tabby' ).animate({ opacity: 1 }, 250);
+      $('.wizard').addClass('unhide');
+    }, 255);
+  // animal
+  } else if(x === 1) {
+    window.reporting = 'a';
+    setTimeout(function() { 
+      $('.report-page-x' ).addClass('none');
+      $('#report-page-0a').removeClass('none');
+      $('.tabby').html(
+        '<paper-tabs class="tabz" selected="0" scrollable>'+
+          '<paper-tab class="tab0"          onclick="toPage(0);"><i18n-msg msgid="status"></i18n-msg></paper-tab>'+
+          '<paper-tab class="tab1" disabled onclick="toPage(1);"><i18n-msg msgid="gender"></i18n-msg></paper-tab>'+
+          '<paper-tab class="tab2" disabled onclick="toPage(2);"><i18n-msg msgid="age"></i18n-msg></paper-tab>'+
+          '<paper-tab class="tab3" disabled onclick="toPage(3);"><i18n-msg msgid="name"></i18n-msg></paper-tab>'+
+          '<paper-tab class="tab4" disabled onclick="toPage(4);"><i18n-msg msgid="photo"></i18n-msg></paper-tab>'+
+          '<paper-tab class="tab5" disabled onclick="toPage(5);"><i18n-msg msgid="location"></i18n-msg></paper-tab>'+
+          '<paper-tab class="tab6" disabled onclick="toPage(6);"><i18n-msg msgid="information"></i18n-msg></paper-tab>'+
+          '<paper-tab class="tab7" disabled onclick="toPage(7);"><i18n-msg msgid="submit"></i18n-msg></paper-tab>'+
+        '</paper-tabs>');
+      $('.tabby' ).removeClass('none');
+      $('.tabby' ).animate({ opacity: 1 }, 250);
+      $('.wizard').addClass('unhide');
+    }, 255);
+  }
+  // update submit gui
+  setTimeout(function() { updateSubmit(); }, 1000);
+}
+
+function setStatus(stat) {
+  window.r.stat = stat;
+  // clear other stats
+  if(stat !== 'mis') { $('.mis').prop('active', false); }
+  if(stat !== 'fnd') { $('.fnd').prop('active', false); }
+  if(stat !== 'ali') { $('.ali').prop('active', false); }
+  if(stat !== 'inj') { $('.inj').prop('active', false); }
+  if(stat !== 'dec') { $('.dec').prop('active', false); }
+  if(stat !== 'unk') { $('.unk').prop('active', false); }
+  toPage(1);
+  // get map ready
+  initReportMap();
+}
+
+function setSex(sex) {
+  window.r.sex = sex;
+  // clear other stats
+  if(sex !== 'mal') { $('.mal' ).prop('active', false); }
+  if(sex !== 'fml') { $('.fml' ).prop('active', false); }
+  if(sex !== 'cpx') { $('.cpx' ).prop('active', false); }
+  if(sex !== 'unk') { $('.unks').prop('active', false); }
+  toPage(2);
+}
+
+function setAge(age) {
+  // slider
+  if(age == -1) {
+    $('.unka').prop('active', false);
+    window.r.age = $('#age'+window.reporting).prop('immediateValue');
+    $('.continueBoxAge').addClass('unhideContinueAge');
+  // button
+  } else {
+    // un-toggle unknown button = use slider value
+    if(window.r.age == 'unk') {
+      $('.unka').prop('active', false);
+      window.r.age = $('#age'+window.reporting).prop('immediateValue');
+      $('.continueBoxAge').addClass('unhideContinueAge');
+    // use unknown
+    } else {
+      window.r.age = 'unk';
+      toPage(3);
+    }
+  }
+}
+
+function setName(val) {
+  // text
+  if(val == -1) {
+    $('.unkn').prop('active', false);
+    // person
+    if(window.reporting == 'p') {
+      window.r.name = $('#name'+window.reporting).prop('value');
+      if(window.r.name == '') {
+        $('.continueBoxName').removeClass('unhideContinueName');
+      } else {
+        $('.continueBoxName').addClass('unhideContinueName');
+      }
+    // animal
+    } else {
+      window.r.name  = $('#name'+window.reporting).prop('value');
+      window.r.buddy = $('#buddy'+window.reporting).prop('value');
+      if(window.r.name == '' && window.r.buddy == '') {
+        $('.continueBoxName').removeClass('unhideContinueName');
+      } else {
+        $('.continueBoxName').addClass('unhideContinueName');
+      }
+    }
+  // button
+  } else {
+    // un-toggle unknown button = use text value
+    if(window.r.name == 'unk') {
+      $('.continueBoxName').removeClass('unhideContinueName');
+      window.r.name  = '';
+      window.r.buddy = '';
+    // use unknown
+    } else {
+      $('#namep').val('');
+      window.r.name  = 'unk';
+      window.r.buddy = 'unk';
+      toPage(4);
+    }
+  }
+}
+
+function setImage() {
+  getCroppedImage();
+  toPage(5);
+}
+
+function setLocation() {
+  window.r.latitude  = window.rmapm.latitude;
+  window.r.longitude = window.rmapm.longitude;
+  toPage(6);
+}
+
+function setInfo(val) {
+  window.r.lki = $('#lki'+window.reporting).prop('value');
+}
+
+// update submit page
+function updateSubmit() {
+  // anon
+  if(parseInt(window.gid, 10) === 3) {
+    // hide logged in functions
+    $('.reportUser').addClass('none');
+    // show anon functions
+    $('.reportSignIn').removeClass('none');
+    // unregister user handlers
+    $(function() { $('.reportButtonSubmit').unbind('click'); });
+    // register anon handlers
+    $(function() { $('.reportButtonSignIn').click(function(e) {
+      $('#report-pad').prop('modal', false);
+      window.postLoginRegisterAction = 'updateSubmitPostSignIn';
+      showPad1();
+    });});
+    $(function() { $('.reportButtonAnon'  ).click(function(e) { report_anon(); }); });
+  // logged in user
+  } else {
+    // hide anon functions
+    $('.reportSignIn').addClass('none');
+    // show user functions
+    $('.reportUser').removeClass('none');
+    // unregister anon handlers
+    $(function() { $('.reportButtonSignIn').unbind('click'); });
+    // register user handlers
+    $(function() { $('.reportButtonSubmit').click(function(e) { report_user(); }); });
+    $(function() { $('.reportButtonAnon'  ).click(function(e) { report_anon(); }); });
+  }
+}
+
+// update submit after sign in
+function updateSubmitPostSignIn() {
+  // re-modal report
+  $('#report-pad').prop('modal', true);
+  // hide anon functions
+  $('.reportSignIn').addClass('none');
+  // show user functions
+  $('.reportUser').removeClass('none');
+  // unregister anon handlers
+  $(function() { $('.reportButtonSignIn').unbind('click'); });
+  // register logged in report button
+  $(function() { $('.reportButtonSubmit').click(function(e) { report_user(); }); });
+  window.postLoginRegisterAction = 'goQuery';
+}
+
+// report anonymously
+function report_anon() {
+  clog('%creport::report_anon', 9, 'color: grey');
+  toastSending();
+  $('.reportButtonSignIn').prop('disabled', true);
+  $('.reportButtonSubmit').prop('disabled', true);
+  $('.reportButtonAnon').prop('disabled', true);
+  $('.reportButtonAnon').prop('active', false);
+  // skip outstanding request
+  if(window.sending === false) {
+    window.sending = true;
+    // set params
+    window.r.token  = window.token;
+    window.r.call   = 'report';
+    window.r.notme  = true;
+    window.r.format = 'PA1';
+    window.r.short  = window.router.short;
+    var rj = JSON.stringify(window.r);
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', window.endpoint, true);
+    xhr.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
+    xhr.onload = function(e) {
+      window.sending = false;
+      if(e.target.status !== 200 && e.target.status !== 0) {
+        netConnectionError();
+        return;
+      }
+      var resp    = JSON.parse(e.target.response);
+      window.uuid = resp.uuid;
+      var error   = resp.error;
+      // success
+      if(parseInt(error, 10) === 0) {
+        clog('%creport::send_anon success! uuid:'+window.uuid, 9, 'color: white');
+        lastPage();
+      // failure
+      } else {
+        $('.reportButtonSignIn').prop('disabled', false);
+        $('.reportButtonSubmit').prop('disabled', false);
+        $('.reportButtonAnon').prop('disabled', false);
+        clog('%creport::send_anon error:'+error, 9, 'color: red');
+        toastRed('restError9999', window.toastDuration);
+      }
+    }.bind(this);
+    xhr.onerror = function(e) {
+      window.sending = false;
+      netConnectionError();
+    };
+    xhr.send(rj);
+  }
+}
+
+// report as user
+function report_user() {
+  toastSending();
+  $('.reportButtonAnon').prop('disabled', true);
+  $('.reportButtonSubmit').prop('disabled', true);
+  $('.reportButtonSubmit').prop('active', false);
+  // skip outstanding request
+  if(window.sending === false) {
+    window.sending = true;
+    // set params
+    window.r.token  = window.token;
+    window.r.call   = 'report';
+    window.r.format = 'PA1';
+    window.r.short  = window.router.short;
+    var rj = JSON.stringify(window.r);
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', window.endpoint, true);
+    xhr.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
+    xhr.onload = function(e) {
+      window.sending = false;
+      if(e.target.status !== 200 && e.target.status !== 0) {
+        netConnectionError();
+        return;
+      }
+      var resp    = JSON.parse(e.target.response);
+      window.uuid = resp.uuid;
+      var error   = resp.error;
+      // success
+      if(parseInt(error, 10) === 0) {
+        clog('%creport::send_user success! uuid:'+window.uuid, 9, 'color: white');
+        lastPage();
+      // failure
+      } else {
+        $('.reportButtonSubmit').prop('disabled', false);
+        $('.reportButtonAnon').prop('disabled', false);
+        clog('%creport::send_user error:'+error, 9, 'color: red');
+        toastRed('restError9999', window.toastDuration);
+      }
+    }.bind(this);
+    xhr.onerror = function(e) {
+      window.sending = false;
+      netConnectionError();
+    };
+    xhr.send(rj);
+    ga('send', 'pageview', window.location.pathname + '/followrecord');
+  }
+}
+
+// nav to next page/tab
+function toPage(x) {
+  $('.wizard').removeClass('unhide');
+  var y;
+  // page 4 is unary
+  if(x == 4) {
+    // update txt
+    y = 'p';
+    if(window.reporting == 'a') {
+      $('.section-question-4').html('<i18n-msg msgid="reportChoicePhotoA"></i18n-msg>');
+    }
+  } else if(x == 5) {
+    y = 'p';
+    if(window.reporting == 'a') {
+      $('.section-question-5').html('<i18n-msg msgid="reportChoiceMapA"></i18n-msg>');
+    }
+  } else {
+    y = window.reporting;
+  }
+  setTimeout(function() { 
+    // hide all
+    for(var i=0; i<10; i++) {
+      $('#report-page-'+i+'p').addClass('none');
+      $('#report-page-'+i+'a').addClass('none');
+    }
+    // show one
+    $('#report-page-'+x+y).removeClass('none');
+    $('.wizard').addClass('unhide');
+    // update tabby
+    $('.tab'+x).prop('disabled', false);
+    $('.tabz').prop('selected', x);
+  }, 255);
+  // get map more ready
+  if(x == 5) {
+    setTimeout(function() { defaultReportMap(); }, 355);
+  }
+}
+
+// proceed to last page of wuzard
+function lastPage() {
+  $('.wizard').removeClass('unhide');
+  setTimeout(function() { 
+    // hide all
+    for(var i=0; i<10; i++) {
+      $('#report-page-'+i+'p').addClass('none');
+      $('#report-page-'+i+'a').addClass('none');
+    }
+    // update uuid
+    var u = window.baseUrl+'/'+window.router.locale+'/'+window.router.short+'/'+'record#'+window.uuid.split('/')[1].split('.')[1];
+    $('#uuidh').html('<paper-input id="uuidp" value="'+u+'"></paper-input>');
+    $('.js-copytextarea').html(u);
+    // show NCMEC link
+    if(window.r.age !== 'unk' && window.r.age < 18 && window.reporting == 'p') {
+      $('#ncmec').removeClass('none');
+    }
+    // clear tabs
+    $('.tabby').addClass('none');
+    // show one
+    $('.report-page-z').removeClass('none');
+    $('.wizard').addClass('unhide');
+    clearSendingToast();
+  }, 255);
+}
+
+// copy url to device clipboard
+function copyUrl() {
+  var copyTextarea = document.querySelector('.js-copytextarea');
+  copyTextarea.select();
+  try {
+    var successful = document.execCommand('copy');
+    var succ = successful ? true : false;
+    if(succ === true) {
+      toastYellow('copyTrue', window.toastDuration);
+    } else {
+      toastRed('copyFalse', window.toastDuration);
+    }
+  } catch (err) {
+    // unable to copy
+    toastRed('copyFalse', window.toastDuration);
+  }
+}
+
+// accept OMB
+function acceptOMB() {
+  setCookie('acknowledgeOMBnotice', true, 9999);
+}
+
+// check accept OMB cookie
+function checkOMB() {
+  if(getCookie('acknowledgeOMBnotice') != 'true') {
+    // do something
+  }
+}
+</script>

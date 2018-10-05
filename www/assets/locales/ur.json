@@ -1,0 +1,1170 @@
+{
+  "thisLanguageDescription": {
+    "message": "Urdu",
+    "context": "This word describes this language itself IN ENGLISH! DO NOT TRANSLATE THIS!! This phrase must remain in English."
+  },
+  "thisLanguage": {
+    "message": "اردو",
+    "context": "This word describes this language itself."
+  },
+  "signIn": {
+    "message": "سائن اِن کریں",
+    "context": "A button that when clicked allows a user to login or register."
+  },
+  "logout": {
+    "message": "لاگ آؤٹ کریں",
+    "context": "A label for a button allowing a user to logout."
+  },
+  "administration": {
+    "message": "انتظام",
+    "context": "A label for a button allowing a user to access the Administraion module."
+  },
+  "linkHelp": {
+    "message": "مدد",
+    "context": "This is the text for a link to the Help page."
+  },
+  "linkAbout": {
+    "message": "بارے میں",
+    "context": "The link text for the About link."
+  },
+  "linkPrivacy": {
+    "message": "رازداری",
+    "context": "The link text for the Privacy link."
+  },
+  "linkAccessibility": {
+    "message": "رسائی",
+    "context": "The link text for the Accessibility link."
+  },
+  "linkContact": {
+    "message": "رابطہ",
+    "context": "The link text for the Contact link."
+  },
+  "linkApps": {
+    "message": "اَیپس",
+    "context": "The link text for the Apps link."
+  },
+  "linkResources": {
+    "message": "ذرائع",
+    "context": "The link text for the Resources link."
+  },
+  "linkFollowUs": {
+    "message": "ہماری پیروی کریں",
+    "context": "The link text for the Follow Us link."
+  },
+  "linkTrademark": {
+    "message": "تجارتی نشان",
+    "context": "The link text for the Trademark link."
+  },
+  "expirationDate": {
+    "message": "تاریخِ اختتام",
+    "context": "Verbiage describing the expiration date of the OMB notice."
+  },
+  "restError1": {
+    "message": "نقص: غیردرست صارف نام یا پاس ورڈ",
+    "context": "Error message presented when a user provides the incorrect username and/or password."
+  },
+  "restError2": {
+    "message": "نقص: آپ کا اکاؤنٹ عارضی طور پر بند ہوگیا ہے کیونکہ آپ بار بار کوشش کرنے کے بعد بھی لاگ ان نہیں کر پائے، بعد میں دوبارہ کوشش کریں",
+    "context": "Error message presented when a user fails to login repeatedly."
+  },
+  "restError3": {
+    "message": "خرابی: جب تک آپ کا ای میل ایڈریس کی تصدیق نہیں کی جاتی ہے اس میں سائن ان نہیں کر سکتے ہیں، براہ کرم لنک کے لئے ای میل چیک کریں",
+    "context": "Error message presented when a user account is not yet active."
+  },
+  "restError2000": {
+    "message": "نقص: فراہم کردہ ای میل پتہ والا ایک صارف پہلے سے موجود ہے",
+    "context": "Error message presented when user tries to use an email address already in use."
+  },
+  "restError2001": {
+    "message": "نقص: غیردرست ای میل پتہ",
+    "context": "Error message presented when a user provides an invalid email address."
+  },
+  "restError2002": {
+    "message": 	"نقص: پاس ورڈ لازمی طور پر8-16  کیریکٹر لمبا ہو، اس میں کم از کم ایک اَپر کیس، ایک لوور کیس اور ایک عددی کیریکٹر ہو",
+    "context": "Error message presented when user enters an invalid password."
+  },
+  "restError2004": {
+    "message": "نقص: پاس ورڈ میل نہیں کھاتے ہیں",
+    "context": "Error message presented when entered password do not match one another."
+  },
+  "passError0": {
+    "message": "نقص: پاس ورڈ لازمی طور پر8-16  کیریکٹر لمبا ہو",
+    "context": "Error message presented when entered password is of incorrect length, must be 8-16 characters long."
+  },
+  "passError1": {
+    "message": "نقص: پاس ورڈ میں لازمی طور پر ایک اَپر کیس حرف (الف-Z) ہو",
+    "context": "Error message presented when entered password does not contain at least one uppercase letter."
+  },
+  "passError2": {
+    "message": "نقص: پاس ورڈ میں لازمی طور پر ایک لوور کیس (a-z) حرف ہو",
+    "context": "Error message presented when entered password does not contain at least one lowercase letter."
+  },
+  "passError3": {
+    "message": "نقص: پاس ورڈ میں لازمی طور پر کوئی عدد (0-9) ہو",
+    "context": "Error message presented when entered password does not contain at least one digit."
+  },
+  "restError5000": {
+    "message":"نیٹ ورک کا نقص۔ برائے مہربانی اپنا کنیکشن چیک کریں اور دوبارہ کوشش کریں۔",
+    "context": "Error message presented when there is a network / internet issue."
+  },
+  "restError9999": {
+    "message": "کوئی نامعلوم نقص واقع ہو گیا ہے۔",
+    "context": "Error message presented when an unknown error has occurred."
+  },
+  "notifyLogin": {
+    "message": "لاگ ان ہو گیا۔",
+    "context": "This notification will appear after the user successfully logs in."
+  },
+  "notifyRegister": {
+    "message": "آپ اب رجسٹرشدہ اور لاگ ان ہیں۔",
+    "context": "This notification will appear after the user newly registers and is automatically logged in."
+  },
+  "notifyRegistering": {
+    "message":  "رجسٹریشن کر رہا۔۔۔",
+    "context": "This notification will appear briefly as the system registers and creates a new account for the user."
+  },
+  "notifyPasswordChanged": {
+    "message": "پاس ورڈ کامیابی کے ساتھ بدل دیا گیا۔",
+    "context": "This notification will appear after the user successfully changes their password."
+  },
+  "notifyResetPassword": {
+    "message": "آپ کو اپنا پاس ورڈ دوبارہ ترتیب دینے کے لئے ہدایات ای میل کردی گئی ہے.",
+    "context": "This notification appears when a user has successfully sent a request to reset their password."
+  },
+  "pad1login": {
+    "message": "لاگ ان",
+    "context": "This is the name of the first tab of the user dialog allowing a user to login."
+  },
+  "pad1register": {
+    "message": "رجسٹر",
+    "context": "This is the name of the second tab of the user dialog allowing a user to register."
+  },
+  "pad1forgotText": {
+    "message": "اپنا ای میل پتہ درج کریں اور ہم آپ کو ہدایات بھیج دیں گے کہ کس طرح سے آپ کو اپنا پاس ورڈ دوبارہ ترتیب دینا ہے۔",
+    "context": "This text informs the user of what they must do in order to reset their password ~ they must enter their email address."
+  },
+  "pad1forgotSend": {
+    "message": "بھیجیں",
+    "context": "This is the text label on the forgot my password dialog to submit the form."
+  },
+  "pad1loginForgot": {
+    "message": "پاسورڈ بھول گے؟",
+    "context": "This is the text label for the forgot my password button on the login dialog."
+  },
+  "pad1loginUsernamePlaceholder": {
+    "message": "صارف نام",
+    "context": "This is the placeholder text for the username input."
+  },
+  "pad1loginPasswordPlaceholder": {
+    "message": "پاس ورڈ",
+    "context": "This is the placeholder text for the password input."
+  },
+  "pad1registerEmailPlaceholder": {
+    "message": "ای میل",
+    "context": "This is the placeholder text for the email input."
+  },
+  "pad1registerText": {
+    "message": "آپ کے پاس ورڈ میں لازمی طور پر ایک عدد، ایک لوورکیس حرف، اورایک اَپر کیس حرف ہو، اور وہ لازماً 8-16 کیریکٹر لمبا ہو۔",
+    "context": "This is the text displayed while the user is in the process of registering informing them of our minimum password requirements."
+  },
+  "omb7notice": {
+    "message": "نوٹِس",
+    "context": "This is the first word of the OMB notice."
+  },
+  "omb7submission": {
+    "message": "معلومات کی جمع کاری رضاکارانہ ہے۔ جمع کردہ ساری معلومات عوامی طور پر دستیاب ہوں گی۔",
+    "context": "These are the first two sentences of the OMB notice."
+  },
+  "omb7text": {
+    "message": "معلومات کے اس مجموعہ کے لیے عوامی رپورٹنگ کا بوجھ تخمینہ کے مطابق فی جواب اوسط 3 منٹ ہے۔ یہ تخمینہ ہدایات کا جائزہ لینے، اکٹھا کرنے، اور ڈیٹا کا اندراج کرنے میں لگنے والے وقت کو شامل ہے۔ کوئی ایجنسی معلومات کے ایک مجموعہ کا انتظام یا اسے اسپانسر نہیں کر سکتی ہے، اور کسی شخص سے اس کا جواب دینا مطلوب نہیں ہے، یہاں تک کہ یہ موجودہ وقت میں درست OMB نمبر ظاہر کرے۔ بوجھ کے اس تخمینہ یا معلومات کے اس مجموعہ کے کسی پہلو، بشمول اس بوجھ کو کم کرنے کے مشورے، کے تعلق سے تبصرے بھیجیں:",
+    "context": "This is the main paragraph of the OMB notice."
+  },
+  "omb7sub": {
+    "message": "میں نے اس کو پڑھ لیا ہے اور اس سے اتفاق کرتا ہوں۔",
+    "context": "This is the label for the OMB notice agreement button."
+  },
+  "pad3following": {
+    "message": "درج ذیل",
+    "context": "This is the name of the first tab of user preferences that shows which records a user is following -- shortened to 1 word!"
+  },
+  "pad3settings": {
+    "message": "ترتیبات",
+    "context": "This is the name of the second tab of user preferences that shows user settings."
+  },
+  "pad3loading": {
+    "message":  "لوڈ کر رہا",
+    "context": "This word is displayed when the following records tab is loading results from the server."
+  },
+  "pad3emptyFollow": {
+    "message": "آپ کسی ریکارڈ کی پیروی نہیں کر رہے ہیں۔",
+    "context": "This verbiage is displayed when the following records panel is displayed and the user is not following any records."
+  },
+  "pad3unFollow": {
+    "message": "پیروی ختم کریں",
+    "context": "This is the text label applied to the button that allows a user to unfollow updates to a record."
+  },
+  "pad3record": {
+    "message": "ریکارڈز کو اپ ڈیٹس حاصل کریں جو آپ کے ذریعے درج ذیل ہیں",
+    "context": "This verbiage describes the user settings section where a user can subscribe to receive messages from PL via push or email when a record they are following is updated."
+  },
+  "pad3event": {
+    "message": "جب ایک نیا ایونٹ تخلیق ہوجاتا ہے تو ایک پیغام وصول کریں",
+    "context": "This verbiage describes the user settings section where a user can subscribe to receive messages from PL via push or email when a new event is created."
+  },
+  "pad3admin": {
+    "message": "ذریعے منتظم پیغامات حاصل کریں",
+    "context": "This verbiage describes the user settings section where a user can subscribe to receive admin messages from PL via push or email."
+  },
+  "pushNotification": {
+    "message": "اطلاعات پش",
+    "context": "This describes a button label for a Push Notification option."
+  },
+  "pad3changePasswordButton": {
+    "message": "پاس ورڈ تبدیل کریں",
+    "context": "This verbiage describes the extent to which we use the push notification subscription a user provides to send out information."
+  },
+  "pad3passwordRequirements": {
+    "message": "آپ کے پاس ورڈ میں لازمی طور پر ایک عدد، ایک لوور کیس حرف، ایک اَپر کیس حرف ہو، اور وہ لازماً 8-16 کیریکٹر لمبا ہو۔",
+    "context": "This verbiage describes the extent to which we use the push notification subscription a user provides to send out information."
+  },
+  "pad3oldPasswordPlaceholder": {
+    "message": "پرانا پاس ورڈ",
+    "context": "This is the placeholder text for the old password input."
+  },
+  "pad3newPassword1Placeholder": {
+    "message": "نیا پاس ورڈ",
+    "context": "This is the placeholder text for the new password input."
+  },
+  "pad3newPassword2Placeholder": {
+    "message": "نیا پاس ورڈ دوبارہ",
+    "context": "This is the placeholder text for the new password again input."
+  },
+  "pushNotificationsDisallowed": {
+    "message": "آپ نے اس سائٹ کو اطلاعات ظاہر کرنے سے منع کیا تھا۔ اس فیچر کو استعمال کرنے کے لیے آپ کو یہ اجازت دوبارہ فعال کرنی ہو گی۔",
+    "context": "This text tells the user that they have prohibited the site from using push notifications and that they must re-enable this feature to subscribe."
+  },
+  "helpFindTitle": {
+    "message": "آدمی یا پالتو جانور کو پانے میں مدد",
+    "context": "This is the title of the help page section on how to find/search."
+  },
+  "helpFindText": {
+    "message": "اگر آپ کسی گمشدہ شخص یا جانور کی تلاش میں ہیں تو، آپ اپنے آفتوں کے واقعات میں سے ایک تلاش کرکے انہیں تلاش کرنے کی کوشش کر سکتے ہیں. جب آپ سب سے پہلے PEOPLE LOCATOR پر پہنچتے ہیں تو، آپ کو دستیاب آفت کے واقعات کی ایک فہرست کے ساتھ پیش کیا جاتا ہے. ہر ایونٹ میں ایک نام، واقعہ سے متعلق بیاناتی تصویر، اور بعض متن کی صورت حال بیان کی گئی ہے. اگر آپ نیچے سکرال کریں گے، تو آپ دیکھیں گے کہ آپ مختلف منتخب ہونے والے واقعات ہیں جن سے آپ منتخب کرسکتے ہیں. ایونٹ کو منتخب کریں جسے آپ اس بات کا یقین کرتے ہیں کہ آپ جو شخص یا جانور تلاش کرنے کی کوشش کررہے ہیں، زیادہ سے زیادہ امکان ہوسکتے ہیں. مثال کے طور پر، اگر ہیٹی زلزلے کا نام تھا اور جو شخص آپ چاہتے ہیں وہ ہیٹی میں آخری بار دیکھا گیا تھا، آپ اس ایونٹ کا انتخاب کریں گے. آپ تصویر کے تحت بڑی سبز بٹن پر ٹپ کرکے ایک ایونٹ منتخب کریں گے؛ یہ آپ کو اس خاص آفت کے واقعہ کے لئے سرچ انجن میں براہ راست لے جائے گا. آپ کے انتخاب کے بعد آپ کو نیا تلاش باکس سب سے اوپر پیش ہوگا. اس شخص کا نام درج کریں جسے آپ اس تلاش باکس میں تلاش کرنے کی کوشش کر رہے ہیں. تلاش کے نتائج خود کار طریقے سے سب سے زیادہ متعلقہ نتائج کے ساتھ خود کار طریقے سے اپ ڈیٹ کرتے ہیں. کسی بھی جزوی ریکارڈ کے نچلے حصے کے قریب تفصیلات لنک پر ٹپ کرکے آپ کے بارے میں مزید معلومات حاصل کر سکتے ہیں، یہ تفصیل کا نظارہ کھولتا ہے. اس تفصیل کے نقطہ نظر پر، آپ مزید تفصیلی ریکارڈ معلومات دیکھ سکتے ہیں، اپنے آپ کو ایک تبصرہ شامل کر سکتے ہیں، یا اپ ڈیٹس کے لۓ ایک ریکارڈ درج کریں.",
+    "context": "This is the help page article body describing in detail how to find/search for a person or animal."
+  },
+  "helpReportTitle": {
+    "message": "آدمی یا پالتو جانور کی رپورٹ کرنے میں مدد",
+    "context": "This is the title of the help page section on how to report."
+  },
+  "helpReportText": {
+    "message": "آپ اس شخص یا جانور تیرا طالب کو تلاش کرنے کے قابل نہیں ہیں، تو آپ کو یہ شخص ہمارے لوگوں لوکیٹر رجسٹری میں رپورٹ کرنا چاہئے. آپ ایک تباہی واقعہ میں نیویگیٹ ہے ایک بار، آپ کی سکرین کے سب سے نیچے دائیں ایک گلابی سچل کارروائی بٹن نظر آئے گا . اس بٹن ٹیپ آپ کی رپورٹ ہماری تلاش رجسٹری میں داخل کیا جائے گا رپورٹنگ کا عمل شروع ہو جائے گا اور ایک علیحدہ وزرڈ معلومات آپ ہمیں فراہم کی بنیاد پر ایک نئی رپورٹ مکمل کرنے کے اقدامات کے ذریعے مدد کرے گا بھی میں آپ کو شروع. ایک بار مکمل، اور ہو جائے دوسروں کو عوامی طور پر مرئی. ایک بار جب آپ رپورٹ مکمل (گمنام اطلاع نہیں ہے تو) آپ کو خود بخود وہ ہمارے رجسٹری میں آنے کے طور پر اپ ڈیٹس کے لئے آپ کی اپنی رپورٹ کی پیروی کرنے شروع کر دیں گے. دیگر شخص یا جانور کے بارے میں نئی ​​معلومات کے ساتھ آپ کو فراہم کر اپنے ریکارڈ پر تبصرہ کر سکتے ہیں آپ نے اطلاع دی. آپ اس ریکارڈ پیروی کر رہے ہیں کے بعد سے، اپ ڈیٹس بذریعہ ای میل آپ کو بھیج دیا یا اطلاعات دھکا ہو جائے گا",
+    "context": "This is the help page article body describing in detail how to report a person or animal."
+  },
+  "pageAboutTextAbout": {
+    "message": " یہ سائٹ Bethesda, Maryland میں واقع ریاستہائے متحدہ کی قومی لائبریری برائے طب (United States National Library of Medicine) کے ذریعہ فراہم کی جا رہی ہے۔ NLM قومی ادارہ برائے صحت، ریاستہائے متحدہ کا محکمۂ صحت اور انسانی خدمات، کا ایک حصہ ہے، اور اس کے مشن میں صحی خدمات کی فراہمی کو بہتر بنانے کے لیے مواصلاتی ٹیکنالوجی کی بہتری اور ربط شامل ہے۔ یہ سائٹ اس لیے فراہم کی جارہی ہے تا کہ قدرتی آفات کے جواب میں اس طرح کے اوزاروں کی افادیت کا مطالعہ ہو سکے۔ بنیادی ٹیکنالوجی کو غائب آدمی کو پانے والا (Lost Person Finder) پروجیکٹ کے ذریعہ ترقی دی گئی تھی، جو کہ بیتھسڈا اسپتال کی ہنگامی تیاری شراکت (Bethesda Hospitals' Emergency Preparedness Partnership) کے لیے NLM کی شراکت کا ایک حصہ ہے۔ شراکت کو 2008 میں LPF اور دیگر NLM IT پروجیکٹوں کے لیے ابتدائی وفاقی فنڈنگ ملی۔LPF پروجیکٹ فی الحال NIHکے ذریعہ داخلی تحقیق پروگرام (Intramural Research Program) کے ذریعہ، NLM کے لِسٹر ہِل مرکز برائے بایو میڈیکل مواصلات (Lister Hill National Center for Biomedical Communications) کے توسط سے، سپورٹ کیا جا رہا ہے۔ سافٹ ویئر ڈیولپمنٹ کی سربراہی LHNCBC کی مواصلاتی انجینئرنگ شاخ، LHNCBC کی کمپیوٹر سائنس شاخ اور قدرتی آفات انتظام تحقیق مرکز ، جو NLM کے مخصوص معلومات خدمات (Specialized Information Service) کا حصہ ہے، سے اضافی مواد کے ساتھ کر  رہی ہے۔", 
+    "context": "This is the first paragraph of verbiage on the About page describing the purpose of the PEOPLE LOCATOR."
+  },
+  "pageAboutTextBrowser": {
+    "message": "آپ کو اپنے براؤزر میں کُکی اور جاوا اسکرپٹ کو فعال حالت میں رکھنا ہو گا۔ آپ کے پاس لازمی طور پر مندرجہ ذیل ویب براؤزروں کے دو تازہ  ترین ورژنوں میں سے ایک ہو: کروم، فائر فاکس، سفاری، اوپیرا، ایج، یا انٹرنیٹ ایکسپلورر۔",
+    "context": "This is the text on the About page describing web browsers support."
+  },
+  "pageAboutHeaderBrowser": {
+     "message": "براؤزر سپورٹ",
+    "context": "On the About page, section header title Browser Support."
+  },
+  "pageAboutHeaderFAQ": {
+     "message": "ڈیٹا شیٹ اور اکثر پوچھے جانے والے سوالات",
+    "context": "On the About page, this is the link to datasheets and the FAQ."
+  },
+  "pageAboutFAQ": {
+    "message": "اکثر پوچھے جانے والے سوالات",
+    "context": "Frequently Asked Questions link title on About page."
+  },
+  "pagePrivacyText1": {
+    "message": "جب تک کہ کسی دیگر چیز کی نشان دہی نہ کی جائے، اس ویب سائٹ میں شامل کمیونٹی پر مبنی ڈیٹا عوام کو دستیاب ہیں اور ویب سائٹ پر آنے والے سارے لوگ انھیں تلاش کر سکتے ہیں۔ ڈیٹا متعدد ذرائع سے موصول ہو سکتے ہیں، جیسا کہ انفرادی ریکارڈوں میں اشارہ کیا گیا ہے NLM کو مندرجہ ذیل کے توسط سے براہ راست رپورٹ کر کے:",
+    "context": "This is the first text paragraph on the Privacy page describing how user data is handled."
+  },
+  "pagePrivacyText2a": {
+    "message": "جمع کاریاں",
+    "context": "Beginning of the second paragraph on the Privacy page."
+  },
+  "pagePrivacyText2b": {
+    "message": "سائٹ کو معتدل نہیں کیا جاتا ہے اور شراکت کرنے والی دیگر تنظیموں سے یہ امید نہیں کی جانی چاہئے کہ وہ اس ویب سائٹ پر پیش کردہ کسی ڈیٹا کا جائزہ لیں یا تصدیق کریں۔ نوٹ کر لیں ۔۔۔ کے پاس براہ راست جمع کاری سے موصول ہونے والا ڈیٹا  ",
+    "context": "Large portion of the second paragraph of the Privacy page."
+  },
+  "pagePrivacyText2c": {
+    "message": "دوسری ایجنسیوں، اداروں، اور تنظیموں کو دیا جا سکتا ہے جو ایسے غائب لوگوں کی جگہ کا پتہ لگانے کی کوشش میں تعاون کر رہے ہیں جو اِن میں شامل ہیں مگر انھیں میں محدود نہیں، ",
+    "context": "End portion of the second paragraph of the Privacy page."
+  },
+  "pagePrivacyText3a": {
+    "message": "براہ راست جمع کاری کے لیے",
+    "context": "Beginning of the third paragraph on the Privacy page."
+  },
+  "pagePrivacyText3b": {
+    "message": "رپورٹر کا ای میل پتہ اور آلہ آئی ڈی قبضے میں رکھا جائے گا مگر عوامی طور پر ظاہر نہیں کیا جائے گا۔",
+    "context": "End of the third paragraph on the Privacy page."
+  },
+  "pagePrivacyText4": {
+   "message": "NLM کا اخفا بیان",
+    "context": "Text for the link to NLM's privacy policy page."
+  },
+  "pagePrivacyText5": {
+    "message": "آزادیٔ معلومات قانون",
+    "context": "Text for the link to the Freedom of Information Act site."
+  },
+  "forMore": {
+    "message": "مزید کے لیے",
+    "context": "The title for a subsection on the Privacy page with links to more topics."
+  },
+  "the": {
+    "message": "یہ",
+    "context": "The word the."
+  },
+  "pagePrivacyBullet1": {
+    "message": "فنکشن کی رپورٹ کریں",
+    "context": "The second half ot the first bullet point on the Privacy page."
+  },
+  "pagePrivacyBullet2": {
+    "message": "ایپلی کیشن",
+    "context": "The word application as it applies to the ReUnite app."
+  },
+  "pagePrivacyBullet3": {
+    "message": "دیگر معاونتی تنظیمیں",
+    "context": "The fourth bullet point on the Privacy page."
+  },
+  "pageResourcesTitle1": {
+    "message": "خاندان اور دوستوں کو تلاش کریں",
+    "context": "The first section title on the Resources page."
+  },
+  "pageResourcesTitle2": {
+    "message": "قدرتی آفات ذرائع",
+    "context": "The second section title on the Resources page."
+  },
+  "pageResourcesTitle3": {
+    "message": "سیلاب ذرائع",
+    "context": "The third section title on the Resources page."
+  },
+  "pageResourcesTitle4": {
+    "message": "طوفان ذرائع",
+    "context": "The fourth section title on the Resources page."
+  },
+  "pageResourcesFamily1": {
+    "message": "ریڈ کراس محفوظ اور ٹھیک فہرست",
+    "context": "First bullet link in the Family and Friends section of the Resource page."
+  },
+  "pageResourcesFamily2": {
+    "message": "وفاقی ہنگامی انتظام ایجنسی قومی ہنگامی خاندان رجسٹری اور لوکیٹر نظام",
+    "context": "Second bullet link in the Family and Friends section of the Resource page."
+  },
+  "pageResourcesFamily3": {
+    "message": "قومی رشتہ دار کی قومی رجسٹری",
+    "context": "Third bullet link in the Family and Friends section of the Resource page."
+  },
+  "pageResourcesFamily4": {
+     "message": "ریڈر کراس خاندان بحالی رابطہ کی بین الاقوامی کمیٹی",
+    "context": "fourth buller link in the Family and Friends section of the Resource page."
+  },
+  "pageResourcesFromDIMRC": {
+    "message": " کے قدرتی آفات معلومات انتطام تحقیق مرکز (NLM's Disaster Information Management Research Center ) کی جانب سے",
+    "context": "Text label for several links to DIMRC on the Resource page."
+  },
+  "pageResourcesDisaster2": {
+    "message": "قدرتی آفت معاونت",
+    "context": "Second bullet link on the Disaster section of the Resource page."
+  },
+  "pageResourcesDisaster3": {
+    "message": "ریڈ کراس پناہ گاہیں اور خوراک فراہم کرتی ہے",
+    "context": "Third buller link on the Disaster section of the Resource page."
+  },
+  "pageResourcesFromMedlinePlus": {
+    "message": "NLM  کے MedlinePlus کی جانب سے",
+    "context": "Text label for several links to Medline Plus on the Resource page."
+  },
+  "followUs": {
+     "message": "ہماری پیروی کریں ",
+    "context": "Used to prompt user to follow us on a social network of their choice."
+  },
+  "and": {
+   	 "message": "اور",
+    "context": "The word and used between two nouns."
+  },
+  "trademarkText": {
+    "message": "امریکی محکمہ برائے صحت و انسانی ذرائع کے رجسٹرڈ تجارتی نشانات ہیں۔",
+    "context": "The second half of the trademark sentence."
+  },
+  "tabReport": {
+    "message": "رپورٹ کریں",
+    "context": "The title of the 3rd tab allowing someone to Report a new person or pet."
+  },
+  "tagline": {
+    "message": "قدرتی آفات کے دوران غائب خاندان، دوستوں، اور پالتو جانوروں کو ڈھونڈھیں اور رپورٹ کریں۔",
+    "context": "The tagline is the summary of what the application is for."
+  },
+  "pageTitle": {
+    "message": "آفتوں کے دوران لوگوں اور جانوروں کو ڈھونڈیں اور ان کی اطلاع دیں",
+    "context": "This is the page title which is very similar in nature to the tagline."
+  },
+  "eventRetired": {
+    "message": "جس وقوعے کی آپ نے درخواست کی ہے وہ اب مزید فعال نہں رہا۔",
+    "context": "We inform the user this message when they attempt to come to us via exact event url when the event is no longer open."
+  },
+  "eventListFindReportButton": {
+    "message": "کسی آدمی یا جانور کو تلاش کریں/اس کی رپورٹ کریں",
+    "context": "This is the button text on the home page to Find or Report a person or animal."
+  },
+  "searchPlaceholder": {
+    "message": "تلاش کریں",
+    "context": "The search box starts off with this text to inform the user what the element is used for."
+  },
+  "records": {
+    "message": "ریکارڈ",
+    "context": "When a search is performed this word is prefixed with the number of results, ie. 17 records"
+  },
+  "sexMale": {
+    "message": "نر",
+    "context": "Sex = Male"
+  },
+  "sexFemale": {
+    "message": "مادہ",
+    "context": "Sex = Female"
+  },
+  "sexOther": {
+    "message": "دیگر",
+    "context": "Sex = Other"
+  },
+  "statusMissing": {
+    "message": "غائب",
+    "context": "Status is Missing"
+  },
+  "statusFound": {
+    "message": "ملا",
+    "context": "Status is Found"
+  },
+  "statusDeceased": {
+    "message": "بیمار",
+    "context": "Status is Deceased"
+  },
+  "statusInjured": {
+    "message": "زخمی",
+    "context": "Status is Injured"
+  },
+  "statusAlive": {
+    "message": "زندہ و ٹھیک",
+    "context": "Status is Alive and Well"
+  },
+  "statusUnknown": {
+    "message": "نامعلوم",
+    "context": "Status, Location, or other attribute is Unknown"
+  },
+  "age": {
+    "message": "عمر",
+    "context": "Age of person or animal"
+  },
+  "comments": {
+    "message": "تبصرے",
+    "context": "Comments that others may add to a person or animal record."
+  },
+  "addComment": {
+    "message": "ایک تبصرہ کا اضافہ کریں",
+    "context": "The label for a button allowing a user to add a comment to a record."
+  }, 
+  "addCommentLabel": {
+    "message": "اس ریکارڈ کے بارے میں کسی ایسی اضافی معلومات کا اضافہ کریں جو ممکن ہے کہ آپ کے پاس ہو",
+    "context": "This is the label below the add comment button explaining to a user what it does."
+  },
+  "followButton": {
+    "message": "پیروی کریں",
+    "context": "A button allows a user to follow record updates."
+  },
+  "name": {
+    "message": "نام",
+    "context": "This label is displayed under the person or animal name."
+  },
+  "status": {
+    "message": "حالت",
+    "context": "This label is displayed below the person or animal missing / found status."
+  },
+  "lastUpdated": {
+    "message": "آخری بار اپ ڈیٹ کیا گیا",
+    "context": "This label is displayed under the date / time of when a record was last updated."
+  },
+  "gender": {
+    "message": "جنس",
+    "context": "This is a label below the displayed gender of a person or animal."
+  },
+  "lastKnownLocation": {
+    "message": "آخری معلوم جائے وقوع",
+    "context": "This is a label displayed below a text box showing a person or animal last known location."
+  },
+  "newReport": {
+    "message": "نئی رپورٹ",
+    "context": "This is the window title when a new person or animal is being reported."
+  },
+  "reportChoicePA": {
+    "message": "آپ کسی آدمی کی رپورٹ کرنا چاہیں گے یا کسی جانور کی؟",
+    "context": "This is the text option displayed for a user to choose and fill out either a person or animal report."
+  },
+  "person": {
+    "message": "آدمی",
+    "context": "This is the text label on a button a user presses to choose a person report."
+  },
+  "animal": {
+    "message": "جانور",
+    "context": "This is the text label on a button a user presses to choose an animal report."
+  },
+  "reportChoiceStatusP": {
+    "message": "آپ جس آدمی کی رپورٹ کر رہے ہیں برائے مہربانی اس کی حالت کی نشان دہی کریں۔",
+    "context": "This is the text option displayed for a user to choose the status of the person they are reporting."
+  }, 
+  "explainMissingP": {
+    "message": "آدمی کے بارے میں مانا جا رہا ہے کہ وہ غائب ہے",
+    "context": "The label next to the status selection button for missing."
+  },
+  "explainFoundP": {
+    "message": "آدمی مل گیا ہے صحت نامعلوم",
+    "context": "The label next to the status selection button for found."
+  },
+  "explainAliveP": {
+    "message": "آدمی مل گیا ہے اور ٹھیک ہے",
+    "context": "The label next to the status selection button for alive & well."
+  },
+  "explainInjuredP": {
+    "message": "آدمی مل گیا ہے اور زخمی ہے",
+    "context": "The label next to the status selection button for injured."
+  },
+  "explainDeceasedP": {
+    "message": " آدمی مل گیا ہے اور زخمی ہے ",
+    "context": "The label next to the status selection button for deceased."
+  },
+  "explainUnknownP": {
+    "message": "معلومات آدمی کے بارے میں چاہی جا رہی ہیں",
+    "context": "The label next to the status selection button for unknown."
+  }, 
+  "location": {
+    "message": "محل وقوع",
+    "context": "Text label for Location."
+  },
+  "photo": {
+    "message": "تصویر",
+    "context": "Text label for Photo."
+  },
+  "reportChoiceStatusA": {
+    "message": "آپ جس جانور کی رپورٹ کر رہے ہیں برائے مہربانی اس کی حالت کی نشان دہی کریں۔",
+    "context": "This is the text option displayed for a user to choose the status of the animal they are reporting."
+  },
+  "explainMissingA": {
+    "message": "جانور کے بارے میں مانا جا رہا ہے کہ وہ غائب ہے",
+    "context": "The label next to the status selection button for missing."
+  },
+  "explainFoundA": {
+    "message": "جانور مل گیا ہے صحت نامعلوم",
+    "context": "The label next to the status selection button for found."
+  },
+  "explainAliveA": {
+    "message": "جانور مل گیا ہے اور ٹھیک ہے",
+    "context": "The label next to the status selection button for alive & well."
+  },
+  "explainInjuredA": {
+    "message": "جانور مل گیا ہے اور زخمی ہے",
+    "context": "The label next to the status selection button for injured."
+  },
+  "explainDeceasedA": {
+    "message": "جانور مل گیا ہے اور بیمار ہے",
+    "context": "The label next to the status selection button for deceased."
+  },
+  "explainUnknownA": {
+    "message": "معلومات جانور کے بارے میں چاہی جا رہی ہیں",
+    "context": "The label next to the status selection button for unknown."
+  },
+  "reportChoiceSexP": {
+    "message": "آپ جس آدمی کی رپورٹ کر رہے ہیں برائے مہربانی اس کی جنس کی نشان دہی کریں۔",
+    "context": "This is the text option displayed for a user to choose the gender of the person they are reporting."
+  },
+  "reportChoiceSexA": {
+    "message": "آپ جس آدمی کی رپورٹ کر رہے ہیں برائے مہربانی اس کی جنس کی نشان دہی کریں",
+    "context": "This is the text option displayed for a user to choose the gender of the person they are reporting."
+  },
+  "explainSexMaleP": {
+    "message": "آدمی کی جنس نر ہے",
+    "context": "The label next to the person sex selection button for male."
+  },
+  "explainSexFemaleP": {
+    "message": "آدمی کی جنس مادہ ہے",
+    "context": "The label next to the person sex selection button for female."
+  },
+  "explainSexOtherP": {
+    "message": "آدمی کی جنس دیگر ہے",
+    "context": "The label next to the person sex selection button for other."
+  },
+  "explainSexUnknownP": {
+    "message": "آدمی کی جنس نامعلوم ہے",
+    "context": "The label next to the person sex selection button for unknown."
+  },
+  "explainSexOtherA": {
+    "message": "جانور کی جنس دیگر ہے",
+    "context": "The label next to the animal sex selection button for other."
+  },
+  "explainSexUnknownA": {
+    "message": "جانور کی جنس نامعلوم ہے",
+    "context": "The label next to the animal sex selection button for unknown."
+  },
+  "reportChoiceAgeP": {
+    "message": " آپ جس آدمی کی رپورٹ کر رہے ہیں برائے مہربانی اس کی تخمینی عمر منتخب کریں",
+    "context": "This is the text option displayed for a user to choose the age of the person they are reporting."
+  },
+  "reportChoiceAgeA": {
+    "message": "آپ جس جانور کی رپورٹ کر رہے ہیں برائے مہربانی اس کی تخمینی عمر منتخب کریں",
+    "context": "This is the text option displayed for a user to choose the age of the animal they are reporting."
+  },
+  "reportChoiceAgeUnknown": {
+    "message": "اگر عمر کے بارے میں پُریقین نہیں تو، برائے مہربانی نامعلوم کا انتخاب کریں۔",
+    "context": "The label next to the status selection button for unknown."
+  },
+  "explainAgeUnknownP": {
+    "message": "آدمی کی عمر نامعلوم ہے",
+    "context": "The label next to the person age selection button for unknown."
+  },
+  "explainAgeUnknownA": {
+    "message": "جانور کی عمر نامعلوم ہے",
+    "context": "The label next to the animal age selection button for unknown."
+  },
+  "continue": {
+    "message": "جاری رکھیں",
+    "context": "The label of a button to continue to the next step."
+  },
+  "reportChoiceNameP": {
+    "message": "آپ جس آدمی کی رپورٹ کر رہے ہیں برائے مہربانی اس کا نام درج کریں۔",
+    "context": "This is the section title displayed for a user to enter the name of the person they are reporting."
+  },
+  "reportChoiceNameA": {
+    "message": "جس جانور کی آپ رپورٹ کر رہے ہیں برائے مہربانی اس کا نام اور/یا رفیق شناخت نمبر درج کریں۔",
+    "context": "This is the section title displayed for a user to enter the name and/or the buddy identification number of the animal they are reporting."
+  },
+  "explainNameP": {
+    "message": "آدمی کا نام",
+    "context": "The text label for name entry of a person."
+  },
+  "explainNameA": {
+    "message": "جانور کا نام",
+    "context": "The text label for name entry of an animal."
+  },
+  "explainBuddyA": {
+   "message": "جانور کا رفیق شناخت نمبر",
+    "context": "The text label for buddty identification number entry of an animal."
+  },
+  "reportChoiceNameUnknownP": {
+   "message": "اگر نام کے بارے میں پُریقین نہیں ہیں تو، برائے مہربانی نامعلوم کا انتخاب کریں۔",
+    "context": "This is the section title displayed for the use to choose name unknown."
+  },
+  "explainNameUnknownP": {
+    "message": "آدمی کا نام نامعلوم ہے",
+    "context": "The label next to the person name selection button for unknown."
+  },
+  "explainNameUnknownA": {
+    "message": "جانور کا نام اور رفیق شناخت نمبر نامعلوم ہے",
+    "context": "The label next to the animal name selection button for unknown."
+  },
+  "cameraError": {
+    "message": "آپ کے ویب براؤزر کے ذریعہ کسی کیمرہ کا سراغ نہیں لگایا گیا۔ آپ اس کے بجائے اپنے کیمرہ ایپ کے استعمال کو اختیار کر سکتے ہیں۔",
+    "context": "This toast notification is displayed when there is an error detecting the camera on the user device."
+  },
+  "browserLimitation": {
+    "message": "آپ کا ویب براؤزر اس فیچر کو سپورٹ نہیں کرتا ہے۔",
+    "context": "This toast notification is displayed when a user attempts to use a feature that their web browser does not support."
+  },
+  "photoOnly": {
+    "message": "صرف JPEG، PNG، اور TIFF تصویر کی فائلیں.",
+    "context": "This toast notification is displayed when a user attempts to use an unsupported image file format in search by photo or report."
+  },
+  "reportChoicePhotoP": {
+    "message": "اس آدمی کی شناخت کو بہتربنانے کے لیے آپ اختیاری طور پر ایک تصویر کا اضافہ کر سکتے ہیں۔",
+    "context": "Section titled telling user that they can add a photo for identification purposes."
+  },
+  "reportChoicePhotoA": {
+    "message": "اس جانور کی شناخت کو بہتربنانے کے لیے آپ اختیاری طور پر ایک تصویر کا اضافہ کر سکتے ہیں",
+    "context": "Section titled telling user that they can add a photo for identification purposes."
+  },
+  "reportChoicePhotoCapture": {
+   "message": "قید کریں",
+    "context": "This is the button label used to capture a photograph using the device camera."
+  },
+  "reportChoicePhotoSelectFile": {
+   "message": "فائل منتخب کریں",
+    "context": "This is the button label used to select an image file from local device storage."
+  },
+  "reportChoicePhotoTake": {
+    "message": "تصویر لیں",
+    "context": "This is the button label used to open the device camera before capturing an image."
+  },
+  "reportChoicePhotoDelete": {
+   "message": "حذف کریں",
+    "context": "This is the button label used to delete an image the user has already submitted."
+  },
+  "reportChoicePhotoHelp": {
+    "message": "اگر ضروری ہو تو تصویر کو تراشیں یا اس کا رخ بدلیں۔",
+    "context": "This is the help text displayed below image manipulation controls informing the user how to alter the already submitted image."
+  },
+  "reportChoiceMapP": {
+    "message": " دوسروں کو اس آدمی کے مقام تک پہونچنے میں مدد کرنے کے لیے آپ اختیاری طور پر ایک نقشہ نکتہ کی تخصیص کر سکتے ہیں",
+    "context": "This is the section header above the map used to specify a last known location."
+  },
+  "reportChoiceMapA": {
+    "message": " دوسروں کو اس جانور کے مقام تک پہونچنے میں مدد کرنے کے لیے آپ اختیاری طور پر ایک نقشہ نکتہ کی تخصیص کر سکتے ہیں۔",
+    "context": "This is the section header above the map used to specify a last known location."
+  },
+  "reportChoiceMapHelp": {
+    "message": "نقشہ کے مارکر کو کھینچ کر آخری معلوم جگہ تک لے جائیں۔",
+    "context": "This is the help text below the last know location map informing a user what to do."
+  },
+  "information": {
+   "message": "معلومات",
+    "context": "This a label for a tab in the reporting wizard where a user enters free text about additional Information."
+  },
+  "submit": {
+    "message": "جمع کریں",
+    "context": "This a label for a tab in the reporting wizard where a user finalizes and submits the report."
+  },
+  "submitAnon": {
+    "message": "گمنام کے طور پر جمع کریں",
+    "context": "This a label for a tab in the reporting wizard where a user finalizes and submits the report anonymously."
+  },
+  "reportChoiceInformationHelpP": {
+    "message": "آپ اختیاری طور پر کوئی اضافی معلومات فراہم کر سکتے ہیں جس کے بارے میں آ پ کا خیال ہے کہ اس سے دوسروں کو اس آدمی کی شناخت کرنے یا اس کی تعیین کرنے میں مدد ملے گی۔",
+    "context": "This is help text informing the user that the information they enter will assist in locating or identifying the person."
+  },
+  "reportChoiceInformationHelpA": {
+    "message": " آپ اختیاری طور پر کوئی اضافی معلومات فراہم کر سکتے ہیں جس کے بارے میں آ پ کا خیال ہے کہ اس سے دوسروں کو اس جانور کی شناخت کرنے یا اس کی تعیین کرنے میں مدد ملے گی۔",
+    "context": "This is help text informing the user that the information they enter will assist in locating or identifying the animal."
+  },
+  "reportBeingSubmittedToast": {
+   "message": "رپورٹ جمع کی جا رہی ہے۔۔۔",
+    "context": "This toast notification will be displayed while the report is being sent in."
+  },
+  "reportSubmit": {
+    "message": "رپورٹ جمع کریں",
+    "context": "This is the section title on the last page of the reporting wizard. The user will choose how to submit the report."
+  },
+  "explainSignInP": {
+    "message": " اگر آپ چاہتے ہیں کہ جب اس آدمی کے بارے میں اضافی معلومات دستیاب ہوں تو آپ کو اطلاع ملے تو، برائے مہربانی رپورٹ جمع کرنے سے پہلے سائن اِن کریں۔",
+    "context": "If the user is not signed in, we will prompt them to sign in so that they can recieve updates to their reported record."
+  },
+  "explainSignInA": {
+    "message": " اگر آپ چاہتے ہیں کہ جب اس جانور کے بارے میں اضافی معلومات دستیاب ہوں تو آپ کو اطلاع ملے تو، برائے مہربانی رپورٹ جمع کرنے سے پہلے سائن اِن کریں۔",
+    "context": "If the user is not signed in, we will prompt them to sign in so that they can recieve updates to their reported record."
+  },
+  "explainSubmitP": {
+    "message": "اگر آپ چاہتے ہیں کہ جب اس آدمی کے بارے میں اضافی معلومات دستیاب ہوں تو آپ کو اطلاع ملے تو، رپورٹ کو اب جمع کرنے کا انتخاب کریں۔",
+    "context": "If the user is already signed in, we will ask them to submit the record and subscribe to updates."
+  },
+  "explainSubmitA": {
+    "message": " اگر آپ چاہتے ہیں کہ جب اس جانور کے بارے میں اضافی معلومات دستیاب ہوں تو آپ کو اطلاع ملے تو، رپورٹ کو اب جمع کرنے کا انتخاب کریں۔",
+    "context": "If the user is already signed in, we will ask them to submit the record and subscribe to updates."
+  },
+  "explainAnonP": {
+    "message": "گمنام طور پر جمع کریں گے تو اس آدمی کے بارے میں جب مزید معلومات دستیاب ہوں گی  تو آپ کو اطلاع نہیں دی جائے گی۔",
+    "context": "The user is prompted that they may choose to submit their report anonymoysly and not recieve any updates afterwards."
+  },
+  "explainAnonA": {
+    "message": "گمنام طور پر جمع کریں گے تو اس آدمی کے بارے میں جب مزید معلومات دستیاب ہوں گی  تو آپ کو اطلاع نہیں دی جائے گی۔",
+    "context": "The user is prompted that they may choose to submit their report anonymoysly and not recieve any updates afterwards."
+  },
+  "explainAnon2": {
+    "message": "This record will expire after 90 days. Use the Report Abuse button in the MORE DETAILS view later on to request an earlier expiration.",
+    "context": "The user is prompted that they may choose to submit their report anonymoysly and not recieve any updates afterwards."
+  },
+  "reportComplete": {
+    "message": "رپورٹ مکمل اور جمع، شکریہ",
+    "context": "This is the section title on the final page of the reporting wizard. The report has been completed."
+  },
+  "explainCopy1": {
+    "message": "یہ آپ کی مکمل کردہ رپورٹ کا یوآرایل ہے۔ آپ اس ریکارڈ پر اپ ڈیٹ اور/یا تبصرے دیکھنے کے لیے بعد میں اس یوآرایل پر واپس آ سکتے ہیں۔",
+    "context": "We inform the user of the URL that corresponds to the report they just completed so that they may bookkmark or share it for later."
+  },
+  "explainCopy2": {
+    "message": "اس یوآرایل کو اپنے کلپ بورڈ پر کاپی کریں تا کہ آپ اس کو شیئر یا اسے بُک مارک کر سکیں۔",
+    "context": "This is the text below the copy to clipboard button informing the user what the button does."
+  },
+ "buddyIdentificationNumber": {
+    "message": "بڈی شناختی نمبر",
+    "context": "This is the label to the Buddy Identification Number field which is displayed for animals."
+  },
+  "notifyRecordFollow": {
+    "message": "آپ اب اس ریکارڈ کو پیروی کر رہے ہیں اور اس میں تبدیلیوں کے طور پر تازہ کاری حاصل کریں گے یا ایک تبصرہ شامل ہو جائے گا",
+    "context": "This notification will appear after the user unfollows a record via the full record view."
+  },  
+  "notifyRecordUnfollow": {
+    "message": "آپ اس ریکارڈ کو ابھی نہیں پیروی کرتے ہیں",
+    "context": "This notification will appear after the user unfollows a record via the full record view."
+  },
+  "followStatusTrue": {
+    "message": "پیروی",
+    "context": "This label is displayed next to a toggle switch displaying that the user is folliwng the currently viewed record."
+  },
+  "followStatusFalse": {
+    "message": "نہیں پیروی",
+    "context": "This label is displayed next to a toggle switch displaying that the user is not folliwng the currently viewed record."
+  },
+  "followButtonExplain": {
+    "message": "ایک تبدیلی اس ریکارڈ کو کی جاتی ہے یا ایک تبصرہ شامل ہے جب ایک اطلاع موصول کریں",
+    "context": "This label is displayed below the follow user toggle button explaining what the button does."
+  },
+  "followButtonAnon": {
+    "message": "جب صارف کسی سائن ان نہیں ہوتا تو پیروی شدہ ریکارڈ کے بٹن کو غیر فعال کردیا جاتا ہے. ہم ان کو مطلع کرتے ہیں کہ ایک ریکارڈ کی پیروی کرنے کے لئے انہیں سب سے پہلے سائن ان کرنا ہوگا",
+    "context": "The follow record button is disabled when a user is not signed in, aka anonymous. We inform them that to follow a record they must first sign in."
+  },
+  "longerComment": {
+    "message": "ایک طویل تبصرہ درج کریں",
+    "context": "The user is notified to enter a longer comment if it is too short"
+  },
+  "commentBeingSubmittedToast": {
+    "message": "تبصرہ پیش کیا جا رہا ...",
+    "context": "This toast notification will be displayed while the new comment is being sent in."
+  },
+  "moduleInvalid": {
+    "message": ".یہ ماڈیول کا کوئی وجود نہیں",
+    "context": "If the user attempts to access a non-existant portion of the site (very unlikely) this toast notification will appear."
+  },
+  "moduleAccess": {
+    "message": ".آپ اس ماڈیول تک رسائی حاصل کرنے کی اجازت نہیں ہے",
+    "context": "If the user attempts to access a portion of the site they do not have permission for, this toast notification will appear."
+  },
+  "copyTrue": {
+    "message": ".URL کلپ بورڈ پر کاپی",
+    "context": "After the user clicks on the copy to clipboard button, if successful, this toast notification will appear."
+  },
+  "copyFalse": {
+    "message": ".کلپ بورڈ میں یو آر ایل کاپی کرنے میں ناکام",
+    "context": "After the user clicks on the copy to clipboard button, if unsuccessful, this toast notification will appear."
+  },
+  "userConfirmActive": {
+    "message": ".آپ کا ای میل ایڈریس اب تصدیق کی ہے اور آپ کے صارف اکاؤنٹ چالو",
+    "context": "When the user visits a confirmation link emailed to them, this toast notification will appear informing the user that their account is now active and email address verified."
+  },
+  "userConfirmInvalid": {
+    "message": ".یہ تصدیق لنک غلط ہے",
+    "context": "When the user vists an invalid email address confirmation link or an invalid password reset confirmation link, this toast notification will appear."
+  },
+  "userPasswordTwo": {
+    "message": ".ایک نیا پاس ورڈ آپ کو ای میل کر دیا گیا ہے",
+    "context": "When the user visits a valid password reset confirmation link, this toast notification will appear to notify the user a new password has been generated and emailed to them."
+  },
+  "eurl1": {
+    "message": "اس واقعہ کا اشتراک",
+    "context": "This section text is displayed on the paper action dialog when a user clicks the share event button."
+  },
+  "eurl2": {
+    "message": "کلپ بورڈ پر کاپی",
+    "context": "This text appears under the button to share an event via email."
+  },
+  "eurl3": {
+    "message": "ای میل بھیجیں",
+    "context": "This text appears under the button to share an event via clipboard."
+  },
+  "eurl4": {
+    "message": "اشتراک کریں",
+    "context": "This button text label appears on the button for a user to share an event or record."
+  },
+  "eurl5": {
+    "message": "اس ریکارڈ کا اشتراک کریں",
+    "context": "This section text is displayed on the paper action dialog when a user clicks the share record button."
+  },
+  "page404": {
+    "message": "404: یہ صفحہ موجود نہیں ہے.",
+    "context": "This toast is displayed when a user attempts to visit a non-existant page."
+  },
+  "ombNoticeTitle": {
+    "message": "OMB نوٹس",
+    "context": "This is the page title for the OMB Notice."
+  },
+  "abuseReportAbuse": {
+    "message": "اطلاع دیں",
+    "context": "This is used as a sectional header and the label of the report abuse button."
+  },
+  "abuseWhatReport": {
+    "message": "آپ کیا رپورٹ کرنا چاہتے ہیں؟",
+    "context": "This is the query presented to a user when asked to be more specific about the type of abuse report the user is filing."
+  },
+  "abuseReportSpam": {
+    "message": "اسپام",
+    "context": "This is the button label to select a report abuse claim of type spam."
+  },
+  "abuseReportSex": {
+    "message": "جنسی طور پر واضح",
+    "context": "This is the button label to select a report abuse claim of type sexually explicit."
+  },
+  "abuseReportHate": {
+    "message": "نفرت انگیز تقریر",
+    "context": "This is the button label to select a report abuse claim of type hate speech."
+  },
+  "abuseReportViolence": {
+    "message": "تشدد",
+    "context": "This is the button label to select a report abuse claim of type violence"
+  },
+  "abuseReportElse": {
+    "message": "اس کے علاوہ کچھ اور",
+    "context": "This button label is to select a report abuse claim of type something else."
+  },
+  "abuseThanks": {
+    "message": "شکریہ. ہمیں آپ کا غلط استعمال کا دعوی مل گیا ہے. ہمارے سائٹ کا عملہ اس ریکارڈ کا جائزہ لیں گے اور کسی بھی غیر مناسب مواد کو ہٹا دیں گے",
+    "context": ""
+  },
+  "deleteRecord": {
+    "message": "ریکارڈ حذف کریں",
+    "context": "This is used as a button label and dialog header allowing a user to delete a record from the system."
+  },
+  "deleteRecordConfirm": {
+    "message": "کیا آپ واقعی یہ ریکارڈ حذف کرنا چاہتے ہیں؟ اس وقت حذف ہونے کے بعد آپ کے ریکارڈ کا ڈیٹا بحال کرنے کا کوئی طریقہ نہیں ہے..",
+    "context": "This is the question prompting a user when they choose to delete a record. We confirm they are certain with their decision."
+  },
+  "deleteRecordCancel": {
+    "message": "منسوخ کریں",
+    "context": "Button label to cancel the action of deleting a record."
+  },
+  "deleteRecordDelete": {
+    "message": "حذف کریں",
+    "context": "Button label to confirm the deletion of a record."
+  },
+  "deleteRecordDone": {
+    "message": "ریکارڈ ختم ہوگیا",
+    "context": "A toast notification displayed to inform the user the deletion of a record action has been completed."
+  },
+  "seconds": {
+    "message": "سیکنڈ",
+    "context": "This word means seconds of time."
+  },
+  "record": {
+    "message": "ریکارڈ",
+    "context": "When a search is performed this word is prefixed with the number of results, ie. 1 record -- special case when only 1 result"
+  },
+  "notifyLogout": {
+    "message": "لاگ آؤٹ.",
+    "context": "This notification will appear after the user successfully logs out."
+  },
+  "uploadingPhoto": {
+    "message": "تصویر اپ لوڈ کر رہا ہے...",
+    "context": "This message is displayed after a user selects an image file to search by photo as the file is being uploaded."
+  },
+  "searchByPhoto": {
+    "message": "تصویر کی طرف سے تلاش کریں",
+    "context": "When a user elects to search by photo from the search query bar, a dialog box appears with this as the title."
+  },
+  "dragAndDrop": {
+    "message": "ڈریگ اور ڈراپ",
+    "context": "A user may drag and drop a file to search by image. This message shows the user where to drag and drop the file ~ the target."
+  },
+  "emailRecordRevisionSubject": {
+    "message": "آپ کے ذیل میں ایک ریکارڈ اپ ڈیٹ کیا گیا ہے",
+    "context": "We email users following a record when a revision is made or a comment is added, this is the subject of that email."
+  },
+  "emailRecordRevisionLine1": {
+    "message": ".ایک تبصرہ شامل کردی گئی ہے یا ایک ریکارڈ جس میں آپ مندرجہ ذیل ہیں اس کی بنا پر نظر ثانی کی گئی ہے",
+    "context": "We email users following a record when a revision is made or a comment is added, this is the first line of that email."
+  },
+  "emailRecordRevisionLine2": {
+    "message": ":آپ اس مقام پر ریکارڈ کا جائزہ لے سکتے ہیں",
+    "context": "We email users following a record when a revision is made or a comment is added, this line prefixes the direct record url."
+  },
+  "emailRecordRevisionLine3": {
+    "message": ".اگر آپ ان ای میل انتباہات سے محروم رکھنا چاہتے ہیں، تو اوپر کی لنک پر جائیں اور مندرجہ ذیل بٹن کو غیر فعال کریں",
+    "context": "We email users following a record when a revision is made or a comment is added, at the end we inform the user of how to unsubscribe to these emails."
+  },
+  "emailNewUserSubject": {
+    "message": "اپنا ای میل ائڈریس کی تصدیق کریں",
+    "context": "We email new users after they register, this is the subject line of said email."
+  },
+  "emailNewUserLine1": {
+    "message": ".رجسٹریشن کے لئے آپ کا شکریہ",
+    "context": "We email new users after they register, this is the first line of said email thanking them for registering."
+  },
+  "emailNewUserLine2": {
+    "message": ":رجسٹریشن کے عمل کو مکمل کرنے کے لئے آپ کو نیچے دیئے گئے لنک پر جانا ہوگا",
+    "context": "We email new users after they register, this is the second line of said email providing them a link complete the registration process."
+  },
+  "emailNewUserLine3": {
+    "message": ".لنک دیکھنے میں ناکام ہونے کے نتیجے میں آپ کا اکاؤنٹ 30 دن کے بعد خارج ہوجائے گا",
+    "context": "We email new users after they register, this is the last line of said email warning the user about account deletion for failure to activate their account."
+  },
+  "emailForgot1Subject": {
+    "message": "پاس ورڈ دوبارہ ترتیب کی درخواست",
+    "context": "We email a user when they initiate the forgot password sequence, this is the subject of that email."
+  },
+  "emailForgot1Line1": {
+    "message": ".کسی نے آپ کے اکاؤنٹ کے پاس ایک پاس ورڈ ری سیٹ کی درخواست شروع کی ہے",
+    "context": "We email a user when they initiate the forgot password sequence, this is the first line of that email."
+  },
+  "emailForgot1Line2": {
+    "message": ".اگر آپ نے یہ درخواست شروع نہیں کی، تو یہ ای میل کو نظر انداز کرنے کے لئے محفوظ ہے اور آپ کا پاس ورڈ تبدیل نہیں کیا جائے گا",
+    "context": "We email a user when they initiate the forgot password sequence, we inform the user it is safe to ignore this request if they did not initiate it."
+  },
+  "emailForgot1Line3": {
+    "message": ":تاہم، اگر آپ نے یہ درخواست شروع کی ہے اور آپ اپنا پاسورٹ ری سیٹ کرنا چاہتے ہیں تو، آپ کو مندرجہ ذیل لنک ملاحظہ کرنا ہوگا",
+    "context": "We email a user when they initiate the forgot password sequence, this line prefixes a url the user must click on to continue in the forgot password sequence."
+  },
+  "emailForgot1Line4": {
+    "message": ".ایک بار اس لنک کا دورہ کیا جائے گا، ایک نیا پاس ورڈ پیدا ہو جائے گا اور ایک دوسرے ای میل میں آپ کو بھیجا جائے گا",
+    "context": "We email a user when they initiate the forgot password sequence, final line of this email informing a new password will be generated."
+  },
+  "emailForgot2Subject": {
+    "message": "نیا پاس ورڈ",
+    "context": "This is the second email in the forgot password sequence, and this is the subject of that email."
+  },
+  "emailForgot2Line1": {
+    "message": ":آپ کا نیا پاس ورڈ ہے",
+    "context": "This is the second email in the forgot password sequence, this line prefixes the new password we generated for the user."
+  },
+  "emailForgot2Line2": {
+    "message": ":سائن ان کرنے کے بعد آپ اختیاری آپ کے پاس ورڈ تبدیل کر سکتے ہیں",
+    "context": "This is the second email in the forgot password sequence, lastly, we inform the user that they may change their password after logging in."
+  },
+  "welcomeTo": {
+    "message": "میں خوش آمدید",
+    "context": "The first time a user comes to PL, we welcome them like: Welcome to PEOPLE LOCATOR. However PEOPLE LOCATOR is not translated in this welcome message."
+  },
+  "chooseLanguage": {
+    "message": "زبان منتخب کریں",
+    "context": "We prompt the user to select a language at first visit."
+  },
+  "additionalInformation": {
+    "message": "اضافی معلومات",
+    "context": "This is a label displayed several places titled Additional Information."
+  },
+  "inEvent": {
+    "message": "ایونٹ میں",
+    "context": "This substring 'in event' will appear atop search results under the search bar after '27 record' but before the event name (0.123 seconds)"
+  },
+  "viewOriginalRecord": {
+    "message": "اصل ریکارڈ دیکھیں",
+    "context": "This link appears on record with a forieign origin. Tapping on the link will open the record from its original location."
+  },
+  "ncmec1": {
+    "message": ".ہم تجویز کرتے ہیں کہ آپ اس رپورٹ کو بھی یادگار اور معزز بچوں کے لئے قومی مرکز میں بھیجیں",
+    "context": "In the reporting wizard, this message will be displayed when a report is completed for a child."
+  },
+  "ncmec2": {
+    "message": ".یہاں ایک لنک تلاش کرسکتے ہیں NCMEC آپ",
+    "context": "In the reporting wizard, this message will be displayed when a report is completed for a child. This is the link text."
+  },
+  "pageResourcesNcmec": {
+    "message": "لاپتہ اور مایوس بچوں کے لئے قومی مرکز",
+    "context": "Resource Page link to NCMEC."
+  },
+  "eventListMeta": {
+    "message": "لوگوں اور جانوروں کو غائب کرنے اور ان کو اطلاع دیں",
+    "context":  "Find and report missing people and animals in any disaster using this website."
+  },
+  "eventListMeta3": {
+    "message": ".اس نیشنل لائبریری میڈیکل ویب سائٹ کا استعمال کرتے ہوئے",
+    "context": "Find missing people using this National Library of Medicine website."
+  },
+  "searchTitle": {
+    "message": ".غائب افراد اور جانوروں کو تلاش کریں",
+    "context": "Find missing people and animals in the Mexico Earthquake."
+  },
+  "searchMeta": {
+    "message": "غائب لوگوں اور جانوروں کے لئے تلاش کریں",
+    "context": "Search for missing people and animals in the Mexico Earthquake."
+  },
+  "searchMeta2": {
+    "message": "نام یا تصویر کی طرف سے",
+    "context": "Search for missing people by name or by photo"
+  },
+  "searchMeta3": {
+    "message": ".میڈیکل لائبریری کے قومی لائبریری کا استعمال کرتے ہوئے",
+    "context": "Search for missing people using the National Library of Medicine's NLM PEOPLE LOCATOR."
+  },
+  "reportTitle": {
+    "message": "لوگوں اور جانوروں کی اطلاع دیں",
+    "context": "Report people and animals in the Mexico Earthquake."
+  },
+  "reportMeta": {
+    "message": "لوگوں اور جانوروں کی حالت کی اطلاع دیں",
+    "context": "Report the status of people and animals in the Mexico City Earthquake."
+  },
+  "recordTitle": {
+    "message": "رپورٹ کردہ شخص",
+    "context": "Reported person Juan Valdez in the Mexico City Earthquake."
+  },
+  "recordTitle2": {
+    "message": "اندر",
+    "context": "Reported person Juan Valdez in the Mexico City Earthquake."
+  },
+  "recordMeta":  {
+    "message": "اطلاع دی گئی ہے",
+    "content": "Juan Valdez has been reported missing on our website."
+  },
+  "aboutMeta": {
+    "message": "نیشنل لائبریری میڈیکل، نیشنل انسٹیٹیوٹ آف ہیلتھ نے اس ویب سائٹ کو تخلیق کیا",
+    "content": "The National Library of Medicine, part of the National Institutes of Health, created this website for the public."
+  },
+  "aboutMeta2": {
+    "message": ".آفتوں کے دوران غائب افراد اور جانوروں کو تلاش کرنے اور رپورٹنگ کے لئے",
+    "content": "We created this website for finding and reporting missing people and animals during disasters."
+  },
+  "resourceMeta": {
+    "message": "میڈیکل وسائل کے اضافی نیشنل لائبریری کے لئے",
+    "content": "Additional National Library of Medicine resources for finding people."
+  },
+  "followUsMeta": {
+    "message": "میڈیکل لائبریری آف نیشنل لائبریری سے سوشل میڈیا پر تباہی کے انتباہات حاصل کریں",
+    "content": "Receive disaster alerts on social media from the National Library of Medicine's NLM PEOPLE LOCATOR."
+  },
+  "privacyMeta": {
+    "message": "پرائیویسی لائبریری برائے قومی لائبریری کے استعمال پر قابو پانے کی پالیسیوں",
+    "content": "Privacy policies governing the use of the National Library of Medicine's NLM PEOPLE LOCATOR."
+  },
+  "goHomePage": {
+    "message": "ہوم پیج پر جائیں",
+    "context": "Displayed tooltip when you hover your mouse over the home button."
+  },
+  "searchUsingPhoto": {
+    "message": "تصویر کا استعمال کرتے ہوئے تلاش کریں",
+    "context": "Displayed tooltip when you hover your mouse over the visual search button."
+  },
+  "searchUsingName": {
+    "message": "ایک نام کا استعمال کرتے ہوئے تلاش کریں",
+    "context": "Displayed tooltip when you hover your mouse over the search magnifying glass."
+  },
+  "reportPersonAnimal": {
+    "message": "ایک شخص یا جانور کی اطلاع دیں",
+    "context": "Tooltip for report button."
+  },
+  "enterName": {
+    "message": "تلاش کے لیے نام داخل کریں",
+    "context": "Title for a search box."
+  },
+  "selectEvent": {
+    "message": "وقوعہ منتخب کریں",
+    "context": "Title for a menu of PL events."
+  },
+  "answerYes": {
+    "message": "ہاں جواب دیں",
+    "context": "The affirmative, yes, as in an answer to a question."
+  },
+  "answerNo": {
+    "message": "جواب نہ دیں",
+    "context": "The negative, no, as in an answer to a question."
+  },
+  "rDeviceShort": {
+    "message": "اضافی آلہ رجسٹر کریں",
+    "context": "This text will appear as a header on the dialog box that appears when a user is prompted to register a new device for push notifications. See below."
+  },
+  "rDeviceLong": {
+    "message": "کیا آپ اس آلہ کو قابو پانے کے لۓ اطلاعات درج کرنا چاہتے ہیں",
+    "context": "This dialog will appear when a user logs into from a 2nd, 3rd, 4th... device as a prompt to also recieve push notifications on this additional device."
+  },
+  "appUpdate1": {
+    "message": "اس ایپ کا ایک نیا ورژن دستیاب ہے",
+    "context": "When a new version of PL is updated online, a returning user will be prompted to update the version he/she is using."
+  },
+  "appUpdate2": {
+    "message": "اپ ڈیٹ",
+    "context": "This label appears on the button to update the version of PL to the newest available. See above."
+  },
+  "noTranslationAvailable": {
+    "message": "اس ایونٹ کی تفصیل آپ کی زبان میں ترجمہ نہیں کی گئی ہے لہذا یہ انگریزی میں دکھایا جا رہا ہے.",
+    "context": "This label appears on the button to update the version of PL to the newest available. See above."
+  },
+  "helpFindText2": {
+    "message": "By default, searches will always return up to 50 results. However, if you would like to have it return more results, you can append or prepend the keyword perPage:100 to a search query which will effectively set a different limit on the number of results that are returned. The number 100 can be changed to any integer value. You may also modify the URL to achieve this filter effect. Here are some examples:",
+    "context": "This paragraph describes advanced search filters."
+  }
+}

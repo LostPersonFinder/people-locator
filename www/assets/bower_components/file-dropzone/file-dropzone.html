@@ -1,0 +1,174 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+
+`file-dropzone` is a drag and dropzone. You can drop a file on the dropzone area and the the file will be read using the FileReader API. You can limit the number of accepted file types by using the `accept` property.
+
+Example:
+
+    <file-dropzone
+      accept="image/jpeg,audio/mpeg,audio/mp3"
+      rejection-timeout="750"
+      on-file-added="_onfileAdded"
+      on-file-removed="_onfileRemoved"
+      on-file-rejected="_onfileRejected"
+      file-dragged="{{fileDragged}}"
+      file-rejected="{{fileRejected}}"
+    >
+
+@demo demo/index.html
+-->
+
+<dom-module id="file-dropzone">
+  <template>
+    <style>
+      :host {
+        display: flex;
+        justify-content: stretch;
+        align-items: stretch;
+        width: 100%;
+        --file-dropzone: {
+          box-sizing: border-box;
+          flex: 1;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          transition: 0.25s background-color;
+          background-color: var(--file-dropzone-background-color, #eeeeee);
+        }
+      }
+
+      :host #dropzone {
+        @apply --file-dropzone;
+      }
+
+      :host([file-dragged]) #dropzone {
+        background-color: var(--file-dropzone-background-color--dragged, #4be774);
+      }
+
+      :host([file-rejected]) #dropzone {
+        background-color: var(--file-dropzone-background-color--rejected, #e83131);
+      }
+    </style>
+
+    <section
+      id="dropzone"
+      on-dragover="_handleDragOver"
+      on-dragleave="_handleDragLeave"
+      on-drop="_handleDrop"
+    ><slot></slot></section>
+
+    </template>
+    <script>
+    Polymer({
+
+      is: 'file-dropzone',
+      properties: {
+
+        /**
+         * true if a file is dragged over the dropzone
+         */
+        fileDragged: {
+          type: Boolean,
+          value: false,
+          notify: true,
+          reflectToAttribute: true,
+        },
+
+        /**
+         * true if the mime type of the dropped file does not match `acceptMimeType` value
+         */
+        fileRejected: {
+          type: Boolean,
+          value: false,
+          notify: true,
+          reflectToAttribute: true,
+          observer: '_fileRejectedChanged'
+        },
+
+        /**
+         * Determines for how long `fileRejected`, in milliseconds
+         */
+        rejectionTimeout: {
+          type: Number,
+          value: 1000,
+          notify: true,
+        },
+
+        /**
+         * Determines whether a specific mime type is accepted
+         */
+        accept: {
+          type: String,
+          value: '.*?/.*?',
+          notify: true,
+          reflectToAttribute: true          
+        },
+
+        /**
+         * The dropped `File` object
+         */
+        file: {
+          type: Object,
+          value: null,
+          notify: true,
+          observer: '_handleFileChanged'
+        },
+
+      },
+
+      _handleDragOver: function(evt) {
+        evt.preventDefault();
+        this.fileDragged = true;
+      },
+
+      _handleDragLeave: function(evt) {
+        evt.preventDefault();
+        this.fileDragged = false;
+      },
+
+      _handleDrop: function(evt) {
+        evt.preventDefault();
+
+        this.fileDragged = false;
+
+        var file = evt.dataTransfer.files[0];
+        var fileAccepted = file && this._fileTypeAccepted(file.type);
+
+        if(!fileAccepted) return this.fileRejected = true;
+        this.file = file;
+      },
+
+      _fileTypeAccepted: function(fileType) {
+        if(!fileType) return false;
+        var acceptesMimeTypes = this.accept.split(/,/g);
+        for(var i in acceptesMimeTypes) {
+          var fileMatches = fileType.match(acceptesMimeTypes[i]);
+          if(fileMatches) return true;
+        }
+        return false;
+      },
+      
+      _handleFileChanged: function(file, oldFile) {
+        if(file) {
+          this.fire('file-added', file);
+        }
+        if(!file && oldFile) {
+          this.fire('file-removed');          
+        }
+       },
+
+      _fileRejectedChanged: function(fileRejected) {
+        if(fileRejected) {
+          this.fire('file-rejected')
+        }
+        window.setTimeout((function() {
+          this.fileRejected = false;
+        }).bind(this), this.rejectionTimeout);
+      }
+
+    });
+  </script>
+</dom-module>

@@ -1,0 +1,400 @@
+<!-- record -->
+<dom-module id="taupo-record">
+  <style>
+    #record {
+      max-height: 100%;
+      margin: 0;
+      width: 360px;
+      max-width: 360px;
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    .record-content {
+      z-index: 5;
+      position: relative;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    .rtl {
+      direction: rtl;
+    }
+    .footer-spacer {
+      clear: both;
+      height: 1em;
+    }
+    @media (min-width:480px) {}
+    @media (min-width:600px) {
+      #record {
+        width: 480px;
+        max-width: 480px;
+        max-height: 80%;
+        margin: auto;
+      }
+      }
+    @media (min-width:720px) {
+      #record {
+        width: 600px;
+        max-width: 600px;
+      }
+    }
+    @media (min-width:960px){
+      #record {
+        width: 720px;
+        max-width: 720px;
+      }
+    }
+    @media (min-width:1200px){
+      #record {
+        width: 960px;
+        max-width: 960px;
+      }
+    }
+    @media (min-width:1600px){}
+    @media (min-width:1900px){}
+  </style>
+  <template>
+    <paper-dialog id="record" modal entry-animation="scale-up-animation" exit-animation="fade-out-animation">
+      <div class="record-content"></div>
+    </paper-dialog>
+  </template>
+  <script>
+  (function () {
+    Polymer({
+      is: 'taupo-record',
+    });
+  })();
+  // load record
+  function loadRecord(uuid) {
+    clog('%crecord::loadRecord uuid:'+uuid, 9, 'color: grey');
+    var xyz;
+    // direct access
+    if(typeof window.view_uuid !== 'undefined') { delete window.view_uuid;  }
+    // push view state
+    else {
+      // originated record
+      if(uuid.indexOf(window.baseUuid) >= 0) {
+        xyz = uuid.split('/')[1]+'/view';
+        window.router.action = str_ireplace('.', '#', xyz);
+        window.router.hv = 'view';
+      // pfif record
+      } else {
+        window.router.action = 'pfif#'+str_ireplace('/', '_', uuid)+'/view';
+        window.router.hv = 'view';
+      }
+      pushRoute();
+    }
+    window.uuid = uuid;
+    var html = '';
+    if(window.records[uuid].is_editable) { html += showRecordEdit(uuid); }
+    else { html += showRecord(uuid); }
+    $('.record-content').html(html);
+    // open
+    if(window.rtl) {
+      $('#record').addClass('rtl');
+      $('.startAbuse').addClass('rtlfl');
+      $('.deleteRecord').addClass('rtlfl');
+      $('.sendComm').addClass('rtlfl');
+      $('.sendComm').addClass('rtlflip');
+      $('.addComm').addClass('rtlfnm3em');
+    } else {
+      $('#record').removeClass('rtl');
+      $('.startAbuse').removeClass('rtlfl');
+      $('.deleteRecord').removeClass('rtlfl');
+      $('.sendComm').removeClass('rtlfl');
+      $('.sendComm').removeClass('rtlflip');
+      $('.addComm').removeClass('rtlfnm3em');
+    }
+    document.querySelector('#record').open();
+    // register this modal
+    window.modal = '#record';
+    // remove enter key function
+    delete window.enterAction;
+    // listeners
+    var sendComm = document.querySelector('#sendComm');
+    sendComm.addEventListener('click', function() { sendComment(); }, { passive: true});
+    if(window.subState !== 3) {
+      var pinkToggler = document.querySelector('#pinkToggler');
+      pinkToggler.addEventListener('change', function() {
+        if(window.subState) {
+          window.subState = false;
+          $('#subState').html(document.querySelector('i18n-msg').getMsg('followStatusFalse'));
+          window.records[uuid].following = false;
+          follow(uuid, false);
+        } else {
+          window.subState = true;
+          $('#subState').html(document.querySelector('i18n-msg').getMsg('followStatusTrue'));
+          window.records[uuid].following = true;
+          follow(uuid, true);
+        }
+      }, { passive: true} );
+    }
+    setTimeout(function(){ $('#pad0').css('z-index', 106); }, 250);
+  }
+  // hide record
+  function hideRecord(performBack) {
+    clog('%crecord::hideRecord', 9, 'color: grey');
+    // close pad
+    document.querySelector('#record').close();
+    // pop modal state
+    delete window.modal;
+    // restore enter key function
+    window.enterAction = 'goQuery';
+    // scroll to top
+    setTimeout(function(){ $('#record').animate({ scrollTop: "0px" }); }, 250);
+    // kill listeners
+    var pinkToggler = document.querySelector('#pinkToggler');
+    pinkToggler.removeEventListener('change', function() {}, { passive: true});
+    // destroy map
+    destructRecordMap();
+    // browsing history present
+    if(performBack && history.length > 2) { popRoute(); }
+    // direct access to url ... no previous browsing history
+    else {
+      clog('%crecord::hideRecord no history!', 9, 'color: lightblue');
+      // purge /view
+      if(window.router.hashish.indexOf('view') >= 0) {
+        clog('%crecord::hideRecord no history; remove /view', 9, 'color: lightblue');
+        // pfif record
+        if(window.router.action.indexOf('pfif') >= 0) {
+          var stateObj = { thisState: window.router };
+          history.pushState(stateObj, null, window.baseUrl+'/'+window.router.locale+'/'+window.router.short+'/'+window.router.action+'#'+str_ireplace('/', '_', window.uuid));
+        // originated record
+        } else {
+          var stateObj = { thisState: window.router };
+          history.pushState(stateObj, null, window.baseUrl+'/'+window.router.locale+'/'+window.router.short+'/'+window.router.action+'#'+window.uuid.split('/')[1].split('.')[1]);
+        }
+      }
+    }
+  }
+  // send comment
+  function sendComment() {
+    var comm = $('#addComm').prop('value');
+    if((typeof comm == 'undefined') || comm.length < 4) { toastYellow('longerComment', window.toastDuration); }
+    else {
+      var sendComm = document.querySelector('#sendComm');
+      sendComm.removeEventListener('click', function() {}, { passive: true});
+      toastSendingComment();
+      $('#sendComm').addClass('opacityTwenty');
+      $('#sendComm').prop('disabled', true);
+      $('#addComm').prop('disabled', true);
+      addCommentF(comm);
+    }
+  }
+  // show the record editable
+  function showRecordEdit(uuid) {
+    var html = '';
+    // for now just show the read only record
+    html += showRecord(uuid);
+    return html;
+  }
+  // show the record non-editable
+  function showRecord(uuid) {
+    window.delbuse = uuid;
+    var r = new Object(); // record
+    r.last     = window.records[uuid].updated;
+    r.name     = window.records[uuid].name;
+    r.stat     = window.records[uuid].stat;
+    r.age      = window.records[uuid].age;
+    r.sex      = window.records[uuid].sex;
+    r.lki      = window.records[uuid].lki;
+    r.comments = window.records[uuid].comments;
+    r.lat      = window.records[uuid].latitude;
+    r.lon      = window.records[uuid].longitude;
+    r.animal   = window.records[uuid].animal;
+    r.follow   = window.records[uuid].following;
+    r.delable  = window.records[uuid].editable;
+    // format report abuse
+    var abuseout = '<div class="startAbuse" onclick="showPad7();"><i18n-msg class="startAbuseT" msgid="abuseReportAbuse"></i18n-msg></div>';
+    // format delete record
+    var delout = '';
+    if(r.delable) { delout = '<div class="deleteRecord" onclick="showPad8();"><i18n-msg class="deleteRecordT" msgid="deleteRecord"></i18n-msg></div>'; }
+    // format "view original record" 
+    var vor = '';
+    // foreign record link
+    if(uuid.indexOf(window.baseUuid) < 0) {
+      // from: test.personfinder.google.org/person.5691906527592448
+      // to: https://google.org/personfinder/test/view?id=test.personfinder.google.org%2Fperson.5691906527592448&lang=zh-CN
+      var vorl = 'https://google.org/personfinder/'+uuid.split('.')[0]+'/view?id='+str_ireplace('/','%2F',uuid)+'&lang='+str_ireplace('_','-',window.router.locale);
+      vor = '<a target="noopener" href="'+vorl+'" class="vor" style="color: #212121 !important;"><i18n-msg class="vorT" msgid="viewOriginalRecord"></i18n-msg></a>';
+    }
+    // format time for display
+    moment.locale(window.router.locale);
+    r.last = moment(r.last).format('LLLL'); // Sunday, June 25, 2017 5:11:47 PM
+    // format name
+    if(r.name == 'unk') { r.name = '<i18n-msg msgid="statusUnknown"></i18n-msg>'; }
+    // animal
+    var bidnS = '';
+    if(r.animal !== null) {
+      r.animalObj = JSON.parse(r.animal);
+      if(trim(r.animalObj['buddy']) == '') { r.bidn = '---'; }
+      else { r.bidn = r.animalObj['buddy']; }
+    } else { bidnS = ' none'; }
+    // image
+    if(window.records[uuid].thumb_url != null) { r.thumb = window.records[uuid].thumb_url; }
+    else { r.thumb = '/assets/images/other/noImage.png'; }
+    // age
+    var textAge = r.age;
+    if(textAge == '-1') { textAge = '<i18n-msg msgid="statusUnknown"></i18n-msg>'; }
+    // sex
+    if(r.sex == 'mal')      { r.sex = '<i18n-msg msgid="sexMale"></i18n-msg>'; }
+    else if(r.sex == 'fml') { r.sex = '<i18n-msg msgid="sexFemale"></i18n-msg>'; }
+    else if(r.sex == 'cpx') { r.sex = '<i18n-msg msgid="sexOther"></i18n-msg>'; }
+    else                    { r.sex = '<i18n-msg msgid="statusUnknown"></i18n-msg>'; }
+    // status
+    if(r.stat == 'mis')      { r.stat = '<i18n-msg class="zeroPad statusMissing" msgid="statusMissing"></i18n-msg>'; }
+    else if(r.stat == 'fnd') { r.stat = '<i18n-msg class="zeroPad statusFound" msgid="statusFound"></i18n-msg>'; }
+    else if(r.stat == 'dec') { r.stat = '<i18n-msg class="zeroPad statusDeceased" msgid="statusDeceased"></i18n-msg>'; }
+    else if(r.stat == 'inj') { r.stat = '<i18n-msg class="zeroPad statusInjured" msgid="statusInjured"></i18n-msg>'; }
+    else if(r.stat == 'ali') { r.stat = '<i18n-msg class="zeroPad statusAlive" msgid="statusAlive"></i18n-msg>'; }
+    else                     { r.stat = '<i18n-msg class="zeroPad statusUnknown" msgid="statusUnknown"></i18n-msg>'; }
+    // location
+    if(r.lat == 0 || r.lon == 0 || r.lat == null || r.lon == null || r.lat == '' || r.lon == '') { 
+      r.lkl = '<div class="record-item"><i18n-msg msgid="statusUnknown"></i18n-msg></div>';
+    } else {
+      r.lkl = ''+
+        '<div class="record-map-d">'+
+          getRecordMap(r.lat, r.lon)+
+        '</div>';
+    }
+    // last known information
+    if(trim(r.lki) == '') { r.lki = '---'; }
+    // notes
+    window.commCount = 0;
+    var comments = '';
+    for(var key in r.comments) {
+      // format time for display
+      var dx = new Date(r.comments[key].when);
+      r.stamp = dx.toDateString()+' '+dx.toLocaleTimeString();
+      comments += ''+
+        '<div class="oneComment">'+
+          '<div class="record-item">'+ r.comments[key].comment + '</div>'+
+          '<div class="record-item-label" secondary>'+ r.stamp +'</div>'+
+        '</div>';
+      window.commCount++;
+    }
+    if(window.commCount == 0) {
+      comments += ''+
+        '<div id="blankComment" class="oneComment">'+
+          '<div class="record-item">---</div>'+
+        '</div>';
+    }
+    // placeholder for new comment
+    comments += ''+
+        '<div id="newComm0" class="oneComment none">'+
+          '<div class="record-item newComm1"></div>'+
+          '<div class="record-item-label newComm2" secondary></div>'+
+        '</div>';
+    // make item
+    var comm = ''+
+      '<paper-item class="paper-item-record">'+
+        '<paper-item-body two-line>'+
+          '<div class="">'+ comments + '</div>'+
+          '<div class="commentT" secondary><i18n-msg msgid="comments"></i18n-msg></div>'+
+        '</paper-item-body>'+
+      '</paper-item>';
+    // add comment
+    var addComment = ''+
+      '<div class="commDiv">'+
+        '<div class="record-item">'+
+          '<paper-textarea id="addComm" class="addComm" rows=1 max-rows=4 aria-labelledby="addCommentLabel"></paper-textarea>'+
+          '<paper-icon-button id="sendComm" class="sendComm" icon="send" aria-label="save"></paper-icon-button>'+
+        '</div>'+
+        '<div class="record-item-label" id="addCommentLabel" secondary><i18n-msg msgid="addCommentLabel"></i18n-msg></div>'+
+      '</div>';
+    // together
+    comm = comm + addComment;
+    // subscribe to record
+    var subLabel;
+    var subValue;
+    var fe = '<i18n-msg msgid="followButtonExplain"></i18n-msg>';
+    if(r.follow) {
+      subLabel = document.querySelector('i18n-msg').getMsg('followStatusTrue');
+      subValue = 'checked';
+      window.subState = true;
+    } else {
+      subLabel = document.querySelector('i18n-msg').getMsg('followStatusFalse');
+      subValue = '';
+      window.subState = false;
+    }
+    if(parseInt(window.gid, 10) === 3) {
+      subLabel = document.querySelector('i18n-msg').getMsg('followStatusFalse');
+      subValue = 'disabled';
+      window.subState = 3;
+      fe = '<i18n-msg msgid="followButtonAnon"></i18n-msg>';
+    }
+    var subscribe = ''+
+      '<paper-item class="paper-item-record">'+
+        '<paper-item-body two-line>'+
+          '<paper-toggle-button id="pinkToggler" class="pinkToggler" touch-action="pan-y" '+subValue+'><span id="subState">'+subLabel+'</span></paper-toggle-button>'+
+          '<div class="record-item-label" secondary>'+fe+'</div>'+
+        '</paper-item-body>'+
+      '</paper-item>';
+    // build total view
+    window.pad6rName = r.name;
+    var html = ''+
+      '<div class="rTop">'+
+        '<paper-icon-button id="recordX" class="padX" icon="clear" title="clear" onclick="hideRecord(true);"></paper-icon-button>'+
+        '<div id="shareRecord">'+
+          '<paper-button id="shareRecordB" class="nonUpper" title="share" onclick="showPad6r();"><i18n-msg msgid="eurl4"></i18n-msg><iron-icon icon="social:share"></iron-icon></paper-button>'+
+        '</div>'+
+      '</div>'+
+      '<div class="rnametop"></div>'+
+      '<paper-item class="paper-item-record clearBoth">'+
+        '<paper-item-body two-line>'+
+          '<div class="record-item">'+ r.name + '</div>'+
+          '<div class="record-item-label" secondary><i18n-msg msgid="name"></i18n-msg></div>'+
+        '</paper-item-body>'+
+      '</paper-item>'+
+      '<paper-item class="paper-item-record'+bidnS+'">'+
+        '<paper-item-body two-line>'+
+          '<div class="record-item">'+ r.bidn + '</div>'+
+          '<div class="record-item-label" secondary><i18n-msg msgid="buddyIdentificationNumber"></i18n-msg></div>'+
+        '</paper-item-body>'+
+      '</paper-item>'+
+      '<paper-item class="paper-item-record">'+
+        '<paper-item-body two-line>'+
+          '<div class="record-item">'+ r.stat + '</div>'+
+          '<div class="record-item-label" secondary><i18n-msg msgid="status"></i18n-msg></div>'+
+        '</paper-item-body>'+
+      '</paper-item>'+
+      '<paper-item class="paper-item-record">'+
+        '<paper-item-body two-line>'+
+          '<div class="record-item time360">'+ r.last + '</div>'+
+          '<div class="record-item-label" secondary><i18n-msg msgid="lastUpdated"></i18n-msg></div>'+
+        '</paper-item-body>'+
+      '</paper-item>'+
+      '<paper-item class="paper-item-record">'+
+        '<paper-item-body two-line>'+
+          '<div class="record-item">'+ textAge + '</div>'+
+          '<div class="record-item-label" secondary><i18n-msg msgid="age"></i18n-msg></div>'+
+        '</paper-item-body>'+
+      '</paper-item>'+
+      '<paper-item class="paper-item-record">'+
+        '<paper-item-body two-line>'+
+          '<div class="record-item">'+ r.sex + '</div>'+
+          '<div class="record-item-label" secondary><i18n-msg msgid="gender"></i18n-msg></div>'+
+        '</paper-item-body>'+
+      '</paper-item>'+
+      '<paper-item class="paper-item-record">'+
+        '<paper-item-body two-line>'+
+          '<div class="record-item">'+ r.lki + '</div>'+
+          '<div class="record-item-label" secondary><i18n-msg msgid="additionalInformation"></i18n-msg></div>'+
+        '</paper-item-body>'+
+      '</paper-item>'+
+      comm +
+      subscribe +
+      '<paper-item class="paper-item-record">'+
+        '<paper-item-body two-line>'+
+          r.lkl +
+          '<div class="record-item-label" secondary><i18n-msg msgid="lastKnownLocation"></i18n-msg></div>'+
+        '</paper-item-body>'+
+      '</paper-item>'+
+      abuseout + delout + vor +
+      '<div class="clearBoth"></div>'+
+      '<div class="fulluuid">'+window.uuid+'</div>'+
+      '<div class="footer-spacer"></div>';
+    return html; 
+  }
+  </script>
+</dom-module>

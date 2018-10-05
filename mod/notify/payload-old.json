@@ -1,0 +1,10 @@
+{
+  "registration_ids":["eoHcoslkVXU...","cGaTxfdRqCw...","ffVS4m-WGs0..."],
+  "data":{
+    "message":"An event has been started for the recent earthquake in Ecuador."
+  },
+  "notification":{
+    "body":"An event has been started for the recent earthquake in Ecuador.",
+    "content_available":1
+  }
+}

@@ -1,0 +1,335 @@
+<!-- language selection element -->
+<dom-module id="taupo-language">
+<template>
+  <style>
+    paper-menu {
+      display: block;
+    }
+    paper-menu-button {
+      margin: 0;
+      padding: 0;
+    }
+    .dropdown-trigger {
+      padding-bottom: 0 !important;
+    }
+    .z9999 {
+      z-index: 99;
+    }
+    .z1000000 {
+      z-index: 1000000 !important;
+    }
+    .nonUpper {
+      text-transform: none !important;
+    }
+    #pblang {
+      padding: 4px 8px !important;
+      margin: 8px !important;
+    }
+    paper-button#pblang {
+      background: white !important;
+      color: var(--taupo-dark-blue) !important;
+      font-weight: bold;
+    }
+    #pblangi {
+      height: 18px !important;
+    }
+    @media (min-width:480px) {
+      #pblangi {
+        top: -1px;
+      }
+    }
+  </style>
+  <paper-menu-button class="z9999" id="paperLangSelect">
+    <paper-button id="pblang" class="nonUpper dropdown-trigger"><iron-icon id="pblangi" icon="language"></iron-icon> <i18n-msg msgid="thisLanguage"></i18n-msg></paper-button>
+    <paper-menu id="gk" class="dropdown-content">
+      <paper-item id="en">English</paper-item><!-- English -->
+      <paper-item id="es">Español</paper-item><!-- Spanish -->
+      <paper-item id="fr">Français</paper-item><!-- French -->
+      <paper-item id="el">Ελληνικά</paper-item><!-- Greek -->
+      <paper-item id="hi">हिंदी</paper-item><!--Hindi -->
+      <paper-item id="ja">日本語</paper-item><!-- Japanese -->
+      <paper-item id="mm">မြန်မာ</paper-item><!-- Burmese/Myanmar -->
+      <paper-item id="ru">Pусский</paper-item><!-- Russian -->
+      <paper-item id="ta">ஆங்கிலம்</paper-item><!-- Tamil -->
+      <paper-item id="ur">اردو</paper-item><!-- Urdu -->
+      <paper-item id="vi">Tiếng Việt</paper-item><!-- Vietnamese -->
+      <paper-item id="zh_CN">中文(简体)</paper-item><!-- Chinese (Mandarin) -->
+      <paper-item id="zh_TW">中文(繁體)</paper-item><!-- Chinese (Taiwan) -->
+    </paper-menu>
+  </paper-menu-button>
+</template>
+<script>
+(function () {
+  Polymer({
+    is: 'taupo-language',
+    listeners: {
+      'tap'       : 'regularTap',
+      'en.tap'    : 'enTap',
+      'es.tap'    : 'esTap',
+      'fr.tap'    : 'frTap',
+      'el.tap'    : 'elTap',
+      'hi.tap'    : 'hiTap',
+      'ja.tap'    : 'jaTap',
+      'mm.tap'    : 'mmTap',
+      'ru.tap'    : 'ruTap',
+      'ta.tap'    : 'taTap',
+      'ur.tap'    : 'urTap',
+      'vi.tap'    : 'viTap',
+      'zh_CN.tap' : 'zh_CNTap',
+      'zh_TW.tap' : 'zh_TWTap'
+    },
+    regularTap: function(e) {},
+    enTap: function(e) {
+      I18nMsg.lang = 'en';
+      window.rtl = false;
+      postLangChange();
+    },
+    esTap: function(e) {
+      I18nMsg.lang = 'es';
+      window.rtl = false;
+      postLangChange();
+    },
+    frTap: function(e) {
+      I18nMsg.lang = 'fr';
+      window.rtl = false;
+      postLangChange();
+    },
+    elTap: function(e) {
+      I18nMsg.lang = 'el';
+      window.rtl = false;
+      postLangChange();
+    },
+    hiTap: function(e) {
+      I18nMsg.lang = 'hi';
+      window.rtl = false;
+      postLangChange();
+    },
+    jaTap: function(e) {
+      I18nMsg.lang = 'ja';
+      window.rtl = false;
+      postLangChange();
+    },
+    mmTap: function(e) {
+      I18nMsg.lang = 'mm';
+      window.rtl = false;
+      postLangChange();
+    },
+    ruTap: function(e) {
+      I18nMsg.lang = 'ru';
+      window.rtl = false;
+      postLangChange();
+    },
+    taTap: function(e) {
+      I18nMsg.lang = 'ta';
+      window.rtl = false;
+      postLangChange();
+    },
+    urTap: function(e) {
+      I18nMsg.lang = 'ur';
+      window.rtl = true;
+      postLangChange();
+    },
+    viTap: function(e) {
+      I18nMsg.lang = 'vi';
+      window.rtl = false;
+      postLangChange();
+    },
+    zh_CNTap: function(e) {
+      I18nMsg.lang = 'zh_CN';
+      window.rtl = false;
+      postLangChange();
+    },
+    zh_TWTap: function(e) {
+      I18nMsg.lang = 'zh_TW';
+      window.rtl = false;
+      postLangChange();
+    },
+    ready: function() {
+      // hide disabled locales
+      for(var i in window.i18n_off) {
+        Polymer.dom(this.$.gk).removeChild(this.$$('#'+window.i18n_off[i]));
+      }
+    }
+  });
+})();
+
+// back/forward language change
+function changeLocale() {
+  clog('%clanguage::changeLocale: '+window.router.locale, 9, 'color: grey');
+  window.skipPushRoute = true;
+  switch(window.router.locale) {
+    case 'es':
+      document.querySelector('taupo-language').esTap(); 
+      break;
+    case 'fr':
+      document.querySelector('taupo-language').frTap(); 
+      break;
+    case 'el':
+      document.querySelector('taupo-language').elTap(); 
+      break;
+    case 'hi':
+      document.querySelector('taupo-language').hiTap(); 
+      break;
+    case 'ja':
+      document.querySelector('taupo-language').jaTap(); 
+      break;
+    case 'mm':
+      document.querySelector('taupo-language').mmTap(); 
+      break;
+    case 'ru':
+      document.querySelector('taupo-language').ruTap(); 
+      break;
+    case 'ta':
+      document.querySelector('taupo-language').taTap(); 
+      break;
+    case 'ur':
+      document.querySelector('taupo-language').urTap(); 
+      break;
+    case 'vi':
+      document.querySelector('taupo-language').viTap(); 
+      break;
+    case 'zh_CN':
+      document.querySelector('taupo-language').zh_CNTap(); 
+      break;
+    case 'zh_TW':
+      document.querySelector('taupo-language').zh_TWTap(); 
+      break;
+    default:
+      document.querySelector('taupo-language').enTap(); 
+  }
+  delete window.skipPushRoute;
+}
+
+// update certain elements after a language change
+function postLangChange() {
+  clog('%clanguage::postLangChange', 9, 'color: grey');
+  setCookie('cLang', I18nMsg.lang, 9999);
+  // hide welcome screen if displayed
+  if(typeof window.postWelcome !== 'undefined' && window.postWelcome == true) {
+    hidePad0();
+    $('#paperLangSelect').removeClass('z1000000');
+  }
+  // lang displayed is same as tapped
+  if(window.router.locale == I18nMsg.lang) { return; }
+  // update element directions
+  if(window.rtl) { $('#sTop').addClass('rtl'); }
+  // update global locale && cookie && moment
+  window.router.locale = I18nMsg.lang;
+  moment.locale(window.router.locale);
+  // localize title/meta
+  seoTitleMeta('');
+  // localize dates
+  localizeDates();
+  // reload placeholders
+  reloadPlaceholders();
+  // reload item hints 
+  reloadAltTitles();
+  // refresh event list/articles
+  refreshArticles();
+  // refresh search results, rtl-ness
+  if(window.router.short != '' && window.router.short != 'events') {
+    goQuery();
+    rtlSearch();
+  }
+  // i18n update
+  Platform.performMicrotaskCheckpoint();
+  // push new browser state
+  if(typeof window.skipPushRoute == 'undefined' || window.skipPushRoute !== true) {
+    replaceRoute();
+  }
+  // save user locale preference
+  rest_pref_locale();
+}
+
+// update dates to locale changes
+function localizeDates() {
+  clog('%clanguage::localizeDates', 9, 'color: grey');
+  // localize record dates
+  if(window.router.short != '' && window.router.short != 'events') {
+    $('.lastUpdated').each(function(index) {
+      var dz = new Date($(this).data('foo').bar);
+      localizedDate = moment(dz).format('LLLL'); // Sunday, June 25, 2017 5:11:47 PM
+      $(this).html(localizedDate);
+    });
+  }
+  // localize omb date
+  moment.locale(window.router.locale);
+  var localizedDate = moment('2019-08-31 12:00:00').format('l'); // 7/27/2017
+  // Necessary for non-Chrome browsers to update OMB page date.
+  Polymer.Base.async(function() { $('.ombDateLocalized').html(localizedDate);}, 1);
+}
+
+// update certain elements after page init
+function postInitLang() {
+  clog('%clanguage::postInitLang', 9, 'color: grey');
+  // i18n update
+  Platform.performMicrotaskCheckpoint();
+  // init notifications
+  notifyStart();
+  // reload placeholders
+  reloadPlaceholders();
+  // reload item hints 
+  reloadAltTitles();
+  // localize dates
+  localizeDates();
+  // update element directions
+  if(window.rtl) { $('#sTop').addClass('rtl'); }
+}
+
+// reload placeholders
+function reloadPlaceholders() {
+  setTimeout(function() { 
+    // these elements lag too, so we wait a bit before updating them
+    document.documentElement.lang = I18nMsg.lang;
+    $('#loginUsername'   ).prop('placeholder', document.querySelector('i18n-msg').getMsg('pad1registerEmailPlaceholder'));
+    $('#loginPassword'   ).prop('placeholder', document.querySelector('i18n-msg').getMsg('pad1loginPasswordPlaceholder'));
+    $('#registerEmail'   ).prop('placeholder', document.querySelector('i18n-msg').getMsg('pad1registerEmailPlaceholder'));
+    $('#registerPassword').prop('placeholder', document.querySelector('i18n-msg').getMsg('pad1loginPasswordPlaceholder'));
+    $('#passwordOld'     ).prop('placeholder', document.querySelector('i18n-msg').getMsg('pad3oldPasswordPlaceholder'  ));
+    $('#passwordNew1'    ).prop('placeholder', document.querySelector('i18n-msg').getMsg('pad3newPassword1Placeholder' ));
+    $('#passwordNew2'    ).prop('placeholder', document.querySelector('i18n-msg').getMsg('pad3newPassword2Placeholder' ));
+  }, 2000);
+}
+
+// reload icon alt and title attributes 
+function reloadAltTitles() {
+  setTimeout(function() { 
+    // these elements lag too, so we wait a bit before updating them
+    $('#goHome').prop('title', document.querySelector('i18n-msg').getMsg('goHomePage'));
+    $('#goHome').prop('alt', document.querySelector('i18n-msg').getMsg('goHomePage'));
+    $('#scamera').prop('title', document.querySelector('i18n-msg').getMsg('searchUsingPhoto'));
+    $('#scamera').prop('alt', document.querySelector('i18n-msg').getMsg('searchUsingPhoto'));
+    $('#maglass').prop('title', document.querySelector('i18n-msg').getMsg('searchUsingName'));
+    $('#maglass').prop('alt', document.querySelector('i18n-msg').getMsg('searchUsingName'));
+    $('#addOne').prop('title', document.querySelector('i18n-msg').getMsg('reportPersonAnimal'));
+    $('#addOne').prop('alt', document.querySelector('i18n-msg').getMsg('reportPersonAnimal'));
+  }, 2000);
+}
+
+// save the user's locale preference server side
+function rest_pref_locale() {
+  // skip anon users
+  if(window.gid !== 3) {
+    // call web service
+    var rp    = new Object();
+    rp.token  = window.token;
+    rp.call   = 'pref';
+    rp.locale = window.router.locale;
+    var rpj   = JSON.stringify(rp);
+    var xhr   = new XMLHttpRequest();
+    xhr.open('POST', window.endpoint, true);
+    xhr.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
+    xhr.onload = function(e) {
+      if(e.target.status !== 200 && e.target.status !== 0) { netConnectionError(); return; }
+      var resp = JSON.parse(e.target.response);
+      // success
+      if(parseInt(resp.error, 10) === 0) {  clog('%clanguage::rest_pref_locale success!', 9, 'color: grey'); }
+      // failure
+      else { clog('%clanguafe::rest_pref_locale fail!', 9, 'color: red');}
+    }.bind(this);
+    xhr.onerror = function(e) { netConnectionError(); };
+    xhr.send(rpj);
+  }
+}
+</script>
+</dom-module>

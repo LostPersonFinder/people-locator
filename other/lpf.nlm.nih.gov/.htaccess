@@ -1,0 +1,57 @@
+##### mod deflate
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/text
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/x-httpd-php
+  AddOutputFilterByType DEFLATE application/x-httpd-fastphp
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+##### mod expires
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault               "access plus 1 month"
+  ExpiresByType image/gif      "access plus 1 month"
+  ExpiresByType image/jpeg     "access plus 1 month"
+  ExpiresByType image/png      "access plus 1 month"
+</IfModule>
+
+##### Use PHP for all these filetypes
+AddType application/x-httpd-php .php
+
+##### Secure cookies
+php_value session.cookie_httponly 1
+php_value session.cookie_secure 1
+php_value session.use_only_cookies 1
+Header edit Set-Cookie ^(.*)$ $1;HttpOnly;Secure
+
+##### Disallow Directory Listings
+DirectoryIndex index.php
+
+##### Turn on mod_rewrite to capture the shortname from a url and pass it on as a url parameter
+RewriteEngine On
+
+##### Site root
+RewriteBase /
+
+##### make mod_rewrite skip the subsequent rules if the file or folder exists already
+RewriteCond %{REQUEST_FILENAME} -d [OR]
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule .* - [L]
+
+##### favicon 
+RewriteRule ^(favicon\.ico)$ assets/icons/favicon.ico
+RewriteRule ^(browserconfig\.xml)$ assets/icons/browserconfig.xml
+
+##### handle actions
+RewriteRule ^(TriageTrak-TriagePic)$ tt.php
+RewriteRule ^(PeopleLocator-ReUnite)$ ru.php
+RewriteRule ^(TriagePic-Download)$ tpd.php

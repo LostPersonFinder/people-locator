@@ -1,0 +1,649 @@
+/* framework styles */
+
+html {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+* {
+  font-family: 'Open Sans';
+  font-size: 100%;
+  line-height: 1.5;
+  color: white;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+}
+html, body, form, fieldset, p {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: rgb(51, 51, 51);
+}
+a { 
+  color: orange;
+}
+.mspace {
+  font-family: monospace;
+}
+#container {
+  min-height: 100%;
+  padding: 16px;
+}
+#site_name {
+  float: left;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+.noshadow {
+  box-shadown: none !important;
+}
+#user_info {
+  float: right;
+}
+#menu, #menu2 {
+  text-align: center;
+  border-radius: 2px;
+  background-color: rgb(68, 68, 68);
+  margin-bottom: 1em;
+  padding: 0.5em;
+}
+.modhover:hover, .abuseT tr:hover {
+  background-color: rgba(0,0,0,0.5); 
+}
+#sitehead {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+a img {
+  border:none;
+}
+paper-dialog {
+  overflow: hidden !important;
+}
+paper-dialog h2 {
+  margin-bottom: 0.75em;
+  color: #222;
+}
+paper-dialog div paper-button {
+  color: #222 !important;
+}
+paper-dialog-scrollable {
+  color: #000;
+}
+paper-button.hover:hover {
+  background-color: rgba(0, 127, 255, 0.25);
+}
+paper-toggle-button.redtoggler .toggle-bar.paper-toggle-button {
+  background-color: #b71c1c !important;
+}
+paper-toggle-button.redtoggler .toggle-button.paper-toggle-button {
+  background-color: #b71c1c !important;
+}
+paper-toggle-button.redtoggler[checked] .toggle-bar.paper-toggle-button {
+  background-color: #f44336 !important;
+}
+paper-toggle-button.redtoggler[checked] .toggle-button.paper-toggle-button {
+  background-color: #f44336 !important;
+}
+paper-toggle-button.redtoggler .toggle-ink.paper-toggle-button {
+  color: #b71c1c !important;
+}
+paper-toggle-button.redtoggler[checked] .toggle-ink.paper-toggle-button {
+  color: #f44336 !important;
+}
+paper-toggle-button.greentoggler .toggle-bar.paper-toggle-button {}
+paper-toggle-button.greentoggler .toggle-button.paper-toggle-button {}
+paper-toggle-button.greentoggler[checked] .toggle-bar.paper-toggle-button {
+  background-color:green !important;
+}
+paper-toggle-button.greentoggler[checked] .toggle-button.paper-toggle-button {
+  background-color:green !important;
+}
+paper-toggle-button.greentoggler .toggle-ink.paper-toggle-button {
+  color:green  !important;
+}
+paper-toggle-button.greentoggler[checked] .toggle-ink.paper-toggle-button {
+  color:green !important;
+}
+.bold {
+  font-weight: bold !important;
+}
+.block {
+  display: block !important;
+}
+.none {
+  display: none !important;
+}
+.both {
+  clear: both;
+}
+.zero {
+  height: 0px;
+  width: 0px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.center {
+  text-align: center;
+}
+.red   { color: red;   }
+.green { color: green; }
+.gr33n { color: green !important; }
+.grey  { color: grey;  }
+table {
+  border: none;
+  border-spacing: none;
+  border-collapse: collapse;
+  width: 100%;
+}
+.opacityZero {
+  opacity: 0 !important;
+}
+.opacityOne {
+  opacity: 1 !important;
+}
+.opacityTwenty {
+  opacity: 0.2;
+}
+paper-toast {
+  z-index: 99999999;
+}
+#toast1 span.paper-toast, #toast3 span.paper-toast {
+  color: white !important;
+}
+paper-toast#toast1 {
+  width: 450px !important;
+  max-width: 450px !important;
+}
+#toast2 span.paper-toast {
+  color: black !important;
+}
+paper-toast#toast2 {
+  width: 400px !important;
+  max-width: 400px !important;
+}
+#toast3 {
+  background-color: green;
+}
+input {
+  background: #555;
+  border: none;
+  padding: 0.25em 0.5em;
+}
+select {
+  background: #555;
+  border: none;
+  padding: 0.25em 1em;
+  width: 300px;
+}
+
+/* from mod/admin -------------------------------------------------------------------------------------------- */
+
+#adminBOX {
+  margin: 0 0 3em;
+  border-top: none;
+  overflow: hidden;
+}
+#adminHolder, #myForm, .four44 {
+  background: #444;
+}
+.four44 {
+  padding: 1em; 
+}
+.five55 {
+  background-color: #555;
+}
+#pc01 {
+  background-color: #777;
+}
+td, table {
+  border: none;
+}
+.servicesU {
+  float: none;
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  margin: 1em 0 0 0;
+}
+.servicesU h2 {
+  margin: 0.2em;
+}
+#servicesDiv {
+  background-color: rgb(68, 68, 68);
+  padding: 1em;
+}
+#ah2 {
+  background-color: rgb(255, 255, 255);
+  margin: 0 0 3em;
+  border-radius: 2px;
+  border: 1px solid rgb(205, 205, 205);
+  padding: 0;
+}
+.biuHolder {
+  padding: 2em !important;
+}
+.dashBox {
+  padding: 0;
+  background-color: #444;
+  margin: 1em 1em 0 0;
+  float: left;
+}
+.dashBox h2 {
+  margin: 1em 0 0.6em 0;
+}
+#dashBoxes {
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+#pingChart0, #pingChart1, #pc01 {
+  width: 100%;
+  padding: 0;
+  height: 200px;
+  margin: 0;
+  overflow: hidden;
+}
+#pingChart0 {
+  position: relative;
+  top: -200px;
+  z-index: 98;
+  opacity: 0;
+}
+#pingChart1 {
+  z-index: 99;
+}
+.clearBan {
+  cursor: pointer;
+  text-align: center;
+  margin-top: 1em !important;
+}
+.banRowEven, #ipDiv {
+  background-color: #777 !important;
+}
+.banRowOdd {
+  background-color: #888 !important;
+}
+.noLeftPadding {
+  padding-left: 0 !important;
+}
+.fontEighty {
+  font-size: 0.8em;
+}
+.fmlog,  .solrlog {
+  height: 400px;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.02);
+  border: 1px solid rgba(0,0,0,0.04);
+  border-radius: 1em;
+  margin-bottom: 1em;
+  margin-top: -0.5em;
+}
+.solrlog {
+  height: 200px;
+}
+.status {
+  margin: -0.5em 0 0.5em 0;
+  text-align: center;
+}
+.center {
+  text-align: center;
+}
+.oneEM {
+  padding: 1em;
+  overflow: hidden;
+}
+td.banRowEven, td.banRowOdd {
+  text-align: center;
+  padding: 0.1em 0.5em;
+}
+#build {
+  font-size: 0.9em;
+  text-align: right;
+  color: rgba(127, 127, 127, 0.5);
+  font-style: italic;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+}
+#allUpdated {
+  font-style: italic;
+  font-size: 0.9em;
+  position: absolute;
+  bottom: 16px;
+}
+#modacl, #modacl a {
+  font-style: italic;
+}
+table#regLog tbody tr:hover {
+  background: #555;
+}
+.lastA {
+  width: 8em;
+}
+.floatLeft {
+  float: left;
+}
+.plusss {
+  margin-bottom: 2em;
+}
+.plusss table {
+  border: none;
+}
+.auditable tbody tr td, .auditable thead tr td {
+  padding: 0;
+} 
+.pagey {
+  margin: 0.5em 0;
+}
+.auditable tbody tr:hover {
+  background-color: #555;
+  cursor: crosshair;
+}
+.auditable tbody tr td {
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
+}
+.notifyHolder {
+  background-color: rgb(68,68,68);
+  padding: 1em;
+  color: pink;
+  border-radius: 3px;
+}
+.notifyHolder h1 {
+  color: white;
+}
+.notifyHolder b {
+  color: #555;
+}
+#not-icon {
+  font-family: 'Roboto', 'Noto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.011em;
+  line-height: 20px;
+  color: rgb(117, 117, 117);
+}
+#not-title, #not-msg, #not-tag, #not-icon {
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+#askAndroid, #askiOS {
+  width: 240px;
+}
+
+.bgGrey {
+  background-color: rgba(127,127,127,0.4) !important;
+  color: black;
+}
+paper-button.bgBlue paper-ripple {
+  color: black !important;
+}
+paper-button.bgBlue paper-material, paper-button.bgBlue span {
+  color: white;
+}
+.bgBlue {
+  background-color: rgba(68, 120, 170, 1) !important;
+  color: white;
+}
+paper-button.bgBlue2 paper-ripple {
+  color: black !important;
+}
+paper-button.bgBlue2 paper-material, paper-button.bgBlue2 span {
+  color: white;
+}
+.bgBlue2 {
+  background: rgba(66, 133, 244, 1) !important;
+  color: white;
+}
+.bgBlue250 {
+  background: rgba(66, 133, 244, 0.5) !important;
+  color: white;
+}
+paper-button.bgGreen paper-ripple {
+  color: black !important;
+}
+paper-button.bgGreen paper-material, paper-button.bgGreen span {
+  color: white;
+}
+.bgGreen {
+  background-color: green !important;
+  color: white;
+}
+paper-button.bgYellow paper-ripple {
+  color: black !important;
+}
+paper-button.bgYellow paper-material, paper-button.bgYellow span {
+  color: black;
+}
+.bgYellow {
+  background-color: yellow !important;
+  color: black;
+}
+paper-button.bgRed paper-ripple {
+  color: black !important;
+}
+paper-button.bgRed paper-material, paper-button.bgRed span {
+  color: white;
+}
+.bgRed {
+  background-color: red !important;
+  color: white;
+}
+paper-button.bgGrey paper-ripple {
+  color: black !important;
+}
+paper-button.bgGrey paper-material, paper-button.bgGrey span {
+  color: black;
+}
+
+paper-button.bgWhiteRed paper-ripple {
+  color: red !important;
+}
+paper-button.bgWhiteRed paper-material, paper-button.bgWhiteRed span {
+  color: red;
+}
+.bgWhiteRed {
+  background-color: white !important;
+  color: red;
+}
+.plus444 {
+  border: none !important;
+}
+.mainRowOdd, .mainRowEven {
+  padding: 0.5em 0.25em;
+  border: 1px solid #666;
+  border-left: none;
+  border-right: none;
+}
+.emTable2 tbody tr:hover {
+  background: none;
+}
+.emTable, .emTable2 {
+  margin-top: 1em;
+}
+.borderNone {
+  border: none !important;
+}
+.emButton {
+  padding: 0.25em 0.5em;
+}
+input[readonly] {
+  background-color: #755;
+}
+.mainRowArchived {
+  background-color: #777;
+}
+#showArchived {
+  padding: 0.75em;
+}
+
+/* users css ------------------------------------------------------------------------------------------------- */
+
+#rt { border-collapse: collapse; }
+#rt tbody tr td {
+  max-width: 145px;
+  overflow: hidden;
+}
+td {
+  white-space: nowrap;
+}
+.none { display: none; }
+.edituser {
+  padding: 0;
+  width: 96px !important;
+}
+#userLegend {
+  float: right;
+  margin-bottom: 1em;
+}
+#newUser {
+  float: right;
+  background-color: rgba(0,255,0,0.75);
+  padding: 0.5em 2em !important;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.25);
+  border-radius: 3px;
+  width: 7.5em;
+  text-align: center;
+  cursor: pointer !important;
+  font-weight: bold;
+}
+th {
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  text-align: left !important;
+  padding: 0 1em !important;
+}
+.thr th {
+  padding: 0 !important;
+}
+table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after { 
+  content: " \25B4\25BE" 
+}
+.opake {
+  opacity: 0;
+}
+#rollup {
+ background: #444;
+ padding: 1em;
+}
+.userBg {
+  background-color: #fff;
+  padding: 8px;
+  height: 76px;
+  border-radius: 2px;
+}
+#editOneUser, #rollup {
+  overflow: hidden;
+}
+#editOneUser {
+  height: 0px;
+  opacity: 0;
+  padding: 1em;
+  background: #444;
+}
+#addNewUserDiv {
+  float: right;
+}
+#limiter {
+  line-height: 50px;
+  margin-left: 0.5em;
+}
+#searchOptions {
+  margin-top: 0.5em;
+}
+#userSearch {
+  float: left;
+  width: 20em;
+  margin-left: 0.5em;
+}
+#userSearchBox {
+  text-align: left !important;
+}
+.nonselect, td, #userid, #newUser, .userButton {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+.userButton {
+  width: 10em;
+  float: left;
+  font-weight: bold;
+  margin: 2em 1em 0em 0em;
+  text-align: center;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.25);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 3px;
+}
+.bgreen {
+  background-color: green;
+  color: white;
+}
+.byellow {
+  background-color: yellow;
+  color: black;
+}
+.bred {
+  background-color: red;
+  color: white;
+}
+.usertext, #gid, #status {
+  padding: 0.25em 1em;
+  width: 300px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin-bottom: 0.5em;
+  background: rgb(85, 85, 85);
+  border: none;
+}
+.locked {
+  background: red !important
+}
+.lockedTd {
+  color: white !important;
+}
+.pending {
+  background: rgb(33,31,32) !important
+}
+.invalid {
+  background-color: rgba(255,0,0,0.2);
+  border: 1px solid red;
+}
+.valid {
+  background-color: rgba(0,255,0,0.2);
+  border: 1px solid green;
+}
+#editButtons {
+  margin: 1em 0 0 -5px;
+}
+#editButtons paper-button {
+  margin-right: 1em;
+}
+#usersDiv #rt tbody tr:hover {
+  background-color: rgba(255,255,255,0.25) !important;
+}

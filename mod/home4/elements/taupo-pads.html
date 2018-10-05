@@ -1,0 +1,1275 @@
+<!-- taupo-pads -->
+<dom-module id="taupo-pads">
+  <template>
+    <style>
+      a, a:visited, a:hover, a:active {
+        color: var(--taupo-accent);
+        text-decoration: none;
+      }
+      .none {
+        display: none;
+      }
+      paper-dialog {
+        overflow: hidden;
+      }
+      .padX {
+        float: right;
+        width: 30px;
+        height: 30px;
+        padding: 0;
+      }
+      .bold {
+        font-weight: bold;
+      }
+      paper-tab {
+        --paper-tab-ink: var(--taupo-blue);
+      }
+      .bgBlue2, .bgBlue2 i18n-msg {
+        background: rgba(66, 133, 244, 1) !important;
+        color: white !important;
+      }
+      #wPL {
+        margin-left: 0.25em;
+      }
+      #pad0 {
+        background: rgba(0,0,0,0.7);
+        color: white;
+        box-shadow: none;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #pad0root {
+        top: 8em;
+        position: absolute;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+      }
+      #pad0msg {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        font-size: 150%;
+      }
+      sup {
+        vertical-align: 1.25em;
+        font-size: 50%;
+        line-height: 0;
+      }
+      #welcomeLine2 {
+        margin: 4em;
+      }
+      #welcomeNIH {
+        margin: 0 2em;
+      }
+      #pad1tabs, #pad3tabs {
+        --paper-tabs-selection-bar-color: #4478aa;
+        font-size: 1.2em;
+      }
+      #pad1root, #pad3root, #pad6root, #pad7root, #pad9root {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+      #pad6more, #pad7top {
+        clear: both;
+        margin: 0 1em;
+      }
+      #pad1top, #pad3top, #pad9top {
+        clear: both;
+        margin: 0;
+        padding: 0 1em;
+        background-color: var(--taupo-lightblue);
+        border-bottom: 1px solid var(--taupo-blue);
+      }
+      #pad9top {
+        background-color: #fff;
+      }
+      #pad1topper, #pad3topper {
+        background-color: var(--taupo-lightblue);
+        height: 40px;
+      }
+      #pad7top {
+        font-weight: bold;
+        font-size: 120%;
+        margin: 0 0 8px 0;
+      }
+      #pad7what {
+        margin: 0 0 16px 0;
+      }
+      #pad7top, #pad7what {
+        padding: 0 16px 0 16px;
+      }
+      .pad7padded {
+        padding: 72px 32px;
+      }
+      .abuseItem {
+        text-align: center;
+        margin-bottom: 16px;
+      }
+      .abuseButton {
+        background-color: var(--taupo-black);
+        color: white;
+        width: 250px;
+      }
+      .pad3padded {
+        padding: 0.75em 0;
+        margin: 1em 0;
+        text-align: center;
+      }
+      .p3t {
+        border-top: 1px solid var(--taupo-divider);
+      }
+      paper-checkbox {
+        --paper-checkbox-checked-color: var(--paper-green-500);
+        --paper-checkbox-checked-ink-color: var(--paper-green-500);
+        --paper-checkbox-unchecked-color: var(--paper-green-900);
+        --paper-checkbox-unchecked-ink-color: var(--paper-green-900);
+        margin-right: 1em;
+      }
+      /* base 360px dynamic elements */
+      #pad1root, #pad3root, #pad7root, #pad9root {
+        width: 282px;
+        overflow: hidden;
+      }
+      .sliderPage {
+        float: left;
+        width: 282px;
+      }
+      #pad1slider, #pad3slider, #pad7slider {
+        width: 846px;
+        position: relative;
+        left: -282px;
+      }
+      #pad3slider, #pad7slider {
+        left: 0px;
+      }
+      #loginUsername, #loginPassword, #registerEmail, #registerPassword {
+        height: 62px;
+      }
+      #loginUsername paper-input-container, #loginPassword paper-input-container,
+      #registerEmail paper-input-container, #registerPassword paper-input-container {
+        height: 46px;
+      }
+      #loginPassword, #loginUsername, #registerEmail, #registerPassword, #forgotEmail, #passwordOld, #passwordNew1, #passwordNew2, #passwordRequirements {
+        margin: 0 2em;
+      }
+      #registerEmail {
+        margin-top: 1em;
+      }
+      #loginSub, #passwordSub {
+        width: 226px;
+        margin: 1em 2em;
+      }
+      #loginUsername {
+        margin-top: 1em;
+      }
+      #pad1tab0, #registerSub, #forgotSub {
+        width: 226px;
+        margin: 0 2em 2em;
+      }
+      #registerSub {
+        margin: 2em;
+        padding: 0;
+        display: block;
+        opacity: 1;
+        height: 40px;
+        text-align: center;
+        padding: 0.75em;
+      }
+      #passwordRequirements {
+        margin: 0 2em;
+        font-size: 0.9em;
+      }
+      #forgotText {
+        margin: 3em 2em;
+      }
+      #p3slider0 {
+        margin-top: 0;
+      }
+      #p3slider1 {
+        margin-top: 1.5em;
+      }
+      #slider1, #slider2 {
+        margin-top: 1em; 
+      }
+      .left1em {
+        margin-left: 0.5em;
+      }
+      .right1em {
+        margin-right: 0.5em;
+      }
+      #eurl {
+        text-align: center;
+        font-weight: bold;
+        border-radius: 2px;
+        padding: 0.25em 0.5em;
+        margin: 1em;
+        color: var(--taupo-blue);
+        text-overflow: ellipsis;
+        overflow: hidden;
+        border: 1px solid #777;
+        user-select: all;
+      }
+      table {
+        width: 100%;
+      }
+      td {
+        text-align: center;
+        width: 50%;
+      }
+      #eurlButtons paper-button {
+        background: var(--taupo-dark-blue);
+        color: white;
+      }
+      .eurlX {
+        text-align: center;
+        margin: 0 2em 1em; 
+      }
+      #pad6more h2 {
+        text-align: center;
+      }
+      .js-copytextarea2, .js-copytextarea3 {
+        position: fixed;
+        top: -2em;
+        left: -2em;
+        width: 2em;
+        height: 2em;
+        padding: 0;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        background: transparent;
+        z-index: -1;
+        opacity: 0.01;
+      }
+      .opacityZero {
+        opacity: 0 !important;
+      }
+      #dnd {
+        margin: 1em 0;
+        border: 1px dashed #777;
+        border-radius: 2px;
+      }
+      #fdz {
+        height: 140px;
+      }
+      .sbps {
+        width: 100%;
+        margin: 0;
+        background-color: var(--taupo-blue);
+        color: white;
+      }
+      #seelect {
+        margin-bottom: 1.5em;
+      }
+      #pad9overlay {
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        background: white;
+        z-index: 3;
+        padding-top: 32px;
+        text-align: center;
+        display: none;
+      }
+      #sbpthrob img {
+        width: 100px;
+        height: 100px;
+        margin: 3em auto;
+      }
+      .center1em {
+        padding: 1em;
+        text-align: center;
+      }
+      @media (min-width:480px) {
+        #pad1root, #pad3root, #pad7root {
+          width: 382px;
+        }
+        .sliderPage {
+          width: 382px;
+        }
+        #pad1slider, #pad3slider, #pad7slider {
+          width: 1146px;
+          left: -382px;
+        }
+        .pad3padded {
+          padding: 1.75em 0;
+        }
+        #pad3slider, #pad7slider {
+          left: 0px;
+        }
+        #loginPassword, #loginUsername, #registerEmail, #registerPassword, #forgotEmail, #passwordOld, #passwordNew1, #passwordNew2, #passwordRequirements {
+          margin: 0 3em;
+        }
+        #passwordOld {
+          margin-top: 0.5em;
+        }
+        #registerEmail {
+          margin-top: 2em;
+        }
+        #loginUsername {
+          margin-top: 2em;
+        }
+        #loginSub {
+          width: 298px;
+          margin: 3em 3em;
+        }
+        #passwordSub {
+          width: 298px;
+          margin: 1em 3em 2em;
+        }
+        #pad1tab0, #forgotSub {
+          width: 298px;
+          margin: 0 3em 1em;
+        }
+        #registerSub {
+          width: 298px;
+          margin: 2em 3em;
+        }
+        #passwordRequirements {
+          margin: 0 3em;
+          font-size: 1em;
+        }
+        #forgotText {
+          margin: 4em 3em;
+        }
+        paper-button.deleteRecordCancel, paper-button.rDeviceCancel {
+          background: yellow;
+          color: black;
+        }
+        paper-button.deleteRecordCancel:hover, paper-button.rDeviceCancel:hover {
+          background: orange;
+        }
+        paper-button.deleteRecordDelete {
+          background: red;
+          color: white;
+        }
+        paper-button.deleteRecordDelete:hover {
+          background: black;
+        }
+        paper-button.rDeviceSub {
+          background: green;
+          color: white;
+        }
+        paper-button.rDeviceSub:hover {
+          background: #005400;
+        }
+        #pad0msg {
+          font-size: 175%;
+        }
+        .rtl {
+          direction: rtl;
+        }
+      }
+      @media (min-width:600px) {
+        #pad0msg {
+          font-size: 200%;
+        }
+      }
+      @media (min-width:720px) {
+        #pad0msg {
+          font-size: 225%;
+        }
+      }
+      @media (min-width:960px) {
+        #pad0msg {
+          font-size: 250%;
+        }
+      }
+      @media (min-width:1200px) {
+        #pad0msg {
+          font-size: 275%;
+        }
+      }
+      @media (min-width:1600px) {
+        #pad0msg {
+          font-size: 300%;
+        }
+      }
+      @media (min-width:1920px) {
+        #pad0msg {
+          font-size: 350%;
+        }
+      }
+    </style>
+    
+    
+    
+    
+    
+    
+    <paper-dialog id="registerDevice" class="none" modal entry-animation="scale-up-animation" exit-animation="fade-out-animation">
+      <h2><i18n-msg msgid="rDeviceShort"></i18n-msg></h2>
+      <paper-dialog-scrollable>
+        <i18n-msg msgid="rDeviceLong"></i18n-msg>
+      </paper-dialog-scrollable>
+      <div class="buttons">
+        <paper-button dialog-dismiss class="rDeviceCancel" onclick="regDecline();"><i18n-msg msgid="answerNo" ></i18n-msg></paper-button>
+        <paper-button dialog-confirm class="rDeviceSub"    onclick="subscribe();" ><i18n-msg msgid="answerYes"></i18n-msg></paper-button>
+      </div>
+    </paper-dialog>
+    
+    
+    
+    
+    
+    <paper-dialog id="pad0" modal entry-animation="scale-up-animation" exit-animation="fade-out-animation">
+      <div id="pad0root">
+        <div id="pad0msg">
+          <i18n-msg msgid="welcomeTo"></i18n-msg><span id="wPL">NLM PEOPLE LOCATOR<sup>&reg;</sup></span>
+          <div id="welcomeLine2">
+            <i18n-msg msgid="chooseLanguage"></i18n-msg>
+          </div>
+          <img id="welcomeNIH" src="/assets/images/logo/nih-nlm-logo-white.svg" alt="NLM logo">
+        </div>
+      </div>
+    </paper-dialog>
+    <paper-dialog id="pad1" modal entry-animation="scale-up-animation" exit-animation="fade-out-animation">
+      <div id="pad1root">
+        <div id="pad1topper">
+          <paper-icon-button id="pad1x" class="padX" icon="clear" title="clear"></paper-icon-button>
+        </div>
+        <div id="pad1top">
+          <paper-tabs id="pad1tabs" selected="0">
+            <paper-tab class="padTabs" id="pad1tab1"><i18n-msg msgid="pad1login"></i18n-msg></paper-tab>
+            <paper-tab class="padTabs" id="pad1tab2"><i18n-msg msgid="pad1register"></i18n-msg></paper-tab>
+          </paper-tabs>
+        </div>
+        <div id="pad1slider">
+          <div id="slider0" class="sliderPage">
+            <paper-input id="forgotEmail" required></paper-input>
+            <div id="forgotText" class="nonselect"><i18n-msg msgid="pad1forgotText"></i18n-msg></div>
+            <paper-button id="forgotSub" raised class="bgBlue2"><i18n-msg msgid="pad1forgotSend"></i18n-msg></paper-button>
+          </div>
+          <div id="slider1" class="sliderPage">
+            <paper-input id="loginUsername" type="text"     placeholder="Email"    required></paper-input>
+            <paper-input id="loginPassword" type="password" placeholder="Password" required></paper-input>
+            <paper-button id="loginSub" raised class="bgBlue2"><i18n-msg msgid="pad1login"></i18n-msg></paper-button>
+            <paper-button id="pad1tab0" class="hover nonUpper"><i18n-msg msgid="pad1loginForgot"></i18n-msg></paper-button>
+          </div>
+          <div id="slider2" class="sliderPage">
+            <paper-input id="registerEmail"    type="email"    placeholder="Email"    required               ></paper-input>
+            <paper-input id="registerPassword" type="password" placeholder="Password" required maxlength="16"></paper-input>
+            <div id="passwordRequirements">
+              <i18n-msg msgid="pad1registerText"></i18n-msg>
+            </div>
+            <paper-button id="registerSub" raised class="bgBlue2"><i18n-msg msgid="pad1register"></i18n-msg></paper-button>
+          </div>
+        </div>
+      </div>
+    </paper-dialog>
+    <paper-dialog id="pad3" modal entry-animation="scale-up-animation" exit-animation="fade-out-animation">
+      <div id="pad3root">
+        <div id="pad3topper">
+          <paper-button class="linkOut hover"><i18n-msg msgid="logout"></i18n-msg></paper-button>
+          <paper-button id="linkAdmin" class="opacityZero"><i18n-msg msgid="administration"></i18n-msg></paper-button>
+          <paper-icon-button id="pad3x" class="padX" dialog-dismiss icon="clear" title="clear"></paper-icon-button>
+        </div>
+        <div id="pad3top">
+          <paper-tabs id="pad3tabs" selected="0" class="transparent-teal">
+            <paper-tab id="pad3tab0"><i18n-msg msgid="pad3settings"></i18n-msg></paper-tab>
+            <paper-tab id="pad3tab1"><i18n-msg msgid="pad3following"></i18n-msg></paper-tab>
+            <paper-tab id="pad3tab2"><i18n-msg msgid="pad1loginPasswordPlaceholder"></i18n-msg></paper-tab>
+          </paper-tabs>
+        </div>
+        <div id="pad3slider">
+          <div id="p3slider0" class="sliderPage">
+            <div class="pad3padded">
+              <span class="setting"><i18n-msg msgid="pad3record"></i18n-msg></span>
+              <div style="clear:both; height: 1em;"></div>
+              <paper-checkbox id="recordP"><i18n-msg msgid="pushNotification"></i18n-msg></paper-checkbox>
+              <paper-checkbox id="recordE"><i18n-msg msgid="pad1registerEmailPlaceholder"></i18n-msg></paper-checkbox>
+            </div>
+            <div class="pad3padded p3t">
+              <span class="setting"><i18n-msg msgid="pad3event"></i18n-msg></span>
+              <div style="clear:both; height: 1em;"></div>
+              <paper-checkbox id="eventP"><i18n-msg msgid="pushNotification"></i18n-msg></paper-checkbox>
+              <paper-checkbox id="eventE"><i18n-msg msgid="pad1registerEmailPlaceholder"></i18n-msg></paper-checkbox>
+            </div>
+            <div id="adminMessages" class="pad3padded p3t">
+              <span class="setting"><i18n-msg msgid="pad3admin"></i18n-msg></span>
+              <div style="clear:both; height: 1em;"></div>
+              <paper-checkbox id="adminP"><i18n-msg msgid="pushNotification"></i18n-msg></paper-checkbox>
+              <paper-checkbox id="adminE"><i18n-msg msgid="pad1registerEmailPlaceholder"></i18n-msg></paper-checkbox>
+            </div>
+          </div>
+          <div id="p3slider1" class="sliderPage">
+            <following-loader></following-loader>
+          </div>
+          <div id="p3slider2" class="sliderPage">
+            <paper-input id="passwordOld"  type="password" placeholder="Old Password"       maxlength="16" required></paper-input>
+            <paper-input id="passwordNew1" type="password" placeholder="New Password"       maxlength="16" required></paper-input>
+            <paper-input id="passwordNew2" type="password" placeholder="New Password Again" maxlength="16" required></paper-input>
+            <div id="passwordRequirements">
+              <i18n-msg msgid="pad3passwordRequirements"></i18n-msg>
+            </div>
+            <paper-button id="passwordSub" raised class="bgBlue2"><i18n-msg msgid="pad3changePasswordButton"></i18n-msg></paper-button>
+          </div>
+        </div>
+      </div>
+    </paper-dialog>
+    <paper-dialog id="pad6" modal entry-animation="scale-up-animation" exit-animation="fade-out-animation">
+      <div id="pad6root">
+        <paper-icon-button id="pad6x" class="padX" dialog-dismiss icon="clear" title="clear"></paper-icon-button>
+        <div id="pad6more">
+          <h2><i18n-msg msgid="eurl1"></i18n-msg></h2>
+          <div id="eurl"></div>
+          <div id="eurlButtons">
+            <table>
+              <tr>
+                <td><paper-button raised class="reportCopy hover report-button nonUpper width150" onclick="copyUrl2();" ><iron-icon icon="icons:content-copy" ></iron-icon></paper-button></td>
+                <td><paper-button raised class="reportCopy hover report-button nonUpper width150" onclick="emailUrl2();"><iron-icon icon="communication:email"></iron-icon></paper-button></td>
+              </tr>
+              <tr>
+                <td><i18n-msg msgid="eurl2"></i18n-msg></td>
+                <td><i18n-msg msgid="eurl3"></i18n-msg></td>
+              </tr>
+            </table>
+          </div>
+          <textarea class="js-copytextarea2"></textarea>
+        </div>
+      </div>
+    </paper-dialog>
+    <paper-dialog id="pad6r" modal entry-animation="scale-up-animation" exit-animation="fade-out-animation">
+      <div id="pad6root">
+        <paper-icon-button id="pad6rx" class="padX" dialog-dismiss icon="clear" title="clear"></paper-icon-button>
+        <div id="pad6more">
+          <h2><i18n-msg msgid="eurl5"></i18n-msg></h2>
+          <div id="eurlr"></div>
+          <div id="eurlButtons">
+            <table>
+              <tr>
+                <td><paper-button raised class="reportCopy hover report-button nonUpper width150" onclick="copyUrl3();" ><iron-icon icon="icons:content-copy" ></iron-icon></paper-button></td>
+                <td><paper-button raised class="reportCopy hover report-button nonUpper width150" onclick="emailUrl3();"><iron-icon icon="communication:email"></iron-icon></paper-button></td>
+              </tr>
+              <tr>
+                <td><i18n-msg msgid="eurl2"></i18n-msg></td>
+                <td><i18n-msg msgid="eurl3"></i18n-msg></td>
+              </tr>
+            </table>
+          </div>
+          <textarea class="js-copytextarea3"></textarea>
+        </div>
+      </div>
+    </paper-dialog>
+    <paper-dialog id="pad7" modal entry-animation="scale-up-animation" exit-animation="fade-out-animation">
+      <div id="pad7root">
+        <paper-icon-button id="pad7x" class="padX" dialog-dismiss icon="clear" title="clear"></paper-icon-button>
+        <div id="pad7slider">
+          <div id="p7slider0" class="sliderPage">
+            <div id="pad7top">
+              <i18n-msg msgid="abuseReportAbuse"></i18n-msg>
+            </div>
+            <div id="pad7what">
+              <i18n-msg msgid="abuseWhatReport"></i18n-msg>
+            </div>
+            <div class="abuseItems">
+              <div class="abuseItem">
+                <paper-button class="abuseButton" onclick="reportAbuse(0);"><i18n-msg msgid="abuseReportSpam"></i18n-msg></paper-button>
+              </div>
+              <div class="abuseItem">
+                <paper-button class="abuseButton" onclick="reportAbuse(1);"><i18n-msg msgid="abuseReportSex"></i18n-msg></paper-button>
+              </div>
+              <div class="abuseItem">
+                <paper-button class="abuseButton" onclick="reportAbuse(2);"><i18n-msg msgid="abuseReportHate"></i18n-msg></paper-button>
+              </div>
+              <div class="abuseItem">
+                <paper-button class="abuseButton" onclick="reportAbuse(3);"><i18n-msg msgid="abuseReportViolence"></i18n-msg></paper-button>
+              </div>
+              <div class="abuseItem">
+                <paper-button class="abuseButton" onclick="reportAbuse(4);"><i18n-msg msgid="abuseReportElse"></i18n-msg></paper-button>
+              </div>
+            </div>
+          </div>
+          <div id="p7slider1" class="sliderPage">
+            <div class="pad7padded">
+              <i18n-msg msgid="abuseThanks"></i18n-msg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </paper-dialog>
+    <paper-dialog id="pad8" modal entry-animation="scale-up-animation" exit-animation="fade-out-animation">
+      <h2><i18n-msg msgid="deleteRecord"></i18n-msg></h2>
+      <paper-dialog-scrollable>
+        <i18n-msg msgid="deleteRecordConfirm"></i18n-msg>
+      </paper-dialog-scrollable>
+      <div class="buttons">
+        <paper-button                class="deleteRecordCancel" onclick="hidePad8();"><i18n-msg msgid="deleteRecordCancel"></i18n-msg></paper-button>
+        <paper-button dialog-confirm class="deleteRecordDelete" onclick="deleteRecord();"><i18n-msg msgid="deleteRecordDelete"></i18n-msg></paper-button>
+      </div>
+    </paper-dialog>
+    <paper-dialog id="pad9" modal entry-animation="scale-up-animation" exit-animation="fade-out-animation">
+      <div id="pad9root">
+        <paper-icon-button id="pad9x" class="padX" dialog-dismiss icon="clear"></paper-icon-button>
+        <div id="pad9overlay">
+          <span id="sbpthrob"><img class="throbS" src="/assets/images/other/throb_black.svg" alt="throbber"></span>
+          <div style="clear:both;"></div>
+          <i18n-msg msgid="uploadingPhoto"></i18n-msg>
+        </div>
+        <div id="pad9top">
+          <h2><i18n-msg msgid="searchByPhoto"></i18n-msg></h2>
+          <div id="dnd">
+            <template is="dom-bind" id="dndz">
+              <file-dropzone id="fdz"
+                accept="image/jpeg,image/png,image/tiff"
+                rejection-timeout="5000"
+                on-file-added="_onfileAdded"
+                on-file-removed="_onfileRemoved"
+                on-file-rejected="_onfileRejected"
+                file-dragged="{{fileDragged}}"
+                file-rejected="{{fileRejected}}"
+              >
+                <template is="dom-if" if="[[!fileRejected]]">
+                  <h3 hidden$="[[fileDragged]]"><i18n-msg msgid="dragAndDrop"></i18n-msg></h3>
+                  <h3 hidden$="[[!fileDragged]]">&nbsp;</h3>
+                </template>
+                <template is="dom-if" if="[[fileRejected]]">
+                  <h3 class="center1em"><i18n-msg msgid="photoOnly"></i18n-msg></h3>
+                </template>
+              </file-dropzone>
+              <script>
+                document.addEventListener('WebComponentsReady', function() {
+                  dndz._onfileAdded = function(evt, file) {
+                    var reader = new FileReader();
+                    reader.readAsDataURL(file);
+                    reader.onload = function () {
+                      window.sbp64   = reader.result;
+                      window.sbpfile = file;
+                      sbp();
+                    };
+                    reader.onerror = function (error) {
+                      toastRed('restError9999', window.toastDuration);
+                      throw error;
+                    };
+                  }
+                  dndz._onfileRemoved = function(evt) { console.info('file removed'); }
+                  dndz._onfileRejected = function() { console.warn('file rejected'); }
+                });
+              </script>
+            </template>
+          </div>
+          <div id="seelect">
+            <paper-button class="sbps" raised onclick="seelect();"><i18n-msg msgid="reportChoicePhotoSelectFile"></i18n-msg></paper-button>
+            <input class="seelectfile none" type="file" multiple/>
+          </div>
+        </div>
+      </div>
+    </paper-dialog>
+    <taupo-report></taupo-report>
+    <taupo-record></taupo-record>
+    <taupo-pages></taupo-pages>
+  </template>
+  <script>(function () { Polymer({ is: 'taupo-pads' }); })();</script>
+</dom-module>
+<script>
+// listen for logout
+function initPads() {
+  // bind to logout button
+  $(function() { $(".linkOut" ).click(function(e) { rest_logout(); }); });
+  // register scope and tap bindings
+  window.scope = document.querySelector('template[is="dom-bind"]');
+  // should we show welcome screen
+  if(typeof window.postWelcome !== 'undefined' && window.postWelcome == true) { welcomeMsg(); }
+}
+
+// show welcome screen
+function welcomeMsg() {
+  // open pad 0
+  document.querySelector('#pad0').open();
+  // show language selection dialog
+  $('#paperLangSelect').addClass('z1000000');
+  //setTimeout(function() { document.querySelector('#trigger').click(); }, 500);
+  // register this modal
+  window.modal = '#pad0';
+}
+// hide welcome screen
+function hidePad0() {
+  document.querySelector('#pad0').close();
+  // pop modal state
+  delete window.modal;
+}
+
+// show photo upload pad
+function goPhoto() {
+  document.querySelector('#pad9').open();
+  $(function() { $("#pad9x").click(function(e) { hidePad8(); }); }); // register click handler
+  $(function() { $(".seelectfile").change(function(e) { seelect2(e); }) });
+}
+
+// hide upload pad
+function hidePad9() {
+  document.querySelector('#pad9').close();
+  $(function() { $("#pad9x").unbind('click'); }); // unregister click handler
+  // reset overlay
+  setTimeout(function() { $('#pad9overlay').css('display','none'); }, 1000);
+}
+
+// seelect photo
+function seelect() {
+  // check file API support
+  if(window.File && window.FileList && window.FileReader) { $('.seelectfile').trigger('click'); }
+  // no fileReader support in browser
+  else {
+    $('.sbps').prop('disabled', true);
+    $('.sbps').css('opacity', 0.1);
+    toastYellow('browserLimitation', window.toastDuration);
+  }
+}
+
+// fired when a user select an image from device
+function seelect2(event) {
+  var newId;
+  var file = event.target.files[0]; // FileList object ... only taking first file
+  // only supported formats
+  if(file.type.match('image/tiff') || file.type.match('image/jpeg') || file.type.match('image/png')) {
+    var reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = function () {
+      window.sbp64   = reader.result;
+      window.sbpfile = file;
+      sbp();
+    }
+    reader.onerror = function (error) {
+      toastRed('restError9999', window.toastDuration);
+      throw error;
+    };
+  } else { toastYellow('photoOnly', 5000); }
+}
+
+// show delete record pad
+function showPad8() {
+  if(window.rtl) { $('#pad8').addClass('rtl'); } else { $('#pad8').removeClass('rtl'); }
+  document.querySelector('#pad8').open();
+  // hide previous modal
+  if(typeof window.modal !== 'undefined') { $(window.modal).prop('modal', false); }
+  // register click handler
+  $(function() { $("#pad8x").click(function(e) { hidePad8(); }); });
+}
+// hide delete record pad
+function hidePad8() {
+  document.querySelector('#pad8').close();
+  // restore modal
+  if(typeof window.modal !== 'undefined') { $(window.modal).prop('modal', true); }
+  // unregister click handler
+  $(function() { $("#pad8x").unbind('click'); });
+}
+
+// accept delete record action
+function deleteRecord() {
+  // restore modal
+  if(typeof window.modal !== 'undefined') { $(window.modal).prop('modal', true); }
+  // call web service
+  var rd   = new Object();
+  rd.call  = 'delete';
+  rd.token = window.token;
+  rd.uuid  = window.delbuse;
+  var rdj  = JSON.stringify(rd);
+  var xhr  = new XMLHttpRequest();
+  xhr.open('POST', window.endpoint, true);
+  xhr.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
+  xhr.onload = function(e) {
+    delete window.delbuse;
+    if(e.target.status !== 200 && e.target.status !== 0) { netConnectionError(); return; }
+    var resp = JSON.parse(e.target.response);
+    // success
+    if(parseInt(resp.error, 10) === 0) {
+      clog('%cpads::deleteRecord success', 9, 'color: white');
+      toastYellow('deleteRecordDone', window.toastDuration);
+      uuidHide(rd.uuid);
+      // RARE: we opened a full record directly from another tab, so when we close it, we have to zero out the query term
+      if(history.length < 2) { document.querySelector('#query').value = ''; }
+      // close full record
+      hideRecord(false);
+      // update search
+      goQuery();
+    // failure
+    } else {
+      clog('%cpads::deleteRecord fail error:'+resp.error, 9, 'color: red');
+      toastRed('restError9999', window.toastDuration);
+      throw error;
+    }
+  }.bind(this);
+  xhr.onerror = function(e) { netConnectionError(); };
+  xhr.send(rdj);
+}
+
+// show report abuse pad
+function showPad7() {
+  if(window.rtl) { $('#p7slider0').addClass('rtl'); } else { $('#p7slider0').removeClass('rtl'); }
+  document.querySelector('#pad7').open();
+  // hide previous modal
+  if(typeof window.modal !== 'undefined') { $(window.modal).prop('modal', false); }
+  // register click handler
+  $(function() { $("#pad7x").click(function(e) { hidePad7(); }); });
+}
+// hide abuse pad
+function hidePad7() {
+  // reset pad
+  setTimeout(function() { $("#pad7slider").css({ left: 0 }); }, 500);
+  // close pad
+  document.querySelector('#pad7').close();
+  // restore modal
+  if(typeof window.modal !== 'undefined') { $(window.modal).prop('modal', true); }
+  // unregister click handler
+  $(function() { $("#pad7x").unbind('click'); });
+}
+
+// accept report abuse claim
+function reportAbuse(type) {
+  // go to next tab
+  var swidth;
+  var w480  = window.matchMedia("(min-width: 480px)");
+  // slider width for 480px width
+  if(w480.matches) { swidth = '-382px'; }
+  // slider width for 360px width
+  else { swidth = '-282px'; }
+  $("#pad7slider").animate({ left: swidth }, 300);
+  // call web service
+  var rra   = new Object();
+  rra.call  = 'abuse';
+  rra.token = window.token;
+  rra.uuid  = window.delbuse;
+  rra.type  = type;
+  var rraj  = JSON.stringify(rra);
+  var xhr   = new XMLHttpRequest();
+  xhr.open('POST', window.endpoint, true);
+  xhr.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
+  xhr.onload = function(e) {
+    delete window.delbuse;
+    if(e.target.status !== 200 && e.target.status !== 0) { netConnectionError(); return; }
+    var resp = JSON.parse(e.target.response);
+    // success
+    if(parseInt(resp.error, 10) === 0) {
+      clog('%cpads::reportAbuse success', 9, 'color: white');
+      uuidHide(rra.uuid);
+      // close full record
+      hideRecord(false);
+    // failure
+    } else {
+      clog('%cpads::reportAbuse fail error:'+resp.error, 9, 'color: red');
+      toastRed('restError9999', window.toastDuration);
+      throw error;
+    }
+  }.bind(this);
+  xhr.onerror = function(e) { netConnectionError(); };
+  xhr.send(rraj);
+}
+
+// show pad based on gid
+function switchPad() {
+  // anonymous
+  if(parseInt(window.gid, 10) === 3) { showPad1(); }
+  // logged in
+  else { showPad3(); }
+}
+
+// show the login / register / pass pad
+function showPad1() {
+  document.querySelector('#pad1').open();
+  // register click handlers
+  $(function() { $("#pad1tab0" ).click(function(e) { pad1tab0();  }); });
+  $(function() { $("#pad1tab1" ).click(function(e) { pad1tab1();  }); });
+  $(function() { $("#pad1tab2" ).click(function(e) { pad1tab2();  }); });
+  $(function() { $("#loginSub" ).click(function(e) { loginSub();  }); });
+  $(function() { $("#forgotSub").click(function(e) { forgotSub(); }); });
+  $(function() { $("#pad1x"    ).click(function(e) { hidePad1();  }); });
+  $(function() { $("#registerSub").click(function(e) { regSub(); }); });
+  window.enterAction = 'loginSub';
+  // hide previous modal
+  if(typeof window.modal !== 'undefined') { $(window.modal).prop('modal', false); }
+}
+// hide login / register / pass pad
+function hidePad1() {
+  delete window.enterAction;
+  if(typeof window.loginTab !== "undefined" && window.loginTab == false) {
+    var swidth;
+    var w480  = window.matchMedia("(min-width: 480px)");
+    // slider width for 480px width
+    if(w480.matches) { swidth = '-382px'; }
+    // slider width for 360px width
+    else { swidth = '-282px'; }
+    setTimeout(function() {
+      document.querySelector('#pad1tabs').selected = 0;
+      $("#pad1top"   ).css({ opacity: 1 });
+      $("#pad1tab1"  ).css({ opacity: 1 });
+      $("#pad1tab2"  ).css({ opacity: 1 });
+      $("#pad1slider").css({ left: swidth });
+      delete window.loginTab;
+    }, 500);
+  }
+  // close pad
+  document.querySelector('#pad1').close();
+  // unregister click handlers
+  $(function() { $("#loginTabText"       ).unbind('click'); });
+  $(function() { $("#loginButton"        ).unbind('click'); });
+  $(function() { $("#registerTabText"    ).unbind('click'); });
+  $(function() { $("#registerSub"        ).unbind('click'); });
+  $(function() { $("#loginForgotPassword").unbind('click'); });
+  $(function() { $("#forgotButton"       ).unbind('click'); });
+  $(function() { $("#pad1x"              ).unbind('click'); });
+  $(function() { $("#registerSub"        ).unbind('click'); });
+  // restore modal
+  if(typeof window.modal !== 'undefined') { $(window.modal).prop('modal', true); }
+}
+
+// show the login tab
+function pad1tab1() {
+  if(typeof window.loginTab !== "undefined" && window.loginTab == false) {
+    var swidth;
+    var w480  = window.matchMedia("(min-width: 480px)");
+    // slider width for 480px width
+    if(w480.matches) { swidth = '-382px'; }
+    // slider width for 360px width
+    else { swidth = '-282px'; }
+    $("#pad1slider").animate({ left: swidth }, 300);
+    delete window.loginTab;
+  }
+  window.enterAction = 'loginSub';
+}
+
+// show the register tab
+function pad1tab2() {
+  if(typeof window.loginTab == "undefined") {
+    delete window.enterAction;
+    var swidth;
+    var w480  = window.matchMedia("(min-width: 480px)");
+    // slider width for 480px width
+    if(w480.matches) { swidth = '-764px'; }
+    // slider width for 360px width
+    else { swidth = '-564px'; }
+    $("#pad1slider").animate({ left: swidth }, 300);
+    window.loginTab = false;
+  }
+  window.enterAction = 'regSub';
+}
+
+// forgot pass function // show forgot pass tab
+function pad1tab0() {
+  if(typeof window.loginTab == "undefined") {
+    $("#pad1top").css({ opacity: 0 });
+    $("#pad1slider").animate({ left: '0px' }, 300);
+    window.loginTab = false;
+    // register enter key handler
+    window.enterAction = 'forgotSub';
+  }
+}
+
+// show event share pad
+function showPad6(name, short) {
+  window.shareUrl = window.baseUrl+'/'+window.router.locale+'/events/'+short;
+  var textDS = document.querySelector('i18n-msg').getMsg('tagline');
+  // WebShare API present on this device
+  if(navigator.share !== undefined) {
+    navigator.share({
+      title: 'NLM PEOPLE LOCATOR: '+name,
+      text: textDS,
+      url: window.shareUrl
+    });
+  // no native WebShare API on this platform
+  } else {
+    // update uuid on pad6
+    $('#eurl').html(shareUrl);
+    $('.js-copytextarea2').html(shareUrl);
+    document.querySelector('#pad6').open();
+    $(function() { $("#pad6x").click(function(e) { hidePad6(); }); }); // register click handler
+  }
+  ga('send', 'pageview', window.location.pathname + '/share');
+}
+// hide event share pad
+function hidePad6() {
+  document.querySelector('#pad6').close();
+  $(function() { $("#pad6x").unbind('click'); }); // unregister click handler
+}
+
+// show record share pad
+function showPad6r() {
+  window.shareUrl = window.location.href;
+  var textDS = document.querySelector('i18n-msg').getMsg('tagline');
+  // WebShare API present on this device
+  if(navigator.share !== undefined) {
+    navigator.share({
+      title: 'NLM PEOPLE LOCATOR: '+window.pad6rName,
+      text: textDS,
+      url: window.shareUrl
+    });
+  // no native WebShare API on this platform
+  } else {
+    // update uuid on pad6
+    $('#eurlr').html(shareUrl);
+    $('.js-copytextarea3').html(shareUrl);
+    document.querySelector('#pad6r').open();
+    // hide previous modal
+    if(typeof window.modal !== 'undefined') { $(window.modal).prop('modal', false); }
+    // register click handler
+    $(function() { $("#pad6rx").click(function(e) { hidePad6r(); }); });
+  }
+  ga('send', 'pageview', window.location.pathname + '/share');
+}
+// hide record share pad
+function hidePad6r() {
+  document.querySelector('#pad6r').close();
+  // restore modal
+  if(typeof window.modal !== 'undefined') { $(window.modal).prop('modal', true); }
+  // unregister click handler
+  $(function() { $("#pad6rx").unbind('click'); });
+}
+
+// part 2 copies url to cliboard
+function copyUrl2() {
+  var copyTextarea = document.querySelector('.js-copytextarea2');
+  copyTextarea.select();
+  try {
+    var successful = document.execCommand('copy');
+    var succ = successful ? true : false;
+    if(succ === true) { toastYellow('copyTrue', window.toastDuration); }
+    else { toastRed('copyFalse', window.toastDuration); }
+  } catch (err) { toastRed('copyFalse', window.toastDuration); }
+  hidePad6();
+}
+
+// opens email client in a new tab for sharing
+function emailUrl2() {
+  hidePad6();
+  window.open('mailto:?body='+window.shareUrl+'&subject='+document.querySelector('i18n-msg').getMsg('tagline'));
+}
+
+// part 3 copies url to cliboard
+function copyUrl3() {
+  var copyTextarea = document.querySelector('.js-copytextarea3');
+  copyTextarea.select();
+  try {
+    var successful = document.execCommand('copy');
+    var succ = successful ? true : false;
+    if(succ === true) { toastYellow('copyTrue', window.toastDuration); }
+    else { toastRed('copyFalse', window.toastDuration); }
+  } catch (err) { toastRed('copyFalse', window.toastDuration); }
+  hidePad6r();
+}
+
+// opens email client in a new tab for sharing
+function emailUrl3() {
+  hidePad6r();
+  window.open('mailto:?body='+window.shareUrl+'&subject='+document.querySelector('i18n-msg').getMsg('tagline'));
+}
+
+// show the user settings pad
+function showPad3() {
+  document.querySelector('#pad3').open();
+  // register click handlers
+  $(function() { $("#pad3tab0").click(function(e) { pad3tab0(); }); });
+  $(function() { $("#pad3tab1").click(function(e) { pad3tab1(); }); });
+  $(function() { $("#pad3tab2").click(function(e) { pad3tab2(); }); });
+  $(function() { $("#pad3x"   ).click(function(e) { hidePad3(); }); });
+  showFollowing();
+}
+// hide the user settings pad
+function hidePad3() {
+  // close pad
+  document.querySelector('#pad3').close();
+  // clear enter button
+  delete window.enterAction;
+  // reset state
+  setTimeout(function() {
+    document.querySelector('#pad3tabs').selected = 0;
+    $("#pad3slider").css({ left: '0px' });
+    $("#pad3top").css({ opacity: 1 });
+    $('#p3slider1').html('<following-loader></following-loader>');
+  }, 500);
+  // unregister click handlers
+  $(function() { $("#pad3tab0"   ).unbind('click'); });
+  $(function() { $("#pad3tab1"   ).unbind('click'); });
+  $(function() { $("#pad3tab2"   ).unbind('click'); });
+  $(function() { $("#pad3x"      ).unbind('click'); });
+  $(function() { $("#passwordSub").unbind('click'); });
+}
+
+// following tab
+function pad3tab0() {
+  $(function() { $("#passwordSub").unbind('click'); });
+  delete window.enterAction;
+  $("#pad3slider").animate({ left: '0px' }, 300);
+}
+
+// settings tab
+function pad3tab1() {
+  $(function() { $("#passwordSub").unbind('click'); });
+  delete window.enterAction;
+  var swidth;
+  var w480  = window.matchMedia("(min-width: 480px)");
+  // slider width for 480px width
+  if(w480.matches) { swidth = '-382px'; }
+  // slider width for 360px width
+  else { swidth = '-282px'; }
+  $("#pad3slider").animate({ left: swidth }, 300);
+}
+
+// pass tab
+function pad3tab2() {
+  $(function() { $("#passwordSub").click(function(e) { passwordSub(); }); });
+  window.enterAction = 'passwordSub';
+  var swidth;
+  var w480  = window.matchMedia("(min-width: 480px)");
+  // slider width for 480px width
+  if(w480.matches) { swidth = '-764px'; }
+  // slider width for 360px width
+  else { swidth = '-564px'; }
+  $("#pad3slider").animate({ left: swidth }, 300);
+}
+
+// executed post login
+function postLogin() {
+  clog('%cpads::postLogin', 9, 'color: grey');
+  // show admin link
+  if(parseInt(window.gid, 10) === 1) {
+    $("#linkAdmin").removeClass('opacityZero');
+    $(function() { $("#linkAdmin" ).click(function(e) { window.location = window.baseUrl+'/admin'; }); });
+  // hide admin link
+  } else {
+    $("#linkAdmin").addClass('opacityZero');
+    $(function() { $("#linkAdmin" ).unbind('click'); });
+  }
+  // refresh articles or search results
+  window[window.postLoginRegisterAction]();
+  // refresh settings
+  loadMessages();
+}
+
+// check pass
+function checkPass(str) {
+  if(str.length < 8 || str.length > 16) { toastRed('passError0', window.toastDuration); return false; }
+  var re = /[A-Z]/;
+  if(!re.test(str)) { toastRed('passError1', window.toastDuration); return false; }
+  re = /[a-z]/;
+  if(!re.test(str)) { toastRed('passError2', window.toastDuration); return false; }
+  re = /[0-9]/;
+  if(!re.test(str)) { toastRed('passError3', window.toastDuration); return false; }
+  return true;
+}
+
+// load messaging preferences
+function loadMessages() {
+  if(parseInt(window.gid, 10) === 3) { return; } // exit for anon
+  var html  = '';
+  var rm    = new Object();
+  rm.call   = 'messages';
+  rm.token  = window.token;
+  var rmj   = JSON.stringify(rm);
+  var xhr   = new XMLHttpRequest();
+  xhr.open('POST', window.endpoint, true);
+  xhr.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
+  xhr.onload = function(e) {
+    if(e.target.status !== 200 && e.target.status !== 0) { netConnectionError(); return; }
+    window.messages = JSON.parse(e.target.response);
+    // success
+    if(parseInt(window.messages.error, 10) === 0) { clog('%cpads::loadMessages success!', 9, 'color: white'); }
+    // failure
+    else {
+      clog('%cpads::loadMessages response: '+window.messages.error, 9, 'color: red');
+      toastRed('restError9999', window.toastDuration);
+    }
+    // update UI
+    if(window.messages.record_push)  { $('#recordP').prop('active', true);  }
+    else                             { $('#recordP').prop('active', false); }
+    if(window.messages.record_email) { $('#recordE').prop('active', true);  }
+    else                             { $('#recordE').prop('active', false); }
+    if(window.messages.event_push)   { $('#eventP' ).prop('active', true);  }
+    else                             { $('#eventP' ).prop('active', false); }
+    if(window.messages.event_email)  { $('#eventE' ).prop('active', true);  }
+    else                             { $('#eventE' ).prop('active', false); }
+    if(window.messages.admin_push)   { $('#adminP' ).prop('active', true);  }
+    else                             { $('#adminP' ).prop('active', false); }
+    if(window.messages.admin_email)  { $('#adminE' ).prop('active', true);  }
+    else                             { $('#adminE' ).prop('active', false); }
+    // show or hide admin settings
+    if(parseInt(window.gid, 10) === 1) { $('#adminMessages').css('display', 'block'); }
+    else                               { $('#adminMessages').css('display', 'none');  }
+    // if push subscribed && notification permission not granted yet  && cookie not set (we haven't asked the user yet)
+    if((window.messages.record_push || window.messages.event_push || window.messages.admin_push) && (Notification.permission == 'default') && (getCookie('rDevice') == null)) {
+      setCookie('rDevice', 1, 9999); // set cookie so we don't ask a 2nd time
+      register_device_ok(); // prompt to register this device
+    }  
+  }.bind(this);
+  xhr.onerror = function(e) { toastRed('restError9999', window.toastDuration); };
+  xhr.send(rmj);
+  // listen for sub/unsub
+  document.querySelector('#recordP').addEventListener('change', function() { setMessages('recordP'); }, { passive: true });
+  document.querySelector('#recordE').addEventListener('change', function() { setMessages('recordE'); }, { passive: true });
+  document.querySelector('#eventP' ).addEventListener('change', function() { setMessages('eventP' ); }, { passive: true });
+  document.querySelector('#eventE' ).addEventListener('change', function() { setMessages('eventE' ); }, { passive: true });
+  document.querySelector('#adminP' ).addEventListener('change', function() { setMessages('adminP' ); }, { passive: true });
+  document.querySelector('#adminE' ).addEventListener('change', function() { setMessages('adminE' ); }, { passive: true });
+}
+
+function register_device_ok() {
+  $("#registerDevice").removeClass('none');
+  document.querySelector('#registerDevice').open();
+  // hide previous modal
+  if(typeof window.modal !== 'undefined') { $(window.modal).prop('modal', false); }
+}
+function regDecline() {
+  // restore modal
+  if(typeof window.modal !== 'undefined') { $(window.modal).prop('modal', true); }
+}
+
+// save settings
+function setMessages(which) {
+  var val = $('#'+which).prop('active');
+  switch(which) {
+    case 'recordP':
+      saveMessages('record_push', val);
+      if(val) { subscribe(); }
+      break;
+    case 'eventP':
+      saveMessages('event_push', val);
+      if(val) { subscribe(); }
+      break;
+    case 'adminP':
+      saveMessages('admin_push', val);
+      if(val) { subscribe(); }
+      break;
+    case 'recordE':
+      saveMessages('record_email', val);
+      break;
+    case 'eventE':
+      saveMessages('event_email', val);
+      break;
+    case 'adminE':
+      saveMessages('admin_email', val);
+      break;
+    default:
+      toastRed('restError9999', window.toastDuration);
+      break;
+  }
+}
+
+// save messaging settings
+function saveMessages(which, val) {
+  // call web service
+  var rm    = new Object();
+  rm.token  = window.token;
+  rm.call   = 'messages';
+  rm[which] = val;
+  var rmj   = JSON.stringify(rm);
+  var xhr   = new XMLHttpRequest();
+  xhr.open('POST', window.endpoint, true);
+  xhr.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
+  xhr.onload = function(e) {
+    if(e.target.status !== 200 && e.target.status !== 0) { netConnectionError(); return; }
+    var resp = JSON.parse(e.target.response);
+    window.messages = JSON.parse(e.target.response);
+    // success
+    if(parseInt(window.messages.error, 10) === 0) { clog('%cpads::saveMessages success!', 9, 'color: white'); }
+    // failure
+    else {
+      clog('%cpads::saveMessages response: '+window.messages.error, 9, 'color: red');
+      toastRed('restError9999', window.toastDuration);
+    }
+  }.bind(this);
+  xhr.onerror = function(e) { netConnectionError(); };
+  xhr.send(rmj);
+}
+</script>

@@ -1,0 +1,178 @@
+/* LPF CSS */
+
+html {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+* {
+  font-family: 'Open Sans';
+  font-weight: normal;
+  font-size: 100%;
+  color: #4478aa;
+  line-height: 1.5;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+}
+html, body, form, fieldset {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background: url('/assets/img_LostPersonFinder-Background.jpg');
+  background-repeat: repeat-x;
+}
+a {
+  text-decoration: none;
+}
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.header, .id, .bullets, .photo, .orange, .paragraph {
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+}
+.header, .download {
+  text-align: center;
+}
+.download {
+  margin-top: 1em;
+}
+h1 {
+  font-size: 300%;
+}
+h2 {
+  font-size: 250%;
+}
+.bullets { 
+  width: 800px;
+  margin-top: 1em;
+  padding-left: 1em;
+}
+.blue {
+  color: #789dc2;
+}
+.photo {
+  width: 800px;
+  margin-top: 1em;
+}
+.orange {
+  color: #DAA520;
+  margin-top: 1em;
+  width: 800px;
+}
+.paragraph {
+  margin-top: 1em;
+  width: 800px;
+  margin-bottom: 1em;
+}
+.gp {
+  margin-top: 0.75em;
+}
+.gp_small {
+  vertical-align: middle;
+  height: 40px;
+  margin-left: 5px;
+}
+sup {
+  font-size: 60%;
+}
+.goto {
+}
+.tp7 {
+  position: relative;
+  left: -100px;
+}
+.section1 {
+/*
+  background-color: rgba(0,0,0,0.025);
+  border: 1px solid rgba(0,0,0,0.05);
+*/
+  border-left: none;
+  border-right: none;
+}
+.section1, .section2 {
+/*
+  margin-top: 50px;
+*/
+  padding-bottom: 50px;
+}
+
+/* landing page specific */
+.main {
+  background: url('/assets/img_LostPersonFinder-All.jpg');
+  background-repeat: no-repeat;
+  width: 1024px;
+  height: 725px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.hero1 {
+  text-align: center;
+  padding-top: 20px;
+}
+.hero1 h1 {
+  margin: 0;
+  line-height: 1em;
+}
+.hero2 {
+  text-align: center;
+}
+.hero2 h2 {
+  margin: 0;
+  font-size: 150%;
+}
+.lpf-logo {
+  padding-top: 260px;
+}
+.boxes {
+  
+}
+.pl, .tt {
+  width: 512px;
+  float: left;
+  color: white;
+  font-size: 130%;
+  text-shadow: 1px 1px 5px #000;
+}
+.pl {
+  padding: 245px 0 0 55px;
+}
+.tt {
+  padding: 245px 0 0 28px;
+}
+.white {
+  color:white;
+}
+.nlm:hover {
+  cursor: hand;
+}
+.nlm {
+  position: absolute;
+  top: 26px;
+  left: 29px;
+  width: 146px;
+  height: 60px;
+  color: rgba(0,0,0,0);
+}
+#footer-holder {
+   text-align: center;
+}
+.footlink, {
+  margin-left: 7px;
+  margin-right: 7px;
+  display: inline;
+  font-size: 90%;
+  line-height: 13px;
+  padding: 4px;
+  height: 17px;
+}

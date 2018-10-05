@@ -1,0 +1,1170 @@
+{
+  "thisLanguageDescription": {
+    "message": "Vietnamese",
+    "context": "This word describes this language itself IN ENGLISH! DO NOT TRANSLATE THIS!! This phrase must remain in English."
+  },
+  "thisLanguage": {
+    "message": "Tiếng Việt",
+    "context": "This word describes this language itself."
+  },
+  "signIn": {
+    "message": "Đăng nhập",
+    "context": "A button that when clicked allows a user to login or register."
+  },
+  "logout": {
+    "message": "Đăng xuất",
+    "context": "A label for a button allowing a user to logout."
+  },
+  "administration": {
+    "message": "Quản Trị",
+    "context": "A label for a button allowing a user to access the Administraion module."
+  },
+  "linkHelp": {
+    "message": "Cứu giúp",
+    "context": "This is the text for a link to the Help page."
+  },
+  "linkAbout": {
+    "message": "Giới Thiệu",
+    "context": "The link text for the About link."
+  },
+  "linkPrivacy": {
+    "message": "Sự kín đáo",
+    "context": "The link text for the Privacy link."
+  },
+  "linkAccessibility": {
+    "message": "Khả Năng Tiếp Cận",
+    "context": "The link text for the Accessibility link."
+  },
+  "linkContact": {
+    "message": "Liên Hệ",
+    "context": "The link text for the Contact link."
+  },
+  "linkApps": {
+    "message": "Ứng Dụng",
+    "context": "The link text for the Apps link."
+  },
+  "linkResources": {
+    "message": "Phương sách",
+    "context": "The link text for the Resources link."
+  },
+  "linkFollowUs": {
+    "message": "Theo chúng tôi",
+    "context": "The link text for the Follow Us link."
+  },
+  "linkTrademark": {
+    "message": "Thương Hiệu",
+    "context": "The link text for the Trademark link."
+  },
+  "expirationDate": {
+    "message": "NGÀY HẾT HẠN",
+    "context": "Verbiage describing the expiration date of the OMB notice."
+  },
+  "restError1": {
+    "message": "Lỗi: tên người dùng hoặc mật khẩu không hợp lệ",
+    "context": "Error message presented when a user provides the incorrect username and/or password."
+  },
+  "restError2": {
+    "message": "Lỗi: Tài khoản của bạn tạm thời bị khóa sau nhiều lần thất bại trong việc đăng nhập, hãy thử lại sau",
+    "context": "Error message presented when a user fails to login repeatedly." 
+  },
+  "restError3": {
+    "message": "Lỗi: không thể đăng nhập cho đến khi địa chỉ email của bạn được xác nhận, hãy kiểm tra email để nhận trang liên kết",
+    "context": "Error message presented when a user account is not yet active."
+  },
+  "restError2000": {
+    "message": "Lỗi: người dùng đã tồn tại với địa chỉ email cung cấp",
+    "context": "Error message presented when user tries to use an email address already in use."
+  },
+  "restError2001": {
+    "message": "Lỗi: địa chỉ thư điện tử không hợp lệ",
+    "context": "Error message presented when a user provides an invalid email address."
+  },
+  "restError2002": {
+    "message": "Lỗi: Mật khẩu phải có 8-16 ký tự, phải có ít nhất một chữ hoa, một chữ thường và một ký tự số",
+    "context": "Error message presented when user enters an invalid password."
+  },
+  "restError2004": {
+    "message": "Lỗi: mật khẩu không đúng",
+    "context": "Error message presented when entered password do not match one another."
+  },
+  "passError0": {
+    "message": "Lỗi: mật khẩu phải có 8-16 ký tự",
+    "context": "Error message presented when entered password is of incorrect length, must be 8-16 characters long."
+  },
+  "passError1": {
+    "message": "Lỗi: Mật khẩu phải chứa ít nhất một chữ hoa (A-Z)",
+    "context": "Error message presented when entered password does not contain at least one uppercase letter."
+  },
+  "passError2": {
+    "message": "Lỗi: Mật khẩu phải chứa ít nhất một chữ thường (a-z)",
+    "context": "Error message presented when entered password does not contain at least one lowercase letter."
+  },
+  "passError3": {
+    "message": "Lỗi: Mật khẩu phải chứa ít nhất một con số (0-9)",
+    "context": "Error message presented when entered password does not contain at least one digit."
+  },
+  "restError5000": {
+    "message": "Lỗi mạng. Vui lòng kiểm tra kết nối của bạn và thử lại.",
+    "context": "Error message presented when there is a network / internet issue."
+  },
+  "restError9999": {
+    "message": "Một lỗi không rỏ đã xảy ra.",
+    "context": "Error message presented when an unknown error has occurred."
+  },
+  "notifyLogin": {
+    "message": "Đăng nhập.",
+    "context": "This notification will appear after the user successfully logs in."
+  },
+  "notifyRegister": {
+    "message": "Bạn đã được đăng ký và đăng nhập.",
+    "context": "This notification will appear after the user newly registers and is automatically logged in."
+  },
+  "notifyRegistering": {
+    "message": "Ghi danh...",
+    "context": "This notification will appear briefly as the system registers and creates a new account for the user."
+  },
+  "notifyPasswordChanged": {
+    "message": "Mật khẩu đã được thay đổi thành công.",
+    "context": "This notification will appear after the user successfully changes their password."
+  },
+  "notifyResetPassword": {
+    "message": "Bạn đã được gửi hướng dẫn làm thế nào để thiết lập lại mật khẩu của bạn.",
+    "context": "This notification appears when a user has successfully sent a request to reset their password."
+  },
+  "pad1login": {
+    "message": "Đăng nhập",
+    "context": "This is the name of the first tab of the user dialog allowing a user to login."
+  },
+  "pad1register": {
+    "message": "Ghi danh",
+    "context": "This is the name of the second tab of the user dialog allowing a user to register."
+  },
+  "pad1forgotText": {
+    "message": "Nhập địa chỉ email của bạn và chúng tôi sẽ gửi cho bạn hướng dẫn làm thế nào để thiết lập lại mật khẩu của bạn.",
+    "context": "This text informs the user of what they must do in order to reset their password ~ they must enter their email address."
+  },
+  "pad1forgotSend": {
+    "message": "Gửi đi",
+    "context": "This is the text label on the forgot my password dialog to submit the form."
+  },
+  "pad1loginForgot": {
+    "message": "Quên mật khẩu?",
+    "context": "This is the text label for the forgot my password button on the login dialog."
+  },
+  "pad1loginUsernamePlaceholder": {
+    "message": "Tên đăng nhập",
+    "context": "This is the placeholder text for the username input."
+  },
+  "pad1loginPasswordPlaceholder": {
+    "message": "Mật khẩu",
+    "context": "This is the placeholder text for the password input."
+  },
+  "pad1registerEmailPlaceholder": {
+    "message": "Thư điện tử",
+    "context": "This is the placeholder text for the email input."
+  },
+  "pad1registerText": {
+    "message": "Mật khẩu của bạn phải chứa một con số, một chữ viết thường, một chữ viết hoa, và có 8-16 ký tự.",
+    "context": "This is the text displayed while the user is in the process of registering informing them of our minimum password requirements."
+  },
+  "omb7notice": {
+    "message": "Lời cáo thị̣",
+    "context": "This is the first word of the OMB notice."
+  },
+  "omb7submission": {
+    "message": "Gửi thông tin này là tự nguyện. Tất cả các thông tin  được nộp sẽ được công bố công khai.",
+    "context": "These are the first two sentences of the OMB notice."
+  },
+  "omb7text": {
+    "message": "Gánh nặng báo cáo công khai cho bộ sưu tập thông tin này được ước tính trung bình 3 phút mỗi phản hồi. Ước tính này bao gồm thời gian để xem xét hướng dẫn, thu thập và nhập dữ liệu. Cơ quan không được tiến hành hoặc nhà tài trợ, và một người không cần phải trả lời, một tập hợp các thông tin trừ khi nó hiển thị một số kiểm soát OMB hợp lệ. Gửi ý kiến về việc này ước tính gánh nặng hoặc bất kỳ khía cạnh khác của bộ sưu tập của thông tin này, trong đó có đề xuất để giảm gánh nặng này, để:",
+    "context": "This is the main paragraph of the OMB notice."
+  },
+  "omb7sub": {
+    "message": "Tôi đã đọc và đồng ý.",
+    "context": "This is the label for the OMB notice agreement button."
+  },
+  "pad3following": {
+    "message": "Theo dõi",
+    "context": "This is the name of the first tab of user preferences that shows which records a user is following -- shortened to 1 word!"
+  },
+  "pad3settings": {
+    "message": "Cài đặt",
+    "context": "This is the name of the second tab of user preferences that shows user settings."
+  },
+  "pad3loading": {
+    "message": "Đang tải...",
+    "context": "This word is displayed when the following records tab is loading results from the server."
+  },
+  "pad3emptyFollow": {
+    "message": "Bạn không theo dõi bất cứ tài khoản.",
+    "context": "This verbiage is displayed when the following records panel is displayed and the user is not following any records."
+  },
+  "pad3unFollow": {
+    "message": "Ngừng theo dõi",
+    "context": "This is the text label applied to the button that allows a user to unfollow updates to a record."
+  },
+  "pad3record": {
+    "message": "Nhận cập nhật các bản ghi mà bạn đang theo dõi thông qua",
+    "context": "This verbiage describes the user settings section where a user can subscribe to receive messages from PL via push or email when a record they are following is updated."
+  },
+  "pad3event": {
+    "message": "Nhận tin nhắn khi một sự kiện mới được tạo qua",
+    "context": "This verbiage describes the user settings section where a user can subscribe to receive messages from PL via push or email when a new event is created."
+  },
+  "pad3admin": {
+    "message": "Nhận thông báo quản trị thông qua",
+    "context": "This verbiage describes the user settings section where a user can subscribe to receive admin messages from PL via push or email."
+  },
+  "pushNotification": {
+    "message": "Nhận Thông báo",
+    "context": "This describes a button label for a Push Notification option."
+  },
+  "pad3changePasswordButton": {
+    "message": "Đổi mật khẩu",
+    "context": "This verbiage describes the extent to which we use the push notification subscription a user provides to send out information."
+  },
+  "pad3passwordRequirements": {
+    "message": "Mật khẩu của bạn phải chứa một con số, một chữ viết thường, một chữ viết hoa, và có 8-16 ký tự.",
+    "context": "This verbiage describes the extent to which we use the push notification subscription a user provides to send out information."
+  },
+  "pad3oldPasswordPlaceholder": {
+    "message": "Mật khẩu cũ",
+    "context": "This is the placeholder text for the old password input."
+  },
+  "pad3newPassword1Placeholder": {
+    "message": "Mật khẩu mới",
+    "context": "This is the placeholder text for the new password input."
+  },
+  "pad3newPassword2Placeholder": {
+    "message": "Mật khẩu mới lần nữa",
+    "context": "This is the placeholder text for the new password again input."
+  },
+  "pushNotificationsDisallowed": {
+    "message": "Bạn không cho trang web này hiển thị thông báo. Bạn phải cho phép trở lại để sử dụng tính năng này.",
+    "context": "This text tells the user that they have prohibited the site from using push notifications and that they must re-enable this feature to subscribe."
+  },
+  "helpFindTitle": {
+    "message": "Giúp định vị một người hoặc vật nuôi",
+    "context": "This is the title of the help page section on how to find/search."
+  },
+  "helpFindText": {
+    "message": "Nếu bạn đang tìm kiếm một người mất tích hoặc vật nuôi, bạn có thể cố gắng để xác định vị trí chúng bằng cách tìm kiếm một trong những sự kiện thảm họa của chúng tôi. Khi bạn lần đầu tiên đến NLM PEOPLE LOCATOR, bạn sẽ thấy một danh sách các sự kiện thiên tai có sẵn. Mỗi sự kiện có một cái tên, một hình ảnh mô tả liên quan đến sự kiện này, và một số văn bản mô tả tình hình. Nếu bạn di chuyển xuống, bạn sẽ thấy có một vài sự kiện khác nhau mà từ đó bạn có thể lựa chọn. Chọn một sự kiện mà bạn tin rằng người hoặc vật nuôi bạn đang cố gắng xác định vị trí có thể liên quan. Ví dụ, nếu có một sự kiện có tên Haiti Earthquake và người mà bạn đang tìm kiếm đã được nhìn thấy lần cuối ở Haiti, bạn sẽ chọn sự kiện này. Bạn sẽ chọn một sự kiện bằng cách bấm vào nút màu xanh lá cây lớn dưới hình ảnh; điều này sẽ đưa bạn trực tiếp đến các công cụ tìm kiếm cho sự kiện thảm họa đặc biệt này. Hộp tìm kiếm mới sẽ xuất hiện ở trên đầu trang sau khi bạn đã chọn một sự kiện . Nhập tên của người mà bạn đang cố gắng xác định vị trí trong hộp tìm kiếm này. Các kết quả tìm kiếm tự động cập nhật với kết quả phù hợp nhất trên gần đầu trang. Bạn có thể có được nhiều thông tin về bằng cách khai thác trên các chi tiết liên kết gần cuối của bất cứ hồ sơ nào, điều này mở ra một hồ sơ chi tiết. Vào xem chi tiết này, bạn có thể xem thông tin hồ sơ chi tiết hơn, thêm nhận xét của riêng bạn, hoặc bắt đầu theo dõi một hồ sơ nếu có cập nhật.",
+    "context": "This is the help page article body describing in detail how to find/search for a person or animal."
+  },
+  "helpReportTitle": {
+    "message": "Giúp báo cáo một người hoặc vật nuôi",
+    "context": "This is the title of the help page section on how to report."
+  },
+  "helpReportText": {
+    "message": "Nếu bạn không thể xác định vị trí của người hoặc vật nuôi mà bạn tìm kiếm, bạn nên báo cáo người này hoặc vật nuôi này để đăng ký với 'PEOPLE LOCATOR' của chúng tôi. Một khi bạn đã hướng vào một sự kiện thiên tai, bạn sẽ thấy một nút nổi màu hồng trên góc dưới bên phải của màn hình. Vổ nhẹ/nhấp chuột vào nút này sẽ bắt đầu quá trình báo cáo và khởi động bạn vào một thuật sĩ riêng biệt để hướng dẫn bạn qua các bước hoàn thành một hồ sơ mới dựa trên những thông tin bạn cung cấp cho chúng tôi. Sau khi hoàn thành, hồ sơ của bạn sẽ được nhập vào sở trước bạ tìm kiếm của chúng tôi và có thể được hiển thị công khai cho người khác. Một khi bạn hoàn thành hồ sơ (nếu không được báo cáo nặc danh), bạn sẽ tự động bắt đầu theo dõi hồ sơ của riêng bạn để cập nhật khi họ đi vào sở trước bạ của chúng tôi. Người khác có thể nhận xét về hồ sơ của bạn cung cấp cho bạn những thông tin mới về người hoặc vật nuôi bạn báo cáo. Vì bạn đang theo dõi hồ sơ này, bản cập nhật sẽ được gửi cho bạn qua email hoặc thông báo.",
+    "context": "This is the help page article body describing in detail how to report a person or animal."
+  },
+  "pageAboutTextAbout": {
+    "message": "Trang web này được cung cấp bởi Thư viện Y khoa Quốc gia ở Bethesda, Maryland. NLM là một phần của Viện Y khoa Quốc gia, Bộ Y tế và Dịch Vụ Nhân Sinh của Hoa Kỳ, và sứ mệnh của chúng tôi là phát triển và điều phối các công nghệ truyền thông để cải thiện việc cung cấp các dịch vụ y tế. Trang web này được cung cấp cho các mục đích nghiên cứu công dụng của các công cụ như vậy trong viec ứng phó với thiên tai. Các công nghệ cơ bản được phát triển thông qua các dự án Lost Person Finder, một phần đóng góp của NLM cho Bethesda Hospitals' Emergency Preparedness Partnership. Sự hợp tác này đã nhận được tài trợ liên bang ban đầu cho LPF và dự án NLM CNTT khác trong năm 2008. Dự án LPF hiện đang được hỗ trợ bởi Chương trình nghiên cứu nội của NIH, thông qua Trung tâm Quốc gia Lister Hill NLM cho khoa Biomedical Communications. Phát triển phần mềm đứng đầu boi Chi nhánh Kỹ thuật Truyền thông LHNCBC, với nội dung bổ sung từ Chi nhánh LHNCBC của  khoa Khoa học Máy tính và Trung tâm Nghiên cứu Quản lý thông tin ve thiên tai, một phần của Dịch vụ Thông tin chuyên ngành NLM.",
+    "context": "This is the first paragraph of verbiage on the About page describing the purpose of the PEOPLE LOCATOR."
+  },
+  "pageAboutTextBrowser": {
+    "message": "Bạn phải có cookie và JavaScript bật lên trong trình duyệt web của bạn. Bạn cũng phải có một trong hai phiên bản gần đây nhất của các trình duyệt web sau: Chrome, Firefox, Safari, Opera, Edge, hoặc Internet Explorer.",
+    "context": "This is the text on the About page describing web browsers support."
+  },
+  "pageAboutHeaderBrowser": {
+    "message": "Hỗ trợ trình duyệt",
+    "context": "On the About page, section header title Browser Support."
+  },
+  "pageAboutHeaderFAQ": {
+    "message": "Các bảng số liệu và các câu hỏi thường gặp",
+    "context": "On the About page, this is the link to datasheets and the FAQ."
+  },
+  "pageAboutFAQ": {
+    "message": "Các câu hỏi thường gặp",
+    "context": "Frequently Asked Questions link title on About page."
+  },
+  "pagePrivacyText1": {
+    "message": "Trừ khi có quy định khác, dữ liệu dựa vào cộng đồng có trên trang web này được cung cấp cho công chúng và có thể được tìm kiếm bởi tất cả du khách đến các trang Web. Dữ liệu có thể được nhận được từ các nguồn khác nhau, như được chỉ ra trên các hồ sơ cá nhân được báo cáo trực tiếp cho NLM  :",
+    "context": "This is the first text paragraph on the Privacy page describing how user data is handled."
+  },
+  "pagePrivacyText2a": {
+    "message": "Đệ trình lên",
+    "context": "Beginning of the second paragraph on the Privacy page."
+  },
+  "pagePrivacyText2b": {
+    "message": "Trang web không được kiểm duyệt và tổ chức góp vốn khác không nên dự kiến để xem xét, xác định tính chính xác của bất kỳ dữ liệu được trình bày trên trang web này. Lưu ý rằng dữ liệu nhận được nộp trực tiếp đến",
+    "context": "Large portion of the second paragraph of the Privacy page."
+  },
+  "pagePrivacyText2c": {
+    "message": "có thể được phổ biến đến các cơ quan khác, tổ chức, và các tổ chức hỗ trợ các nỗ lực để xác định vị trí người mất tích, bao gồm nhưng không giới hạn ở những",
+    "context": "End portion of the second paragraph of the Privacy page."
+  },
+  "pagePrivacyText3a": {
+    "message": "Cho bài nộp trực tiếp",
+    "context": "Beginning of the third paragraph on the Privacy page."
+  },
+  "pagePrivacyText3b": {
+    "message": "địa chỉ email và thiết bị ID của phóng viên sẽ được giữ lại nhưng sẽ không được hiển thị công khai.",
+    "context": "End of the third paragraph on the Privacy page."
+  },
+  "pagePrivacyText4": {
+    "message": "Cam kết bảo mật chung của NLM",
+    "context": "Text for the link to NLM's privacy policy page."
+  },
+  "pagePrivacyText5": {
+    "message": "Đạo luật Tự do Thông tin",
+    "context": "Text for the link to the Freedom of Information Act site."
+  },
+  "forMore": {
+    "message": "Để biết thêm",
+    "context": "The title for a subsection on the Privacy page with links to more topics."
+  },
+  "the": {
+    "message": "các",
+    "context": "The word the."
+  },
+  "pagePrivacyBullet1": {
+    "message": "Chức năng báo cáo",
+    "context": "The second half ot the first bullet point on the Privacy page."
+  },
+  "pagePrivacyBullet2": {
+    "message": "ứng dụng",
+    "context": "The word application as it applies to the ReUnite app."
+  },
+  "pagePrivacyBullet3": {
+    "message": "các tổ chức cung cấp thông tin khác",
+    "context": "The fourth bullet point on the Privacy page."
+  },
+  "pageResourcesTitle1": {
+    "message": "Tìm gia đình và bạn bè",
+    "context": "The first section title on the Resources page."
+  },
+  "pageResourcesTitle2": {
+    "message": "Thông tin thiên tai",
+    "context": "The second section title on the Resources page."
+  },
+  "pageResourcesTitle3": {
+    "message": "Thông tin lũ",
+    "context": "The third section title on the Resources page."
+  },
+  "pageResourcesTitle4": {
+    "message": "Thông tin lốc xoáy",
+    "context": "The fourth section title on the Resources page."
+  },
+  "pageResourcesFamily1": {
+    "message": "Danh sách An Toàn của Hội Hồng Thập Tự",
+    "context": "First bullet link in the Family and Friends section of the Resource page."
+  },
+  "pageResourcesFamily2": {
+    "message": "Cơ quan Quản lý Khẩn cấp Liên bang Quốc gia nơi đăng ký khẩn cấp và hệ thống định vị",
+    "context": "Second bullet link in the Family and Friends section of the Resource page."
+  },
+  "pageResourcesFamily3": {
+    "message": "Danh sách đăng ký quốc gia cho người thân họ hàng",
+    "context": "Third bullet link in the Family and Friends section of the Resource page."
+  },
+  "pageResourcesFamily4": {
+    "message": "Ủy ban Quốc tế cho liên kết khôi phục gia đình của Hội Hồng Thập Tự",
+    "context": "fourth buller link in the Family and Friends section of the Resource page."
+  },
+  "pageResourcesFromDIMRC": {
+    "message": "Từ Trung tâm Nghiên cứu Quản lý thông tin thiên tai của NLM",
+    "context": "Text label for several links to DIMRC on the Resource page."
+  },
+  "pageResourcesDisaster2": {
+    "message": "Hỗ trợ thiên tai",
+    "context": "Second bullet link on the Disaster section of the Resource page."
+  },
+  "pageResourcesDisaster3": {
+    "message": "Hội Hồng Thập Tự cung cấp nơi trú ăn và thực phẩm", 
+    "context": "Third buller link on the Disaster section of the Resource page."
+  },
+  "pageResourcesFromMedlinePlus": {
+    "message": "Từ MedlinePlus của NLM",
+    "context": "Text label for several links to Medline Plus on the Resource page."
+  },
+  "followUs": {
+    "message": "Theo dõi chúng tôi tại...",
+    "context": "Used to prompt user to follow us on a social network of their choice."
+  },
+  "and": {
+    "message": "và",
+    "context": "The word and used between two nouns."
+  },
+  "trademarkText": {
+    "message": "Thương Hiệu đăng ký  của Sở Y Tế và Dịch vụ Nhân sinh Hoa Kỳ.",
+    "context": "The second half of the trademark sentence."
+  },
+  "tabReport": {
+    "message": "Báo cáo",
+    "context": "The title of the 3rd tab allowing someone to Report a new person or pet."
+  },
+  "tagline": {
+    "message": "Tìm và báo cáo mất tích gia đình, bạn bè, và vật nuôi trong thiên tai.",
+    "context": "The tagline is the summary of what the application is for."
+  },
+  "pageTitle": {
+    "message": "Tìm và báo cáo người bị mất tích và vật nuôi trong thiên tai",
+    "context": "This is the page title which is very similar in nature to the tagline."
+  },
+  "eventRetired": {
+    "message": "Các sự kiện mà bạn yêu cầu không còn hoạt động.",
+    "context": "We inform the user this message when they attempt to come to us via exact event url when the event is no longer open."
+  },
+  "eventListFindReportButton": {
+    "message": "Tìm / Báo cáo một người hoặc vật nuôi",
+    "context": "This is the button text on the home page to Find or Report a person or animal."
+  },
+  "searchPlaceholder": {
+    "message": "Tìm",
+    "context": "The search box starts off with this text to inform the user what the element is used for."
+  },
+  "records": {
+    "message": "hồ sơ",
+    "context": "When a search is performed this word is prefixed with the number of results, ie. 17 records"
+  },
+  "sexMale": {
+    "message": "Nam giới",
+    "context": "Sex = Male"
+  },
+  "sexFemale": {
+    "message": "Nữ giới",
+    "context": "Sex = Female"
+  },
+  "sexOther": {
+    "message": "Giới tính khác",
+    "context": "Sex = Other"
+  },
+  "statusMissing": {
+    "message": "Mất tích",
+    "context": "Status is Missing"
+  },
+  "statusFound": {
+    "message": "Tìm thấy",
+    "context": "Status is Found"
+  }  ,
+  "statusDeceased": {
+    "message": "đã qua đời",
+    "context": "Status is Deceased"
+  },
+  "statusInjured": {
+    "message": "Bị thương",
+    "context": "Status is Injured"
+  },
+  "statusAlive": {
+    "message": "Còn sống",
+    "context": "Status is Alive and Well"
+  },
+  "statusUnknown": {
+    "message": "Không xác định",
+    "context": "Unknown"
+  },
+  "age": {
+    "message": "Tuổi",
+    "context": "Age of person or animal"
+  },
+  "comments": {
+    "message": "Bình luận",
+    "context": "Comments that others may add to a person or animal record."
+  },
+  "addComment": {
+    "message": "Thêm một lời bình luận",
+    "context": "The label for a button allowing a user to add a comment to a record."
+  }, 
+  "addCommentLabel": {
+    "message": "Thêm bất kỳ thông tin bổ sung về hồ sơ này, nếu bạn có",
+    "context": "This is the label below the add comment button explaining to a user what it does."
+  },
+  "followButton": {
+    "message": "Theo dõi",
+    "context": "A button allows a user to follow record updates."
+  },
+  "name": {
+    "message": "Tên",
+    "context": "This label is displayed under the person or animal name."
+  },
+  "status": {
+    "message": "Tình trạng",
+    "context": "This label is displayed below the person or animal missing / found status."
+  },
+  "lastUpdated": {
+    "message": "Cập nhật mới nhất",
+    "context": "This label is displayed under the date / time of when a record was last updated."
+  },
+  "gender": {
+    "message": "Giới tính",
+    "context": "This is a label below the displayed gender of a person or animal."
+  },
+  "lastKnownLocation": {
+    "message": "Vị trí cuối cùng được nhìn thấy",
+    "context": "This is a label displayed below a text box showing a person or animal last known location."
+  },
+  "newReport": {
+    "message": "Báo cáo mới",
+    "context": "This is the window title when a new person or animal is being reported."
+  },
+  "reportChoicePA": {
+    "message": "Bạn có muốn báo cáo một người hay một vật nuôi?",
+    "context": "This is the text option displayed for a user to choose and fill out either a person or animal report."
+  },
+  "person": {
+    "message": "Người",
+    "context": "This is the text label on a button a user presses to choose a person report."
+  },
+  "animal": {
+    "message": "Vật nuôi",
+    "context": "This is the text label on a button a user presses to choose an animal report."
+  },
+  "reportChoiceStatusP": {
+    "message": "Xin cho biết tình trạng của người bạn đang báo cáo.",
+    "context": "This is the text option displayed for a user to choose the status of the person they are reporting."
+  },  
+  "explainMissingP": {
+    "message": "Người ấy cho là mất tích",
+    "context": "The label next to the status selection button for missing."
+  },
+  "explainFoundP": {
+    "message": "Người ấy đã được tìm thấy sức khỏe chưa biết",
+    "context": "The label next to the status selection button for found."
+  },
+  "explainAliveP": {
+    "message": "Người ấy đã được tìm thấy vẫn mạnh khỏe",
+    "context": "The label next to the status selection button for alive & well."
+  },
+  "explainInjuredP": {
+    "message": "Người ấy đã được tìm thấy đang bị thương",
+    "context": "The label next to the status selection button for injured."
+  },
+  "explainDeceasedP": {
+    "message": "Người ấy đã được tìm thấy đã qua đời",
+    "context": "The label next to the status selection button for deceased."
+  },
+  "explainUnknownP": {
+    "message": "thông tin được tìm về người ấy",
+    "context": "The label next to the status selection button for unknown."
+  },  
+  "location": {
+    "message": "Vị trí",
+    "context": "Text label for Location."
+  },
+  "photo": {
+    "message": "Hình ảnh",
+    "context": "Text label for Photo."
+  },
+  "reportChoiceStatusA": {
+    "message": "Xin cho biết tình trạng của vật nuôi bạn đang báo cáo.",
+    "context": "This is the text option displayed for a user to choose the status of the animal they are reporting."
+  },
+  "explainMissingA": {
+    "message": "vật nuôi được cho là mất tích",
+    "context": "The label next to the status selection button for missing."
+  },
+  "explainFoundA": {
+    "message": "vật nuôi đã được tìm thấy có sức khỏe chưa biết",
+    "context": "The label next to the status selection button for found."
+  },
+  "explainAliveA": {
+    "message": "vật nuôi đã được tìm thấy và vẫn khỏe mạnh",
+    "context": "The label next to the status selection button for alive & well."
+  },
+  "explainInjuredA": {
+    "message": "vật nuôi đã được tìm thấy và bị thương",
+    "context": "The label next to the status selection button for injured."
+  },
+  "explainDeceasedA": {
+    "message": "vật nuôi đã được tìm thấy và đã chết",
+    "context": "The label next to the status selection button for deceased."
+  },
+  "explainUnknownA": {
+    "message": "thông tin được tìm về vật nuôi",
+    "context": "The label next to the status selection button for unknown."
+  },
+  "reportChoiceSexP": {
+    "message": "Vui lòng cho biết giới tính của người mà bạn đang báo cáo.",
+    "context": "This is the text option displayed for a user to choose the gender of the person they are reporting."
+  },
+  "reportChoiceSexA": {
+    "message": "Vui lòng cho biết giới tính của người mà bạn đang báo cáo.",
+    "context": "This is the text option displayed for a user to choose the gender of the person they are reporting."
+  },
+  "explainSexMaleP": {
+    "message": "giới tính của người ấy là nam",
+    "context": "The label next to the person sex selection button for male."
+  },
+  "explainSexFemaleP": {
+    "message": "giới tính của người ấy là nữ",
+    "context": "The label next to the person sex selection button for female."
+  },
+  "explainSexOtherP": {
+    "message": "giới tính của người ấy là giới tính khác",
+    "context": "The label next to the person sex selection button for other."
+  },
+  "explainSexUnknownP": {
+    "message": "giới tính của người ấy chưa biết",
+    "context": "The label next to the person sex selection button for unknown."
+  },
+  "explainSexOtherA": {
+    "message": "giới tính của vật nuôi là giống khác",
+    "context": "The label next to the animal sex selection button for other."
+  },
+  "explainSexUnknownA": {
+    "message": "giới tính của vật nuôi là không rõ",
+    "context": "The label next to the animal sex selection button for unknown."
+  },
+  "reportChoiceAgeP": {
+    "message": "Vui lòng chọn tuổi gần đúng của người bạn đang báo cáo",
+    "context": "This is the text option displayed for a user to choose the age of the person they are reporting."
+  },
+  "reportChoiceAgeA": {
+    "message": "Vui lòng chọn tuổi gần đúng của các vật nuôi bạn đang báo cáo",
+    "context": "This is the text option displayed for a user to choose the age of the animal they are reporting."
+  },
+  "reportChoiceAgeUnknown": {
+    "message": "Nếu không chắc chắn tuổi , xin vui lòng chọn không rõ.",
+    "context": "The label next to the status selection button for unknown."
+  },
+  "explainAgeUnknownP": {
+    "message": "tuổi của người ấy chưa biết",
+    "context": "The label next to the person age selection button for unknown."
+  },
+  "explainAgeUnknownA": {
+    "message": "tuổi của vật nuôi không rõ",
+    "context": "The label next to the animal age selection button for unknown."
+  },
+  "continue": {
+    "message": "tiếp tục",
+    "context": "The label of a button to continue to the next step."
+  },
+  "reportChoiceNameP": {
+    "message": "Vui lòng nhập tên của người mà bạn đang báo cáo.",
+    "context": "This is the section title displayed for a user to enter the name of the person they are reporting."
+  },
+  "reportChoiceNameA": {
+    "message": "Vui lòng nhập tên và / hoặc mã số của vật nuôi bạn đang báo cáo",
+    "context": "This is the section title displayed for a user to enter the name and/or the buddy identification number of the animal they are reporting."
+  },
+  "explainNameP": {
+    "message": "Tên người ấy",
+    "context": "The text label for name entry of a person."
+  },
+  "explainNameA": {
+    "message": "Tên của vật nuôi",
+    "context": "The text label for name entry of an animal."
+  },
+  "explainBuddyA": {
+    "message": "mã số của vật nuôi",
+    "context": "The text label for buddty identification number entry of an animal."
+  },
+  "reportChoiceNameUnknownP": {
+    "message": "Nếu không chắc chắn tên, xin vui lòng chọn không rõ.",
+    "context": "This is the section title displayed for the use to choose name unknown."
+  },
+  "explainNameUnknownP": {
+    "message": "Tên của người ấy chưa biết",
+    "context": "The label next to the person name selection button for unknown."
+  },
+  "explainNameUnknownA": {
+    "message": "tên và mã số của vật nuôi không rõ",
+    "context": "The label next to the animal name selection button for unknown."
+  },
+  "cameraError": {
+    "message": "Không phát hiện máy ảnh  bởi trình duyệt web của bạn . Bạn có thể chọn để sử dụng ứng dụng máy ảnh của bạn để thay thế.",
+    "context": "This toast notification is displayed when there is an error detecting the camera on the user device."
+  },
+  "browserLimitation": {
+    "message": "Trình duyệt web của bạn không hỗ trợ tính năng này .",
+    "context": "This toast notification is displayed when a user attempts to use a feature that their web browser does not support."
+  },
+  "photoOnly": {
+    "message": "Chỉ chấp nhận JPG, PNG và TIFF.",
+    "context": "This toast notification is displayed when a user attempts to use an unsupported image file format in search by photo or report."
+  },
+  "reportChoicePhotoP": {
+    "message": "Bạn có thể tùy chọn thêm một bức ảnh để cải thiện việc nhận dạng người này.",
+    "context": "Section titled telling user that they can add a photo for identification purposes."
+  },
+  "reportChoicePhotoA": {
+    "message": "Bạn có thể tùy chọn thêm một bức ảnh để cải thiện việc nhận dạng vật nuôi này .",
+    "context": "Section titled telling user that they can add a photo for identification purposes."
+  },
+  "reportChoicePhotoCapture": {
+    "message": "Bắt",
+    "context": "This is the button label used to capture a photograph using the device camera."
+  },
+  "reportChoicePhotoSelectFile": {
+    "message": "Chọn tập tin",
+    "context": "This is the button label used to select an image file from local device storage."
+  },
+  "reportChoicePhotoTake": {
+    "message": "Chụp một tấm",
+    "context": "This is the button label used to open the device camera before capturing an image."
+  },
+  "reportChoicePhotoDelete": {
+    "message": "Xóa bỏ",
+    "context": "This is the button label used to delete an image the user has already submitted."
+  },
+  "reportChoicePhotoHelp": {
+    "message": "Cắt hoặc xoay hình ảnh nếu cần thiết.",
+    "context": "This is the help text displayed below image manipulation controls informing the user how to alter the already submitted image."
+  },
+  "reportChoiceMapP": {
+    "message": "Bạn có thể tùy chọn chỉ định một điểm ở trên bản đồ để giúp đỡ người khác trong việc định vị người này.",
+    "context": "This is the section header above the map used to specify a last known location."
+  },
+  "reportChoiceMapA": {
+    "message": "Bạn có thể tùy chọn chỉ định một điểm ở trên bản đồ để giúp đỡ người khác trong việc định vị vật nuôi này .",
+    "context": "This is the section header above the map used to specify a last known location."
+  },
+  "reportChoiceMapHelp": {
+    "message": "Kéo điểm đánh dấu bản đồ đến vị trí cuối cùng được biết.",
+    "context": "This is the help text below the last know location map informing a user what to do."
+  },
+  "information": {
+    "message": "Thông tin",
+    "context": "This a label for a tab in the reporting wizard where a user enters free text about additional Information."
+  },
+  "submit": {
+    "message": "Đệ trình",
+    "context": "This a label for a tab in the reporting wizard where a user finalizes and submits the report."
+  },
+  "submitAnon": {
+    "message": "Đệ trình ẩn danh",
+    "context": "This a label for a tab in the reporting wizard where a user finalizes and submits the report anonymously."
+  },
+  "reportChoiceInformationHelpP": {
+    "message": "Bạn có thể tùy chọn cung cấp bất kỳ thông tin bổ sung mà bạn cảm thấy sẽ giúp những người khác trong việc xác định hoặc định vị người này.",
+    "context": "This is help text informing the user that the information they enter will assist in locating or identifying the person."
+  },
+  "reportChoiceInformationHelpA": {
+    "message": "Bạn có thể tùy chọn cung cấp bất kỳ thông tin bổ sung mà bạn cảm thấy sẽ giúp những người khác trong việc xác định hoặc định vị hoặc con vật này.",
+    "context": "This is help text informing the user that the information they enter will assist in locating or identifying the animal."
+  },
+  "reportBeingSubmittedToast": {
+    "message": "Báo cáo được nộp ...",
+    "context": "This toast notification will be displayed while the report is being sent in."
+  },
+  "reportSubmit": {
+    "message": "Gửi báo cáo",
+    "context": "This is the section title on the last page of the reporting wizard. The user will choose how to submit the report."
+  },
+  "explainSignInP": {
+    "message": "Nếu bạn muốn được thông báo khi có thêm thông tin về người này, vui lòng đăng nhập trước khi gửi báo cáo.",
+    "context": "If the user is not signed in, we will prompt them to sign in so that they can recieve updates to their reported record."
+  },
+  "explainSignInA": {
+    "message": "Nếu bạn muốn được thông báo khi có thêm thông tin về con vật này, vui lòng đăng nhập trước khi gửi báo cáo.",
+    "context": "If the user is not signed in, we will prompt them to sign in so that they can recieve updates to their reported record."
+  },
+  "explainSubmitP": {
+    "message": "Nếu bạn muốn được thông báo khi có thêm thông tin về người này, chọn để gửi báo cáo ngay bây giờ.",
+    "context": "If the user is already signed in, we will ask them to submit the record and subscribe to updates."
+  },
+  "explainSubmitA": {
+    "message": "Nếu bạn muốn được thông báo khi có thêm thông tin về con vật này trở nên có sẵn , chọn để gửi báo cáo ngay bây giơ.̀",
+    "context": "If the user is already signed in, we will ask them to submit the record and subscribe to updates."
+  },
+  "explainAnonP": {
+    "message": "Gửi nặc danh và bạn sẽ không được thông báo khi có thêm thông tin về người này.",
+    "context": "The user is prompted that they may choose to submit their report anonymoysly and not recieve any updates afterwards."
+  },
+  "explainAnonA": {
+    "message": "Gửi nặc danh và bạn sẽ không được thông báo khi có thêm thông tin về con vật này.",
+    "context": "The user is prompted that they may choose to submit their report anonymoysly and not recieve any updates afterwards."
+  },
+  "explainAnon2": {
+    "message": "Hồ sơ này sẽ hết hạn sau 90 ngày. Sử dụng nút 'Báo cáo Lạm dụng' trong khung nhìn 'MORE DETAILS' sau này để yêu cầu hết hạn trước đó.",
+    "context": "The user is prompted that they may choose to submit their report anonymoysly and not recieve any updates afterwards."
+  },
+  "reportComplete": {
+    "message": "Hồ sơ hoàn thành và đã được đăng, Cảm ơn bạn.",
+    "context": "This is the section title on the final page of the reporting wizard. The report has been completed."
+  },
+  "explainCopy1": {
+    "message": "Đây là địa chỉ cho hồ sơ hoàn tất của bạn. Bạn có thể quay trở lại URL này sau một thời gian để xem các cập nhật và / hoặc ý kiến đóng góp cho hồ sơ này.",
+    "context": "We inform the user of the URL that corresponds to the report they just completed so that they may bookkmark or share it for later."
+  },
+  "explainCopy2": {
+    "message": "Sao chép URL này vào máy của bạn để bạn có thể chia sẻ hoặc đánh dấu nó.",
+    "context": "This is the text below the copy to clipboard button informing the user what the button does."
+  },
+  "buddyIdentificationNumber": {
+    "message": "Số Nhận dạng Buddy",
+    "context": "This is the label to the Buddy Identification Number field which is displayed for animals."
+  },
+  "notifyRecordFollow": {
+    "message": "Bây giờ bạn đang theo dõi hồ sơ này và sẽ nhận được bản cập nhật neu như nó thay đổi hoặc một bình luận được thêm",
+    "context": "This notification will appear after the user unfollows a record via the full record view."
+  },  
+  "notifyRecordUnfollow": {
+    "message": "Bạn không còn theo dõi hồ sơ này",
+    "context": "This notification will appear after the user unfollows a record via the full record view."
+  },
+  "followStatusTrue": {
+    "message": "Đang theo dõi",
+    "context": "This label is displayed next to a toggle switch displaying that the user is folliwng the currently viewed record."
+  },
+  "followStatusFalse": {
+    "message": "Không theo dõi",
+    "context": "This label is displayed next to a toggle switch displaying that the user is not folliwng the currently viewed record."
+  },
+  "followButtonExplain": {
+    "message": "Nhận thông báo khi có sự thay đổi cho  hồ sơ này hoặc một bình luận được bổ sung",
+    "context": "This label is displayed below the follow user toggle button explaining what the button does."
+  },
+  "followButtonAnon": {
+    "message": "Để theo dõi một hồ sơ và nhận thông báo khi nó được cập nhật, trước tiên bạn phải đăng nhập",
+    "context": "The follow record button is disabled when a user is not signed in, aka anonymous. We inform them that to follow a record they must first sign in."
+  },
+  "longerComment": {
+    "message": "Vui lòng nhập một bình luận dài hơn",
+    "context": "The user is notified to enter a longer comment if it is too short"
+  },
+  "commentBeingSubmittedToast": {
+    "message": "Bình luận được gửi ...",
+    "context": "This toast notification will be displayed while the new comment is being sent in."
+  },
+  "moduleInvalid": {
+    "message": "Module này không tồn tại.",
+    "context": "If the user attempts to access a non-existant portion of the site (very unlikely) this toast notification will appear."
+  },
+  "moduleAccess": {
+    "message": "Bạn không có quyền truy cập vào module này.",
+    "context": "If the user attempts to access a portion of the site they do not have permission for, this toast notification will appear."
+  },
+  "copyTrue": {
+    "message": "URL đã được sao chép vào clipboard.",
+    "context": "After the user clicks on the copy to clipboard button, if successful, this toast notification will appear."
+  },
+  "copyFalse": {
+    "message": "Không sao chép URL vào clipboard được.",
+    "context": "After the user clicks on the copy to clipboard button, if unsuccessful, this toast notification will appear."
+  },
+  "userConfirmActive": {
+    "message": "địa chỉ email của bạn đã được xác nhận và tài khoản người dùng của bạn đã được kích hoạt.",
+    "context": "When the user visits a confirmation link emailed to them, this toast notification will appear informing the user that their account is now active and email address verified."
+  },
+  "userConfirmInvalid": {
+    "message": "Liên kết xác nhận này không hợp lệ.",
+    "context": "When the user vists an invalid email address confirmation link or an invalid password reset confirmation link, this toast notification will appear."
+  },
+  "userPasswordTwo": {
+    "message": "Mật khẩu mới đã được gửi qua email cho bạn.",
+    "context": "When the user visits a valid password reset confirmation link, this toast notification will appear to notify the user a new password has been generated and emailed to them."
+  },
+  "eurl1": {
+    "message": "Chia sẻ sự kiện này",
+    "context": "This section text is displayed on the paper action dialog when a user clicks the share event button."
+  },
+  "eurl2": {
+    "message": "Sao chép vào clipboard",
+    "context": "This text appears under the button to share an event via email."
+  },
+  "eurl3": {
+    "message": "Gửi email",
+    "context": "This text appears under the button to share an event via clipboard."
+  },
+  "eurl4": {
+    "message": "Chia sẻ",
+    "context": "This button text label appears on the button for a user to share an event or record."
+  },
+  "eurl5": {
+    "message": "Chia sẻ hồ sơ này",
+    "context": "This section text is displayed on the paper action dialog when a user clicks the share record button."
+  },
+  "page404": {
+    "message": "404: Trang này không tồn tại.",
+    "context": "This toast is displayed when a user attempts to visit a non-existant page."
+  },
+  "ombNoticeTitle": {
+    "message": "Chú thích từ OBM",
+    "context": "This is the page title for the OMB Notice."
+  },
+  "abuseReportAbuse": {
+    "message": "Báo cáo Lạm dụng",
+    "context": "This is used as a sectional header and the label of the report abuse button."
+  },
+  "abuseWhatReport": {
+    "message": "Bạn muốn báo cáo những gì?",
+    "context": "This is the query presented to a user when asked to be more specific about the type of abuse report the user is filing."
+  },
+  "abuseReportSpam": {
+    "message": "Rác",
+    "context": "This is the button label to select a report abuse claim of type spam."
+  },
+  "abuseReportSex": {
+    "message": "Khêu gợi tình dục",
+    "context": "This is the button label to select a report abuse claim of type sexually explicit."
+  },
+  "abuseReportHate": {
+    "message": "Phát biểu thù hận",
+    "context": "This is the button label to select a report abuse claim of type hate speech."
+  },
+  "abuseReportViolence": {
+    "message": "Bạo lực",
+    "context": "This is the button label to select a report abuse claim of type violence"
+  },
+  "abuseReportElse": {
+    "message": "Thứ gì khác",
+    "context": "This button label is to select a report abuse claim of type something else."
+  },
+  "abuseThanks": {
+    "message": "Cảm ơn bạn. Chúng tôi đã nhận được khiếu nại lạm dụng của bạn. Nhân viên trang web của chúng tôi sẽ xem lại hồ sơ này và xóa bất kỳ nội dung  nào không phù hợp.",
+    "context": ""
+  },
+  "deleteRecord": {
+    "message": "Xóa hồ sơ",
+    "context": "This is used as a button label and dialog header allowing a user to delete a record from the system."
+  },
+  "deleteRecordConfirm": {
+    "message": "Bạn có chắc chắn muốn xóa hồ sơ này? Không có cách nào để khôi phục dữ liệu hồ sơ của bạn sau khi đã xóa.",
+    "context": "This is the question prompting a user when they choose to delete a record. We confirm they are certain with their decision."
+  },
+  "deleteRecordCancel": {
+    "message": "Hủy",
+    "context": "Button label to cancel the action of deleting a record."
+  },
+  "deleteRecordDelete": {
+    "message": "Xóa bỏ",
+    "context": "Button label to confirm the deletion of a record."
+  },
+  "deleteRecordDone": {
+    "message": "Đã xóa  hồ sơ",
+    "context": "A toast notification displayed to inform the user the deletion of a record action has been completed."
+  },
+  "seconds": {
+    "message": "giây",
+    "context": "This word means seconds of time."
+  },
+  "record": {
+    "message": "hồ sơ",
+    "context": "When a search is performed this word is prefixed with the number of results, ie. 1 record -- special case when only 1 result"
+  },
+  "notifyLogout": {
+    "message": "Đăng xuất.",
+    "context": "This notification will appear after the user successfully logs out."
+  },
+  "uploadingPhoto": {
+    "message": "Tải ảnh lên...",
+    "context": "This message is displayed after a user selects an image file to search by photo as the file is being uploaded."
+  },
+  "searchByPhoto": {
+    "message": "Tìm kiếm bằng ảnh",
+    "context": "When a user elects to search by photo from the search query bar, a dialog box appears with this as the title."
+  },
+  "dragAndDrop": {
+    "message": "Kéo và thả",
+    "context": "A user may drag and drop a file to search by image. This message shows the user where to drag and drop the file ~ the target."
+  },
+  "emailRecordRevisionSubject": {
+    "message": "Một hồ sơ bạn đang theo dõi đã được cập nhật",
+    "context": "We email users following a record when a revision is made or a comment is added, this is the subject of that email."
+  },
+  "emailRecordRevisionLine1": {
+    "message": "Nhận xét đã được thêm vào hoặc bản sửa đổi được thực hiện đối cho hồ sơ bạn đang theo dõi.",
+    "context": "We email users following a record when a revision is made or a comment is added, this is the first line of that email."
+  },
+  "emailRecordRevisionLine2": {
+    "message": "Bạn có thể xem lại hồ sơ ở vị trí này:",
+    "context": "We email users following a record when a revision is made or a comment is added, this line prefixes the direct record url."
+  },
+  "emailRecordRevisionLine3": {
+    "message": "Nếu bạn muốn hủy đăng ký nhận các thông báo qua email này, hãy truy cập vào trang liên kết ở trên và bỏ chọn nút Dưới đây.",
+    "context": "We email users following a record when a revision is made or a comment is added, at the end we inform the user of how to unsubscribe to these emails."
+  },
+  "emailNewUserSubject": {
+    "message": "Xác nhận địa chỉ email của bạn",
+    "context": "We email new users after they register, this is the subject line of said email."
+  },
+  "emailNewUserLine1": {
+    "message": "Cảm ơn bạn đã đăng ký.",
+    "context": "We email new users after they register, this is the first line of said email thanking them for registering."
+  },
+  "emailNewUserLine2": {
+    "message": "Bạn phải vào trang liên kết dưới đây để hoàn tất quá trình đăng ký:",
+    "context": "We email new users after they register, this is the second line of said email providing them a link complete the registration process."
+  },
+  "emailNewUserLine3": {
+    "message": "Không vào trang liên kết sẽ dẫn đến việc tài khoản của bạn bị xóa sau 30 ngày.",
+    "context": "We email new users after they register, this is the last line of said email warning the user about account deletion for failure to activate their account."
+  },
+  "emailForgot1Subject": {
+    "message": "Yêu cầu đặt lại mật khẩu",
+    "context": "We email a user when they initiate the forgot password sequence, this is the subject of that email."
+  },
+  "emailForgot1Line1": {
+    "message": "Có người đã khởi tạo yêu cầu đặt lại mật khẩu cho tài khoản của bạn.",
+    "context": "We email a user when they initiate the forgot password sequence, this is the first line of that email."
+  },
+  "emailForgot1Line2": {
+    "message": "Nếu bạn không bắt đầu yêu cầu này, bạn có thể bỏ qua email này một cách an toàn và mật khẩu của bạn sẽ không bị thay đổi.",
+    "context": "We email a user when they initiate the forgot password sequence, we inform the user it is safe to ignore this request if they did not initiate it."
+  },
+  "emailForgot1Line3": {
+    "message": "Tuy nhiên, nếu bạn đã thực hiện yêu cầu này và muốn đặt lại mật khẩu của mình, bạn phải truy cập vào trang liên kết sau:",
+    "context": "We email a user when they initiate the forgot password sequence, this line prefixes a url the user must click on to continue in the forgot password sequence."
+  },
+  "emailForgot1Line4": {
+    "message": "Khi trang liên kết này đã được truy cập, mật khẩu mới sẽ được tạo và gửi cho bạn trong email thứ hai.",
+    "context": "We email a user when they initiate the forgot password sequence, final line of this email informing a new password will be generated."
+  },
+  "emailForgot2Subject": {
+    "message": "Mật khẩu mới",
+    "context": "This is the second email in the forgot password sequence, and this is the subject of that email."
+  },
+  "emailForgot2Line1": {
+    "message": "Mật khẩu mới của bạn là:",
+    "context": "This is the second email in the forgot password sequence, this line prefixes the new password we generated for the user."
+  },
+  "emailForgot2Line2": {
+    "message": "Bạn có thể tùy ý thay đổi mật khẩu sau khi đăng nhập:",
+    "context": "This is the second email in the forgot password sequence, lastly, we inform the user that they may change their password after logging in."
+  },
+  "welcomeTo": {
+    "message": "Chào mừng bạn đến",
+    "context": "The first time a user comes to PL, we welcome them like: Welcome to PEOPLE LOCATOR. However PEOPLE LOCATOR is not translated in this welcome message."
+  },
+  "chooseLanguage": {
+    "message": "Chọn một ngôn ngữ",
+    "context": "We prompt the user to select a language at first visit."
+  },
+  "additionalInformation": {
+    "message": "Thông tin bổ sung",
+    "context": "This is a label displayed several places titled Additional Information."
+  },
+  "inEvent": {
+    "message": "trong sự kiện",
+    "context": "This substring 'in event' will appear atop search results under the search bar after '27 record' but before the event name (0.123 seconds)"
+  },
+  "viewOriginalRecord": {
+    "message": "Xem hồ sơ gốc",
+    "context": "This link appears on record with a forieign origin. Tapping on the link will open the record from its original location."
+  },
+  "ncmec1": {
+    "message": "Chúng tôi cũng khuyên bạn nên gửi báo cáo này tới Trung tâm Quốc gia về Trẻ em Mất tích và bị Lợi dụng.",
+    "context": "In the reporting wizard, this message will be displayed when a report is completed for a child."
+  },
+  "ncmec2": {
+    "message": "Bạn có thể tìm thấy một liên kết đến NCMEC ở đây.",
+    "context": "In the reporting wizard, this message will be displayed when a report is completed for a child. This is the link text."
+  },
+  "pageResourcesNcmec": {
+    "message": "Trung tâm quốc gia về trẻ em bị mất tích và bị lợi dụng",
+    "context": "Resource Page link to NCMEC."
+  },
+  "eventListMeta": {
+    "message": "Tìm và báo cáo người và vật nuôi bị mất tích trong",
+    "context":  "Find and report missing people and animals in any disaster using this website."
+  },
+  "eventListMeta3": {
+    "message": "sử dụng trang web Thư viện Y Học Quốc Gia.",
+    "context": "Find missing people using this National Library of Medicine website."
+  },
+  "searchTitle": {
+    "message": "Tìm người mất tích và vật nuôi trong",
+    "context": "Find missing people and animals in the Mexico Earthquake."
+  },
+  "searchMeta": {
+    "message": "Tìm kiếm người mất tích và vật nuôi trong",
+    "context": "Search for missing people and animals in the Mexico Earthquake."
+  },
+  "searchMeta2": {
+    "message": "theo tên hoặc theo hình ảnh",
+    "context": "Search for missing people by name or by photo"
+  },
+  "searchMeta3": {
+    "message": "sử dụng Thư viện Y Học Quốc Gia",
+    "context": "Search for missing people using the National Library of Medicine's NLM PEOPLE LOCATOR."
+  },
+  "reportTitle": {
+    "message": "Báo cáo người và vật nuôi trong",
+    "context": "Report people and animals in the Mexico Earthquake."
+  },
+  "reportMeta": {
+    "message": "Report the status of loved people and pets in",
+    "context": "Report the status of people and animals in the Mexico City Earthquake."
+  },
+  "recordTitle": {
+    "message": "Người được báo cáo",
+    "context": "Reported person Juan Valdez in the Mexico City Earthquake."
+  },
+  "recordTitle2": {
+    "message": "trong",
+    "context": "Reported person Juan Valdez in the Mexico City Earthquake."
+  },
+  "recordMeta":  {
+    "message": "đã được báo cáo",
+    "content": "Juan Valdez has been reported missing on our website."
+  },
+  "aboutMeta": {
+    "message": "Thư viện Y Khoa Quốc Gia, một bộ phận của Viện Y tế Quốc Gia, đã tạo ra trang web này",
+    "content": "The National Library of Medicine, part of the National Institutes of Health, created this website for the public."
+  },
+  "aboutMeta2": {
+    "message": "tìm kiếm và báo cáo người bị mất tích và vật nuôi trong thiên tai.",
+    "content": "We created this website for finding and reporting missing people and animals during disasters."
+  },
+  "resourceMeta": {
+    "message": "Thông tin bổ sung cho Thư viện Y Khoa Quốc Gia",
+    "content": "Additional National Library of Medicine resources for finding people."
+  },
+  "followUsMeta": {
+    "message": "Nhận cảnh báo thiên tai trên các phương tiện truyền thông xã hội từ Thư viện Y Học Quốc Gia",
+    "content": "Receive disaster alerts on social media from the National Library of Medicine's NLM PEOPLE LOCATOR."
+  },
+  "privacyMeta": {
+    "message": "Chính sách bảo mật quy định việc sử dụng Thư Viện Y Học Quốc Gia",
+    "content": "Privacy policies governing the use of the National Library of Medicine's NLM PEOPLE LOCATOR."
+  },
+  "goHomePage": {
+    "message": "Đi tới trang chủ",
+    "context": "Displayed tooltip when you hover your mouse over the home button."
+  },
+  "searchUsingPhoto": {
+    "message": "Tìm kiếm bằng ảnh",
+    "context": "Displayed tooltip when you hover your mouse over the visual search button."
+  },
+  "searchUsingName": {
+    "message": "Tìm kiếm bằng cách sử dụng tên",
+    "context": "Displayed tooltip when you hover your mouse over the search magnifying glass."
+  },
+  "reportPersonAnimal": {
+    "message": "Báo cáo một người hoặc vật nuôi",
+    "context": "Tooltip for report button."
+  },
+  "enterName": {
+    "message": "Nhập tên để tìm",
+    "context": "Title for a search box."
+  },
+  "selectEvent": {
+    "message": "Chọn một sự kiện",
+    "context": "Title for a menu of PL events."
+  },
+  "answerYes": {
+    "message": "Vâng",
+    "context": "The affirmative, yes, as in an answer to a question."
+  },
+  "answerNo": {
+    "message": "Không",
+    "context": "The negative, no, as in an answer to a question."
+  },
+  "rDeviceShort": {
+    "message": "Đăng ký thiết bị bổ sung",
+    "context": "This text will appear as a header on the dialog box that appears when a user is prompted to register a new device for push notifications. See below."
+  },
+  "rDeviceLong": {
+    "message": "Bạn có muốn đăng ký thiết bị này để nhận thông báo đẩy không?",
+    "context": "This dialog will appear when a user logs into from a 2nd, 3rd, 4th... device as a prompt to also recieve push notifications on this additional device."
+  },
+  "appUpdate1": {
+    "message": "Đã có phiên bản mới của ứng dụng này.",
+    "context": "When a new version of PL is updated online, a returning user will be prompted to update the version he/she is using."
+  },
+  "appUpdate2": {
+    "message": "CẬP NHẬT",
+    "context": "This label appears on the button to update the version of PL to the newest available. See above."
+  },
+  "noTranslationAvailable": {
+    "message": "Mô tả sự kiện này chưa được dịch sang ngôn ngữ của bạn để nó được hiển thị bằng tiếng Anh.",
+    "context": "This label appears on the button to update the version of PL to the newest available. See above."
+  },
+  "helpFindText2": {
+    "message": "By default, searches will always return up to 50 results. However, if you would like to have it return more results, you can append or prepend the keyword perPage:100 to a search query which will effectively set a different limit on the number of results that are returned. The number 100 can be changed to any integer value. You may also modify the URL to achieve this filter effect. Here are some examples:",
+    "context": "This paragraph describes advanced search filters."
+  }
+}

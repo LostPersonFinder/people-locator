@@ -1,0 +1,14 @@
+{
+  "registration_ids":["eoHcoslkVXU...","cGaTxfdRqCw...","ffVS4m-WGs0..."],
+  "data":{
+    "badge":"https://pl.nlm.nih.gov/assets/images/logo/logo-white-transparent-128.png",
+    "icon": "https://pl.nlm.nih.gov/assets/images/logo/logo-white-128.png",
+    "goto": "https://pl.nlm.nih.gov/en/test"
+  },
+  "notification":{
+    "body":"An event has been started for the recent earthquake in Ecuador.",
+    "title":"NLM PEOPLE LOCATOR",
+    "content_available":1
+  },
+  "priority" : "high"
+}

@@ -1,0 +1,28 @@
+#bar_blank {
+  border: solid 1px #ccc;
+  height: 20px;
+  width: 100%;
+  border-radius: 5px;
+}
+#bar_color {
+  background-color: green;
+  height: 20px;
+  width: 0px;
+}
+#hidden_iframe {
+  display: block;
+  height: 800px; 
+  border: none;
+  width: 100%;
+}
+#shortname {
+  margin-top: 0.75em;
+}
+#biuHolder {
+  background-color: rgb(255, 255, 255);
+  margin: 0 0 3em;
+  border-radius: 2px;
+  border: 1px solid rgb(205, 205, 205);
+  padding: 0.5em 2em 2em;
+  border-top: none;
+}

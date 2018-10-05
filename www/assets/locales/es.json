@@ -1,0 +1,1170 @@
+{
+  "thisLanguageDescription": {
+    "message": "Spanish",
+    "context": "This word describes this language itself IN ENGLISH! DO NOT TRANSLATE THIS!! This phrase must remain in English."
+  },
+  "thisLanguage": {
+    "message": "Español",
+    "context": "This word describes this language itself."
+  },
+  "signIn": {
+    "message": "Registrarse",
+    "context": "A button that when clicked allows a user to login or register."
+  },
+  "logout": {
+    "message": "Cerrar sesión",
+    "context": "A label for a button allowing a user to logout."
+  },
+  "administration": {
+    "message": "Administración",
+    "context": "A label for a button allowing a user to access the Administraion module."
+  },
+  "linkHelp": {
+    "message": "Ayuda",
+    "context": "This is the text for a link to the Help page."
+  },
+  "linkAbout": {
+    "message": "Acerca de",
+    "context": "The link text for the About link."
+  },
+  "linkPrivacy": {
+    "message": "Privacidad",
+    "context": "The link text for the Privacy link."
+  },
+  "linkAccessibility": {
+    "message": "Accesibilidad",
+    "context": "The link text for the Accessibility link."
+  },
+  "linkContact": {
+    "message": "Contáctenos",
+    "context": "The link text for the Contact link."
+  },
+  "linkApps": {
+    "message": "Aplicaciones",
+    "context": "The link text for the Apps link."
+  },
+  "linkResources": {
+    "message": "Recursos",
+    "context": "The link text for the Resources link."
+  },
+  "linkFollowUs": {
+    "message": "Síguenos",
+    "context": "The link text for the Follow Us link."
+  },
+  "linkTrademark": {
+    "message": "Marca Registrada",
+    "context": "The link text for the Trademark link."
+  },
+  "expirationDate": {
+    "message": "FECHA DE CADUCIDAD",
+    "context": "Verbiage describing the expiration date of the OMB notice."
+  },
+  "restError1": {
+    "message": "Error: Nombre de usuario o contraseña inválidos",
+    "context": "Error message presented when a user provides the incorrect username and/or password."
+  },
+  "restError2": {
+    "message": "Error: la cuenta está bloqueada temporalmente por uso repetido de nombre de usuario o contraseña erróneos, intente más tarde",
+    "context": "Error message presented when a user fails to login repeatedly."
+  },
+  "restError3": {
+    "message": "Error: no puede ingresar hasta que no confirme la dirección de su correo electrónico, por favor busque el enlace en su correo",
+    "context": "Error message presented when a user account is not yet active."
+  },
+  "restError2000": {
+    "message": "Error:ya existe un usuario con la dirección de correo electrónico proporcionada",
+    "context": "Error message presented when user tries to use an email address already in use."
+  },
+  "restError2001": {
+    "message": "Error: la dirección de correo electrónico no es válida",
+    "context": "Error message presented when a user provides an invalid email address."
+  },
+  "restError2002": {
+    "message": "Error: la contraseña debe tener 8-16 caracteres de longitud, debe tener al menos una letra mayúscula, una minúscula y un carácter numérico",
+    "context": "Error message presented when user enters an invalid password."
+  },
+  "restError2004": {
+    "message": "Error: las contraseñas no coinciden",
+    "context": "Error message presented when entered password do not match one another."
+  },
+  "passError0": {
+    "message": "Error: la contraseña debe tener 8-16 caracteres de longitud",
+    "context": "Error message presented when entered password is of incorrect length, must be 8-16 characters long."
+  },
+  "passError1": {
+    "message": "Error: la contraseña debe contener al menos una letra mayúscula (A-Z)",
+    "context": "Error message presented when entered password does not contain at least one uppercase letter."
+  },
+  "passError2": {
+    "message": "Error: la contraseña debe contener al menos una letra en minúscula (a-z)",
+    "context": "Error message presented when entered password does not contain at least one lowercase letter."
+  },
+  "passError3": {
+    "message": "Error: la contraseña debe contener al menos un número (0-9)",
+    "context": "Error message presented when entered password does not contain at least one digit."
+  },
+  "restError5000": {
+    "message": "Error de red. Por favor verifique su conexión e intente de nuevo.",
+    "context": "Error message presented when there is a network / internet issue."
+  },
+  "restError9999": {
+    "message": "Ha ocurrido un error desconocido.",
+    "context": "Error message presented when an unknown error has occurred."
+  },
+  "notifyLogin": {
+    "message": "Conectado.",
+    "context": "This notification will appear after the user successfully logs in."
+  },
+  "notifyRegister": {
+    "message": "Ahora está registrado y conectado.",
+    "context": "This notification will appear after the user newly registers and is automatically logged in."
+  },
+  "notifyRegistering": {
+    "message": "Registrando...",
+    "context": "This notification will appear briefly as the system registers and creates a new account for the user."
+  },
+  "notifyPasswordChanged": {
+    "message": "Contraseña cambiada correctamente.",
+    "context": "This notification will appear after the user successfully changes their password."
+  },
+  "notifyResetPassword": {
+    "message": "Se le ha enviado por correo electrónico las instrucciones de cómo restablecer su contraseña.",
+    "context": "This notification appears when a user has successfully sent a request to reset their password."
+  },
+  "pad1login": {
+    "message": "Iniciar sesión",
+    "context": "This is the name of the first tab of the user dialog allowing a user to login."
+  },
+  "pad1register": {
+    "message": "Registro",
+    "context": "This is the name of the second tab of the user dialog allowing a user to register."
+  },
+  "pad1forgotText": {
+    "message": "Introduzca su dirección de correo electrónico y le enviaremos instrucciones de cómo restablecer su contraseña.",
+    "context": "This text informs the user of what they must do in order to reset their password ~ they must enter their email address."
+  },
+  "pad1forgotSend": {
+    "message": "Enviar",
+    "context": "This is the text label on the forgot my password dialog to submit the form."
+  },
+  "pad1loginForgot": {
+    "message": "Olvidó su contraseña?",
+    "context": "This is the text label for the forgot my password button on the login dialog."
+  },
+  "pad1loginUsernamePlaceholder": {
+    "message": "Nombre de usuario",
+    "context": "This is the placeholder text for the username input."
+  },
+  "pad1loginPasswordPlaceholder": {
+    "message": "Contraseña",
+    "context": "This is the placeholder text for the password input."
+  },
+  "pad1registerEmailPlaceholder": {
+    "message": "Correo electrónico",
+    "context": "This is the placeholder text for the email input."
+  },
+  "pad1registerText": {
+    "message": "Su contraseña debe contener un número, una letra minúscula, una letra mayúscula, y ser de 8-16 caracteres de longitud.",
+    "context": "This is the text displayed while the user is in the process of registering informing them of our minimum password requirements."
+  },
+  "omb7notice": {
+    "message": "Aviso",
+    "context": "This is the first word of the OMB notice."
+  },
+  "omb7submission": {
+    "message": "La presentación de la información es de carácter voluntario. Toda la información presentada se pondrá a disposición del público.",
+    "context": "These are the first two sentences of the OMB notice."
+  },
+  "omb7text": {
+    "message": "El tiempo de la recopilación de información se estima en un promedio de 3 minutos por respuesta. El cálculo incluye el tiempo para revisar las instrucciones, la recolección y la introducción de datos. Una agencia no puede realizar o patrocinar, y una persona no está obligada a responder a una solicitud de información a menos que muestre un número de control OMB válido. Envíe los comentarios sobre el cálculo de tiempo o cualquier otro aspecto de esta recopilación de información, incluyendo sugerencias para reducir esta carga, a:",
+    "context": "This is the main paragraph of the OMB notice."
+  },
+  "omb7sub": {
+    "message": "He leído y acepto las condiciones.",
+    "context": "This is the label for the OMB notice agreement button."
+  },
+  "pad3following": {
+    "message": "Siguiendo",
+    "context": "This is the name of the first tab of user preferences that shows which records a user is following -- shortened to 1 word!"
+  },
+  "pad3settings": {
+    "message": "Ajustes",
+    "context": "This is the name of the second tab of user preferences that shows user settings."
+  },
+  "pad3loading": {
+    "message": "Cargando",
+    "context": "This word is displayed when the following records tab is loading results from the server."
+  },
+  "pad3emptyFollow": {
+    "message": "No está siguiendo ningún registro.",
+    "context": "This verbiage is displayed when the following records panel is displayed and the user is not following any records."
+  },
+  "pad3unFollow": {
+    "message": "Dejar de seguir",
+    "context": "This is the text label applied to the button that allows a user to unfollow updates to a record."
+  },
+  "pad3record": {
+    "message": "Recibir actualizaciones de los registros que esta siguiendo por la siguiente via",
+    "context": "This verbiage describes the user settings section where a user can subscribe to receive messages from PL via push or email when a record they are following is updated."
+  },
+  "pad3event": {
+    "message": "Recibir mensajes acerca de nuevos eventos por la siguiente via",
+    "context": "This verbiage describes the user settings section where a user can subscribe to receive messages from PL via push or email when a new event is created."
+  },
+  "pad3admin": {
+    "message": "Recibir mensajes de la administración por la siguiente via",
+    "context": "This verbiage describes the user settings section where a user can subscribe to receive admin messages from PL via push or email."
+  },
+  "pushNotification": {
+    "message": "Notificación de inserción",
+    "context": "This describes a button label for a Push Notification option."
+  },
+  "pad3changePasswordButton": {
+    "message": "Cambiar la contraseña",
+    "context": "This verbiage describes the extent to which we use the push notification subscription a user provides to send out information."
+  },
+  "pad3passwordRequirements": {
+    "message": "Su contraseña debe contener un número, una letra minúscula, una letra mayúscula, y ser de 8-16 caracteres de longitud.",
+    "context": "This verbiage describes the extent to which we use the push notification subscription a user provides to send out information."
+  },
+  "pad3oldPasswordPlaceholder": {
+    "message": "Contraseña anterior",
+    "context": "This is the placeholder text for the old password input."
+  },
+  "pad3newPassword1Placeholder": {
+    "message": "Nueva contraseña",
+    "context": "This is the placeholder text for the new password input."
+  },
+  "pad3newPassword2Placeholder": {
+    "message": "Ingresar la nueva contraseña otra vez",
+    "context": "This is the placeholder text for the new password again input."
+  },
+  "pushNotificationsDisallowed": {
+    "message": "Usted canceló las notificaciones. Debe volver a habilitar este permiso para utilizar esta función.",
+    "context": "This text tells the user that they have prohibited the site from using push notifications and that they must re-enable this feature to subscribe."
+  },
+  "helpFindTitle": {
+    "message": "Ayuda para localizar a una persona o animal",
+    "context": "This is the title of the help page section on how to find/search."
+  },
+  "helpFindText": {
+    "message": "Si está en búsca de una persona desaparecida o un animal, es posible que pueda localizarlos mediante la búsqueda en uno de nuestros eventos de desastre. Cuando llega por primera vez en el localizador de personas, se le presentará con una lista de eventos de desastre disponibles. Cada evento tiene un nombre, una imagen descriptiva relacionada con el evento, y un texto que describe la situación. Si se desplaza hacia abajo, se ve que hay una serie de eventos diferentes desde los que puede seleccionar. Seleccione el evento en el que usted cree que la persona o animal que está tratando de localizar pueda encontrarse. Por ejemplo, si había un evento denominado terremoto de Haití y la persona que está buscando fue visto por última vez en Haití, eliga este evento. Se puede seleccionar un evento pulsando en el botón verde grande debajo de la imagen; esto le llevará directamente al motor de búsqueda para este evento  en particular. Un nuevo cuadro de búsqueda aparecerá en la parte superior después de haber hecho su selección. Introduzca el nombre de la persona que está tratando de localizar en este cuadro de búsqueda. Los resultados de la búsqueda se actualizan automáticamente con los resultados más relevantes en la parte superior. Es posible adquirir más información acerca con un toque en los detalles en el vinculo cerca de la parte inferior de cualquier registro, esto abre una vista detallada. En esta vista detallada, puede consultar la información adicional del registro, añadir un comentario de su cuenta, o comenzar a seguir un registro con cambios.",
+    "context": "This is the help page article body describing in detail how to find/search for a person or animal."
+  },
+  "helpReportTitle": {
+    "message": "Instrucciones para reportar a una persona o animal que está buscando",
+    "context": "This is the title of the help page section on how to report."
+  },
+  "helpReportText": {
+    "message": "Si no puede localizar a la persona o mascota que busca, usted debe informar acerca de esta persona en el  registro localizador de personas. Una vez que haya navegado al evento o desastre dentro de la aplicación, verá un botón de acción flotante de color rosa en la parte inferior derecha de la pantalla. Al pulsarlo, se iniciará el proceso de información e inicia un asistente independiente que le guiará a través de los pasos para  completar un nuevo informe basado en la información que proporcione. Una vez completado, se introduce su informe en el libro de registro de búsqueda y queda visible al público. Una vez que complete el informe (si no se informa de manera anónima) comenzará automáticamente a seguir su propio informe y recibirá informes de las  actualizaciones a medida que son entradas en el registro. Otras personas pueden hacer comentarios en su registro lo cual  proporcionara nueva información sobre la persona o mascota. Puesto que usted está siguiendo este registro, las actualizaciones se enviarán a través del correo electrónico o notificaciones push.",
+    "context": "This is the help page article body describing in detail how to report a person or animal."
+  },
+  "pageAboutTextAbout": {
+    "message": "Esta aplicación  está proporcionada por la Biblioteca Nacional de Medicina de los Estados Unidos, en Bethesda, Maryland. NLM es parte de los Institutos Nacionales de Salud, Departamento de Salud y Servicios Humanos de los Estados Unidos, y tiene en su misión el desarrollo y la coordinación de la tecnología de la comunicación para mejorar la prestación de los servicios de salud. Este sitio se proporciona con el fin de estudiar la utilidad de este tipo de herramientas en respuesta a los desastres. La tecnología subyacente fue desarrollado a través del proyecto Lost Person Finder, parte de la contribución de la NLM para Asociación de Preparación de Emergencia de los Hospitales de Bethesda. La asociación recibió fondos federales iniciales para LPF y otros proyectos de NLM de TI en 2008. El proyecto LPF está apoyado actualmente por el Programa de Investigación Intramural del NIH, a través del Centro Nacional Lister Hill de la NLM para las Comunicaciones Biomédicas. El desarrollo de software está encabezada por la Subdirección de  Rama de Comunicaciones de Ingeniería de LHNCBC, con contenido adicional de la rama de Ciencias Informáticas de LHNCBC y el Centro de Investigación de Desastres Gestión de la Información, parte de los Servicios Especializados de Información de la NLM.",
+    "context": "This is the first paragraph of verbiage on the About page describing the purpose of the PEOPLE LOCATOR."
+  },
+  "pageAboutTextBrowser": {
+    "message": "Debe tener cookies y JavaScript habilitados  en su navegador y la version más reciente de uno de los siguientes navegadores: Chrome, Firefox, Safari, Opera, Edge o Internet Explorer.",
+    "context": "This is the text on the About page describing web browsers support."
+  },
+  "pageAboutHeaderBrowser": {
+    "message": "Ayuda para el navegador",
+    "context": "On the About page, section header title Browser Support."
+  },
+  "pageAboutHeaderFAQ": {
+    "message": "Hojas de datos y preguntas frecuentes",
+    "context": "On the About page, this is the link to datasheets and the FAQ."
+  },
+  "pageAboutFAQ": {
+    "message": "Preguntas frecuentes",
+    "context": "Frequently Asked Questions link title on About page."
+  },
+  "pagePrivacyText1": {
+    "message": "A menos que se indique lo contrario, los datos basados en la comunidad contenidas en este sitio Web están disponibles al público y se pueden ser buscados por todos los visitantes del sitio Web. Los datos pueden ser recibidos de diversas fuentes, como se indica en los registros individuales de la notificación directa a través de la NLM :",
+    "context": "This is the first text paragraph on the Privacy page describing how user data is handled."
+  },
+  "pagePrivacyText2a": {
+    "message": "Comentarios",
+    "context": "Beginning of the second paragraph on the Privacy page."
+  },
+  "pagePrivacyText2b": {
+    "message": "La página no es monitoreada,  otras organizaciones contribuyentes no están obligadas  a revisar ni a verificar la exactitud  de la información de esta página. Tenga en cuenta que los datos son recibidos directamente",
+    "context": "Large portion of the second paragraph of the Privacy page."
+  },
+  "pagePrivacyText2c": {
+    "message": "podrá difundirse a otros organismos, instituciones y organizaciones de asistencia a los esfuerzos para localizar a personas desaparecidas, incluyendo pero no limitado a la",
+    "context": "End portion of the second paragraph of the Privacy page."
+  },
+  "pagePrivacyText3a": {
+    "message": "Para las transmisiones directas a",
+    "context": "Beginning of the third paragraph on the Privacy page."
+  },
+  "pagePrivacyText3b": {
+    "message": "la  dirección de correo electrónico y el identificador del dispositivo  de la persona que denuncia se archivan, pero no son visibles al público.",
+    "context": "End of the third paragraph on the Privacy page."
+  },
+  "pagePrivacyText4": {
+    "message": "Declaración general de protección de datos de la NLM",
+    "context": "Text for the link to NLM's privacy policy page."
+  },
+  "pagePrivacyText5": {
+    "message": "Acta de Libertad de Información",
+    "context": "Text for the link to the Freedom of Information Act site."
+  },
+  "forMore": {
+    "message": "Para más",
+    "context": "The title for a subsection on the Privacy page with links to more topics."
+  },
+  "the": {
+    "message": "la",
+    "context": "The word the."
+  },
+  "pagePrivacyBullet1": {
+    "message": "función de informe",
+    "context": "The second half ot the first bullet point on the Privacy page."
+  },
+  "pagePrivacyBullet2": {
+    "message": "solicitud",
+    "context": "The word application as it applies to the ReUnite app."
+  },
+  "pagePrivacyBullet3": {
+    "message": "otras organizaciones sindicales",
+    "context": "The fourth bullet point on the Privacy page."
+  },
+  "pageResourcesTitle1": {
+    "message": "Encuentra familia y amigos",
+    "context": "The first section title on the Resources page."
+  },
+  "pageResourcesTitle2": {
+    "message": "Recursos para desastres",
+    "context": "The second section title on the Resources page."
+  },
+  "pageResourcesTitle3": {
+    "message": "Recursos para inundaciones",
+    "context": "The third section title on the Resources page."
+  },
+  "pageResourcesTitle4": {
+    "message": "Recursos para tornados",
+    "context": "The fourth section title on the Resources page."
+  },
+  "pageResourcesFamily1": {
+    "message": "Lista de sanos y salvos de la Cruz Roja",
+    "context": "First bullet link in the Family and Friends section of the Resource page."
+  },
+  "pageResourcesFamily2": {
+    "message": "Registro Familiar y Sistema de Localización de la  Agencia Federal para la gestión de Emergencias Nacionales",
+    "context": "Second bullet link in the Family and Friends section of the Resource page."
+  },
+  "pageResourcesFamily3": {
+    "message": "Registro Nacional de parientes cercanos",
+    "context": "Third bullet link in the Family and Friends section of the Resource page."
+  },
+  "pageResourcesFamily4": {
+    "message": "Comité Internacional del restablecimiento del contacto entre familiares de la Cruz Roja ",
+    "context": "fourth buller link in the Family and Friends section of the Resource page."
+  },
+  "pageResourcesFromDIMRC": {
+    "message": "Información del Centro de Investigación de Gestión de Desastres de la NLM",
+    "context": "Text label for several links to DIMRC on the Resource page."
+  },
+  "pageResourcesDisaster2": {
+    "message": "Asistencia para desastres",
+    "context": "Second bullet link on the Disaster section of the Resource page."
+  },
+  "pageResourcesDisaster3": {
+    "message": "Cruz Roja ofrece espacio y alimentación",
+    "context": "Third buller link on the Disaster section of the Resource page."
+  },
+  "pageResourcesFromMedlinePlus": {
+    "message": "A partir de la NLM MedlinePlus",
+    "context": "Text label for several links to Medline Plus on the Resource page."
+  },
+  "followUs": {
+    "message": "Síguenos...",
+    "context": "Used to prompt user to follow us on a social network of their choice."
+  },
+  "and": {
+    "message": "y",
+    "context": "The word and used between two nouns."
+  },
+  "trademarkText": {
+    "message": "son marcas comerciales registradas de el Departamento de Salud y Servicios Humanos de los EE.UU.",
+    "context": "The second half of the trademark sentence."
+  },
+  "tabReport": {
+    "message": "Informe",
+    "context": "The title of the 3rd tab allowing someone to Report a new person or pet."
+  },
+  "tagline": {
+    "message": "Encuentra y denuncia de desaparición de familiares, amigos y mascotas durante los desastres.",
+    "context": "The tagline is the summary of what the application is for."
+  },
+  "pageTitle": {
+    "message": "Busque e informe acerca de personas y mascotas desaparecidas durante desastres",
+    "context": "This is the page title which is very similar in nature to the tagline."
+  },
+  "eventRetired": {
+    "message": "El evento que ha solicitado ya no está activo.",
+    "context": "We inform the user this message when they attempt to come to us via exact event url when the event is no longer open."
+  },
+  "eventListFindReportButton": {
+    "message": "Buscar o Denunciar Persona o Mascota",
+    "context": "This is the button text on the home page to Find or Report a person or animal."
+  },
+  "searchPlaceholder": {
+    "message": "Buscar",
+    "context": "The search box starts off with this text to inform the user what the element is used for."
+  },
+  "records": {
+    "message": "archivos",
+    "context": "When a search is performed this word is prefixed with the number of results, ie. 17 records"
+  },
+  "sexMale": {
+    "message": "Masculino",
+    "context": "Sex = Male"
+  },
+  "sexFemale": {
+    "message": "Femenino",
+    "context": "Sex = Female"
+  },
+  "sexOther": {
+    "message": "Otro",
+    "context": "Sex = Other"
+  },
+  "statusMissing": {
+    "message": "Perdido",
+    "context": "Status is Missing"
+  },
+  "statusFound": {
+    "message": "Encontrado",
+    "context": "Status is Found"
+  }  ,
+  "statusDeceased": {
+    "message": "Fallecido",
+    "context": "Status is Deceased"
+  },
+  "statusInjured": {
+    "message": "Lesionado",
+    "context": "Status is Injured"
+  },
+  "statusAlive": {
+    "message": "Vivo y Bien",
+    "context": "Status is Alive and Well"
+  },
+  "statusUnknown": {
+    "message": "Desconocido",
+    "context": "Status, Location, or other attribute is Unknown"
+  },
+  "age": {
+    "message": "Edad",
+    "context": "Age of person or animal"
+  },
+  "comments": {
+    "message": "Comentarios",
+    "context": "Comments that others may add to a person or animal record."
+  },
+  "addComment": {
+    "message": "Añadir un comentario",
+    "context": "The label for a button allowing a user to add a comment to a record."
+  }, 
+  "addCommentLabel": {
+    "message": "Agregar información adicional acerca de este registro.",
+    "context": "This is the label below the add comment button explaining to a user what it does."
+  },
+  "followButton": {
+    "message": "Vigilar",
+    "context": "A button allows a user to follow record updates."
+  },
+  "name": {
+    "message": "Nombre",
+    "context": "This label is displayed under the person or animal name."
+  },
+  "status": {
+    "message": "Estado",
+    "context": "This label is displayed below the person or animal missing / found status."
+  },
+  "lastUpdated": {
+    "message": "Última actualización",
+    "context": "This label is displayed under the date / time of when a record was last updated."
+  },
+  "gender": {
+    "message": "Género",
+    "context": "This is a label below the displayed gender of a person or animal."
+  },
+  "lastKnownLocation": {
+    "message": "Última ubicación conocida",
+    "context": "This is a label displayed below a text box showing a person or animal last known location."
+  },
+  "newReport": {
+    "message": "Nuevo reporte",
+    "context": "This is the window title when a new person or animal is being reported."
+  },
+  "reportChoicePA": {
+    "message": "Desea crear un registro nuevo acerca de una persona o mascota?",
+    "context": "This is the text option displayed for a user to choose and fill out either a person or animal report."
+  },
+  "person": {
+    "message": "Persona",
+    "context": "This is the text label on a button a user presses to choose a person report."
+  },
+  "animal": {
+    "message": "Mascota",
+    "context": "This is the text label on a button a user presses to choose an animal report."
+  },
+  "reportChoiceStatusP": {
+    "message": "Por favor indicar el estado de la persona que está denunciando.",
+    "context": "This is the text option displayed for a user to choose the status of the person they are reporting."
+  },  
+  "explainMissingP": {
+    "message": "Persona encontrada",
+    "context": "The label next to the status selection button for missing."
+  },
+  "explainFoundP": {
+    "message": "La persona ha sido declarada en estado de salud desconocido",
+    "context": "The label next to the status selection button for found."
+  },
+  "explainAliveP": {
+    "message": "La persona ha sido encontrado y está bien",
+    "context": "The label next to the status selection button for alive & well."
+  },
+  "explainInjuredP": {
+    "message": "La persona ha sido encontrada y esta lesionada",
+    "context": "The label next to the status selection button for injured."
+  },
+  "explainDeceasedP": {
+    "message": "La persona ha sido encontrada y ha fallecido",
+    "context": "The label next to the status selection button for deceased."
+  },
+  "explainUnknownP": {
+    "message": "Se busca información sobre la persona",
+    "context": "The label next to the status selection button for unknown."
+  },  
+  "location": {
+    "message": "Ubicación",
+    "context": "Text label for Location."
+  },
+  "photo": {
+    "message": "Foto",
+    "context": "Text label for Photo."
+  },
+  "reportChoiceStatusA": {
+    "message": "Por favor indicar el estado del animal que está denunciando.",
+    "context": "This is the text option displayed for a user to choose the status of the animal they are reporting."
+  },
+  "explainMissingA": {
+    "message": "se cree que el animal está desaparecido",
+    "context": "The label next to the status selection button for missing."
+  },
+  "explainFoundA": {
+    "message": "el animal se ha encontrado con salud desconocida",
+    "context": "The label next to the status selection button for found."
+  },
+  "explainAliveA": {
+    "message": "el animal se ha encontrado y está bien",
+    "context": "The label next to the status selection button for alive & well."
+  },
+  "explainInjuredA": {
+    "message": "el animal se ha encontrado y se lesionó",
+    "context": "The label next to the status selection button for injured."
+  },
+  "explainDeceasedA": {
+    "message": "el animal se ha encontrado y ha fallecido",
+    "context": "The label next to the status selection button for deceased."
+  },
+  "explainUnknownA": {
+    "message": "se busca información sobre el animal",
+    "context": "The label next to the status selection button for unknown."
+  },
+  "reportChoiceSexP": {
+    "message": "Por favor indicar el género de la persona que está denunciando.",
+    "context": "This is the text option displayed for a user to choose the gender of the person they are reporting."
+  },
+  "reportChoiceSexA": {
+    "message": "Por favor indicar el género de la persona que está denunciando.",
+    "context": "This is the text option displayed for a user to choose the gender of the person they are reporting."
+  },
+  "explainSexMaleP": {
+    "message": "El género de la persona es masculino",
+    "context": "The label next to the person sex selection button for male."
+  },
+  "explainSexFemaleP": {
+    "message": "El género de la persona es femenino",
+    "context": "The label next to the person sex selection button for female."
+  },
+  "explainSexOtherP": {
+    "message": "El género de la persona es otro",
+    "context": "The label next to the person sex selection button for other."
+  },
+  "explainSexUnknownP": {
+    "message": "Se desconoce el género de la persona",
+    "context": "The label next to the person sex selection button for unknown."
+  },
+  "explainSexOtherA": {
+    "message": "el género del animal es otro",
+    "context": "The label next to the animal sex selection button for other."
+  },
+  "explainSexUnknownA": {
+    "message": "Se desconoce el género del animal",
+    "context": "The label next to the animal sex selection button for unknown."
+  },
+  "reportChoiceAgeP": {
+    "message": "Por favor seleccione la edad aproximada de la persona que está denunciando",
+    "context": "This is the text option displayed for a user to choose the age of the person they are reporting."
+  },
+  "reportChoiceAgeA": {
+    "message": "Por favor seleccione la edad aproximada del animal que está denunciando",
+    "context": "This is the text option displayed for a user to choose the age of the animal they are reporting."
+  },
+  "reportChoiceAgeUnknown": {
+    "message": "Si no está seguro de la edad, por favor seleccione desconocida.",
+    "context": "The label next to the status selection button for unknown."
+  },
+  "explainAgeUnknownP": {
+    "message": "la edad de la persona es desconocida",
+    "context": "The label next to the person age selection button for unknown."
+  },
+  "explainAgeUnknownA": {
+    "message": "la edad del animal es desconocida",
+    "context": "The label next to the animal age selection button for unknown."
+  },
+  "continue": {
+    "message": "continuar",
+    "context": "The label of a button to continue to the next step."
+  },
+  "reportChoiceNameP": {
+    "message": "Por favor, introduzca el nombre de la persona que está denunciando.",
+    "context": "This is the section title displayed for a user to enter the name of the person they are reporting."
+  },
+  "reportChoiceNameA": {
+    "message": "Por favor, introduzca el nombre y / o un número de identificación del animal que está denunciando.",
+    "context": "This is the section title displayed for a user to enter the name and/or the buddy identification number of the animal they are reporting."
+  },
+  "explainNameP": {
+    "message": "Nombre de la persona",
+    "context": "The text label for name entry of a person."
+  },
+  "explainNameA": {
+    "message": "Nombre del animal",
+    "context": "The text label for name entry of an animal."
+  },
+  "explainBuddyA": {
+    "message": " número de identificación del animal",
+    "context": "The text label for buddty identification number entry of an animal."
+  },
+  "reportChoiceNameUnknownP": {
+    "message": "Si no está seguro del nombre, por favor seleccione desconocido.",
+    "context": "This is the section title displayed for the use to choose name unknown."
+  },
+  "explainNameUnknownP": {
+    "message": "Nombre de la persona es desconocido",
+    "context": "The label next to the person name selection button for unknown."
+  },
+  "explainNameUnknownA": {
+    "message": "el nombre y el número de identificación del animal son desconocidos",
+    "context": "The label next to the animal name selection button for unknown."
+  },
+  "cameraError": {
+    "message": "Ninguna cámara detectada por el navegador web. Puede utilizar su aplicación de su cámara.",
+    "context": "This toast notification is displayed when there is an error detecting the camera on the user device."
+  },
+  "browserLimitation": {
+    "message": "Su navegador no permite esta característica.",
+    "context": "This toast notification is displayed when a user attempts to use a feature that their web browser does not support."
+  },
+  "photoOnly": {
+    "message": "Solo se permiten archivos de imágenes tipo JPEG, PNG, y TIFF.",
+    "context": "This toast notification is displayed when a user attempts to use an unsupported image file format in search by photo or report."
+  },
+  "reportChoicePhotoP": {
+    "message": "Puede añadir opcionalmente una foto para mejorar la identificación de esta persona.",
+    "context": "Section titled telling user that they can add a photo for identification purposes."
+  },
+  "reportChoicePhotoA": {
+    "message": "Puede añadir opcionalmente una foto para mejorar la identificación de este animal.",
+    "context": "Section titled telling user that they can add a photo for identification purposes."
+  },
+  "reportChoicePhotoCapture": {
+    "message": "Capturar",
+    "context": "This is the button label used to capture a photograph using the device camera."
+  },
+  "reportChoicePhotoSelectFile": {
+    "message": "Seleccione Archivo",
+    "context": "This is the button label used to select an image file from local device storage."
+  },
+  "reportChoicePhotoTake": {
+    "message": "Tomar una foto",
+    "context": "This is the button label used to open the device camera before capturing an image."
+  },
+  "reportChoicePhotoDelete": {
+    "message": "Borrar",
+    "context": "This is the button label used to delete an image the user has already submitted."
+  },
+  "reportChoicePhotoHelp": {
+    "message": "Recortar o rotar la imagen si es necesario.",
+    "context": "This is the help text displayed below image manipulation controls informing the user how to alter the already submitted image."
+  },
+  "reportChoiceMapP": {
+    "message": "Opcionalmente, puede especificar un punto del mapa para ayudar a otros en la localización de esta persona.",
+    "context": "This is the section header above the map used to specify a last known location."
+  },
+  "reportChoiceMapA": {
+    "message": "Opcionalmente, puede especificar un punto del mapa para ayudar a otros en la localización de este animal.",
+    "context": "This is the section header above the map used to specify a last known location."
+  },
+  "reportChoiceMapHelp": {
+    "message": "Arrastre el marcador del mapa a la última ubicación conocida.",
+    "context": "This is the help text below the last know location map informing a user what to do."
+  },
+  "information": {
+    "message": "Información",
+    "context": "This a label for a tab in the reporting wizard where a user enters free text about additional Information."
+  },
+  "submit": {
+    "message": "Enviar",
+    "context": "This a label for a tab in the reporting wizard where a user finalizes and submits the report."
+  },
+  "submitAnon": {
+    "message": "Enviar el informe en forma anónima",
+    "context": "This a label for a tab in the reporting wizard where a user finalizes and submits the report anonymously."
+  },
+  "reportChoiceInformationHelpP": {
+    "message": "De manera opcional puede proporcionar cualquier información adicional que considere pueda ayudar a otros a identificar o localizar a esta persona.",
+    "context": "This is help text informing the user that the information they enter will assist in locating or identifying the person."
+  },
+  "reportChoiceInformationHelpA": {
+    "message": "Puede proporcionar opcionalmente cualquier información adicional que usted considere que puede ayudar a otros a identificar o localizar a este animal.",
+    "context": "This is help text informing the user that the information they enter will assist in locating or identifying the animal."
+  },
+  "reportBeingSubmittedToast": {
+    "message": "El informe ha sido enviado ...",
+    "context": "This toast notification will be displayed while the report is being sent in."
+  },
+  "reportSubmit": {
+    "message": "Enviar informe",
+    "context": "This is the section title on the last page of the reporting wizard. The user will choose how to submit the report."
+  },
+  "explainSignInP": {
+    "message": "Si desea que se le notifique de información adicional acerca de esta persona, por favor cree una cuenta para registrarse en el sistema.",
+    "context": "If the user is not signed in, we will prompt them to sign in so that they can recieve updates to their reported record."
+  },
+  "explainSignInA": {
+    "message": "Si desea que se le notifique cuando información adicional esté disponible sobre este animal, inicie sesión antes de enviar el informe.",
+    "context": "If the user is not signed in, we will prompt them to sign in so that they can recieve updates to their reported record."
+  },
+  "explainSubmitP": {
+    "message": "Si desea que se le notifique cuando información adicional esté disponible sobre esta persona, opte por presentar el informe ahora.",
+    "context": "If the user is already signed in, we will ask them to submit the record and subscribe to updates."
+  },
+  "explainSubmitA": {
+    "message": "Si desea que se le notifique cuando información adicional esté disponible sobre este animal, opte por presentar el informe ahora.",
+    "context": "If the user is already signed in, we will ask them to submit the record and subscribe to updates."
+  },
+  "explainAnonP": {
+    "message": "Puede enviar el informe de forma anónima, no será notificado si hay información actualizada acerca de esta persona.",
+    "context": "The user is prompted that they may choose to submit their report anonymoysly and not recieve any updates afterwards."
+  },
+  "explainAnonA": {
+    "message": "Puede enviar el informe de forma anónima, no será notificado si hay información actualizada acerca de este animal.",
+    "context": "The user is prompted that they may choose to submit their report anonymoysly and not recieve any updates afterwards."
+  },
+  "explainAnon2": {
+    "message": "Este registro caduca en 90 dias. Use el botón “Informar Abuso” bajo la sección de MAS DETALLES para modificar la fecha de caducidad.",
+    "context": "The user is prompted that they may choose to submit their report anonymoysly and not recieve any updates afterwards."
+  },
+  "reportComplete": {
+    "message": "Informe completo y enviado, Gracias.",
+    "context": "This is the section title on the final page of the reporting wizard. The report has been completed."
+  },
+  "explainCopy1": {
+    "message": "Esta es la URL de su informe. Puede regresar a esta dirección para ver actualizaciones o comentarios adicionales acerca de este registro.",
+    "context": "We inform the user of the URL that corresponds to the report they just completed so that they may bookkmark or share it for later."
+  },
+  "explainCopy2": {
+    "message": "Copie esta URL al portapapeles para compartirla o marcarla.",
+    "context": "This is the text below the copy to clipboard button informing the user what the button does."
+  },
+  "buddyIdentificationNumber": {
+    "message": "Número de Identificación de mascotas",
+    "context": "This is the label to the Buddy Identification Number field which is displayed for animals."
+  },
+  "notifyRecordFollow": {
+    "message": "Ahora estás siguiendo este registro y recibirá actualizaciones a medida que cambia o se añade un comentario",
+    "context": "This notification will appear after the user unfollows a record via the full record view."
+  },  
+  "notifyRecordUnfollow": {
+    "message": "Ya no está siguiendo este informe",
+    "context": "This notification will appear after the user unfollows a record via the full record view."
+  },
+  "followStatusTrue": {
+    "message": "Siguiendo el informe",
+    "context": "This label is displayed next to a toggle switch displaying that the user is folliwng the currently viewed record."
+  },
+  "followStatusFalse": {
+    "message": "No seguir",
+    "context": "This label is displayed next to a toggle switch displaying that the user is not folliwng the currently viewed record."
+  },
+  "followButtonExplain": {
+    "message": "Recibir una notificación cuando se haga un cambio en este informe o se añada un comentario",
+    "context": "This label is displayed below the follow user toggle button explaining what the button does."
+  },
+  "followButtonAnon": {
+    "message": "Para seguir un informe y recibir notificaciones de actualizacion debe crear una cuenta",
+    "context": "The follow record button is disabled when a user is not signed in, aka anonymous. We inform them that to follow a record they must first sign in."
+  },
+  "longerComment": {
+    "message": "Por favor, introduzca un comentario más largo",
+    "context": "The user is notified to enter a longer comment if it is too short"
+  },
+  "commentBeingSubmittedToast": {
+    "message": "Enviando comentario...",
+    "context": "This toast notification will be displayed while the new comment is being sent in."
+  },
+  "moduleInvalid": {
+    "message": "Este módulo no existe.",
+    "context": "If the user attempts to access a non-existant portion of the site (very unlikely) this toast notification will appear."
+  },
+  "moduleAccess": {
+    "message": "Usted no tiene permiso para acceder a este módulo.",
+    "context": "If the user attempts to access a portion of the site they do not have permission for, this toast notification will appear."
+  },
+  "copyTrue": {
+    "message": "URL copiada en el portapapeles.",
+    "context": "After the user clicks on the copy to clipboard button, if successful, this toast notification will appear."
+  },
+  "copyFalse": {
+    "message": "No se pudo copiar la URL en el portapapeles.",
+    "context": "After the user clicks on the copy to clipboard button, if unsuccessful, this toast notification will appear."
+  },
+  "userConfirmActive": {
+    "message": "Su dirección de correo electrónico ya está confirmada y su cuenta de usuario activada.",
+    "context": "When the user visits a confirmation link emailed to them, this toast notification will appear informing the user that their account is now active and email address verified."
+  },
+  "userConfirmInvalid": {
+    "message": "Este enlace de confirmación no es válido.",
+    "context": "When the user vists an invalid email address confirmation link or an invalid password reset confirmation link, this toast notification will appear."
+  },
+  "userPasswordTwo": {
+    "message": "Una nueva contraseña ha sido enviada por correo electrónico.",
+    "context": "When the user visits a valid password reset confirmation link, this toast notification will appear to notify the user a new password has been generated and emailed to them."
+  },
+  "eurl1": {
+    "message": "Compartir este evento",
+    "context": "This section text is displayed on the paper action dialog when a user clicks the share event button."
+  },
+  "eurl2": {
+    "message": "Copiar al portapapeles",
+    "context": "This text appears under the button to share an event via email."
+  },
+  "eurl3": {
+    "message": "Envie Correo Electrónico",
+    "context": "This text appears under the button to share an event via clipboard."
+  },
+  "eurl4": {
+    "message": "Compartir",
+    "context": "This button text label appears on the button for a user to share an event or record."
+  },
+  "eurl5": {
+    "message": "Comparta este registro",
+    "context": "This section text is displayed on the paper action dialog when a user clicks the share record button."
+  },
+  "page404": {
+    "message": "404: Esta página no existe.",
+    "context": "This toast is displayed when a user attempts to visit a non-existant page."
+  },
+  "ombNoticeTitle": {
+    "message": "Aviso OMB",
+    "context": "This is the page title for the OMB Notice."
+  },
+  "abuseReportAbuse": {
+    "message": "Reporte Abuso",
+    "context": "This is used as a sectional header and the label of the report abuse button."
+  },
+  "abuseWhatReport": {
+    "message": "Que quiere reportar?",
+    "context": "This is the query presented to a user when asked to be more specific about the type of abuse report the user is filing."
+  },
+  "abuseReportSpam": {
+    "message": "Mensaje identificado como abuso",
+    "context": "This is the button label to select a report abuse claim of type spam."
+  },
+  "abuseReportSex": {
+    "message": "Contenido de naturaleza sexual",
+    "context": "This is the button label to select a report abuse claim of type sexually explicit."
+  },
+  "abuseReportHate": {
+    "message": "Palabras que denotan odio a otras personas",
+    "context": "This is the button label to select a report abuse claim of type hate speech."
+  },
+  "abuseReportViolence": {
+    "message": "Violencia",
+    "context": "This is the button label to select a report abuse claim of type violence"
+  },
+  "abuseReportElse": {
+    "message": "Un tema diferente",
+    "context": "This button label is to select a report abuse claim of type something else."
+  },
+  "abuseThanks": {
+    "message": "Gracias. Hemos recibido su informe de abuso. Nuestro personal revisará el contenido y borrara cualquiere contenido inapropiado.",
+    "context": ""
+  },
+  "deleteRecord": {
+    "message": "Borrar este registro",
+    "context": "This is used as a button label and dialog header allowing a user to delete a record from the system."
+  },
+  "deleteRecordConfirm": {
+    "message": "Está seguro que quiere borrar este registro? Una vez borrado no existe forma de recuperar su contenido.",
+    "context": "This is the question prompting a user when they choose to delete a record. We confirm they are certain with their decision."
+  },
+  "deleteRecordCancel": {
+    "message": "Cancelar",
+    "context": "Button label to cancel the action of deleting a record."
+  },
+  "deleteRecordDelete": {
+    "message": "Borrar",
+    "context": "Button label to confirm the deletion of a record."
+  },
+  "deleteRecordDone": {
+    "message": "Registro Borrado",
+    "context": "A toast notification displayed to inform the user the deletion of a record action has been completed."
+  },
+  "seconds": {
+    "message": "segundos",
+    "context": "This word means seconds of time."
+  },
+  "record": {
+    "message": "registro",
+    "context": "When a search is performed this word is prefixed with the number of results, ie. 1 record -- special case when only 1 result"
+  },
+  "notifyLogout": {
+    "message": "Desconectado.",
+    "context": "This notification will appear after the user successfully logs out."
+  },
+  "uploadingPhoto": {
+    "message": "Subiendo la foto...",
+    "context": "This message is displayed after a user selects an image file to search by photo as the file is being uploaded."
+  },
+  "searchByPhoto": {
+    "message": "Búsqueda con foto",
+    "context": "When a user elects to search by photo from the search query bar, a dialog box appears with this as the title."
+  },
+  "dragAndDrop": {
+    "message": "Arrastrar y soltar",
+    "context": "A user may drag and drop a file to search by image. This message shows the user where to drag and drop the file ~ the target."
+  },
+  "emailRecordRevisionSubject": {
+    "message": "Uno de los registros que Ud. está siguiendo ha sido actualizado",
+    "context": "We email users following a record when a revision is made or a comment is added, this is the subject of that email."
+  },
+  "emailRecordRevisionLine1": {
+    "message": "Uno de los registros que Ud. está siguiendo ha sido actualizado o se le ha agregado un comentario.",
+    "context": "We email users following a record when a revision is made or a comment is added, this is the first line of that email."
+  },
+  "emailRecordRevisionLine2": {
+    "message": "Puede ver este registro en esta ubicación:",
+    "context": "We email users following a record when a revision is made or a comment is added, this line prefixes the direct record url."
+  },
+  "emailRecordRevisionLine3": {
+    "message": "Si quiere dejar de recibir alertas por correo electrónico vaya al enlace en la parte superior y quite la marca del botón de Siguiendo.",
+    "context": "We email users following a record when a revision is made or a comment is added, at the end we inform the user of how to unsubscribe to these emails."
+  },
+  "emailNewUserSubject": {
+    "message": "Confirme su correo electrónico",
+    "context": "We email new users after they register, this is the subject line of said email."
+  },
+  "emailNewUserLine1": {
+    "message": "Gracias por registrarse.",
+    "context": "We email new users after they register, this is the first line of said email thanking them for registering."
+  },
+  "emailNewUserLine2": {
+    "message": "Debe ir al enlace debajo de esta linea para completar el proceso de registro:",
+    "context": "We email new users after they register, this is the second line of said email providing them a link complete the registration process."
+  },
+  "emailNewUserLine3": {
+    "message": "Si no va al enlace su cuenta sera borrada despues de 30 dias.",
+    "context": "We email new users after they register, this is the last line of said email warning the user about account deletion for failure to activate their account."
+  },
+  "emailForgot1Subject": {
+    "message": "Solicitud de nueva contraseña",
+    "context": "We email a user when they initiate the forgot password sequence, this is the subject of that email."
+  },
+  "emailForgot1Line1": {
+    "message": "Hemos recibido una solicitud de nueva contraseña para su cuenta.",
+    "context": "We email a user when they initiate the forgot password sequence, this is the first line of that email."
+  },
+  "emailForgot1Line2": {
+    "message": "Si Ud. no solicitó una nueva contraseña simplemente ignore este mensaje. Su contraseña no sera cambiada",
+    "context": "We email a user when they initiate the forgot password sequence, we inform the user it is safe to ignore this request if they did not initiate it."
+  },
+  "emailForgot1Line3": {
+    "message": "Si Ud. solicito una nueva contraseña, vaya al siguiente enlace:",
+    "context": "We email a user when they initiate the forgot password sequence, this line prefixes a url the user must click on to continue in the forgot password sequence."
+  },
+  "emailForgot1Line4": {
+    "message": "Una vez Ud. vaya al enlace, se creará una nueva contraseña y recibirá otro mensaje.",
+    "context": "We email a user when they initiate the forgot password sequence, final line of this email informing a new password will be generated."
+  },
+  "emailForgot2Subject": {
+    "message": "Nueva Contraseña",
+    "context": "This is the second email in the forgot password sequence, and this is the subject of that email."
+  },
+  "emailForgot2Line1": {
+    "message": "La nueva contraseña es:",
+    "context": "This is the second email in the forgot password sequence, this line prefixes the new password we generated for the user."
+  },
+  "emailForgot2Line2": {
+    "message": "Tiene la opcion de cambiar la contraseña despues de ingresar a su cuenta:",
+    "context": "This is the second email in the forgot password sequence, lastly, we inform the user that they may change their password after logging in."
+  },
+  "welcomeTo": {
+    "message": "Bienvenido a",
+    "context": "The first time a user comes to PL, we welcome them like: Welcome to PEOPLE LOCATOR. However PEOPLE LOCATOR is not translated in this welcome message."
+  },
+  "chooseLanguage": {
+    "message": "Escoja un Idioma",
+    "context": "We prompt the user to select a language at first visit."
+  },
+  "additionalInformation": {
+    "message": "Información adicional",
+    "context": "This is a label displayed several places titled Additional Information."
+  },
+  "inEvent": {
+    "message": "en evento",
+    "context": "This substring 'in event' will appear atop search results under the search bar after '27 record' but before the event name (0.123 seconds)"
+  },
+  "viewOriginalRecord": {
+    "message": "Ver el registro original",
+    "context": "This link appears on record with a forieign origin. Tapping on the link will open the record from its original location."
+  },
+  "ncmec1": {
+    "message": "Sugerimos que envie este informe adicionalmente al Centro Nacional de Niños Desaparecidos y Explotados. (NCMEC)",
+    "context": "In the reporting wizard, this message will be displayed when a report is completed for a child."
+  },
+  "ncmec2": {
+    "message": "El enlace de NCMEC es este.",
+    "context": "In the reporting wizard, this message will be displayed when a report is completed for a child. This is the link text."
+  },
+  "pageResourcesNcmec": {
+    "message": "Centro Nacional de Niños Desaparecidos y Explotados",
+    "context": "Resource Page link to NCMEC."
+  },
+  "eventListMeta": {
+    "message": "Encuentre e informe acerca de personas y mascotas desaparecidad en",
+    "context":  "Find and report missing people and animals in any disaster using this website."
+  },
+  "eventListMeta3": {
+    "message": "utilizando este página de la Biblioteca Nacional de Medicina.",
+    "context": "Find missing people using this National Library of Medicine website."
+  },
+  "searchTitle": {
+    "message": "Encuentre personas y mascotas desaparecidas en",
+    "context": "Find missing people and animals in the Mexico Earthquake."
+  },
+  "searchMeta": {
+    "message": "Busque personas y mascotas desaparecidas en",
+    "context": "Search for missing people and animals in the Mexico Earthquake."
+  },
+  "searchMeta2": {
+    "message": "por nombre o con foto",
+    "context": "Search for missing people by name or by photo"
+  },
+  "searchMeta3": {
+    "message": "utilizando la pagina de la Biblioteca Nacional de Medicina",
+    "context": "Search for missing people using the National Library of Medicine's NLM PEOPLE LOCATOR."
+  },
+  "reportTitle": {
+    "message": "Informe acerca de personas y mascotas en",
+    "context": "Report people and animals in the Mexico Earthquake."
+  },
+  "reportMeta": {
+    "message": "Informe acerca del estado de personas y mascotas en",
+    "context": "Report the status of people and animals in the Mexico City Earthquake."
+  },
+  "recordTitle": {
+    "message": "Informe acerca de persona",
+    "context": "Reported person Juan Valdez in the Mexico City Earthquake."
+  },
+  "recordTitle2": {
+    "message": "en",
+    "context": "Reported person Juan Valdez in the Mexico City Earthquake."
+  },
+  "recordMeta":  {
+    "message": "el informe fue creado",
+    "content": "Juan Valdez has been reported missing on our website."
+  },
+  "aboutMeta": {
+    "message": "Esta página fue creada por la Biblioteca Nacional de Medicina, que hace parte de los Institutos Nacionales de salud",
+    "content": "The National Library of Medicine, part of the National Institutes of Health, created this website for the public."
+  },
+  "aboutMeta2": {
+    "message": "para buscar e informar acerca de personas y mascotas desaparecidas durante desastres.",
+    "content": "We created this website for finding and reporting missing people and animals during disasters."
+  },
+  "resourceMeta": {
+    "message": "Recursos adicionales de la Biblioteca Nacional de Medicina para",
+    "content": "Additional National Library of Medicine resources for finding people."
+  },
+  "followUsMeta": {
+    "message": "Reciba alertas acerca de desastres en medios sociales a través de la Biblioteca Nacional de Medicina",
+    "content": "Receive disaster alerts on social media from the National Library of Medicine's NLM PEOPLE LOCATOR."
+  },
+  "privacyMeta": {
+    "message": "Políticas de Privacidad que rigen el uso de los recursos de la Biblioteca Nacional de Medicina.",
+    "content": "Privacy policies governing the use of the National Library of Medicine's NLM PEOPLE LOCATOR."
+  },
+  "goHomePage": {
+    "message": "Regresar a la página de inicio",
+    "context": "Displayed tooltip when you hover your mouse over the home button."
+  },
+  "searchUsingPhoto": {
+    "message": "Búsqueda utilizando una foto",
+    "context": "Displayed tooltip when you hover your mouse over the visual search button."
+  },
+  "searchUsingName": {
+    "message": "Búsqueda utilizando el nombre",
+    "context": "Displayed tooltip when you hover your mouse over the search magnifying glass."
+  },
+  "reportPersonAnimal": {
+    "message": "Informe acerca de una persona o mascota",
+    "context": "Tooltip for report button."
+  },
+  "enterName": {
+    "message": "Digite el nombre",
+    "context": "Title for a search box."
+  },
+  "selectEvent": {
+    "message": "Seleccione un evento",
+    "context": "Title for a menu of PL events."
+  },
+  "answerYes": {
+    "message": "Sí",
+    "context": "The affirmative, yes, as in an answer to a question."
+  },
+  "answerNo": {
+    "message": "No",
+    "context": "The negative, no, as in an answer to a question."
+  },
+  "rDeviceShort": {
+    "message": "Registre un dispositivo adicional",
+    "context": "This text will appear as a header on the dialog box that appears when a user is prompted to register a new device for push notifications. See below."
+  },
+  "rDeviceLong": {
+    "message": "Would you like to register this device to recieve push notifications?",
+    "context": "This dialog will appear when a user logs into from a 2nd, 3rd, 4th... device as a prompt to also recieve push notifications on this additional device."
+  },
+  "appUpdate1": {
+    "message": "Hay disponible una nueva versión de esta aplicación.",
+    "context": "When a new version of PL is updated online, a returning user will be prompted to update the version he/she is using."
+  },
+  "appUpdate2": {
+    "message": "ACTUALIZACION",
+    "context": "This label appears on the button to update the version of PL to the newest available. See above."
+  },
+  "noTranslationAvailable": {
+    "message": "Esta descripción del evento no se ha traducido a su idioma, por lo que se muestra en inglés.",
+    "context": "This label appears on the button to update the version of PL to the newest available. See above."
+  },
+  "helpFindText2": {
+    "message": "By default, searches will always return up to 50 results. However, if you would like to have it return more results, you can append or prepend the keyword perPage:100 to a search query which will effectively set a different limit on the number of results that are returned. The number 100 can be changed to any integer value. You may also modify the URL to achieve this filter effect. Here are some examples:",
+    "context": "This paragraph describes advanced search filters."
+  }
+}

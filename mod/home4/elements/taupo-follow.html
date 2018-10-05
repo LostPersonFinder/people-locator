@@ -1,0 +1,26 @@
+<!-- following loader -->
+<dom-module id="following-loader">
+  <template>
+    <div id="followLoading">
+      <i18n-msg msgid="pad3loading"></i18n-msg><br>
+      <img class="throbber" src="/assets/images/other/throbber.svg" alt="progress throbber">
+    </div>
+  </template>
+  <script>
+  (function () {
+    Polymer({
+      is: 'following-loader'
+    });
+  })();    
+  </script>
+  <style>
+    #followLoading {
+      text-align: center;
+      margin-top: 10em;
+    }
+    #followLoading img {
+      height: 3em;
+      margin-top: 2em;
+    }
+  </style>
+</dom-module>

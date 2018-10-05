@@ -1,0 +1,30 @@
+
+# Starts, stops, and restarts PL PFIF import/export operations. These are repeated at sub-minute intervals and
+# so cron is not appropriate.
+#
+# chkconfig: 35 93 08
+# description: Starts and stops pl pfif imports/exports.
+
+case $1 in
+    start)
+        echo "Starting PL PFIF imports/exports."
+
+        # Start PFIF imports/exports.
+        su g -c "/opt/pl/mod/pfif/import.sh &"
+        su g -c "/opt/pl/mod/pfif/export.sh &"
+        ;;
+    stop)
+        echo "Stopping PL PFIF imports/exports."
+        pkill -f import.sh
+        pkill -f export.sh
+        ;;
+    restart)
+        $0 stop
+        sleep 1
+        $0 start
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart}" >&2
+        exit 1
+        ;;
+esac

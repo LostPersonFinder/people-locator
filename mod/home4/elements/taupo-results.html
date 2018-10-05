@@ -1,0 +1,324 @@
+<!-- taupo results -->
+<dom-module id="taupo-results">
+  <template>
+    <style>
+      .record-tile {
+        display: inline-block;
+        float: left;
+        vertical-align: top;
+        width: calc(100% / 6);
+        height: calc(100% / 3);
+        @apply(--paper-font-title);
+        @apply(--layout-vertical);
+        @apply(--layout-center-center);
+      }
+    </style>
+    <div id="content"></div>
+  </template>
+</dom-module>
+<script>
+(function () {
+  window.sFetching = false; // true if there's an outstanding search fetch
+  Polymer({
+    is: 'taupo-results',
+    behaviors: [ Polymer.NeonSharedElementAnimatableBehavior ],
+    properties: {
+      animationConfig: {
+        type: Object,
+        value: function() {
+          return {
+            'entry': [{
+              name: 'cascaded-animation',
+              animation: 'scale-up-animation',
+              timing: {
+                duration: 500
+              }
+            }],
+            'exit': [{
+              name: 'cascaded-animation',
+              animation: 'scale-down-animation',
+              timing: {
+                duration: 250
+              }
+            }]
+          }
+        }
+      },
+      results: {
+        type: String,
+        value: ''
+      },
+      total: {
+        type: Number,
+        value: 0
+      },
+      error: {
+        type: Number,
+        value: 0
+      }
+    },
+    ready: function() {
+      clog('%cresults::ready', 9, 'color: grey');
+    },
+    attached: function() {
+      clog('%cresults::attached', 9, 'color: grey');
+    },
+    // pull search results from web service
+    sFetchResults: function() {
+      clog('%cresults::sFetchResults ENTER', 9, 'color: grey');
+      var startTime;
+      var endTime;
+      window.queryCount++;
+      // update route unless direct term
+      if(window.directTerm == '') {
+        clog('%cresults::sFetchResults>directTerm:" searchTerm:'+window.searchTerm, 9, 'color: grey');
+        window.router.action = window.searchTerm;
+        if(typeof window.dontPushFromGo == 'undefined' && typeof window.dontPushFromReport == 'undefined' && typeof window.sbp64 == 'undefined') {
+          clog('%cresults::sFetchResults>directTerm>pushRoute', 9, 'color: grey');
+          if(window.queryCount > 2) { replaceRoute(); }
+          else { pushRoute(); }
+        } else {
+          clog('%cresults::sFetchResults>directTerm>dontPushFromGo/Report', 9, 'color: grey');
+          delete window.dontPushFromGo;
+          delete window.dontPushFromReport;
+        }
+      // direct term via forward/back or direct link
+      } else {
+        clog('%cresults::sFetchResults directTerm:'+window.directTerm, 9, 'color: grey');
+        window.searchTerm = window.directTerm;
+        // special case empty term
+        if(window.directTerm == 'DEFAULT') {
+          window.directTerm = '';
+          window.searchTerm = '';
+          delete window.dontPushFromGo;
+        }
+        document.querySelector('#query').value = window.directTerm;
+      }
+      clog('%cresults::sFetchResults searchTerm:'+window.searchTerm, 9, 'color: grey');
+      // skip outstanding request 
+      if(window.sFetching) {return; }
+      window.sFetching = true;
+      // set params
+      window.rs = new Object();
+      window.rs.token = window.token;
+      window.rs.call  = 'search';
+      window.rs.short = window.router.short;
+      // defaults for advanced filters
+      window.rs.perPage   = 50;
+      window.rs.pageStart = 0;
+      // check for advanced filters
+      var qsplit = window.searchTerm.split(' ');
+      qsplit.forEach(function(element) {
+        if(element.startsWith('perPage:')) {
+          var ppsplit = element.split(':');
+          window.rs.perPage = parseInt(ppsplit[1], 10);
+          var newQuery = window.searchTerm.replace(element, '');
+          window.searchTerm = newQuery.trim();
+          clog('%cresults::sFetchResults perPage:'+window.rs.perPage+' q('+window.searchTerm+')', 9, 'color: yellow');
+        }
+        if(element.startsWith('pageStart:')) {
+          var pssplit = element.split(':');
+          window.rs.pageStart = (parseInt(pssplit[1], 10) - 1);
+          var newQuery2 = window.searchTerm.replace(element, '');
+          window.searchTerm = newQuery2.trim();
+          clog('%cresults::sFetchResults pageStart:'+window.rs.pageStart+' q('+window.searchTerm+')', 9, 'color: yellow');
+        }
+      });
+      // params
+      window.rs.query = window.searchTerm;
+      window.rs.photo = '';
+      // search by photo
+      if(typeof window.sbp64 !== 'undefined') { window.rs.photo = window.sbp64; }
+      // set filters
+      window.rs.sexMale        = true;
+      window.rs.sexFemale      = true;
+      window.rs.sexOther       = true;
+      window.rs.sexUnknown     = true;
+      window.rs.ageChild       = true;
+      window.rs.ageAdult       = true;
+      window.rs.ageUnknown     = true;
+      window.rs.statusMissing  = true;
+      window.rs.statusAlive    = true;
+      window.rs.statusInjured  = true;
+      window.rs.statusDeceased = true;
+      window.rs.statusUnknown  = true;
+      window.rs.statusFound    = true;
+      window.rs.hasImage       = false;
+      window.rs.since          = '1970-01-01T01:23:45Z';
+      window.rs.personAnimal   = 2;
+      window.rs.sortBy         = '';
+      // xhr
+      var rsj = JSON.stringify(window.rs);
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', window.endpoint, true);
+      xhr.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
+      xhr.onload = function(e) {
+        endTime = performance.now()/1000;
+        this.elapsed = Math.round((endTime-startTime) * 1000) / 1000; // this is round trip XHR start to finish time
+        clog('%cresults::sFetchResults: response:'+e.target.status, 9, 'color: grey');
+        window.sFetching = false;
+        // sbp needs to hide dialog
+        if(typeof window.sbp64 !== 'undefined') { hidePad9(); }
+        // net error
+        if(e.target.status !== 200 && e.target.status !== 0) { netConnectionError(); return; }
+        var resp = JSON.parse(e.target.response);
+        this.error = resp.error;
+        this.results = resp.results;
+        // success
+        if(parseInt(this.error, 10) === 0) {
+          this.total = this.results.length;
+          if(typeof window.waitabit !== 'undefined' && window.waitabit == 'goQuery2') {
+            clog('%cresults::sFetchResults>goQuery2()', 9, 'color: grey');
+            goQuery2();
+          } else {
+            clog('%cresults::sFetchResults>_updateElements()', 9, 'color: grey');
+            this._updateElements();
+          }
+        // error
+        } else {
+          this.total = 0;
+          clog('%cresults::sFetchResults error:'+this.error, 9, 'color: grey');
+          toastRed('restError9999', window.toastDuration);
+        }
+      }.bind(this);
+      xhr.onerror = function(e) {
+        window.sFetching = false;
+        netConnectionError();
+      };
+      startTime = performance.now()/1000;
+      xhr.send(rsj);
+    },
+    // format search results for display
+    _updateElements: function() {
+      var z = getParameterByName('z');
+      var kl;
+      var ku;
+      var skip;
+      var skipped = 0;
+      this.plural = 's';
+      clog('%cresults::_updateElements', 9, 'color: grey');
+      var html = '';
+      var rtlClass = '';
+      if(window.rtl) { rtlClass = ' rtl'; }
+      var r = new Object(); // record
+      window.records = new Object(); // holds all records for view/review
+      if(this.total > 0) {
+        for(var key in this.results) {
+          // check if we hide this record
+          skip = false;
+          for(var ix = 0; ix < localStorage.length; ix++) {
+            kl = localStorage.key(ix).toString();
+            ku = this.results[key].uuid.toString();
+            if((kl == ku)&&(z !== 'q')) {
+              skip = true;
+              skipped++;
+            }
+          }
+          if(skip) { continue; }
+          // snag values
+          r.uuid    = this.results[key].uuid;
+          r.updated = this.results[key].updated;
+          r.name    = this.results[key].name;
+          r.stat    = this.results[key].stat;
+          r.age     = this.results[key].age;
+          r.sex     = this.results[key].sex;
+          r.animal  = this.results[key].animal;
+          window.records[r.uuid] = this.results[key];
+          // show unknown name in proper language
+          if(r.name == 'unk') { r.name = '<i18n-msg msgid="statusUnknown"></i18n-msg>'; }
+          // format time for display
+          r.updatedS = r.updated;
+          moment.locale(window.router.locale);
+          r.updated = moment(r.updated).format('LLLL'); // Sunday, June 25, 2017 5:11:47 PM
+          // format name
+          if(r.given  == null) { r.given  = ''; }
+          if(r.family == null) { r.family = ''; }
+          if(trim(r.given) == '' && trim(r.family) == '') { r.given = 'unknown'; }
+          // image
+          var sout = '';
+          if(this.results[key].image_url != null) { r.thumb = '/'+this.results[key].image_url; }
+          else { 
+            r.thumb = '/assets/images/other/noImage.png';
+            sout = 'style="object-fit:fill;height:auto"';
+          }
+          // sex
+          if(r.sex == 'mal')      { r.sex = '<i18n-msg msgid="sexMale"></i18n-msg>'; }
+          else if(r.sex == 'fml') { r.sex = '<i18n-msg msgid="sexFemale"></i18n-msg>'; }
+          else if(r.sex == 'cpx') { r.sex = '<i18n-msg msgid="sexOther"></i18n-msg>'; }
+          else                    { r.sex = '<i18n-msg msgid="statusUnknown"></i18n-msg>'; }
+          // status
+          if(r.stat == 'mis')      { r.stat = '<i18n-msg class="statusMissing" msgid="statusMissing"></i18n-msg>'; }
+          else if(r.stat == 'fnd') { r.stat = '<i18n-msg class="statusFound" msgid="statusFound"></i18n-msg>'; }
+          else if(r.stat == 'dec') { r.stat = '<i18n-msg class="statusDeceased" msgid="statusDeceased"></i18n-msg>'; }
+          else if(r.stat == 'inj') { r.stat = '<i18n-msg class="statusInjured" msgid="statusInjured"></i18n-msg>'; }
+          else if(r.stat == 'ali') { r.stat = '<i18n-msg class="statusAlive" msgid="statusAlive"></i18n-msg>'; }
+          else                     { r.stat = '<i18n-msg class="statusUnknown" msgid="statusUnknown"></i18n-msg>'; }
+          // age
+          if(r.age == -1) { r.age = '<i18n-msg msgid="statusUnknown"></i18n-msg>'; }
+          // animal
+          if(r.animal !== null) { r.showA = '&#128049; '; }
+          else                  { r.showA = ''; }
+          // tile
+          html +=
+          '<div class="record-tile-h">'+
+            '<div class="record-tile" onclick="loadRecord(\''+r.uuid+'\');">'+
+              '<div class="record-title">'+ r.showA + r.name + '</div>'+
+              '<div class="record-image-d"><img class="record-image" '+sout+' src="'+r.thumb+'" alt="photo of reported person or animal"></div>'+
+              '<div style="clear:both;"></div>'+
+              '<div class="basicInfo">'+
+                '<div class="eq">'+r.sex+'</div>'+
+                '<div class="eq dStatus">'+r.stat+'</div>'+
+                '<div class="eq dAge">'+r.age+'</div>'+
+              '</div>'+
+              '<div class="lastUpdated" data-foo=\'{"bar":"'+r.updatedS+'"}\'>'+r.updated+'</div>'+
+            '</div>'+
+          '</div>';
+        }
+      }
+      // calc skipped
+      this.total = this.total - skipped;
+      // calc plural
+      if(this.showTotalCount == 1) { this.plural = ''; }
+      // out -->
+      var showTotalCount = window.eventData[window.disaster].unexpired;
+      if(showTotalCount < this.total) { showTotalCount = this.total; } // PL-1805
+      // format top
+      var aout = '<div id="sTop" class="sTop'+rtlClass+'">'+this.total+' / '+showTotalCount+' <i18n-msg msgid="record'+this.plural+'"></i18n-msg> <i18n-msg msgid="inEvent"></i18n-msg><span class="bold"> '+getEventName(window.router.short)+'</span> <span id="sSeconds">('+this.elapsed+' <i18n-msg msgid="seconds"></i18n-msg>)</span></div>';
+      this.$.content.innerHTML = aout+html;
+      clog('%cresults::_updatedElements done!', 9, 'color: grey');
+      // sync nodes
+      this.async(function() {
+        var nodeList = Polymer.dom(this.root).querySelectorAll('.record-tile');
+        this.animationConfig['entry'][0].nodes = Array.prototype.slice.call(nodeList);
+        this.animationConfig['exit'][0].nodes = Array.prototype.slice.call(nodeList);
+        if(typeof window.fetchcallback !== 'undefined') {
+          clog('%cresults::_updateElements->callback: '+window.fetchcallback, 9, 'color: grey');
+          if(window.fetchcallback == 'this.domHost.show2')      { this.domHost.show2(); }
+          else if(window.fetchcallback == 'this.domHost.show3') { this.domHost.show3(); }
+          else { window[window.fetchcallback](); }
+        }
+        delete window.fetchcallback;
+      });
+      fixFab();
+      // if this was a direct term // update search box and focus
+      if(window.directTerm !== '') {
+        setTimeout(function() {
+          document.querySelector('#query').value = window.directTerm;
+          focusSearch();
+          window.directTerm = '';
+        }, 500);
+      }
+      // Localize thumbnail image alt tags after language packs loaded.
+      setTimeout(function() {
+        $('.record-tile').each(function(index) {
+          var name = $(this).find('.record-title').text();
+          var status = $(this).find('.dStatus').text().toLowerCase();
+          $(this).find('.record-image').prop('alt', status+' '+localize('person').toLowerCase()+' '+name);
+        });
+      }, 2000);
+      // if direct record view access, show the record
+      if(typeof window.view_uuid !== 'undefined') { loadRecord(window.view_uuid); }
+    }
+  });
+})();
+</script>

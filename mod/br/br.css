@@ -1,0 +1,15 @@
+#hidden_iframe {
+  display: block;
+  height: 800px; 
+  border: none;
+  width: 100%;
+}
+#shortname {
+  margin-top: 0.5em;
+}
+#report_format {
+  margin-top: 0.5em;
+}
+#status {
+  margin-top: 0.5em;
+}

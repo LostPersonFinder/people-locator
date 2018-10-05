@@ -1,0 +1,140 @@
+<!-- taupo toast -->
+<dom-module id="taupo-toast">
+  <template>
+    <paper-toast id="toastRed"     class="fit-bottom" style="color: white; background-color: red;"    ></paper-toast>
+    <paper-toast id="toastYellow"  class="fit-bottom" style="color: black; background-color: yellow;" ></paper-toast>
+    <paper-toast id="toastSending" class="fit-bottom" style="color: black; background-color: yellow;" duration="0">
+      <div class="containerXX">
+        <span id="sendM"><i18n-msg msgid="reportBeingSubmittedToast"></i18n-msg></span>
+        <span id="throbB"><img class="throbS" src="/assets/images/other/throb_black.svg" alt=""></span>
+      </div>
+    </paper-toast>
+    <paper-toast id="toastSendingComment" class="fit-bottom blackYellow" duration="0">
+      <div class="containerXX">
+        <span id="sendMs"><i18n-msg msgid="commentBeingSubmittedToast"></i18n-msg></span>
+        <span id="throbBs"><img class="throbSs" src="/assets/images/other/throb_black.svg" alt=""></span>
+      </div>
+    </paper-toast>
+    <paper-toast id="toastGrey" class="fit-bottom">
+      <paper-button onclick="toastGrey.toggle(); openJira();" class="yellow-button">Test and close issues!</paper-button>
+    </paper-toast>
+    <paper-toast id="toastR" duration="0" class="fit-bottom blackYellow">
+      <i18n-msg msgid="appUpdate1"></i18n-msg>
+      <paper-button raised onclick="updateApp();" class="updateButton"><i18n-msg msgid="appUpdate2"></i18n-msg></paper-button>
+    </paper-toast>
+  </template>
+  <script>
+  (function () {
+    Polymer({
+      is: 'taupo-toast'
+    });
+  })();
+  // global toast delay
+  window.toastDuration = 10000; // ms ~ 10 seconds
+  // make desktop toasts not-fit
+  function toastFit() {
+    if(window.mquery.queryMatches) {
+      $('#toastRed'           ).removeClass('fit-bottom');
+      $('#toastYellow'        ).removeClass('fit-bottom');
+      $('#toastSending'       ).removeClass('fit-bottom');
+      $('#toastSendingComment').removeClass('fit-bottom');
+      $('#toastGrey'          ).removeClass('fit-bottom');
+      $('#toastR'             ).removeClass('fit-bottom');
+    }
+  }
+  // show toast 1 RED
+  function toastRed(msg, duration) {
+    document.querySelector('#toastRed').text = document.querySelector('i18n-msg').getMsg(msg);
+    document.querySelector('#toastRed').duration = duration;
+    document.querySelector('#toastRed').show();
+  }
+  // show toast 2 YELLOW
+  function toastYellow(msg, duration) {
+    document.querySelector('#toastYellow').text = document.querySelector('i18n-msg').getMsg(msg);
+    document.querySelector('#toastYellow').duration = duration;
+    document.querySelector('#toastYellow').show();
+  }
+  function toastSending() {
+    document.querySelector('#toastSending').show();
+  }
+  function clearSendingToast() {
+    $('#toastSending').addClass('sGreen');
+    $('#throbB').html('✓');
+    $('#sendM').html('');
+    setTimeout(function() { 
+      document.querySelector('#toastSending').cancel();
+    }, 1000);
+    setTimeout(function() { 
+      $('#toastSending').removeClass('sGreen');
+      $('#throbB').html('<img class="throbS" src="/assets/images/other/throb_black.svg" alt="">');
+      $('#sendM').html('<i18n-msg msgid="reportBeingSubmittedToast"></i18n-msg>');
+    }, 3000);
+  }
+  function toastSendingComment() {
+    document.querySelector('#toastSendingComment').show();
+  }
+  function clearSendingToastComment() {
+    setTimeout(function() { 
+      $('#toastSendingComment').addClass('sGreen');
+      $('#throbBs').html('✓');
+      $('#sendMs').html('');
+      setTimeout(function() { 
+        document.querySelector('#toastSendingComment').cancel();
+      }, 1500);
+      setTimeout(function() { 
+        $('#toastSendingComment').removeClass('sGreen');
+        $('#throbBs').html('<img class="throbSs" src="/assets/images/other/throb_black.svg" alt="">');
+        $('#sendMs').html('<i18n-msg msgid="commentBeingSubmittedToast"></i18n-msg>');
+      }, 3000);
+    }, 1500);
+  }
+  function clearSendingToastComment2() {
+    $('#sendComm').removeClass('opacityTwenty');
+    $('#sendComm').prop('disabled', false);
+    $('#addComm').prop('disabled', false);
+  }
+  </script>
+  <style>
+    paper-toast {
+      z-index: 99999999;
+    }
+    #toastRed span.paper-toast {
+      color: white !important;
+    }
+    .containerXX {
+      @apply(--layout-horizontal);
+      @apply(--layout-center);
+    }
+    .containerXX > iron-image {
+      margin-right: 5px;
+    }
+    #throbB, #throbBs {
+      float: right;
+      position: relative;
+      top: 2px;
+    }
+    .sGreen {
+              transition: all .4s ease;
+         -moz-transition: all .4s ease;
+      -webkit-transition: all .4s ease;
+      background-color: green !important;
+      color: white !important;
+      bottom: 0px;
+    }
+    .yellow-button {
+      text-transform: none;
+      color: #eeff41;
+    }
+    .blackYellow {
+      color: black;
+      background-color: yellow;
+    }
+    .updateButton {
+      color: white;
+      background: #1976D2;
+      padding: 0.25em 1em;
+      text-transform: capitalize;
+      font-weight: bold;
+    }
+  </style>
+</dom-module>

@@ -1,0 +1,21 @@
+{
+  "name": "NLM PEOPLE LOCATOR",
+  "short_name": "PL",
+  "start_url": "/?utm_source=homescreen",
+  "display": "standalone",
+  "theme_color": "#1976D2",
+  "background_color": "#1976D2",
+  "icons": [
+    {
+      "src": "assets/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "gcm_sender_id": "103953800507"
+}

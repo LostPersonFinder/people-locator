@@ -1,0 +1,36 @@
+{
+  "name": "jquery-textchange",
+  "version": "0.2.3",
+  "authors": [
+    "ZURB"
+  ],
+  "description": "jQuery TextChange Plugin",
+  "main": "jquery.textchange.js",
+  "keywords": [
+    "text",
+    "change",
+    "jquery"
+  ],
+  "license": "MIT",
+  "homepage": "http://zurb.com/playground/jquery-text-change-custom-event",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "*"
+  },
+  "_release": "0.2.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.3",
+    "commit": "2648a921f466f6a32008123abd0f7f61b28c8f71"
+  },
+  "_source": "https://github.com/jmalonzo/bower-jquery-textchange.git",
+  "_target": "^0.2.3",
+  "_originalSource": "jquery-textchange",
+  "_direct": true
+}

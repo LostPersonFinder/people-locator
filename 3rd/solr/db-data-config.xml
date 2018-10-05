@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- BatchSize parameter recommended for MySQL in DIH FAQ -->
+<dataConfig>
+  <dataSource type="JdbcDataSource" name="ds-1" driver="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost/plstage?zeroDateTimeBehavior=round" batchSize="-1" user="***" password="***"/>
+    <document>
+        <!-- Root entity: person_search table -->
+	<entity dataSource="ds-1" name="person_search"
+	    query="select * from person_search where complete=1 and (expiry_date is null or expiry_date > now())"
+	    deltaImportQuery="select * from person_search where complete=1 and p_uuid='${dataimporter.delta.p_uuid}'"
+	    deltaQuery="select p_uuid from person_status where last_updated_db &gt; DATE_SUB('${dataimporter.last_index_time}', INTERVAL 10 SECOND)"
+	    deletedPkQuery="select ps.p_uuid as p_uuid from person_status ps, person_uuid pu where last_updated_db &gt; DATE_SUB('${dataimporter.last_index_time}', INTERVAL 10 SECOND) and ps.p_uuid = pu.p_uuid and pu.expiry_date &lt; now()">
+        </entity>
+    </document>
+</dataConfig>

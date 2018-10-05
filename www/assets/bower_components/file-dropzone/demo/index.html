@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>file-dropzone demo</title>
+
+    <script>
+      window.Polymer = {
+        useNativeCSSProperties: true,
+        lazyRegister: true,
+        dom: 'shadow'
+      };
+    </script>
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../file-dropzone.html">
+
+    <style is="custom-style" include="demo-pages-shared-styles">
+      demo-snippet {
+        --demo-snippet-demo: {
+          display: block;
+        }
+      }
+      file-dropzone {
+        width: 100%;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="vertical-section-container centered">
+      <h3>Basic file-dropzone demo</h3>
+      <demo-snippet>
+        <template is="dom-bind" id="demo">
+          <file-dropzone
+            accept="image/jpeg,audio/mpeg,audio/mp3"
+            rejection-timeout="750"
+            on-file-added="_onfileAdded"
+            on-file-removed="_onfileRemoved"
+            on-file-rejected="_onfileRejected"
+            file-dragged="{{fileDragged}}"
+            file-rejected="{{fileRejected}}"
+          >
+
+            <template is="dom-if" if="[[!fileRejected]]">
+              <h3 hidden$="[[fileDragged]]">Drag an image</h3>
+              <h3 hidden$="[[!fileDragged]]">Drop now!</h3>
+            </template>
+
+            <template is="dom-if" if="[[fileRejected]]">
+              <h3>File rejected</h3>
+            </template>
+
+          </file-dropzone>
+          <script>
+            demo._onfileAdded = function(evt, file) {
+              alert('file added!')
+              console.info('file added', file);
+            }  
+            demo._onfileRemoved = function(evt) {
+              console.info('file removed');
+            }  
+            demo._onfileRejected = function() {
+              console.warn('file rejected');
+            }  
+          </script>
+        </template>
+      </demo-snippet>
+    </div>
+  </body>
+</html>

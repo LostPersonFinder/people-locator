@@ -1,0 +1,201 @@
+<!-- taupo events -->
+<dom-module id="taupo-events">
+  <template>
+    <style>
+      .event-tile {
+        display: inline-block;
+        float: left;
+        vertical-align: top;
+        width: calc(100% / 6);
+        height: calc(100% / 3);
+        @apply(--paper-font-title);
+        @apply(--layout-vertical);
+        @apply(--layout-center-center);
+      }
+    </style>
+    <div id="content"></div>
+  </template>
+</dom-module>
+<script>
+(function() {
+  var eFetching = false; // true if there's an outstanding XHR downloading
+  Polymer({
+    is: 'taupo-events',
+    behaviors: [ Polymer.NeonSharedElementAnimatableBehavior ],
+    properties: {
+      animationConfig: {
+        type: Object,
+        value: function() {
+          return {
+            'entry': [{
+              name: 'cascaded-animation',
+              animation: 'scale-up-animation',
+              timing: {
+                duration: 500
+              }
+            }],
+            'exit': [{
+              name: 'cascaded-animation',
+              /* animation: 'slide-left-animation', */
+              animation: 'scale-down-animation',
+              /* animation: 'slide-left-animation', */
+              timing: {
+                duration: 250
+              }
+            }]
+          }
+        }
+      }
+    },
+    ready: function() {
+      clog('%cevents::ready', 9, 'color: grey');
+    },
+    attached: function() {
+      clog('%cevents::attached', 9, 'color: grey');
+    },
+    // format article content for display
+    _load: function(cb) {
+      clog('%cevents::_load locale('+window.router.locale+')', 9, 'color: grey');
+      var cb = (typeof cb !== 'undefined') ?  cb : null;
+      var html = '';
+      var ahtml = '';
+      var group = '';
+      var tagOut = '';
+      var share = '';
+      // all events
+      var eicon;
+      var plural;
+      ahtml +=
+      '<div class="event-tile">'+
+        '<div class="event-title nonselect">All Events</div>'+
+          '<table id="allEventsTable" class="eventable nonselect">'+
+            '<tr><td onclick="sortTable(0,true);" class="left bold pointer">&nbsp;&nbsp;💥&nbsp;&nbsp;</td><td onclick="sortTable(1,true);" class="left bold pointer allEventsName">name</td><td onclick="sortTable(2,true);" class="right elast bold pointer allEventsDate">date</td><td onclick="sortTable(3,false);" class="right elast bold pointer">u<span class="ehead">nexpired</span></td><td onclick="sortTable(4,false);" class="right elast bold pointer">e<span class="ehead">xpired</span></td><td onclick="sortTable(5,false);" class="right bold  pointer"><span class="elast">o<span class="ehead">riginated</span></span></td></tr>';
+      var ut = 0;
+      var et = 0;
+      var ot = 0;
+      // traverse article json and pre-render content
+      for(var i = 0; i < window.eventData.length; i++) {
+        eicon = '🌐';
+        plural = 's';
+        // right to left
+        var rtlClass = '';
+        if(window.rtl) { rtlClass = ' rtl'; }
+        // init
+        var obj = window.eventData[i];
+        // localize event date
+        moment.locale(window.router.locale);
+        var localizedDate = moment(obj.date).format('MMMM Do YYYY'); // June 25, 2017
+        // prefer different vi format // PL-1722
+        if(window.router.locale === 'vi') { localizedDate = moment(obj.date).format('Do MMMM YYYY'); /* June 25, 2017 */ }
+        // show single event (filtered)
+        if((typeof window.singleEvent !== 'undefined') && (window.singleEvent !== obj.short)) {
+          clog('%cevents::_load SKIP_SINGLE: '+obj.short, 9, 'color: orange');
+          continue; // skip this iteration
+        // update og:image // PL-1741
+        } else { $('meta[name=og\\:image]').attr('content', obj.image); }
+        var useLocale = window.router.locale;
+        // public event
+        if(obj.group == 0 && obj.unlisted == 0) {
+          // no translation available, use english instead // PL-1877
+          if(!(useLocale in obj.names)) {
+              useLocale = 'en';
+              noTranslationAvailable = '<div class="event-text noTranslationAvailable'+rtlClass+'"><i18n-msg msgid="noTranslationAvailable"></i18n-msg></div>';
+          } else { noTranslationAvailable = ''; }
+          // formulate share button
+          share = '<paper-button id="shareEvent" class="nonUpper" title="share" onclick="showPad6(\''+obj.names[useLocale]+'\', \''+obj.short+'\');"><i18n-msg msgid="eurl4"></i18n-msg><iron-icon icon="social:share"></iron-icon></paper-button>';
+          // tags
+          tagOut = '';
+          if(typeof obj.tags[useLocale] !== 'undefined' && obj.tags[useLocale].length > 0) {
+            var e = obj.tags[useLocale].split(',');
+            e.forEach(function(entry) {
+              tagOut += '<span class="tag"><a href="https://www.google.com/webhp?#q=%23'+entry+'" target="noopener">#'+entry+'</a></span> ';
+            });
+          }
+          // calc plurality
+          if(parseInt(obj.unexpired, 10) == 1) { plural = ''; }
+          // tile
+          html +=
+          '<div class="event-tile">'+
+            '<div class="event-image-d"><img class="event-image" src="/'+obj.image+'" alt="event"></div>'+
+            '<div class="event-title">'+obj.names[useLocale]+'</div>'+
+            '<div class="event-title-2"><div class="event-date">'+localizedDate+'</div><div class="event-count">'+obj.unexpired+' <i18n-msg msgid="record'+plural+'"></i18n-msg></div></div>'+
+            '<div style="clear:both;"></div>'+
+            '<div class="event-button"><paper-button raised class="event-enter bold" onclick="window.disaster='+i+'; goSearch(true);"><i18n-msg msgid="eventListFindReportButton"></i18n-msg></paper-button></div>'+
+            noTranslationAvailable+
+            '<div class="event-text'+rtlClass+'">'+obj.articles[useLocale]+'</div>'+
+            '<div style="clear:both;"></div>'+
+            '<div class="event-tags'+rtlClass+'">'+tagOut+'</div><div class="event-share">'+share+'</div>'+
+            '<div style="clear:both;"></div>'+
+          '</div>';
+        }
+        // unlisted event
+        if(obj.unlisted != 0) { eicon = '🚫'; }
+        // admin event
+        if(obj.group == 1) { eicon = '🔑'; }
+        // all events
+        ut += parseInt(obj.unexpired,  10);
+        et += parseInt(obj.expired,    10);
+        ot += parseInt(obj.originated, 10);
+        ahtml +=
+        '<tr class="eventr">'+
+          '<td class="left">&nbsp;&nbsp;'+eicon+'&nbsp;&nbsp;</td>'+
+          '<td class="left eventlink accent allEventsName" onclick="window.disaster='+i+'; goSearch(true);">'+obj.names['en']+'</td>'+
+          '<td class="right elast allEventsDate">'+moment(obj.date).format('YYYY-MM-DD')+'</td>'+
+          '<td class="right elast">'+obj.unexpired+'</td>'+
+          '<td class="right elast">'+obj.expired+'</td>'+
+          '<td class="right elast">'+obj.originated+'</td>'+
+        '</tr>';
+      }
+      // finish admin
+      ahtml +=
+            '<tr class="allEventsSum"><td>&nbsp;</td><td class="allEventsName">&nbsp;</td><td class="allEventsDate">&nbsp;</td><td class="right elast bold">'+ut+'</td><td class="right elast bold">'+et+'</td><td class="right elast bold">'+ot+'</td></tr>'+
+          '</table>'+
+        '<div style="clear:both;"></div>'+
+        '<div class="eventr-legend left fleft">'+
+          ' &nbsp; 🌐 public &nbsp; 🚫 unlisted &nbsp; 🔑 admin'+
+        '</div>'+
+        '<div class="eventr-legend right fright">'+
+          '🔃 &nbsp; tap a column header to sort &nbsp; &nbsp; '+
+        '</div>'+
+        '<div style="clear:both;"></div>'+
+      '</div>';
+      // only show all events for admin
+      if(window.gid == 1) { html += ahtml; }
+      // out -->
+      this.$.content.innerHTML = html;
+      clog('%cevents::_load complete!', 9, 'color: grey');
+      // sync nodes
+      this.async(function() {
+        var nodeList = Polymer.dom(this.root).querySelectorAll('.event-tile');
+        this.animationConfig['entry'][0].nodes = Array.prototype.slice.call(nodeList);
+        this.animationConfig['exit'][0].nodes = Array.prototype.slice.call(nodeList);
+        if(cb !== null) {
+          clog('%cevents::_load cb()', 9, 'color: grey');
+          cb();
+        }
+      });
+    },
+    // get article content from web service
+    eFetch: function() {
+      clog('%cevents::eFetch', 9, 'color: grey');
+      getEventData('waitForIt');
+    }
+  });
+})();
+
+function waitForIt() {
+  // wait for the hide() animation to finish if we are too quick
+  if(window.animating === true) {
+    window.intervalID = setInterval(function() {
+      clog('%cevents::waitForIt <--- waiting to show --->', 9, 'color: lightblue');
+      if(window.animating === false) {
+        document.querySelector('taupo-events')._load(showEvents);
+        clearInterval(window.intervalID);
+      }
+    }, 25);
+  } else {
+    clog('%cevents::waitForIt NO WAIT!', 9, 'color: grey');
+    document.querySelector('taupo-events')._load(showEvents);
+  }
+}
+</script>

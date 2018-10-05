@@ -1,0 +1,1166 @@
+{
+  "thisLanguageDescription": {
+    "message": "Greek",
+    "context": "This word describes this language itself IN ENGLISH! DO NOT TRANSLATE THIS!! This phrase must remain in English."
+  },
+  "thisLanguage": {
+    "message": "Ελληνικά",
+    "context": "This word describes this language itself."
+  },
+  "signIn": {
+    "message": "Εισοδος",
+    "context": "A button that when clicked allows a user to login or register."
+  },
+  "logout": {
+    "message": "Αποσυνδεση",
+    "context": "A label for a button allowing a user to logout."
+  },
+  "administration": {
+    "message": "Διαχειριστης",
+    "context": "A label for a button allowing a user to access the Administraion module."
+  },
+  "linkHelp": {
+    "message": "Βοήθεια",
+    "context": "This is the text for a link to the Help page."
+  },
+  "linkAbout": {
+    "message": "Σχετικά με εμάς",
+    "context": "The link text for the About link."
+  },
+  "linkPrivacy": {
+    "message": "Πολιτική Απορρήτου",
+    "context": "The link text for the Privacy link."
+  },
+  "linkAccessibility": {
+    "message": "Προσβασιμότητα",
+    "context": "The link text for the Accessibility link."
+  },
+  "linkContact": {
+    "message": "Επικοινωνία",
+    "context": "The link text for the Contact link."
+  },
+  "linkApps": {
+    "message": "Apps",
+    "context": "The link text for the Apps link."
+  },
+  "linkResources": {
+    "message": "Πηγές",
+    "context": "The link text for the Resources link."
+  },
+  "linkFollowUs": {
+    "message": "Ακολουθήστε μας",
+    "context": "The link text for the Follow Us link."
+  },
+  "linkTrademark": {
+    "message": "Εμπορικό σήμα",
+    "context": "The link text for the Trademark link."
+  },
+  "expirationDate": {
+    "message": "ΗΜΕΡΟΜΗΝΙΑ ΛΗΞΗΣ",
+    "context": "Verbiage describing the expiration date of the OMB notice."
+  },
+  "restError1": {
+    "message": "Σφάλμα: μη έγκυρο username ή password",
+    "context": "Error message presented when a user provides the incorrect username and/or password."
+  },
+  "restError2": {
+    "message": "Σφάλμα: ο λογαριασμός σας έχει κλειδωθεί προσωρινά επειδή αποτύχατε συνεχόμενες φορές να πραγματοποιήσετε είσοδο, προσπαθήστε ξανά αργότερα",
+    "context": "Error message presented when a user fails to login repeatedly."
+  },
+  "restError3": {
+    "message": "Σφάλμα: δεν μπορείτε να πραγματοποιήσετε είσοδο μέχρι να επιβεβαιωθεί το email σας, παρακαλούμε ελέγξτε τα email σας για το link",
+    "context": "Error message presented when a user account is not yet active."
+  },
+  "restError2000": {
+    "message": "Σφάλμα: υπάρχει ήδη χρήστης με την διεύθυνση email που μας δώσατε",
+    "context": "Error message presented when user tries to use an email address already in use."
+  },
+  "restError2001": {
+    "message": "Σφάλμα: μη έγκυρη διεύθυνση email",
+    "context": "Error message presented when a user provides an invalid email address."
+  },
+  "restError2002": {
+    "message": "Σφάλμα: το password πρέπει να αποτελείται από 8-16 χαρακτήρες, και θα πρέπει να έχει τουλάχιστον ένα κεφαλαίο, ένα πεζό, και ένα νούμερο",
+    "context": "Error message presented when user enters an invalid password."
+  },
+  "restError2004": {
+    "message": "Σφάλμα: τα password δεν ταιριάζουν",
+    "context": "Error message presented when entered password do not match one another."
+  },
+  "passError0": {
+    "message": "Σφάλμα: το password πρέπει να είναι μεταξύ 8-16 χαρακτήρων",
+    "context": "Error message presented when entered password is of incorrect length, must be 8-16 characters long."
+  },
+  "passError1": {
+    "message": "Σφάλμα: το password πρέπει να περιέχει τουλάχιστον ένα κεφαλαίο γράμμα (A-Z)",
+    "context": "Error message presented when entered password does not contain at least one uppercase letter."
+  },
+  "passError2": {
+    "message": "Σφάλμα: το password πρέπει να περιέχει τουλάχιστον ένα μικρό γράμμα  (a-z)",
+    "context": "Error message presented when entered password does not contain at least one lowercase letter."
+  },
+  "passError3": {
+    "message": "Σφάλμα: το password πρέπει να περιέχει τουλάχιστον ένα νούμερο (0-9)",
+    "context": "Error message presented when entered password does not contain at least one digit."
+  },
+  "restError5000": {
+    "message": "Σφάλμα δικτύου. Παρακαλούμε ελέγξτε τη σύνδεσή σας και δοκιμάστε ξανά.",
+    "context": "Error message presented when there is a network / internet issue."
+  },
+  "restError9999": {
+    "message": "Κάποιο σφάλμα έχει συμβεί, παρακαλούμε δοκιμάστε ξανά αργότερα.",
+    "context": "Error message presented when an unknown error has occurred."
+  },
+  "notifyLogin": {
+    "message": "Συνδεδεμένος.",
+    "context": "This notification will appear after the user successfully logs in."
+  },
+  "notifyRegister": {
+    "message": "Είστε πλέον εγγεγραμμένος και συνδεδεμένος.",
+    "context": "This notification will appear after the user newly registers and is automatically logged in."
+  },
+  "notifyRegistering": {
+    "message": "Εγγραφή ...",
+    "context": "This notification will appear briefly as the system registers and creates a new account for the user."
+  },
+  "notifyPasswordChanged": {
+    "message": "Το password άλλαξε επιτυχώς.",
+    "context": "This notification will appear after the user successfully changes their password."
+  },
+  "notifyResetPassword": {
+    "message": "Σας έχουμε στείλει email με οδηγίες για το πώς να επαναφέρετε το password σας.",
+    "context": "This notification appears when a user has successfully sent a request to reset their password."
+  },
+  "pad1login": {
+    "message": "Είσοδος",
+    "context": "This is the name of the first tab of the user dialog allowing a user to login."
+  },
+  "pad1register": {
+    "message": "Εγγραφή",
+    "context": "This is the name of the second tab of the user dialog allowing a user to register."
+  },
+  "pad1forgotText": {
+    "message": "Εισάγετε τη διεύθυνση email σας και θα σας στείλουμε οδηγίες για το πώς να επαναφέρετε το password σας.",
+    "context": "This text informs the user of what they must do in order to reset their password ~ they must enter their email address."
+  },
+  "pad1forgotSend": {
+    "message": "Αποστολή",
+    "context": "This is the text label on the forgot my password dialog to submit the form."
+  },
+  "pad1loginForgot": {
+    "message": "Ξεχάσατε το password σας?",
+    "context": "This is the text label for the forgot my password button on the login dialog."
+  },
+  "pad1loginUsernamePlaceholder": {
+    "message": "Όνομα χρήστη",
+    "context": "This is the placeholder text for the username input."
+  },
+  "pad1loginPasswordPlaceholder": {
+    "message": "Password",
+    "context": "This is the placeholder text for the password input."
+  },
+  "pad1registerEmailPlaceholder": {
+    "message": "Email",
+    "context": "This is the placeholder text for the email input."
+  },
+  "pad1registerText": {
+    "message": "Το password σας πρέπει να περιέχει έναν αριθμό, ένα πεζό γράμμα, ένα κεφαλαίο γράμμα, και να είναι μεταξύ 8-16 χαρακτήρων.",
+    "context": "This is the text displayed while the user is in the process of registering informing them of our minimum password requirements."
+  },
+  "omb7notice": {
+    "message": "Ειδοποίηση",
+    "context": "This is the first word of the OMB notice."
+  },
+  "omb7submission": {
+    "message": "Η υποβολή πληροφοριών είναι εθελοντική. Όλες οι πληροφορίες που θα υποβληθούν θα είναι διαθέσιμες δημόσια.",
+    "context": "These are the first two sentences of the OMB notice."
+  },
+  "omb7text": {
+    "message": "Το φορτίο δημόσιας αναφοράς για αυτή τη συλλογή πληροφοριών υπολογίζεται κατα μέσο όρο σε 3 λεπτά ανά απάντηση. Αυτή η εκτίμηση περιλαμβάνει το χρόνο για την αναθεώρηση των οδηγιών, τη συγκέντρωση και την εισαγωγή δεδομένων. Ένας οργανισμός μπορεί να μη διεξάγει ή να χορηγεί και ένα άτομο δεν υποχρεούται να απαντήσει σε μια συλλογή πληροφοριών, εκτός εάν εμφανίζει έναν έγκυρο αριθμό ελέγχου OMB. Στείλτε σχόλια σχετικά με αυτήν την εκτίμηση φορτίου ή οποιαδήποτε άλλη πτυχή αυτής της συλλογής πληροφοριών, συμπεριλαμβανομένων προτάσεων για τη μείωση αυτού του φορτίου, στο :",
+    "context": "This is the main paragraph of the OMB notice."
+  },
+  "omb7sub": {
+    "message": "Το έχω διαβάσει και συμφωνώ.",
+    "context": "This is the label for the OMB notice agreement button."
+  },
+  "pad3following": {
+    "message": "Ακολουθείτε",
+    "context": "This is the name of the first tab of user preferences that shows which records a user is following -- shortened to 1 word!"
+  },
+  "pad3settings": {
+    "message": "Ρυθμίσεις",
+    "context": "This is the name of the second tab of user preferences that shows user settings."
+  },
+  "pad3loading": {
+    "message": "Φόρτωση",
+    "context": "This word is displayed when the following records tab is loading results from the server."
+  },
+  "pad3emptyFollow": {
+    "message": "Δεν ακολουθείτε κάποια εγγραφή.",
+    "context": "This verbiage is displayed when the following records panel is displayed and the user is not following any records."
+  },
+  "pad3unFollow": {
+    "message": "Να μην ακολουθώ",
+    "context": "This is the text label applied to the button that allows a user to unfollow updates to a record."
+  },
+  "pad3record": {
+    "message": "Λάβετε ειδοποιήσεις για εγγραφές που ακολουθείτε μέσω",
+    "context": "This verbiage describes the user settings section where a user can subscribe to receive messages from PL via push or email when a record they are following is updated."
+  },
+  "pad3event": {
+    "message": "Λάβετε ένα μήνυμα όταν ένα νέο γεγονός δημιουργείται μέσω",
+    "context": "This verbiage describes the user settings section where a user can subscribe to receive messages from PL via push or email when a new event is created."
+  },
+  "pad3admin": {
+    "message": "Λάβετε μηνύματα από τον Διαχειριστη μέσω",
+    "context": "This verbiage describes the user settings section where a user can subscribe to receive admin messages from PL via push or email."
+  },
+  "pushNotification": {
+    "message": "Άμεση Ειδοποίηση(Push Notification)",
+    "context": "This describes a button label for a Push Notification option."
+  },
+  "pad3changePasswordButton": {
+    "message": "Αλλαγή Password",
+    "context": "This verbiage describes the extent to which we use the push notification subscription a user provides to send out information."
+  },
+  "pad3passwordRequirements": {
+    "message": "Το password σας πρέπει να περιέχει έναν αριθμό, ένα πεζό γράμμα, ένα κεφαλαίο γράμμα, και να είναι μεταξύ 8-16 χαρακτήρων.",
+    "context": "This verbiage describes the extent to which we use the push notification subscription a user provides to send out information."
+  },
+  "pad3oldPasswordPlaceholder": {
+    "message": "Παλιό Password",
+    "context": "This is the placeholder text for the old password input."
+  },
+  "pad3newPassword1Placeholder": {
+    "message": "Νέο Password",
+    "context": "This is the placeholder text for the new password input."
+  },
+  "pad3newPassword2Placeholder": {
+    "message": "Νέο Password Ξανά",
+    "context": "This is the placeholder text for the new password again input."
+  },
+  "pushNotificationsDisallowed": {
+    "message": "Έχετε απαγορέψει σε αυτή την εφαρμογή να σας δείχνει άμεσες ειδοποιήσεις(push notifications). Θα πρέπει να ενεργοποιήσετε ξανά αυτό το δικαίωμα για να χρησιμοποιήσετε αυτή τη λειτουργία.",
+    "context": "This text tells the user that they have prohibited the application from using push notifications and that they must re-enable this feature to subscribe."
+  },
+  "helpFindTitle": {
+    "message": "Βοηθάει στον Εντοπισμό ενός Ανθρώπου ή Ζώου",
+    "context": "This is the title of the help page section on how to find/search."
+  },
+  "helpFindText": {
+    "message": "Αν βρίσκεστε σε αναζήτηση χαμένου ανθρώπου ή ζώου , ίσως να προσπαθήσετε να τους εντοπίσετε ψάχνοντας ένα από τα καταστροφικά γεγονότα. Όταν μπαίνεται για πρώτη φορά στο NLM PEOPLE LOCATOR, σας παρουσιάζεται μια λίστα με τα διαθέσιμα καταστοφικά γεγονότα. Κάθε γεγονός έχει ένα όνομα, μια περιγραφική εικόνα που σχετίζεται με το γεγονός, και ένα κείμενο που περιγράφει την κατάσταση. Εάν μετακινηθείτε προς τα κάτω, θα δείτε ότι υπάρχουν διαφορετικά γεγονότα από τα οποία μπορείτε να επιλέξετε αυτό που σας ενδιαφέρει. Επιλέξτε το γεγονός εκείνο στο οποίο πιστεύετε ότι ο άνθρωπος ή το ζώο που αναζητάτε θα συγκαταλέγεται. Για παράδειγμα, εάν υπήρχε ένα γεγονός που ονομαζόταν Σεισμός στην Αΐτη και ο άνθρωπος που αναζητάτε εθεάθει τελευταία φορά στην Αΐτη, θα επιλέγατε αυτό το γεγονός. Μπορείτε να επιλέξετε ένα γεγονός πατώντας στο μεγάλο πράσινο κουμπί κάτω από την εικόνα. Αυτό θα σας πάει κατευθείαν στην σελίδα αναζήτησης για το συγκεκριμένο καταστροφικό γεγονός. Ένα νέο πεδίο αναζήτησης θα εμφανιστεί στην κορυφή αφού έχετε κάνει την επιλογή σας. Εισάγετε το όνομα του ανθρώπου ή του ζώου που προσπαθείτε να εντοπίσετε σε αυτό το πεδίο αναζήτησης και πατήστε Enter. Τα αποτελέσματα της αναζήτησης θα ανανεωθούν με τα πιο σχετικά αποτελέσματα στην κορυφή. Μπορείτε να αποκτήσετε περισσότερες πληροφορίες σχετικά με ένα αποτέλεσμα, πατώντας στο σύνδεσμο λεπτομερειών κοντά στο κάτω μέρος μιας αναφοράς. Αυτό ανοίγει μια λεπτομερή περιγραφή στην οποία μπορείτε να δείτε περισσότερες πληροφορίες για την αναφορά, να προσθέσετε ένα σχόλιο, ή να αρχίσετε να ακολουθείτε τη συγκεκριμένη αναφορά για να ειδοποιήστε σχετικά με ενημερώσεις που την αφορούν.",
+    "context": "This is the help page article body describing in detail how to find/search for a person or animal."
+  },
+  "helpReportTitle": {
+    "message": "Βοηθήστε Αναφέροντας έναν Άνθρωπο ή ένα Ζώο",
+    "context": "This is the title of the help page section on how to report."
+  },
+  "helpReportText": {
+    "message": "Εάν αδυνατείτε να εντοπίσετε τον άνθρωπο ή το ζώο που αναζητάτε, τότε μπορείτε να αναφέρετε αυτό τον άνθρωπο ή το ζώο στο PEOPLE LOCATOR αρχείο μας. Αφού πλοηγηθείτε σε ένα γεγονός καταστροφής, θα δείτε ένα ροζ κουμπί κάτω δεξιά της οθόνης. Με το πάτημα αυτού του κουμπιού θα ανοίξει ένας wizard ο οποίος θα σας καθοδηγήσει ώστε να υποβάλετε μία αναφορά. Μόλις ολοκληρωθεί, η αναφορά σας θα συμπεριληφθεί στα αποτελέσματα αναζήτησης και θα είναι δημόσια ορατή στους άλλους. Εάν η αναφορά σας δεν έγινε ανώνυμα, θα αρχίσετε αυτόματα να ακολουθείτε την δική σας αναφορά για ενημερώσεις. Οι άλλοι μπορούν να σχολιάζουν την αναφορά σας παρέχοντάς σας νέες πληροφορίες σχετικά με το άτομο ή το ζώο που αναφέρατε. Οι ενημερώσεις θα σας αποστέλλονται μέσω email ή μέσω άμεσων ειδοποιήσεων(push notifications).",
+    "context": "This is the help page article body describing in detail how to report a person or animal."
+  },
+  "pageAboutTextAbout": {
+    "message": "Αυτή η εφαρμογή παρέχεται από την Εθνική Βιβλιοθήκη Ιατρικής των Ηνωμένων Πολιτιών της Bethesda, Maryland. H NLM αποτελεί μέρος του Εθνικού Ινστιτούτου Υγείας,Υπουργείο Υγείας και Ανθρωπίνων Υπηρεσιών των Ηνωμένων Πολιτειών, και έχει ως αποστολή την ανάπτυξη και το συντονισμό της τεχνολογίας των επικοινωνιών για τη βελτίωση της παροχής υπηρεσιών υγείας. Αυτή η εφαρμογή παρέχεται με σκοπό τη μελέτη της χρησιμότητας τέτοιων εργαλείων για την αντιμετώπιση καταστροφών. Η υποκείμενη τεχνολογία αναπτύχθηκε μέσω του προγράμματος Lost Person Finder, μέρος της συνεισφοράς της NLM στη Σύμπραξη Έκτακτης Ετοιμότητας των Νοσοκομείων της Bethesda. Η σύμπραξη έλαβε αρχική ομοσπονδιακή χρηματοδότηση για το LPF και άλλα έργα του NLM IT το 2008. Το έργο LPF υποστηρίζεται επί του παρόντος από το Εσωτερικό Ερευνητικό Πρόγραμμα του NIH, μέσω του Εθνικού Κέντρου Βιοϊατρικών Επικοινωνιών του Lister Hill της NLM. Η ανάπτυξη λογισμικού διευθύνεται από το Τμήμα Μηχανικών των Επικοινωνιών της LHNCBC, με πρόσθετο περιεχόμενο από το Τμήμα της Επιστήμης των Υπολογιστών της LHNCBC και το Κέντρο Ερευνών για την Διαχείριση Πληροφόρησης σε Καταστροφές, μέρος των Εξειδικευμένων Υπηρεσιών Πληροφόρησης της NLM.",
+    "context": "This is the first paragraph of verbiage on the About page describing the purpose of the PEOPLE LOCATOR."
+  },
+  "pageAboutTextBrowser": {
+    "message": "Πρέπει να έχετε ενεργοποιημένα τα cookies και τη JavaScript στο φυλλομετρητή σας. Πρέπει επίσης να έχετε μία από τις δύο πιο πρόσφατες εκδόσεις ενός από τους ακόλουθους φυλλομετρητές: Chrome, Firefox, Safari, Opera, Edge, ή Internet Explorer.",
+    "context": "This is the text on the About page describing web browsers support."
+  },
+  "pageAboutHeaderBrowser": {
+    "message": "Υποστήριξη Φυλλομετρητών",
+    "context": "On the About page, section header title Browser Support."
+  },
+  "pageAboutHeaderFAQ": {
+    "message": "Δελτία δεδομένων και Συχνές Ερωτήσεις",
+    "context": "On the About page, this is the link to datasheets and the FAQ."
+  },
+  "pageAboutFAQ": {
+    "message": "Συχνές Ερωτήσεις",
+    "context": "Frequently Asked Questions link title on About page."
+  },
+  "pagePrivacyText1": {
+    "message": "Εκτός εάν δηλώνεται διαφορετικά, τα δεδομένα που προέρχονται από την κοινότητα και περιέχονται σε αυτήν την εφαρμογή είναι διαθέσιμα στο κοινό και μπορούν να αναζητηθούν από όλους τους χρήστες αυτής της εφαρμογής. Τα δεδομένα μπορούν να ληφθούν από διάφορες πηγές, όπως αναφέρεται σε μεμονωμένες εγγραφές με απευθείας αναφορά στην NLM μέσω:",
+    "context": "This is the first text paragraph on the Privacy page describing how user data is handled."
+  },
+  "pagePrivacyText2a": {
+    "message": "Οι υποβολές στην εφαρμογή",
+    "context": "Beginning of the second paragraph on the Privacy page."
+  },
+  "pagePrivacyText2b": {
+    "message": " δεν συντονίζονται από κάποιον και άλλοι συμβαλλόμενοι οργανισμοί δε θα έπρεπε να αναμένεται ότι ελέγχουν ή επαληθεύουν την ακρίβεια οποιουδήποτε δεδομένου σε αυτή την εφαρμογή. Σημειώστε ότι τα δεδομένα που λαμβάνονται με απευθείας υποβολή στο",
+    "context": "Large portion of the second paragraph of the Privacy page."
+  },
+  "pagePrivacyText2c": {
+    "message": "μπορεί να διανεμηθούν σε άλλες υπηρεσίες, ιδρύματα, και οργανισμούς που βοηθούν την προσπάθεια εντοπισμού εξαφανισθέντων ατόμων, συμπεριλαμβανομένου αλλά όχι περιορισμένου σε αυτό, στο",
+    "context": "End portion of the second paragraph of the Privacy page."
+  },
+  "pagePrivacyText3a": {
+    "message": "Για απευθείας υποβολές στο",
+    "context": "Beginning of the third paragraph on the Privacy page."
+  },
+  "pagePrivacyText3b": {
+    "message": "η διεύθυνση ηλεκτρονικού ταχυδρομείου και το αναγνωριστικό συσκευής του ατόμου που κάνει την αναφορά θα διατηρούνται αλλά δε θα εμφανίζονται δημόσια.",
+    "context": "End of the third paragraph on the Privacy page."
+  },
+  "pagePrivacyText4": {
+    "message": "Η Γενική Δήλωση Απορρήτου της NLM",
+    "context": "Text for the link to NLM's privacy policy page."
+  },
+  "pagePrivacyText5": {
+    "message": "Νόμος για την Ελευθερία της Πληροφορίας",
+    "context": "Text for the link to the Freedom of Information Act site."
+  },
+  "forMore": {
+    "message": "Για Περισσότερα",
+    "context": "The title for a subsection on the Privacy page with links to more topics."
+  },
+  "the": {
+    "message": "του",
+    "context": "The word the."
+  },
+  "pagePrivacyBullet1": {
+    "message": "λειτουργία αναφοράς",
+    "context": "The second half ot the first bullet point on the Privacy page."
+  },
+  "pagePrivacyBullet2": {
+    "message": "app",
+    "context": "The word application as it applies to the ReUnite app."
+  },
+  "pagePrivacyBullet3": {
+    "message": "άλλοι κοινοπρακτικοί οργανισμοί",
+    "context": "The fourth bullet point on the Privacy page."
+  },
+  "pageResourcesTitle1": {
+    "message": "Βρείτε Συγγενείς και Φίλους",
+    "context": "The first section title on the Resources page."
+  },
+  "pageResourcesTitle2": {
+    "message": "Πηγές για Καταστροφές",
+    "context": "The second section title on the Resources page."
+  },
+  "pageResourcesTitle3": {
+    "message": "Πηγές για Πλημμύρες",
+    "context": "The third section title on the Resources page."
+  },
+  "pageResourcesTitle4": {
+    "message": "Πηγές για Ανεμοστρόβιλους",
+    "context": "The fourth section title on the Resources page."
+  },
+  "pageResourcesFamily1": {
+    "message": "Λίστα Σώων και Αβλαβών του Ερυθρού Σταυρού",
+    "context": "First bullet link in the Family and Friends section of the Resource page."
+  },
+  "pageResourcesFamily2": {
+    "message": "Federal Emergency Management Agency National Emergency Family Registry and Locator System",
+    "context": "Second bullet link in the Family and Friends section of the Resource page."
+  },
+  "pageResourcesFamily3": {
+    "message": "Next of Kin National Registry",
+    "context": "Third bullet link in the Family and Friends section of the Resource page."
+  },
+  "pageResourcesFamily4": {
+    "message": "Διεθνής Επιτροπή του Ερυθρού Σταυρού για την Αποκατάσταση Οικογενειακών Δεσμών",
+    "context": "fourth buller link in the Family and Friends section of the Resource page."
+  },
+  "pageResourcesFromDIMRC": {
+    "message": "Από το Κέντρο Ερευνών Διαχείρισης Πληροφοριών Καταστροφών της NLM",
+    "context": "Text label for several links to DIMRC on the Resource page."
+  },
+  "pageResourcesDisaster2": {
+    "message": "Βοήθεια για Καταστροφές",
+    "context": "Second bullet link on the Disaster section of the Resource page."
+  },
+  "pageResourcesDisaster3": {
+    "message": "Ο Ερυθρός Σταυρός παρέχει Καταφύγια και Φαγητό",
+    "context": "Third buller link on the Disaster section of the Resource page."
+  },
+  "pageResourcesFromMedlinePlus": {
+    "message": "Από NLM's MedlinePlus",
+    "context": "Text label for several links to Medline Plus on the Resource page."
+  },
+  "followUs": {
+    "message": "Ακολουθήστε μας  στο...",
+    "context": "Used to prompt user to follow us on a social network of their choice."
+  },
+  "and": {
+    "message": "και",
+    "context": "The word and used between two nouns."
+  },
+  "trademarkText": {
+    "message": "είναι κατοχυρωμένα εμπορικά σήματα του Υπουργείου Υγείας και Ανθρωπίνων Υπηρεσιών των ΗΠΑ.",
+    "context": "The second half of the trademark sentence."
+  },
+  "tabReport": {
+    "message": "Αναφορά",
+    "context": "The title of the 3rd tab allowing someone to Report a new person or animal."
+  },
+  "tagline": {
+    "message": "Βρείτε και αναφέρετε αγνοούμενους συγγενείς, φίλους, και ζώα κατα τη διάρκεια καταστροφών.",
+    "context": "The tagline is the summary of what the application is for."
+  },
+  "pageTitle": {
+    "message": "Βρείτε και αναφέρετε αγνοούμενους ανθρώπους και ζώα κατα τη διάρκεια καταστροφών",
+    "context": "This is the page title which is very similar in nature to the tagline."
+  },
+  "eventRetired": {
+    "message": "Το γεγονός που ζητήσατε δεν είναι πλέον ενεργό.",
+    "context": "We inform the user this message when they attempt to come to us via exact event url when the event is no longer open."
+  },
+  "eventListFindReportButton": {
+    "message": "Βρείτε / Αναφέρετε έναν Άνθρωπο ή Ζώο",
+    "context": "This is the button text on the home page to Find or Report a person or animal."
+  },
+  "searchPlaceholder": {
+    "message": "Αναζήτηση",
+    "context": "The search box starts off with this text to inform the user what the element is used for."
+  },
+  "records": {
+    "message": "αναφορές",
+    "context": "When a search is performed this word is prefixed with the number of results, ie. 17 records"
+  },
+  "sexMale": {
+    "message": "Αρσενικο",
+    "context": "Sex = Male"
+  },
+  "sexFemale": {
+    "message": "Θηλυκο",
+    "context": "Sex = Female"
+  },
+  "sexOther": {
+    "message": "Αλλο",
+    "context": "Sex = Other"
+  },
+  "statusMissing": {
+    "message": "Χαθηκε",
+    "context": "Status is Missing"
+  },
+  "statusFound": {
+    "message": "Βρεθηκε",
+    "context": "Status is Found"
+  }  ,
+  "statusDeceased": {
+    "message": "Νεκρος/η",
+    "context": "Status is Deceased"
+  },
+  "statusInjured": {
+    "message": "Τραυματισμενος/η",
+    "context": "Status is Injured"
+  },
+  "statusAlive": {
+    "message": "Σωος & Αβλαβης",
+    "context": "Status is Alive and Well"
+  },
+  "statusUnknown": {
+    "message": "Αγνωστο",
+    "context": "Status, Location, or other attribute is Unknown"
+  },
+  "age": {
+    "message": "Ηλικία",
+    "context": "Age of person or animal"
+  },
+  "comments": {
+    "message": "Σχόλια",
+    "context": "Comments that others may add to a person or animal record."
+  },
+  "addComment": {
+    "message": "Προσθέστε ένα σχόλιο",
+    "context": "The label for a button allowing a user to add a comment to a record."
+  },
+  "addCommentLabel": {
+    "message": "Προσθέστε οποιαδήποτε πληροφορία μπορεί να έχετε σχετικά με αυτή την αναφορά",
+    "context": "This is the label below the add comment button explaining to a user what it does."
+  },
+  "followButton": {
+    "message": "Ακολουθήστε",
+    "context": "A button allows a user to follow record updates."
+  },
+  "name": {
+    "message": "Όνομα",
+    "context": "This label is displayed under the person or animal name."
+  },
+  "status": {
+    "message": "Κατάσταση",
+    "context": "This label is displayed below the person or animal missing / found status."
+  },
+  "lastUpdated": {
+    "message": "Τελευταία Ενημέρωση",
+    "context": "This label is displayed under the date / time of when a record was last updated."
+  },
+  "gender": {
+    "message": "Φύλο",
+    "context": "This is a label below the displayed gender of a person or animal."
+  },
+  "lastKnownLocation": {
+    "message": "Τελευταία Γνωστή Τοποθεσία",
+    "context": "This is a label displayed below a text box showing a person or animal last known location."
+  },
+  "newReport": {
+    "message": "Νέα αναφορά",
+    "context": "This is the window title when a new person or animal is being reported."
+  },
+  "reportChoicePA": {
+    "message": "Θέλετε να αναφέρετε έναν Άνθρωπο ή ένα Ζώο;",
+    "context": "This is the text option displayed for a user to choose and fill out either a person or animal report."
+  },
+  "person": {
+    "message": "Άνθρωπος",
+    "context": "This is the text label on a button a user presses to choose a person report."
+  },
+  "animal": {
+    "message": "Ζώο",
+    "context": "This is the text label on a button a user presses to choose an animal report."
+  },
+  "reportChoiceStatusP": {
+    "message": "Παρακαλούμε υποδείξτε την κατάσταση του ανθρώπου που αναφέρετε.",
+    "context": "This is the text option displayed for a user to choose the status of the person they are reporting."
+  },
+  "explainMissingP": {
+    "message": "ο άνθρωπος πιστεύεται ότι είναι αγνοούμενος",
+    "context": "The label next to the status selection button for missing."
+  },
+  "explainFoundP": {
+    "message": "ο άνθρωπος έχει βρεθεί κατάσταση υγείας άγνωστη",
+    "context": "The label next to the status selection button for found."
+  },
+  "explainAliveP": {
+    "message": "ο άνθρωπος έχει βρεθεί και είναι καλά",
+    "context": "The label next to the status selection button for alive & well."
+  },
+  "explainInjuredP": {
+    "message": "ο άνθρωπος έχει βρεθεί και είναι τραυματισμένος",
+    "context": "The label next to the status selection button for injured."
+  },
+  "explainDeceasedP": {
+    "message": "ο άνθρωπος έχει βρεθεί και είναι νεκρός",
+    "context": "The label next to the status selection button for deceased."
+  },
+  "explainUnknownP": {
+    "message": "αναζητούνται πληροφορίες για αυτόν τον άνθρωπο",
+    "context": "The label next to the status selection button for unknown."
+  },  
+  "location": {
+    "message": "Τοποθεσία",
+    "context": "Text label for Location."
+  },
+  "photo": {
+    "message": "Φωτογραφία",
+    "context": "Text label for Photo."
+  },
+  "reportChoiceStatusA": {
+    "message": "Παρακαλούμε υποδείξτε την κατάσταση του ζώου που αναφέρετε.",
+    "context": "This is the text option displayed for a user to choose the status of the animal they are reporting."
+  },
+  "explainMissingA": {
+    "message": "το ζώο πιστεύεται ότι είναι αγνοούμενο",
+    "context": "The label next to the status selection button for missing."
+  },
+  "explainFoundA": {
+    "message": "το ζώο έχει βρεθεί κατάσταση υγείας άγνωστη",
+    "context": "The label next to the status selection button for found."
+  },
+  "explainAliveA": {
+    "message": "το ζώο έχει βρεθεί και είναι καλά",
+    "context": "The label next to the status selection button for alive & well."
+  },
+  "explainInjuredA": {
+    "message": "το ζώο έχει βρεθεί και είναι τραυματισμένο",
+    "context": "The label next to the status selection button for injured."
+  },
+  "explainDeceasedA": {
+    "message": "το ζώο έχει βρεθεί και είναι νεκρό",
+    "context": "The label next to the status selection button for deceased."
+  },
+  "explainUnknownA": {
+    "message": "αναζητούνται πληροφορίες για αυτό το ζώο",
+    "context": "The label next to the status selection button for unknown."
+  },
+  "reportChoiceSexP": {
+    "message": "Παρακαλούμε υποδείξτε το φύλο του ανθρώπου που αναφέρετε.",
+    "context": "This is the text option displayed for a user to choose the gender of the person they are reporting."
+  },
+  "reportChoiceSexA": {
+    "message": "Παρακαλούμε υποδείξτε το φύλο του ζώου που αναφέρετε.",
+    "context": "This is the text option displayed for a user to choose the gender of the animal they are reporting."
+  },
+  "explainSexMaleP": {
+    "message": "το φύλο του ανθρώπου είναι αρσενικό",
+    "context": "The label next to the person sex selection button for male."
+  },
+  "explainSexFemaleP": {
+    "message": "το φύλο του ανθρώπου είναι θηλυκό",
+    "context": "The label next to the person sex selection button for female."
+  },
+  "explainSexOtherP": {
+    "message": "το φύλο του ανθρώπου είναι άλλο",
+    "context": "The label next to the person sex selection button for other."
+  },
+  "explainSexUnknownP": {
+    "message": "το φύλο του ανθρώπου είναι άγνωστο",
+    "context": "The label next to the person sex selection button for unknown."
+  },
+  "explainSexOtherA": {
+    "message": "το φύλο του ζώου είναι άλλο",
+    "context": "The label next to the animal sex selection button for other."
+  },
+  "explainSexUnknownA": {
+    "message": "το φύλο του ζώου είναι άγνωστο",
+    "context": "The label next to the animal sex selection button for unknown."
+  },
+  "reportChoiceAgeP": {
+    "message": "Παρακαλούμε επιλέξτε κατα προσέγγιση την ηλικία του ανθρώπου που αναφέρετε",
+    "context": "This is the text option displayed for a user to choose the age of the person they are reporting."
+  },
+  "reportChoiceAgeA": {
+    "message": "Παρακαλούμε επιλέξτε κατα προσέγγιση την ηλικία του ζώου που αναφέρετε",
+    "context": "This is the text option displayed for a user to choose the age of the animal they are reporting."
+  },
+  "reportChoiceAgeUnknown": {
+    "message": "Εάν δεν είστε σίγουροι για την ηλικία, παρακαλούμε επιλέξτε άγνωστο.",
+    "context": "The label next to the status selection button for unknown."
+  },
+  "explainAgeUnknownP": {
+    "message": "η ηλικία του ανθρώπου είναι άγνωστη",
+    "context": "The label next to the person age selection button for unknown."
+  },
+  "explainAgeUnknownA": {
+    "message": "η ηλικία του ζώου είναι άγνωστη",
+    "context": "The label next to the animal age selection button for unknown."
+  },
+  "continue": {
+    "message": "Συνεχεια",
+    "context": "The label of a button to continue to the next step."
+  },
+  "reportChoiceNameP": {
+    "message": "Παρακαλούμε εισάγετε το όνομα του ανθρώπου που αναφέρετε.",
+    "context": "This is the section title displayed for a user to enter the name of the person they are reporting."
+  },
+  "reportChoiceNameA": {
+    "message": "Παρακαλούμε εισάγετε το όνομα και/ή τον αριθμό μικροτσίπ του ζώου που αναφέρετε.",
+    "context": "This is the section title displayed for a user to enter the name and/or the buddy identification number of the animal they are reporting."
+  },
+  "explainNameP": {
+    "message": "όνομα του ανθρώπου",
+    "context": "The text label for name entry of a person."
+  },
+  "explainNameA": {
+    "message": "όνομα του ζώου",
+    "context": "The text label for name entry of an animal."
+  },
+  "explainBuddyA": {
+    "message": "αριθμός μικροτσίπ του ζώου",
+    "context": "The text label for buddty identification number entry of an animal."
+  },
+  "reportChoiceNameUnknownP": {
+    "message": "Εάν δεν είστε σίγουροι για το όνομα, παρακαλούμε επιλέξτε άγνωστο.",
+    "context": "This is the section title displayed for the use to choose name unknown."
+  },
+  "explainNameUnknownP": {
+    "message": "το όνομα του ανθρώπου είναι άγνωστο",
+    "context": "The label next to the person name selection button for unknown."
+  },
+  "explainNameUnknownA": {
+    "message": "το όνομα και ο αριθμός μικροτσίπ του ζώου είναι άγνωστα",
+    "context": "The label next to the animal name selection button for unknown."
+  },
+  "cameraError": {
+    "message": "Δεν εντοπίστηκε κάμερα από το φυλλομετρητή σας. Μπορείτε να επιλέξετε να χρησιμοποιήσετε αντ 'αυτού την εφαρμογή για την κάμερας σας.",
+    "context": "This toast notification is displayed when there is an error detecting the camera on the user device."
+  },
+  "browserLimitation": {
+    "message": "Ο φυλλομετρητής σας δεν υποστηρίζει αυτή τη λειτουργία.",
+    "context": "This toast notification is displayed when a user attempts to use a feature that their web browser does not support."
+  },
+  "photoOnly": {
+    "message": "JPEG, PNG, και TIFF αρχεία εικόνας μόνο.",
+    "context": "This toast notification is displayed when a user attempts to use an unsupported image file format in search by photo or report."
+  },
+  "reportChoicePhotoP": {
+    "message": "Μπορείτε προαιρετικά να προσθέσετε μία φωτογραφία για να βελτιώσετε την ταυτοποίηση αυτού του ανθρώπου.",
+    "context": "Section titled telling user that they can add a photo for identification purposes."
+  },
+  "reportChoicePhotoA": {
+    "message": "Μπορείτε προαιρετικά να προσθέσετε μία φωτογραφία για να βελτιώσετε την ταυτοποίηση αυτού του ζώου.",
+    "context": "Section titled telling user that they can add a photo for identification purposes."
+  },
+  "reportChoicePhotoCapture": {
+    "message": "Τραβηξτε φωτογραφια",
+    "context": "This is the button label used to capture a photograph using the device camera."
+  },
+  "reportChoicePhotoSelectFile": {
+    "message": "Επιλογη Αρχειου",
+    "context": "This is the button label used to select an image file from local device storage."
+  },
+  "reportChoicePhotoTake": {
+    "message": "Τραβηξτε μια Φωτογραφια",
+    "context": "This is the button label used to open the device camera before capturing an image."
+  },
+  "reportChoicePhotoDelete": {
+    "message": "Διαγραφη",
+    "context": "This is the button label used to delete an image the user has already submitted."
+  },
+  "reportChoicePhotoHelp": {
+    "message": "Περικόψτε ή περιστρέψτε τη φωτογραφία αν χρειάζεται.",
+    "context": "This is the help text displayed below image manipulation controls informing the user how to alter the already submitted image."
+  },
+  "reportChoiceMapP": {
+    "message": "Μπορείτε να ορίσετε προαιρετικά ένα σημείο στο χάρτη για να βοηθήσετε άλλους να εντοπίσουν αυτό τον άνθρωπο.",
+    "context": "This is the section header above the map used to specify a last known location."
+  },
+  "reportChoiceMapA": {
+    "message": "Μπορείτε να ορίσετε προαιρετικά ένα σημείο στο χάρτη για να βοηθήσετε άλλους να εντοπίσουν αυτό το ζώο.",
+    "context": "This is the section header above the map used to specify a last known location."
+  },
+  "reportChoiceMapHelp": {
+    "message": "Σύρετε το δείκτη του χάρτη στην τελευταία γνωστή τοποθεσία.",
+    "context": "This is the help text below the last know location map informing a user what to do."
+  },
+  "information": {
+    "message": "Πληροφορία",
+    "context": "This a label for a tab in the reporting wizard where a user enters free text about additional Information."
+  },
+  "submit": {
+    "message": "Υποβολή",
+    "context": "This a label for a tab in the reporting wizard where a user finalizes and submits the report."
+  },
+  "submitAnon": {
+    "message": "Υποβολή Ανώνυμα",
+    "context": "This a label for a tab in the reporting wizard where a user finalizes and submits the report anonymously."
+  },
+  "reportChoiceInformationHelpP": {
+    "message": "Μπορείτε να δώσετε προαιρετικά οποιεσδήποτε πρόσθετες πληροφορίες πιστεύετε ότι θα βοηθούσαν άλλους να αναγνωρίσουν ή να εντοπίσουν αυτό τον άνθρωπο.",
+    "context": "This is help text informing the user that the information they enter will assist in locating or identifying the person."
+  },
+  "reportChoiceInformationHelpA": {
+    "message": "Μπορείτε να δώσετε προαιρετικά οποιεσδήποτε πρόσθετες πληροφορίες πιστεύετε ότι θα βοηθούσαν άλλους να αναγνωρίσουν ή να εντοπίσουν αυτό το ζώο.",
+    "context": "This is help text informing the user that the information they enter will assist in locating or identifying the animal."
+  },
+  "reportBeingSubmittedToast": {
+    "message": "Η αναφορά υποβάλλεται ...",
+    "context": "This toast notification will be displayed while the report is being sent in."
+  },
+  "reportSubmit": {
+    "message": "Υποβολή Αναφοράς",
+    "context": "This is the section title on the last page of the reporting wizard. The user will choose how to submit the report."
+  },
+  "explainSignInP": {
+    "message": "Εάν θέλετε να ειδοποιηθείτε όταν επιπλέον πληροφορίες σχετικά με αυτό τον άνθρωπο γίνουν διαθέσιμες, παρακαλούμε συνδεθείτε προτού υποβάλετε την αναφορά.",
+    "context": "If the user is not signed in, we will prompt them to sign in so that they can recieve updates to their reported record."
+  },
+  "explainSignInA": {
+    "message": "Εάν θέλετε να ειδοποιηθείτε όταν επιπλέον πληροφορίες σχετικά με αυτό το ζώο γίνουν διαθέσιμες, παρακαλούμε συνδεθείτε προτού υποβάλετε την αναφορά.",
+    "context": "If the user is not signed in, we will prompt them to sign in so that they can recieve updates to their reported record."
+  },
+  "explainSubmitP": {
+    "message": "Εάν θέλετε να ειδοποιηθείτε όταν επιπλέον πληροφορίες σχετικά με αυτό τον άνθρωπο γίνουν διαθέσιμες, επιλέξτε να υποβάλετε την αναφορά τώρα.",
+    "context": "If the user is already signed in, we will ask them to submit the record and subscribe to updates."
+  },
+  "explainSubmitA": {
+    "message": "Εάν θέλετε να ειδοποιηθείτε όταν επιπλέον πληροφορίες σχετικά με αυτό το ζώο γίνουν διαθέσιμες, επιλέξτε να υποβάλετε την αναφορά τώρα.",
+    "context": "If the user is already signed in, we will ask them to submit the record and subscribe to updates."
+  },
+  "explainAnonP": {
+    "message": "Υποβάλετε ανώνυμα και δεν θα ειδοποιηθείτε όταν επιπλέον πληροφορίες για αυτόν τον άνθρωπο γίνουν διαθέσιμες.",
+    "context": "The user is prompted that they may choose to submit their report anonymoysly and not recieve any updates afterwards."
+  },
+  "explainAnonA": {
+    "message": "Υποβάλετε ανώνυμα και δεν θα ειδοποιηθείτε όταν επιπλέον πληροφορίες για αυτό το ζώο γίνουν διαθέσιμες.",
+    "context": "The user is prompted that they may choose to submit their report anonymoysly and not recieve any updates afterwards."
+  },
+  "explainAnon2": {
+    "message": "Αυτή η εγγραφή θα λήξει μετά από 90 μέρες. Χρησιμοποιήστε το κουμπί 'Αναφορά Παράβασης' στην οθόνη ΠΕΡΙΣΣΟΤΕΡΕΣ ΛΕΠΤΟΜΕΡΕΙΕΣ αργότερα για να ζητήσετε νωρίτερη λήξη.",
+    "context": "The user is prompted that they may choose to submit their report anonymoysly and not recieve any updates afterwards."
+  },
+  "reportComplete": {
+    "message": "Αναφορά Ολοκληρώθηκε και Υποβλήθηκε, Σας Ευχαριστούμε.",
+    "context": "This is the section title on the final page of the reporting wizard. The report has been completed."
+  },
+  "explainCopy1": {
+    "message": "Αυτή είναι η διεύθυνση URL για την ολοκληρωμένη αναφορά σας. Μπορείτε να επιστρέψετε σε αυτή τη διεύθυνση URL σε επόμενο χρόνο για να δείτε ενημερώσεις ή / και σχόλια που έγιναν σε αυτήν την αναφορά.",
+    "context": "We inform the user of the URL that corresponds to the report they just completed so that they may bookmark or share it for later."
+  },
+  "explainCopy2": {
+    "message": "Αντιγράψτε αυτή τη διεύθυνση URL στο πρόχειρο σας, ώστε να μπορείτε να την κοινοποιήσετε ή να την προσθέσετε στους σελιδοδείκτες.",
+    "context": "This is the text below the copy to clipboard button informing the user what the button does."
+  },
+  "buddyIdentificationNumber": {
+    "message": "Αριθμός Μικροτσίπ",
+    "context": "This is the label to the Buddy Identification Number field which is displayed for animals."
+  },
+  "notifyRecordFollow": {
+    "message": "Πλέον ακολουθείτε αυτή την αναφορά και θα λαμβάνετε ενημερώσεις όταν αλλάζει ή προστίθενται σχόλια",
+    "context": "This notification will appear after the user unfollows a record via the full record view."
+  },  
+  "notifyRecordUnfollow": {
+    "message": "Δεν ακολουθείτε πλέον αυτή την αναφορά",
+    "context": "This notification will appear after the user unfollows a record via the full record view."
+  },
+  "followStatusTrue": {
+    "message": "Ακολουθείτε",
+    "context": "This label is displayed next to a toggle switch displaying that the user is folliwng the currently viewed record."
+  },
+  "followStatusFalse": {
+    "message": "Δεν Ακολουθείτε",
+    "context": "This label is displayed next to a toggle switch displaying that the user is not folliwng the currently viewed record."
+  },
+  "followButtonExplain": {
+    "message": "Λάβετε μια ειδοποίηση όταν μια αλλαγή γίνεται σε αυτή την αναφορά ή προστίθεται κάποιο σχόλιο",
+    "context": "This label is displayed below the follow user toggle button explaining what the button does."
+  },
+  "followButtonAnon": {
+    "message": "Για να ακολουθήσετε μια αναφορά και να λαμβάνετε ειδοποιήσεις όταν ενημερώνεται, πρέπει πρώτα να συνδεθείτε",
+    "context": "The follow record button is disabled when a user is not signed in, aka anonymous. We inform them that to follow a record they must first sign in."
+  },
+  "longerComment": {
+    "message": "Παρακαλούμε εισάγετε ένα μεγαλύτερο σχόλιο",
+    "context": "The user is notified to enter a longer comment if it is too short"
+  },
+  "commentBeingSubmittedToast": {
+    "message": "Το σχόλιο υποβάλλεται ...",
+    "context": "This toast notification will be displayed while the new comment is being sent in."
+  },
+  "moduleInvalid": {
+    "message": "Αυτή η ενότητα δεν υπάρχει.",
+    "context": "If the user attempts to access a non-existant portion of the app (very unlikely) this toast notification will appear."
+  },
+  "moduleAccess": {
+    "message": "Δεν έχετε δικαίωμα πρόσβασης σε αυτή την ενότητα.",
+    "context": "If the user attempts to access a portion of the app they do not have permission for, this toast notification will appear."
+  },
+  "copyTrue": {
+    "message": "Η διεύθυνση URL αντιγράφηκε στο πρόχειρο.",
+    "context": "After the user clicks on the copy to clipboard button, if successful, this toast notification will appear."
+  },
+  "copyFalse": {
+    "message": "Αποτυχία αντιγραφής διεύθυνσης URL στο πρόχειρο.",
+    "context": "After the user clicks on the copy to clipboard button, if unsuccessful, this toast notification will appear."
+  },
+  "userConfirmActive": {
+    "message": "Η διεύθυνση email σας έχει επιβεβαιωθεί και ο λογαριασμός χρήστη σας είναι πλέον ενεργός.",
+    "context": "When the user visits a confirmation link emailed to them, this toast notification will appear informing the user that their account is now active and email address verified."
+  },
+  "userConfirmInvalid": {
+    "message": "Αυτός ο σύνδεσμος επιβεβαίωσης δεν είναι έγκυρος.",
+    "context": "When the user vists an invalid email address confirmation link or an invalid password reset confirmation link, this toast notification will appear."
+  },
+  "userPasswordTwo": {
+    "message": "Ένα νέο password σας έχει σταλεί με email.",
+    "context": "When the user visits a valid password reset confirmation link, this toast notification will appear to notify the user a new password has been generated and emailed to them."
+  },
+  "eurl1": {
+    "message": "Κοινοποιήστε αυτό το γεγονός",
+    "context": "This section text is displayed on the paper action dialog when a user clicks the share event button."
+  },
+  "eurl2": {
+    "message": "Αντιγραφή στο πρόχειρο",
+    "context": "This text appears under the button to share an event via email."
+  },
+  "eurl3": {
+    "message": "Αποστολή Email",
+    "context": "This text appears under the button to share an event via clipboard."
+  },
+  "eurl4": {
+    "message": "Κοινοποίηση",
+    "context": "This button text label appears on the button for a user to share an event or record."
+  },
+  "eurl5": {
+    "message": "Κοινοποιήστε αυτή την αναφορά",
+    "context": "This section text is displayed on the paper action dialog when a user clicks the share record button."
+  },
+  "page404": {
+    "message": "404: This page does not exist.",
+    "context": "This toast is displayed when a user attempts to visit a non-existant page."
+  },
+  "ombNoticeTitle": {
+    "message": "OMB Notice",
+    "context": "This is the page title for the OMB Notice."
+  },
+  "abuseReportAbuse": {
+    "message": "Αναφορα Παραβιασης",
+    "context": "This is used as a sectional header and the label of the report abuse button."
+  },
+  "abuseWhatReport": {
+    "message": "Τι θα θέλατε να αναφέρετε?",
+    "context": "This is the query presented to a user when asked to be more specific about the type of abuse report the user is filing."
+  },
+  "abuseReportSpam": {
+    "message": "Spam",
+    "context": "This is the button label to select a report abuse claim of type spam."
+  },
+  "abuseReportSex": {
+    "message": "Άσεμνο Περιεχόμενο",
+    "context": "This is the button label to select a report abuse claim of type sexually explicit."
+  },
+  "abuseReportHate": {
+    "message": "Ρητορική Μίσους",
+    "context": "This is the button label to select a report abuse claim of type hate speech."
+  },
+  "abuseReportViolence": {
+    "message": "Βίαιο Περιεχόμενο",
+    "context": "This is the button label to select a report abuse claim of type violence"
+  },
+  "abuseReportElse": {
+    "message": "Κάτι Άλλο",
+    "context": "This button label is to select a report abuse claim of type something else."
+  },
+  "abuseThanks": {
+    "message": "Σας ευχαριστούμε. Έχουμε λάβει την αναφορά παράβασης. Το προσωπικό μας θα εξετάσει την αναφορά και θα αφαιρέσει τυχόν ακατάλληλο περιεχόμενο.",
+    "context": ""
+  },
+  "deleteRecord": {
+    "message": "Διαγραφη Αναφορας",
+    "context": "This is used as a button label and dialog header allowing a user to delete a record from the system."
+  },
+  "deleteRecordConfirm": {
+    "message": "Είστε σίγουροι ότι θέλετε να διαγράψετε αυτή την αναφορά; Δεν υπάρχει τρόπος να ανακτήσετε τα δεδομένα της αναφοράς σας αφού αυτή διαγραφεί.",
+    "context": "This is the question prompting a user when they choose to delete a record. We confirm they are certain with their decision."
+  },
+  "deleteRecordCancel": {
+    "message": "Ακυρωση",
+    "context": "Button label to cancel the action of deleting a record."
+  },
+  "deleteRecordDelete": {
+    "message": "Διαγραφη",
+    "context": "Button label to confirm the deletion of a record."
+  },
+  "deleteRecordDone": {
+    "message": "Η Αναφορά έχει διαγραφεί",
+    "context": "A toast notification displayed to inform the user the deletion of a record action has been completed."
+  },
+  "seconds": {
+    "message": "δευτερόλεπτα",
+    "context": "This word means seconds of time."
+  },
+  "record": {
+    "message": "αναφορά",
+    "context": "When a search is performed this word is prefixed with the number of results, ie. 1 record -- special case when only 1 result"
+  },
+  "notifyLogout": {
+    "message": "Αποσυνδεμένος.",
+    "context": "This notification will appear after the user successfully logs out."
+  },
+  "uploadingPhoto": {
+    "message": "Ανέβασμα Φωτογραφίας...",
+    "context": "This message is displayed after a user selects an image file to search by photo as the file is being uploaded."
+  },
+  "searchByPhoto": {
+    "message": "Αναζήτηση με Φωτογραφία",
+    "context": "When a user elects to search by photo from the search query bar, a dialog box appears with this as the title."
+  },
+  "dragAndDrop": {
+    "message": "Σύρετε και αφήστε",
+    "context": "A user may drag and drop a file to search by image. This message shows the user where to drag and drop the file ~ the target."
+  },
+  "emailRecordRevisionSubject": {
+    "message": "Μια αναφορά που ακολουθείτε έχει ενημερωθεί",
+    "context": "We email users following a record when a revision is made or a comment is added, this is the subject of that email."
+  },
+  "emailRecordRevisionLine1": {
+    "message": "Έχει προστεθεί ένα σχόλιο ή έχει γίνει μια αναθεώρηση σε μια αναφορά που ακολουθείτε.",
+    "context": "We email users following a record when a revision is made or a comment is added, this is the first line of that email."
+  },
+  "emailRecordRevisionLine2": {
+    "message": "Μπορείτε να ελέγξετε την αναφορά σε αυτή την τοποθεσία:",
+    "context": "We email users following a record when a revision is made or a comment is added, this line prefixes the direct record url."
+  },
+  "emailRecordRevisionLine3": {
+    "message": "Εάν θέλετε να καταργήσετε την εγγραφή σας από αυτές τις ειδοποιήσεις ηλεκτρονικού ταχυδρομείου, επισκεφθείτε τον παραπάνω σύνδεσμο και απενεργοποιήστε το κουμπί 'Ακολουθώ'",
+    "context": "We email users following a record when a revision is made or a comment is added, at the end we inform the user of how to unsubscribe to these emails."
+  },
+  "emailNewUserSubject": {
+    "message": "Επιβεβαιώστε τη διεύθυνση email σας",
+    "context": "We email new users after they register, this is the subject line of said email."
+  },
+  "emailNewUserLine1": {
+    "message": "Ευχαριστούμε για την εγγραφή σας.",
+    "context": "We email new users after they register, this is the first line of said email thanking them for registering."
+  },
+  "emailNewUserLine2": {
+    "message": "Για να ολοκληρώσετε τη διαδικασία εγγραφής, πρέπει να επισκεφθείτε τον παρακάτω σύνδεσμο:",
+    "context": "We email new users after they register, this is the second line of said email providing them a link complete the registration process."
+  },
+  "emailNewUserLine3": {
+    "message": "Εάν δεν επισκεφθείτε τον σύνδεσμο, ο λογαριασμός σας θα διαγραφεί μετά από 30 ημέρες.",
+    "context": "We email new users after they register, this is the last line of said email warning the user about account deletion for failure to activate their account."
+  },
+  "emailForgot1Subject": {
+    "message": "Αίτημα επαναφοράς του password",
+    "context": "We email a user when they initiate the forgot password sequence, this is the subject of that email."
+  },
+  "emailForgot1Line1": {
+    "message": "Κάποιος έχει ξεκινήσει μια αίτηση επαναφοράς του password για το λογαριασμό σας.",
+    "context": "We email a user when they initiate the forgot password sequence, this is the first line of that email."
+  },
+  "emailForgot1Line2": {
+    "message": "Εάν δεν έχετε ξεκινήσει εσείς αυτό το αίτημα, είναι ασφαλές να αγνοήσετε αυτό το μήνυμα ηλεκτρονικού ταχυδρομείου και το password σας δεν θα αλλάξει.",
+    "context": "We email a user when they initiate the forgot password sequence, we inform the user it is safe to ignore this request if they did not initiate it."
+  },
+  "emailForgot1Line3": {
+    "message": "Ωστόσο, αν ξεκινήσατε εσείς αυτό το αίτημα και θέλετε να επαναφέρετε το password σας, πρέπει να επισκεφθείτε τον ακόλουθο σύνδεσμο:",
+    "context": "We email a user when they initiate the forgot password sequence, this line prefixes a url the user must click on to continue in the forgot password sequence."
+  },
+  "emailForgot1Line4": {
+    "message": "Μετά την επίσκεψη αυτού του συνδέσμου θα δημιουργηθεί ένας νέος κωδικός και θα σας αποσταλεί σε ένα δεύτερο μήνυμα ηλεκτρονικού ταχυδρομείου.",
+    "context": "We email a user when they initiate the forgot password sequence, final line of this email informing a new password will be generated."
+  },
+  "emailForgot2Subject": {
+    "message": "Νέο password",
+    "context": "This is the second email in the forgot password sequence, and this is the subject of that email."
+  },
+  "emailForgot2Line1": {
+    "message": "Το νέο σας password είναι:",
+    "context": "This is the second email in the forgot password sequence, this line prefixes the new password we generated for the user."
+  },
+  "emailForgot2Line2": {
+    "message": "Μπορείτε να αλλάξετε προαιρετικά το password σας μετά την είσοδό σας:",
+    "context": "This is the second email in the forgot password sequence, lastly, we inform the user that they may change their password after logging in."
+  },
+  "welcomeTo": {
+    "message": "Καλωσήρθατε στο",
+    "context": "The first time a user comes to PL, we welcome them like: Welcome to PEOPLE LOCATOR. However PEOPLE LOCATOR is not translated in this welcome message."
+  },
+  "chooseLanguage": {
+    "message": "Επιλέξτε μια γλώσσα",
+    "context": "We prompt the user to select a language at first visit."
+  },
+  "additionalInformation": {
+    "message": "Επιπρόσθετες πληροφορίες",
+    "context": "This is a label displayed several places titled Additional Information."
+  },
+  "inEvent": {
+    "message": "στο γεγονός",
+    "context": "This substring 'in event' will appear atop search results under the search bar after '27 record' but before the event name (0.123 seconds)"
+  },
+  "viewOriginalRecord": {
+    "message": "Δείτε την Αρχική Αναφορά",
+    "context": "This link appears on record with a foreign origin. Tapping on the link will open the record from its original location."
+  },
+  "ncmec1": {
+    "message": "Σας προτείνουμε επίσης να στείλετε αυτή την αναφορά στο Εθνικό Κέντρο για Αγνοούμενα Παιδιά και Παιδιά που έχουν υποστεί Εκμετάλλευση.",
+    "context": "In the reporting wizard, this message will be displayed when a report is completed for a child."
+  },
+  "ncmec2": {
+    "message": "Μπορείτε να βρείτε ένα σύνδεσμο για το NCMEC εδώ.",
+    "context": "In the reporting wizard, this message will be displayed when a report is completed for a child. This is the link text."
+  },
+  "pageResourcesNcmec": {
+    "message": "Εθνικό Κέντρο για Αγνοούμενα Παιδιά και Παιδιά που έχουν υποστεί Εκμετάλλευση",
+    "context": "Resource Page link to NCMEC."
+  },
+  "eventListMeta": {
+    "message": "Βρείτε και αναφέρετε αγνοούμενα άτομα και ζώα σε",
+    "context":  "Find and report missing people and animals in any disaster using this website."
+  },
+  "eventListMeta3": {
+    "message": "χρησιμοποιώντας αυτή την ιστοσελίδα της Εθνικής Βιβλιοθήκης Ιατρικής.",
+    "context": "Find missing people using this National Library of Medicine website."
+  },
+  "searchTitle": {
+    "message": "Βρείτε αγνοούμενα άτομα και ζώα σε",
+    "context": "Find missing people and animals in the Mexico Earthquake."
+  },
+  "searchMeta": {
+    "message": "Αναζητήστε αγνοούμενους ανθρώπους και ζώα σε",
+    "context": "Search for missing people and animals in the Mexico Earthquake."
+  },
+  "searchMeta2": {
+    "message": "με όνομα ή με φωτογραφία",
+    "context": "Search for missing people by name or by photo"
+  },
+  "searchMeta3": {
+    "message": "χρησιμοποιώντας της Εθνικής Βιβλιοθήκης της Ιατρικής",
+    "context": "Search for missing people using the National Library of Medicine's NLM PEOPLE LOCATOR."
+  },
+  "reportTitle": {
+    "message": "Αναφέρετε ανθρώπους και ζώα σε",
+    "context": "Report people and animals in the Mexico Earthquake."
+  },
+  "reportMeta": {
+    "message": "Αναφέρετε την κατάσταση των ανθρώπων και των ζώων σε",
+    "context": "Report the status of people and animals in the Mexico City Earthquake."
+  },
+  "recordTitle": {
+    "message": "Αναφερόμενο πρόσωπο",
+    "context": "Reported person Juan Valdez in the Mexico City Earthquake."
+  },
+  "recordTitle2": {
+    "message": "σε",
+    "context": "Reported person Juan Valdez in the Mexico City Earthquake."
+  },
+  "recordMeta":  {
+    "message": "έχει αναφερθεί",
+    "content": "Juan Valdez has been reported missing on our website."
+  },
+  "aboutMeta": {
+    "message": "Η Εθνική Βιβλιοθήκη Ιατρικής, μέρος των Εθνικών Ινστιτούτων Υγείας, δημιούργησε αυτή την ιστοσελίδα",
+    "content": "The National Library of Medicine, part of the National Institutes of Health, created this website for the public."
+  },
+  "aboutMeta2": {
+    "message": "για την ανεύρεση και αναφορά αγνοούμενων ανθρώπων και ζώων κατα τη διάρκεια καταστροφών.",
+    "content": "We created this website for finding and reporting missing people and animals during disasters."
+  },
+  "resourceMeta": {
+    "message": "Πρόσθετες πηγές της Εθνικής Βιβλιοθήκης της Ιατρικής για",
+    "content": "Additional National Library of Medicine resources for finding people."
+  },
+  "followUsMeta": {
+    "message": "Λάβετε ειδοποιήσεις καταστροφών στα μέσα κοινωνικής δικτύωσης από την Εθνική Βιβλιοθήκη της Ιατρικής",
+    "content": "Receive disaster alerts on social media from the National Library of Medicine's NLM PEOPLE LOCATOR."
+  },
+  "privacyMeta": {
+    "message": "Πολιτικές απορρήτου που διέπουν τη χρήση της Εθνικής Βιβλιοθήκης της Ιατρικής",
+    "content": "Privacy policies governing the use of the National Library of Medicine's NLM PEOPLE LOCATOR."
+  },
+  "goHomePage": {
+    "message": "Πηγαίνετε στην Αρχική σελίδα",
+    "context": "Displayed tooltip when you hover your mouse over the home button."
+  },
+  "searchUsingPhoto": {
+    "message": "Αναζήτηση με τη χρήση φωτογραφίας",
+    "context": "Displayed tooltip when you hover your mouse over the visual search button."
+  },
+  "searchUsingName": {
+    "message": "Αναζήτηση με τη χρήση ονόματος",
+    "context": "Displayed tooltip when you hover your mouse over the search magnifying glass."
+  },
+  "reportPersonAnimal": {
+    "message": "Αναφορά ενός ανθρώπου ή ζώου",
+    "context": "Tooltip for report button."
+  },
+  "enterName": {
+    "message": "Εισάγετε όνομα για αναζήτηση",
+    "context": "Title for a search box."
+  },
+  "selectEvent": {
+    "message": "Επιλέξτε γεγονός",
+    "context": "Title for a menu of PL events."
+  },
+  "answerYes": {
+    "message": "Ναι",
+    "context": "The affirmative, yes, as in an answer to a question."
+  },
+  "answerNo": {
+    "message": "Όχι",
+    "context": "The negative, no, as in an answer to a question."
+  },
+  "rDeviceShort": {
+    "message": "Καταχωρήστε Πρόσθετη Συσκευή",
+    "context": "This text will appear as a header on the dialog box that appears when a user is prompted to register a new device for push notifications. See below."
+  },
+  "rDeviceLong": {
+    "message": "Θέλετε να καταχωρήσετε αυτή τη συσκευή για να λαμβάνετε άμεσες ειδοποιήσεις (push notifications);",
+    "context": "This dialog will appear when a user logs into from a 2nd, 3rd, 4th... device as a prompt to also recieve push notifications on this additional device."
+  },
+  "appUpdate1": {
+    "message": "Μια νέα έκδοση αυτής της εφαρμογής είναι διαθέσιμη.",
+    "context": "When a new version of PL is updated online, a returning user will be prompted to update the version he/she is using."
+  },
+  "appUpdate2": {
+    "message": "ΕΝΗΜΕΡΩΣΗ",
+    "context": "This label appears on the button to update the version of PL to the newest available. See above."
+  },
+  "noTranslationAvailable": {
+    "message": "Αυτή η περιγραφή γεγονότος δεν έχει μεταφραστεί στη γλώσσα σας, οπότε εμφανίζεται στα αγγλικά.",
+    "context": "This label appears on the button to update the version of PL to the newest available. See above."
+  }
+}
